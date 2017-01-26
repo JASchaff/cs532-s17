@@ -1,0 +1,227 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage[margin=3cm]{geometry}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{deepblue}{rgb}{0,0,0.7}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{red}{rgb}{0.9,0,0}
+
+\newcommand\course{CS532}
+\newcommand\semester{Spring 2017}
+\newcommand\hwnum{1}
+\newcommand\yourname{Justin Schaffner}
+\newcommand\login{JASchaff}
+\newenvironment{answer}[1]{\subsection*{Problem #1}}
+
+\pagestyle{fancyplain}
+\headheight 40pt
+\lhead{\yourname\ (\login)\\\course\ --- \semester}
+\chead{\textbf{\Large Assignment \hwnum}}
+\rhead{\today}
+\headsep 40pt
+\lstnewenvironment{MyBash}{\lstset{language=bash, aboveskip=3mm, belowskip=3mm, showstringspaces=false, columns=flexible, basicstyle={\small\ttfamily}, numbers=none, numberstyle=\tiny\color{grey}, keywordstyle=\color{black}, commentstyle=\color{dkgreen}, stringstyle=\color{black}, breaklines=true, breakatwhitespace=true, tabsize=3}}{}
+\lstnewenvironment{MyPython}{\lstset{language=Python, aboveskip=3mm, belowskip=3mm, basicstyle=\small, otherkeywords={self}, keywordstyle=\color{deepblue}, emph={MyClass,__init__}, emphstyle=\color{deepred}, stringstyle=\color{deepgreen}, commentstyle=\color{red}, frame=tb, showstringspaces=false, breaklines=true }}{}
+
+\begin{document}
+
+\begin{answer}{1: Posting with Curl}
+I chose Hillary Clintons page because I knew it had an email subscription form. \\
+\url https://my.democrats.org/page/s/say-you-re-in-for-what-s-next-sticker-h/
+I used cURL to pull the page data:
+\begin{MyBash}
+curl https://my.democrats.org/page/s/say-you-re-in-for-what-s-next-sticker-h/ > ~/Desktop/Hillary.txt
+\end{MyBash}
+Scanning through the text with comm-f and "input" as a search parameter I found a list of the names of the fields. A blog post had led me to a script called formfinder, but when I tried to run it I got an error. Rather than try to fix it I just searched manually. The field names the server was expecting were firstname, lastname, email and zip.
+I used cURL to post the data:
+\begin{MyBash}
+curl -d firstname="charlie" -d lastname="chaplin" -d email="charlie.chaplin@mail.com" -d zip="23510" https://my.democrat.org/page/s/say-you-re-in-for-what-s-next-sticker-h/ > ~/Desktop/response.html
+\end{MyBash}
+The first attempt gave me a redirect address, so I added -L to follow the redirect and get the page
+\begin{MyBash}
+curl -L -d firstname="charlie" -d lastname="chaplin" -d email="charlie.chaplin@mail.com" -d zip="23510" https://my.democrat.org/page/s/say-you-re-in-for-what-s-next-sticker-h/ > ~/Desktop/response.html
+\end{MyBash}
+\newpage
+When I opened response.html in Chrome I got the following page:
+\\
+\includegraphics[width=\linewidth]{Screenshot1}
+\end{answer}
+
+\begin{answer}{2: Python Link Finder}
+I built the program on my Mac using Python 3.6. For HTP handling I downloaded the requests library and I installed BeautifulSoup4 to read the response body. I used lxml as the parser for beautifulsoup. Several stackexchange posts had recommended it over the built-in parser for being faster. The code ended up being pretty simple to write.
+\begin{MyPython}
+import requests
+from bs4 import BeautifulSoup
+import lxml
+import sys
+
+if not(len(sys.argv)==2):
+    raise ValueError("Missing or multiple arguments")
+address=sys.argv[1]
+if not (address.startswith("http://") or address.startswith("https://")):
+    raise ValueError("Argument not an URI")
+page=requests.get(address, allow_redirects=True)
+soup=BeautifulSoup(page.content, "lxml")
+linklist=[]
+pdflinklist=[]
+numlinks=0
+numpdfs=0
+for link in soup.find_all('a'):
+    linklist.append(link.get('href'))
+    numlinks+=1
+print("Number of links found: ", numlinks)
+for i in linklist:
+    tpage=requests.get(i, allow_redirects=True, stream=True)
+    temp=tpage.headers.get('content-type')
+    if "pdf" in temp:
+        pdflinklist.append((i,tpage.headers.get('content-length')))
+        numpdfs+=1
+    tpage.close
+print("Number of links to pdfs found: ", numpdfs)
+for i in pdflinklist:
+    print ("\t\tcontent-length: ".join(i))
+\end{MyPython}
+The "raise ValueError" solution to jumping out of the program if the args are wrong also came from a stack exchange post. I thought it would be less problematic than calling quit or exit from sys, though I could be wrong. I know that was always a big NO from C++. 
+I ran the program with the required URI for the test page and got the following:
+\\
+\includegraphics[width=\linewidth]{CS_results}
+For the second URI I went with the HRT bus schedule page. Initially I ran into a number of errors dealing with missing schema. A lot of the links seemed to be relative urls  that don't have the full http:// address. For this issue I imported urllib.parse.urljoin, which gave me the following change to the "for i in linklist:" loop:
+\begin{MyPython}
+for i in linklist:
+    if (i.startswith("http://") or i.startswith("https://")):
+        tpage=requests.get(i, allow_redirects=True, stream=True)
+        temp=tpage.headers.get('content-type')
+        if "pdf" in temp:
+            pdflinklist.append((i,tpage.headers.get('content-length')))
+            numpdfs+=1
+        tpage.close
+    else:
+        try:
+            tpage=requests.get((urljoin(address, i)), allow_redirects=True, stream=True)
+            temp=page.headers.get('content-type')
+            if "pdf" in temp:
+                pdflinklist.append((i, tpage.headers.get('content-length')))
+                numpdfs+=1
+        except Exception:
+            unhandledlinks+=1
+            pass
+        rellinks+=1
+print("Number of links to pdfs found: ", numpdfs)
+print("Number of relative links found: ", rellinks)
+print("Number of unhandled links: ", unhandledlinks)
+\end{MyPython}
+Some of the links without full paths were relative, and could be handled with urljoin, but there was an email link on the page that was still throwing an exception, so I ignored it with the 'try' since it was unlikely to yeild a pdf. I also added a few print lines detailing how stuff was handled. 
+The results for the HRT page:
+\\
+\includegraphics[width=\linewidth]{HRT_results}
+\\
+For the third run I used the IRS PUBS page. My initial run gave an AttributeError for one of the elements in the link list. My interpretation was that one of the hrefs that Beautifulsoup found was empty. I fixed that with an if statement, but then got an error for SSL certification failure. For that, I encased the first if statement in a try as well and added one to the unhandled counter if it throws an exception. Once I got that all working, the results said there were no PDF's on that particular IRS page, so I followed one of the links to a list of FORMS and got the following results:
+\\
+\includegraphics[width=\linewidth]{IRS_results}
+\\
+\\
+At this point I got the email saying the results need to display any final landing page after redirects. I updated the code gave the following results for the test page:
+\\
+\includegraphics[width=\linewidth]{CS_results_2}
+\\
+There weren't any redirects for the pdf's on the HRT page or the IRS page, but here are the results with the updated code:
+\\
+\includegraphics[width=\linewidth]{HRT_results_2}
+\\
+\includegraphics[width=\linewidth]{IRS_results_2}
+\\
+The final code for PDFlinkfinder.py
+\begin{MyPython}
+import requests
+from bs4 import BeautifulSoup
+import lxml
+import sys
+from urllib.parse import urljoin
+
+
+if not(len(sys.argv)==2):
+    raise ValueError("Missing or multiple arguments")
+address=sys.argv[1]
+if not (address.startswith("http://") or address.startswith("https://")):
+    raise ValueError("Argument not an URI")
+page=requests.get(address, allow_redirects=True)
+soup=BeautifulSoup(page.content, "lxml")
+linklist=[]
+pdflinklist=[]
+
+numlinks=0
+numpdfs=0
+rellinks=0
+unhandledlinks=0;
+for link in soup.find_all('a'):
+    linklist.append(link.get('href'))
+    numlinks+=1
+print("Number of links found: ", numlinks)
+for i in linklist:
+    if not i:
+        unhandledlinks+=1
+        continue
+    if (i.startswith("http://") or i.startswith("https://")):
+        #try:
+        tpage=requests.get(i, allow_redirects=True, stream=True)
+        temp=tpage.headers.get('content-type')
+        if "pdf" in temp:
+            if len(tpage.history) == 0:
+                pdflinklist.append((i, "No Redirect", tpage.headers.get('content-length')))
+            else:
+                pdflinklist.append((i, tpage.url, tpage.headers.get('content-length')))
+            numpdfs+=1
+        tpage.close
+        #except Exception:
+            #unhandledlinks+=1
+            #pass
+    else:
+        try:
+            reladd=urljoin(address, i)
+            tpage=requests.get(reladd, allow_redirects=True, stream=True)
+            temp=page.headers.get('content-type')
+            if "pdf" in temp:
+                if len(tpage.history) == 0:
+                    pdflinklist.append((reladd, "No Redirect", tpage.headers.get('content-length')))
+                else:
+                    pdflinklist.append((reladd, tpage.url, tpage.headers.get('content-length')))
+                numpdfs+=1
+            tpage.close
+        except Exception:
+            unhandledlinks+=1
+            pass
+        rellinks+=1
+print("Number of links to pdfs found: ", numpdfs)
+print("Number of relative links found: ", rellinks)
+print("Number of unhandled links: ", unhandledlinks)
+for i in pdflinklist:
+    print ("\t\t".join(i))
+\end{MyPython}
+\end{answer}
+
+\begin{answer}{3: Bowtie}
+
+\includegraphics[width=\linewidth]{Screenshot2}
+
+IN: O M P\\
+SCC: A B C G\\
+OUT: D H\\
+Tendrils: L  I-K\\
+Tubes: M-N-D\\
+Disconnected: E-F\\
+\\
+'O M P' are all IN since they point into the SCC but nothing comes back out to them. 'A B C G' are SCC because they all connected both ways, even if it has to go around the loop to get there. 'D H' are both out, since data comes out from the SCC but does not go back in. 'I' and 'L' are both tendrils since they both point to nodes that are OUT. They're connected but their data never makes it into the SCC and SCC data never makes it to them. 'K' would be considered disconnected if 'I' wasn't a tendril, so I guess it just gets included as part of the 'I' tendril.  'E' and 'F' are disconnected. They have no relationships connecting them to other nodes. 
+\end{answer}
+\end{document}
