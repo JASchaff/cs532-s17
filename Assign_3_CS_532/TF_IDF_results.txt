@@ -1,0 +1,21 @@
+TF-IDF	TF	IDF	URL
+0.0829	0.00319	26.0	http://linkis.com/www.youtube.com/GFCPL
+
+0.0208	0.000803	26.0	https://www.youtube.com/watch?v=yk5RORfkeok
+
+0.106	0.00409	26.0	http://worldofwonder.net/omgaga-official-lady-gaga-will-rupauls-drag-race-season-9/
+
+0.0303	0.00117	26.0	http://www.instyle.com/news/lady-gaga-rupauls-drag-race-season-9-video?xid=soc_socialflow_twitter_instyle
+
+0.0652	0.00251	26.0	http://www.elsalvador.com/articulo/famosos/lady-gaga-alquilo-lujosa-mansion-para-super-bowl-140280
+
+0.0417	0.00161	26.0	http://www.metalinjection.net/shocking-revelations/metallica-to-perform-with-lady-gaga-at-the-grammys-this-weekend
+
+0.0421	0.00162	26.0	http://metro.co.uk/2017/02/07/lady-gaga-and-metallica-to-perform-special-and-unique-duet-at-2017-grammy-awards-6433549/?ito=twitter
+
+0.0605	0.00233	26.0	http://kroq.cbslocal.com/2017/02/07/lady-gaga-duet-metallica-grammys/
+
+0.0415	0.0016	26.0	http://www.notiexpresscolor.com/2017/02/07/lady-gaga-engano-a-millones-con-falso-salto-video/
+
+0.0229	0.000881	26.0	https://itunes.apple.com/gb/album/born-this-way/id903210172?ign-mpt=uo%3D2
+
