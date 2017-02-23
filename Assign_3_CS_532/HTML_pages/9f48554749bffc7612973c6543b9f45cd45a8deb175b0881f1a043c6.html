@@ -1,0 +1,1028 @@
+      <!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <script src="//cdn.optimizely.com/js/210320823.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b908402cd3","applicationID":"1237919,13960630","transactionName":"clhXTRQOW10BQBsRWVZSShYVCVhG","queueTime":1,"applicationTime":95,"agent":"","atts":"ShVMG1waFUQWXhZbGllDTUlcThhGE0UaFVBUWVxOBQhBWAhAXQZQRURUVhAEWlQKRhoCV1wYXVgQCFNTBVZVElAeVUtcBwpeXwNtRgRIRFVVUAUAWUI7UVsPXlhFVGYOCERFC0BdAlldW0BmEw9GRAVeXQdRVFNmWwMVREg7VlEXV0JoWEo5BFNEB1NACFdfaEpcBRNSRQVATV5KVFRLTA8VUkM7W1BcChdCTVQ5AlhfEFdaFQVTQl9fAxNSAgALV0dNRVpmVAMFXkQJD0cOW1hWVR8TFVpuF11BE1tUCk1ODxVDVBYcVw5VF0JNVDkCVlwUU10GVgxVTF8ABEUTSBBaAExYWFdmFQ1CVkYIFhVQVFlcTgUIQVgIQF0GUEVEVFYQBFpUCkYWTRpVVk1YBABEVEYIFhFKXlNMWhIIWF87U0ANWV9DWGZXVxUdRkBREkheWUpQBA1SbhBXVQwaCxVMVwUNVlgJV1BDFBNFXFQJFVJuDUIWWxoGBxcIUFEZBFYcAFIaHRVNWAESFQtGXUAJXUMVREQ="}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <title>BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary - The New Civil Rights Movement</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="http://d3n8a8pro7vhmx.cloudfront.net/themes/5728fb61b504f5ef9e000001/attachments/original/1470337357/faviconncrm.ico?1470337357" type="image/x-icon" />
+  <link rel="stylesheet" href="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/theme.scss" type="text/css" />
+  <link rel="stylesheet" href="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" />
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Google Adsense Page-level Ads Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1282611763943983",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+  var sc_project=4237281;
+  var sc_invisible=1;
+  var sc_partition=49;
+  var sc_click_stat=1;
+  var sc_security="48025cf1";
+  </script>
+
+  <script type="text/javascript"
+  src="//www.statcounter.com/counter/counter.js"></script><noscript><div
+  class="statcounter"><a title="stats for wordpress"
+  href="http://www.statcounter.com/wordpress.org/"
+  target="_blank"><img class="statcounter"
+  src="http://c.statcounter.com/4237281/0/48025cf1/1/"
+  alt="stats for wordpress" ></a></div></noscript>
+  <!-- End of StatCounter Code -->
+
+  <script type="text/javascript">
+      __compete_code = '6a45ef9ac3727d27d73aab0bf94078c5';
+      (function () {
+          var s = document.createElement('script'),
+              d = document.getElementsByTagName('head')[0] ||
+                  document.getElementsByTagName('body')[0],
+              t = 'https:' == document.location.protocol ?
+                  'https://c.compete.com/bootstrap/' :
+                  'http://c.compete.com/bootstrap/';
+          s.src = t + __compete_code + '/bootstrap.js';
+          s.type = 'text/javascript';
+          s.async = 'async';
+          if (d) { d.appendChild(s); }
+      }());
+  </script>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '259182721113632',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="http://cache.blogads.com/284274437/feed.css" />
+
+  <!-- Begin comScore Tag  Put in Header-->
+  <script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "7584020" });
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=7584020&cv=2.0&cj=1" />
+  </noscript>
+  <!-- End comScore Tag -->
+
+
+  <!-- because ie8 ignores media queries, we need this -->
+  <!--[if IE 8]>
+    <link rel="stylesheet" href="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/tablet-and-desktop.scss" type="text/css" />
+  <![endif]-->
+
+
+  <!--[if IE]>
+  <link rel="stylesheet" href="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/ie.scss" type="text/css" />
+  <![endif]-->
+
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <meta name="google-site-verification" content="jP8OBaknsLrLrUReRa1iFj24dVZU6CQhTstvxQf6Mo8" />
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="dEnnIsmlbgaWVLlewz0SPO1u/Yii4lusccz6HKDvNjc=" name="csrf-token" />
+
+  <link rel="canonical" href="http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary" />
+    <link rel="alternate" type="application/rss+xml" href="http://www.thenewcivilrightsmovement.com/home.rss" title="RSS 2.0">
+    <meta name="Title" content="BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary">
+    <meta name="Description" content="Confirmed.">
+    <meta property="og:title" content="BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary"/>
+  <meta property="og:url" content="http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary">
+    <meta property="og:description" content="Confirmed.">
+    <meta property="og:type" content="article">
+      <link rel="image_src" href="http://d3n8a8pro7vhmx.cloudfront.net/thenewcivilrightsmovement/pages/18970/meta_images/original/f.jpg?1486488721" />
+      <meta property="og:image" content="http://d3n8a8pro7vhmx.cloudfront.net/thenewcivilrightsmovement/pages/18970/meta_images/original/f.jpg?1486488721" />
+  <meta property="og:site_name" content="The New Civil Rights Movement"/>
+
+<script type="text/javascript">
+  var NB = NB || {};
+
+  NB.environment = "production";
+  NB.pageId = "18970";
+  NB.Liquid = NB.Liquid || {};
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+      window._auth_token_name = "authenticity_token";
+      window._auth_token = "dEnnIsmlbgaWVLlewz0SPO1u/Yii4lusccz6HKDvNjc=";
+    //]]>
+</script>
+
+
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/cupertino/jquery-ui.css" type="text/css" media="all">
+
+      <link rel="icon" type="image/x-icon" href="http://d3n8a8pro7vhmx.cloudfront.net/thenewcivilrightsmovement/sites/1/favicon_images/original/logo-mobile-more-1.png?1470338138" />
+
+<script src="//d3n8a8pro7vhmx.cloudfront.net/assets/liquid/main-b26c7e32216efbd4acb3c95338d47546.js"></script>
+
+<script type="text/javascript">
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+    js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<script type="text/javascript">
+  NB.FBAppId = '126739610711965';
+</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '//apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+  <script type="text/javascript" src="//use.typekit.com/vuq5mdr.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2752898-3']);
+   	_gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_setCustomVar', 1, 'Parent', 'home', 3]);
+      _gaq.push(['_setCustomVar', 1, 'UGC', 'true', 3]);
+      _gaq.push(['_setCustomVar', 1, 'Page type', 'Blog Post', 3]);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  <script type="text/javascript">
+    var _qevents = _qevents || [];
+
+    (function() {
+     var elem = document.createElement('script');
+
+     elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+     elem.async = true;
+     elem.type = "text/javascript";
+     var scpt = document.getElementsByTagName('script')[0];
+     scpt.parentNode.insertBefore(elem, scpt);
+    })();
+  </script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    NB.appConfig.userIsLoggedIn = false;
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@newcivilrights">
+  <meta name="twitter:image:src" content="http://d3n8a8pro7vhmx.cloudfront.net/thenewcivilrightsmovement/pages/18970/meta_images/original/f.jpg?1486488721">
+  <meta name="twitter:title" content="BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary">
+  
+    <meta name="twitter:creator" content="davidbadash">
+  
+
+  
+    <meta name="twitter:description" content="Confirmed.">
+
+
+  <!-- Taboola Initializer Code for Articles  -->
+    <script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({article:'auto'});
+      !function (e, f, u, i) {
+        if (!document.getElementById(i)){
+          e.async = 1;
+          e.src = u;
+          e.id = i;
+          f.parentNode.insertBefore(e, f);
+        }
+      }(document.createElement('script'),
+      document.getElementsByTagName('script')[0],
+      '//cdn.taboola.com/libtrc/thenewcivilrightsmovement/loader.js',
+      'tb_loader_script');
+    </script>
+
+
+  
+
+  <script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/9822.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+
+  <script src="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/showads.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  
+  <script src="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/jquery.sticky-kit.min.js"></script>
+  
+
+</head>
+<body class="aware-theme v2-theme page-type-blog-post js">
+  <div id="pattern" class="pattern non-home">
+    <div class="wrap" id="wrap">
+      <div id="block-wrap">
+        <div id="body" class="page-pages-show-blog-post">
+
+          <div class="header-container nonhomepage  clearfix">
+
+            
+
+            
+              
+<!-- _block_alert.html -->
+<div class="block-alert">
+	<div class="width-container">
+		<a href="/champion">
+			We noticed you’re using an ad blocker. Support NCRM and help us reduce our dependence on advertising — become an NCRM Champion!
+		</a>
+	</div>
+</div>
+<!-- /_block_alert.html -->
+
+              
+<!-- _leaderboard_article_1.html -->
+<div class="desktop-visible">
+
+	<div class="ad leaderboard">
+		<div class="width-container" style="text-align:center;margin: 0 auto;">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Desktop Article: Leaderboard #1 -->
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="8955186759"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+
+</div>
+<!-- /_leaderboard_article_1.html -->
+
+
+            
+
+            <div class="width-container">
+
+              <div class="header-wrap clearfix">
+                
+                  <div class="header-profile mobile-visible"  id="login-icon"  >
+                    
+                      <div class="face"><a href="/login"><i class="fa fa-key"></i></a></div>
+                    
+                  </div>
+                
+
+                <div class="site-logo">
+                  <a href="/"></a>
+                </div>
+
+                
+
+                
+                  
+<!-- _nav.html -->
+<nav id="menu" role="navigation">
+  <ul id="topnav" class="topnav desktop-nav">
+    
+    
+    <li class=" drop">
+      <a href="/issues">News <i class="fa fa-caret-down"></i></a>
+      <ul class="sub">
+        
+        <li class="show-parent mobile-visible"><a href="/issues">News</a></li>
+        
+        
+        <li><a href="/politics">Politics</a></li>
+        
+        <li><a href="/marriage_equality">Marriage Equality</a></li>
+        
+        <li><a href="/discrimination">Discrimination</a></li>
+        
+        <li><a href="/culture">Culture</a></li>
+        
+        <li><a href="/women_s_rights">Women’s Rights</a></li>
+        
+        <li><a href="/immigration">Immigration</a></li>
+        
+        <li><a href="/international">International</a></li>
+        
+        <li><a href="/opinion">Opinion</a></li>
+        
+      </ul>
+    </li>
+    
+    
+    
+    <li >
+      <a href="/about_david">About</a>
+    </li>
+    
+    
+      <script>
+        (function() {
+          var cx = '015718538772110605585:4klovzmezjc';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+              '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <li class="desktop-visible"><gcse:search></gcse:search></li>
+  </ul>
+</nav>
+
+<a href="#menu" class="menu-link">Menu<i class="fa fa-caret-down"></i></a>
+<!-- /_nav.html -->
+
+
+                  
+<!-- _user.html -->
+<div class="header-profile desktop-visible">
+<div class="tablet-hidden">
+	<a href="https://www.facebook.com/The-New-Civil-Rights-Movement-358168880614/" class="social-button" target="_blank"><i class="fa fa-facebook"></i></a>
+	<a href="https://twitter.com/newcivilrights" class="social-button" target="_blank"><i class="fa fa-twitter"></i></a>
+</div>
+
+	
+	<a href="/champion" class="ribbon">
+		+ Become a Champion
+	</a>
+	
+	<div class="log-in">
+		<a href="/login" title="Log in to the site">Log in <i class="fa fa-key"></i></a>
+	</div>
+
+</div>
+
+<!-- /_user.html -->
+
+                
+
+              </div>
+
+            </div>
+            <!-- .width-container -->
+          </div>
+          <!-- .header-container -->
+
+          
+            <div class="width-container">
+              
+              
+<!-- _features.html -->
+
+
+
+
+<div id="page-features" class="page-features">
+  
+  
+    
+      <li style="background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/thenewcivilrightsmovement/pages/18970/features/original/f.jpg?1486488908')">
+        <div class="photo-attribution "><em>Source: </em>C-SPAN</div>
+      </li>
+    
+  
+
+  
+  
+</div>
+
+
+
+
+<!-- /_features.html -->
+
+            </div>
+          
+
+          
+<!-- _columns_1.html -->
+<div class="main-container" id="middle">
+  <div class="main width-container clearfix">
+    <div class="clearfix">
+
+      <div class="columns-1-flash"></div>
+
+      <div class="content-pages-show-blog-post">
+        <div class="onecolumn-container">
+  <div class="desktop-visible">
+    <h6 class="ad-header">Advertisement</h6>
+    
+<!-- _leaderboard_article_2.html -->
+<div class="desktop-visible">
+
+	<div class="ad leaderboard">
+		<div class="width-container" style="text-align:center;margin: 0 auto;">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Desktop Article: Leaderboard #2 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="2908653153"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		</div>
+	</div>
+
+</div>
+<!-- /_leaderboard_article_2.html -->
+
+  </div>
+
+  <div class="row-fluid tablet-case main-post">
+
+    <div class="span8">
+
+      <div class="headline">
+        <h2>BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary</h2>
+      </div>
+
+      <div class="clearfix">
+        
+          
+          
+<!-- _page_byline.html -->
+
+
+<div class="byline clearfix">
+  <a href="/davidbadash"><div class="face"><img src="https://graph.facebook.com/v2.2/814208496/picture?height=73&type=square&width=73"></div></a>
+  <div class="attribution">
+    <div class="blogger-info">
+      by <span class="author"><a href="/davidbadash" class="linked-signup-name">David Badash</a></span><br/>
+      February 07, 2017 12:32 PM
+    </div>
+  </div>
+</div>
+
+<!-- /_page_byline.html -->
+
+        
+
+        <div class="share-section clearfix">
+          <a href="/champion"><img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5728fb61b504f5ef9e000001/attachments/original/1468354370/donate-icon.svg?1468354370" /></a>
+          <a href="http://www.facebook.com/share.php?u=http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary" target="_blank" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook"></i></a>
+          <a href="http://twitter.com/share?url=http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary&related=newcivilrights&text=BREAKING%3A+Republicans+Confirm+Historically+Unqualified+Betsy+DeVos+as+Education+Secretary" target="_blank" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+          <a href="mailto:?subject=BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary - The New Civil Rights Movement&body=BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary" target="_top"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div id="content">
+
+        <div id="intro" class="intro">
+          <div class="content">
+            <h4>Confirmed.</h4>
+
+            <!-- <h2 class="continue">Continue Reading</h2> -->
+            <div class="padtopmore">
+              <div class="fallback-wrap mobile-visible">
+                
+<!-- _big_box_article_mobile_1.html -->
+<h6 class="ad-header">Advertisement</h6>
+<div class="ad big-box">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Mobile Article: Medium Rectangle #1 300 x 250 -->
+	<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="9414028357"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<!-- /_big_box_article_mobile_1.html -->
+
+                
+<!-- _fallback.html -->
+
+	<div class="fallback-champion-cta">
+		<h4>Become a patron of breaking LGBTQ news</h4>
+		<a class="button" href="/champion">
+			Chip in $4
+			<span>go <i class="fa fa-caret-right"></i></span>
+		</a>
+	</div>
+
+<!-- /_fallback.html -->
+
+              </div>
+
+              <p>Lockstep Republicans in the U.S. Senate have just voted to confirm <a href="http://www.thenewcivilrightsmovement.com/davidbadash/watch_live_now_final_senate_vote_on_betsy_devos_will_one_more_republican_take_a_stand_for_america_s_kids">anti-public education</a> activist <a href="http://thenewcivilrightsmovement.com/tags/Betsy_DeVos"><strong>Betsy DeVos</strong></a> as Secretary of Education. In a historic move, Vice President Mike Pence was forced to cast the deciding 51st vote, the first time a sitting vice president has had to do so.</p>
+<p>Just two Republican Senators, Lisa Murkowski of Alaska and Susan Collins of Maine, had the courage to stand up to President Donald Trump by voting against DeVos. </p>
+<blockquote class="twitter-video">
+<p dir="ltr" lang="en">BREAKING: VP Mike Pence casts historic tie-breaking vote to confirm Betsy DeVos as Pres. Trump’s education secretary <a href="https://t.co/HxFJAzYvbx">https://t.co/HxFJAzYvbx</a> <a href="https://t.co/eorEjaUC5N">pic.twitter.com/eorEjaUC5N</a></p>
+— CNN (@CNN) <a href="https://twitter.com/CNN/status/829021096355708930">February 7, 2017</a>
+</blockquote>
+<p>NCRM encourages you to call your Senator to thank them for their "no" vote or to denounce their support for the unqualified soon-to-be-sworn-in DeVos: <span>(202) 224- 3121.</span></p>
+<p><strong>UPDATE: 12:35 PM EST –</strong><br>Mike Pence will swear DeVos in this afternoon.</p>
+<p><span><strong><em>This is a breaking news and developing story. Details may change. This story will be updated, and NCRM will likely publish follow-up stories on this news. Stay tuned and refresh for updates.</em></strong></span></p>
+
+            </div>
+
+            <div class="fallback-wrap mobile-visible">
+              
+<!-- _big_box_article_mobile_2.html -->
+<h6 class="ad-header">Advertisement</h6>
+<div class="ad big-box">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Mobile Article: Medium Rectangle #2 300 x 250 -->
+	<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="3367494750"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<!-- /_big_box_article_mobile_2.html -->
+
+              
+<!-- _fallback.html -->
+
+	<div class="fallback-champion-cta">
+		<h4>Become a patron of breaking LGBTQ news</h4>
+		<a class="button" href="/champion">
+			Chip in $4
+			<span>go <i class="fa fa-caret-right"></i></span>
+		</a>
+	</div>
+
+<!-- /_fallback.html -->
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="share-section below">
+          <a href="/champion"><img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5728fb61b504f5ef9e000001/attachments/original/1468354370/donate-icon.svg?1468354370" /></a>
+          <a href="http://www.facebook.com/share.php?u=http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary" target="_blank" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook"></i></a>
+          <a href="http://twitter.com/share?url=http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary&related=newcivilrights&text=BREAKING%3A+Republicans+Confirm+Historically+Unqualified+Betsy+DeVos+as+Education+Secretary" target="_blank" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+          <a href="mailto:?subject=BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary - The New Civil Rights Movement&body=BREAKING: Republicans Confirm Historically Unqualified Betsy DeVos as Education Secretary http://www.thenewcivilrightsmovement.com/davidbadash/breaking_republicans_confirm_historically_unqualified_betsy_devos_as_education_secretary" target="_top"><i class="fa fa-envelope"></i></a>
+        </div>
+
+        
+        <div class="page-tags">
+          
+<!-- _page_tags.html -->
+
+  <div class="tags"> tags:</div>
+  
+    <span class="page-tag"><a href="/tags/news">News</a></span>,
+  
+    <span class="page-tag"><a href="/tags/politics">Politics</a></span>,
+  
+    <span class="page-tag"><a href="/tags/mike_pence">Mike Pence</a></span>,
+  
+    <span class="page-tag"><a href="/tags/law">Law</a></span>,
+  
+    <span class="page-tag"><a href="/tags/betsy_devos">Betsy DeVos</a></span>,
+  
+    <span class="page-tag"><a href="/tags/education_department">Education Department</a></span>,
+  
+    <span class="page-tag"><a href="/tags/education_dept">Education Dept.</a></span>
+  
+
+<!-- /_page_tags.html -->
+
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="span4 desktop-visible">
+      
+<!-- _big_box_article_1.html -->
+<h6 class="ad-header">Advertisement</h6>
+<div class="ad big-box">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Desktop Article: Medium Rectangle #1 300 x 250 -->
+	<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="4844227958"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<!-- /_big_box_article_1.html -->
+
+      
+<!-- _fallback.html -->
+
+	<div class="fallback-champion-cta">
+		<h4>Become a patron of breaking LGBTQ news</h4>
+		<a class="button" href="/champion">
+			Chip in $4
+			<span>go <i class="fa fa-caret-right"></i></span>
+		</a>
+	</div>
+
+<!-- /_fallback.html -->
+
+      
+<!-- _big_box_article_2.html -->
+<h6 class="ad-header">Advertisement</h6>
+<div class="ad big-box">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Desktop Article: Medium Rectangle #2 300 x 250 -->
+	<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1282611763943983" data-ad-slot="6320961158"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<!-- /_big_box_article_2.html -->
+
+      
+
+<div id="sticky_item">
+  <hr>
+    <h4>David Recommends</h4>
+    <a href="/davidbadash/ncrm_s_official_statement_on_donald_trump">NCRM's Official Statement on Donald Trump</a>
+  <hr>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="join">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="headline">The best of NCRM, delivered straight to your inbox</div>
+      </div>
+      <div class="span6">
+        <form id="join_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="dEnnIsmlbgaWVLlewz0SPO1u/Yii4lusccz6HKDvNjc="/><input name="page_id" type="hidden" value="17"/><input name="return_to" type="hidden" value="http://www.thenewcivilrightsmovement.com/join"/><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br/><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"/></p></div>
+
+  <input id="page_id" name="page_id" type="hidden" value="17" />
+
+  <div class="form-errors"></div>
+  
+  <div class="input-wrap">  
+	  <input class="homepage-form-join" id="signup_email" name="signup[email]" placeholder="Email address" type="email" />
+
+	  <input class="homepage-form-join join-button" type="submit" name="commit" value="Go" />
+  </div>
+
+  <div class="form-submit"></div>
+
+</form>
+
+
+      </div>
+    </div>
+  </div>
+
+
+ 
+<!-- _taboola.html -->
+<h6 class="ad-header">More from around the web</h6>
+
+<div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script>
+
+<!-- /_taboola.html -->
+ 
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+<!-- _equal_heights.html -->
+<script src="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/jquery.matchHeight.js" type="text/javascript"></script>
+
+<script>
+	$(function() {
+	    $('.equal').matchHeight({
+	    	byRow: true,
+		    property: 'height',
+		    target: null,
+		    remove: false
+    	});
+	});
+</script>
+<!-- /_equal_heights.html -->
+
+
+<script src="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/ResizeSensor.js"></script>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    $("#sticky_item").stick_in_parent();
+
+    new ResizeSensor($('.main-post .span8'), function() {
+        $('.main-post .span4').height($('.main-post .span8').height());
+    });
+
+    $(".continue").on("click", function(){
+      $(".extended").slideDown('400', function() {
+        $(".continue").slideUp();
+      });
+    });
+  });
+
+</script>
+      </div>
+
+    </div>
+    <!-- /onecolumn-container -->
+  </div>
+</div>
+<!-- /_columns_1.html -->
+
+
+
+          <footer class="clearfix">
+            <div class="width-container">
+              <div id="fb-root"></div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 126739610711965,
+      channelUrl : "//thenewcivilrightsmovement.nationbuilder.com/channel.html",
+      status     : true,
+      version    : "v2.3",
+      cookie     : true,
+      xfbml      : true
+    });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.async = true;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script src="//d3n8a8pro7vhmx.cloudfront.net/assets/liquid-7725230ee4a02f25d185268272da71ac.js"></script>
+<script src="//d3n8a8pro7vhmx.cloudfront.net/assets/tinymce-jquery-1bfcd8ec3dae00004ebd3a7f4d3fed95.js"></script>
+
+  	<iframe src="//www.thenewcivilrightsmovement.com/session_pair_phase_1" width="1" height="1" style="display: none;"></iframe>
+
+
+  <script type="text/javascript">
+  _qevents.push(
+  	{ qacct:"p-5ftmjaPECGTTU" }
+  	);
+  </script>
+
+  <noscript>
+  <div style="display: none;"><img src="//pixel.quantserve.com/pixel?a.1=p-5ftmjaPECGTTU" height="1" width="1" alt="Quantcast"/></div>
+  </noscript>
+
+
+
+              
+                <div class="row-fluid">
+                  <div class="span6">
+                    <div class="footer-left">
+                      <h4>Be part of the movement.<br>Become an <a href="/champion">NCRM Champion</a> or make a <a href="https://thenewcivilrightsmovement.nationbuilder.com/support">donation</a>.</h4>
+<h4>Interesting in partnering with NCRM?<br><a href="/advertise">Advertise with us</a>.</h4>
+<h4>Need to get in touch?<br><a href="/contact">Contact us</a> or see our <a href="/masthead">masthead</a>.</h4>
+<h4>Read our<br><a href="/copyright">copyright</a>, <a href="/site_terms">terms &amp; conditions</a>, <a href="/disclosure">disclosure</a>, and <a href="/privacy">privacy</a> policies.</h4>
+                    </div>
+                  </div>
+                </div>
+                <hr class="mobile-visible">
+              
+
+
+              <div class="row-fluid">
+                <div class="span6">
+                  <a href="/"><div class="footer-logo"></div></a>
+                  <p>Copyright &copy; 2008-2017<br/>
+                  The New Civil Rights Movement, LLC</p>
+                </div>
+                <div class="span6">
+                  <!-- The NationBuilder link below is required. If it is removed, we may add it back ourselves.
+                       You can style it or move it in different ways, but please leave it in the footer. -->
+                  <div class="footer-logos">
+                    <a href="http://www.cstreet.ca" target="_blank" title="cStreet Campaigns"><img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5728fb61b504f5ef9e000001/attachments/original/1467039158/cstreet-logo.svg?1467039158" /></a><a href="http://www.nationbuilder.com" target="_blank" title="NationBuilder"><img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5728fb61b504f5ef9e000001/attachments/original/1467038312/nationbuilder_logo.svg?1467038312" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- .width-container -->
+
+        </div>
+        <!-- #body -->
+      </div>
+    </div>
+    <!-- #wrap -->
+  </div>
+  <!-- #pattern -->
+
+
+
+<div class="width-container" id="disruption">
+  <div class="join">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="headline">The best of NCRM, delivered straight to your inbox</div>
+      </div>
+      <div class="span6">
+        <form id="join_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="dEnnIsmlbgaWVLlewz0SPO1u/Yii4lusccz6HKDvNjc="/><input name="page_id" type="hidden" value="17"/><input name="return_to" type="hidden" value="http://www.thenewcivilrightsmovement.com/join"/><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br/><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"/></p></div>
+
+  <input id="page_id" name="page_id" type="hidden" value="17" />
+
+  <div class="form-errors"></div>
+  
+  <div class="input-wrap">  
+	  <input class="homepage-form-join" id="signup_email" name="signup[email]" placeholder="Email address" type="email" />
+
+	  <input class="homepage-form-join join-button" type="submit" name="commit" value="Go" />
+  </div>
+
+  <div class="form-submit"></div>
+
+</form>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="close-disruption"><i class="fa fa-times"></i></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+<script>
+  $(document).ready(function() {
+    if(!Cookies.get('ncrm')) {
+      Cookies.set('ncrm', true);
+      $('#disruption').addClass('active');
+      $('#close-disruption').on('click', function(e) {
+        e.preventDefault();
+        $('#disruption').remove();
+      })
+    }
+  });
+</script>
+
+
+
+<!--[if IE]>
+<script src="http://thenewcivilrightsmovement.nationbuilder.com/themes/1/5728fb61b504f5ef9e000001/0/attachments/14723042081484856786/default/jquery.backgroundSize.js"></script>
+<script>
+$(".homepage-logo").css({backgroundSize: "contain"});
+$(".reaction").css({backgroundSize: "contain"});
+$(".facebook-share").css({backgroundSize: "contain"});
+$(".twitter-share").css({backgroundSize: "contain"});
+$(".email-share").css({backgroundSize: "contain"});
+</script>
+<![endif]-->
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-ZXKQxaqabCBkG"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-ZXKQxaqabCBkG.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script>
+$(document).ready(function(){
+  console.log(window.canRunAds)
+  if( window.canRunAds === undefined ){
+    // adblocker detected, show fallback
+      document.getElementById("block-wrap").className = "on";
+  }
+})
+</script>
+
+<script type="text/javascript">
+  $(window).scroll(function() {
+  if ($(this).scrollTop() > 1){
+      $('.wrap').addClass("sticky");
+    }
+    else{
+      $('.wrap').removeClass("sticky");
+    }
+  });
+</script>
+
+<script type="text/javascript">
+window._taboola = window._taboola || [];
+_taboola.push(
+{flush: true}
+);
+</script>
+
+</body>
+</html>
+

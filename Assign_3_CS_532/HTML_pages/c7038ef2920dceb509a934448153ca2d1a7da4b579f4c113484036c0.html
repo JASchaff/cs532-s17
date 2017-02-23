@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en" xml:lang="en">
+<!--<![endif]-->
+  <head>
+    <script type="text/javascript">//<!--
+window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);
+//--></script>
+    <base href="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929/" />
+    <meta charset="utf-8" />
+    <title>How to Contact the 17 Banks Funding the Dakota Access Pipeline by Emily Fuller — YES! Magazine</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1" />
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/++theme++yes.diazotheme/favicon.ico" />
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+    <script id="page_url"></script>
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+      More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/collective.js.jqueryui.custom.min-cachekey-191954f7c06d4d12f02fb63d9564eddd.css" media="all" />
+    <style type="text/css" media="all">@import url(http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/authoring-cachekey-c584ff321589f7384f2e36a9c0c108e5.css);</style>
+    <style type="text/css" media="all">@import url(http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/invisibles-cachekey-ab8539cc4315e87a12cc70cfeb324f0a.css);</style>
+    <style type="text/css">@import url(http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/contentlicensing-cachekey-ae227a3190bed18de2db287ac75058b4.css);</style>
+    <link rel="stylesheet" type="text/css" href="http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/++theme++yes.diazotheme/bootstrap/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700italic,700,600,600italic" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/themeyes.diazothemecsspublic-cachekey-5bffec02d308e385032e4f3b30b64690.css" media="all" />
+    <style type="text/css" media="all">@import url(http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/resourceplone.app.jquerytools.overlays-cachekey-a1926678aa20e92e2693fd01a00a08be.css);</style>
+    <link rel="stylesheet" type="text/css" href="http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/++theme++yes.diazotheme/css/yes.css" media="all" />
+    <style type="text/css">@import url(http://www.yesmagazine.org/portal_css/YES%21%20Magazine%20Diazo%20theme/orderablereference-cachekey-3f7cc92a3922beb4654df79ae134bc80.css);</style>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/resourceplone.app.jquery-cachekey-43875f508e680350c2193b5b3c3596b8.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/jquery-integration-cachekey-b43c6938f1235635af6cd51e29cf8927.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/resourcecarousel-cachekey-3f1ce071415283dd515fced6b34551a2.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/resourceanalytics_config-cachekey-35b9b1b2d1ca2efa32539fbcda9ef352.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/resourcesimplesocial-cachekey-d14cb19b9bb818f40bbb90158a2710e7.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/themeyes.diazothemejslibsmodernizr-2.0.6.min-cachekey-e2d91ca9c39bf31abf179d5e22ccb68c.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/themeyes.diazothemejslibsjquery.twbsPagination.min-cachekey-b1e2688505994890964c7eea48af3867.js"></script>
+    <script type="text/javascript" src="http://www.yesmagazine.org/portal_javascripts/YES%21%20Magazine%20Diazo%20theme/themeyes.diazothemejslibsSocialShare-cachekey-bbe825e0ddea5433529544c9a090b2b0.js"></script>
+    <meta name="DC.creator" content="Emily Fuller" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.language" content="en" />
+    <meta name="DC.date.modified" content="2016-12-02T10:53:16-08:00" />
+    <meta name="DC.date.created" content="2016-09-29T10:17:34-07:00" />
+    <meta name="DC.type" content="Article" />
+    <meta name="DC.distribution" content="Global" />
+    <meta name="description" content="Here are CEO names, emails, and phone numbers—because banks have choices when it comes to what projects they give loans to." />
+    <meta name="keywords" content="native leadership" />
+    <meta name="robots" content="ALL" />
+    <meta name="distribution" content="Global" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yesmagazine" />
+    <meta property="og:url" content="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929" />
+    <meta property="og:site_name" content="YES! Magazine" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Here are CEO names, emails, and phone numbers—because banks have choices when it comes to what projects they give loans to." />
+    <meta property="og:title" content="How to Contact the 17 Banks Funding the Dakota Access Pipeline" />
+    <meta property="fb:app_id" content="168677949836292" />
+    <meta property="og:image" content="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929/standing-rock-banks.jpg/@@images/image/feature" />
+    <script type="text/javascript">
+
+	var disqus_url = "http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929/";
+
+</script>
+    <script type="text/javascript"><!--
+              (function(i,s,o,g,r,a,m){
+              i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-345401-6', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+        --></script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    jq(function() {
+        jq('a[href^="mailto"]').click(function () {
+            var email = jq(this).attr('href').replace('mailto:', '');
+        // universal analytics - E-mail
+            ga('send', 'event', 'External', 'E-mail', email);
+        });
+    });
+    /*]]>*/
+</script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    // universal analytics - external
+    jq.expr[':'].external  = function(obj) {
+      return !obj.href.match(/^mailto:/) && !obj.href.match(/^javascript:/) && (obj.hostname != document.location.hostname);
+    };
+    jq(function() {
+        jq('a:external').click(function(){
+          ga('send', 'event', 'External', 'Link', jq(this).attr('href'));
+        });
+    });
+    /*]]>*/
+</script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+// universal analytics - download
+    jq(function() {
+        var extensions = ["avi", "css", "doc", "docx", "dmg", "eps", "exe", "jpg", "js", "mov", "mp3", "msi", "pdf", "png", "ppt", "pptx", "rar", "svg", "txt", "vsd", "vxd", "wma", "wmv", "xls", "xlsx", "zip"];
+        var extensionsPattern = new RegExp('\\.((' + extensions.join(')|(') + '))$$', 'g');
+        jq('a').filter(function () {
+            return this.href.match(extensionsPattern) || this.href.match(/\/at_download\//g);
+        }).click(function () {
+            ga('send', 'event', 'File', 'Download', jq(this).attr('href'));
+        });
+    });
+    /*]]>*/
+</script>
+    <script type="text/javascript">
+    jq(function() {
+        var sharePath = window.location.pathname.replace(/\/$/,'');
+        sharePath += '?icl=ShareBar_Art_UR&amp;ica=';
+        jq('#like-email').live('click', function() {
+            ga('send', 'pageview', sharePath + 'Share');
+        });
+        SimpleSocial.queue.push(function () {
+            FB.Event.subscribe('edge.create', function(response) {
+                ga('send', 'pageview', sharePath + 'FB_Like');
+            });
+            FB.Event.subscribe('edge.remove', function(response) {
+                ga('send', 'pageview', sharePath + 'FB_Unlike');
+            });
+        });
+    });
+</script>
+    <link rel="canonical" href="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.yesmagazine.org/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://www.yesmagazine.org/touch_icon.png" />
+    <script type="text/javascript">
+        jQuery(function($){
+            if (typeof($.datepicker) != "undefined"){
+              $.datepicker.setDefaults(
+                jQuery.extend($.datepicker.regional[''],
+                {dateFormat: 'mm/dd/yy'}));
+            }
+        });
+        </script>
+    <link rel="alternate" href="" title="RSS 1.0" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/most-recent-articles" title="Most Recent" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/peace-justice" title="Peace &amp; Justice" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/planet" title="Planet" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/new-economy" title="New Economy" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/people-power" title="People Power" type="application/rss+xml" />
+    <link rel="alternate" href="http://feeds.feedburner.com/yes/happiness" title="Happiness" type="application/rss+xml" />
+    <link rel="search" href="http://www.yesmagazine.org/@@search" title="Search this site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta name="generator" content="Plone - http://plone.org" />
+    <meta name="google-site-verification" content="D-swTPHf3ceP43dYgvW7wJATjR6OZ_Z--Y-wm7kQ2TY" />
+    <meta name="msvalidate.01" content="DA355B70C969236324D132B644A05C20" />
+    <meta name="y_key" content="f980e223a84dbfbc" />
+<!-- js from Plone gets inserted here -->
+  </head>
+  <body data-responsejs="{ &#10;        &quot;create&quot;: [{ &#10;          &quot;prop&quot;: &quot;width&quot;,&#10;          &quot;prefix&quot;: &quot;min-width- r src&quot;,&#10;          &quot;breakpoints&quot;: [0, 420, 667, 768, 992]&#10;        }]&#10;      }" class="yes template-article_view portaltype-article site-yes section-people-power subsection-how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929 userrole-anonymous">
+<!-- Google Tag Manager -->
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4RBTV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+	    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T4RBTV');
+	  </script>
+<!-- End Google Tag Manager -->
+    <div id="edit-bar-wrapper">
+            <div id="portal-personaltools-wrapper">
+
+<p class="hiddenStructure">Personal tools</p>
+
+
+
+
+
+</div>
+            
+            <div class="visualClear"></div>
+          </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1750901785130514";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+<!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '873203622778957'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+      </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=873203622778957&amp;ev=PageView&amp;noscript=1" />
+    </noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+    <div class="container">
+        <div id="topbanner" class="hidden-xs center-block"></div>
+      </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation"><div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+              <a class="navbar-brand" href="http://www.yesmagazine.org"><div data-min-width-0="&lt;img src=&quot;++theme++yes.diazotheme/img/yes/yes_logo_sm.png&quot; width=&quot;150&quot;&#10;              height=&quot;46&quot; alt=&quot;YES! Magazine logo&quot;/&gt;" data-min-width-667="&lt;img src=&quot;++theme++yes.diazotheme/img/yes/yes_logo_lg.png&quot; width=&quot;356&quot; height=&quot;160&quot; /&gt;"><img width="356" src="/++theme++yes.diazotheme/" height="160" alt="YES! Magazine" /></div></a>              
+
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav-collapse" title="toggle menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              
+              <button class="navbar-toggle navbar-search" type="button" data-toggle="collapse" data-target="#topsearchboxxs"><span class="sr-only">toggle search</span>
+                    <span class="fa fa-search fa-lg"> </span></button>
+              
+              <form id="topsearchboxxs" class="row collapse height mobile form-horizontal" role="search" action="@@search">
+                  <div class="form-group-sm" id="searchinputmobxs">
+                    <label class="sr-only" for="SearchableText">Search</label><!-- screen reader only -->
+                    <div class="col-xs-10"><input id="searchGadgetxs" class="form-control" name="SearchableText" placeholder="Search" autocomplete="off" size="30" /></div>
+                    <div class="col-xs-2 no-gutter-pad"><button class="navbar-toggle" style="float:none;margin:0;padding:4px" type="submit">Go</button></div>
+                  </div>
+              </form>
+
+            </div><!-- /navbar-header -->
+
+            <div class="collapse navbar-collapse row" id="topnav-collapse">
+
+              <!-- multiple nav sections within this div -->
+              <div id="navbar-top">
+                <div id="navbar-top-border-inset"></div>
+
+                <a href="http://www.yesmagazine.org/issues/science"><div data-min-width-667="&lt;img src='http://www.yesmagazine.org/issues/science/image' alt='Why Science Can’t Be Silent' title='' height='146' width='115' class='img-responsive' /&gt;" id="issuenavimg"></div></a>  
+
+
+                <ul id="issuenav" class="hidden-xs nav navbar-nav navbar-right navbar-stacked"><li class="list"><small><a href="http://www.yesmagazine.org/issues/science">Current Issue</a></small></li><li class="list"><small><a href="https://store.yesmagazine.org/gifts/?ica=Gift_txt_GiveGifts_2for1&amp;icl=TopRight_80">Give a Gift</a></small></li><li class="list"><small><a href="http://store.yesmagazine.org/account/login">My Subscription</a></small></li></ul><ul id="topbuttonsnav" class="nav navbar-nav nav-tabs navbar-left"><li class="toptab"><a href="http://store.yesmagazine.org/subscribe/?ica=Subs_txt_SubscribeGetFreeIssue_15&amp;icl=TopRight_19">Subscribe</a></li><li class="toptab"><a href="http://store.yesmagazine.org/donate/?ica=Don_txt_DonateNow_multi&amp;icl=Footer_1667">Donate</a></li></ul></div>
+
+              <div id="navbar-bottom">
+
+                <div id="buttonsnavmobilewrapper" class="visible-xs">
+                  <ul id="topbuttonsnav" class="nav navbar-nav navbar-left col-xs-6"><li class="toptab"><a href="http://store.yesmagazine.org/subscribe/?ica=Subs_txt_SubscribeGetFreeIssue_15&amp;icl=TopRight_19">Subscribe</a></li><li class="toptab"><a href="http://store.yesmagazine.org/donate/?ica=Don_txt_DonateNow_multi&amp;icl=Footer_1667">Donate</a></li></ul><ul id="topbuttonsnavmobile" class="visible-xs-block nav navbar-nav navbar-left col-xs-6"><li><a href="http://store.yesmagazine.org/newsletter/signup.php">Get YES! Emails</a></li>
+                    <li><a href="https://store.yesmagazine.org">Store</a></li>
+                  </ul></div>
+
+                <ul id="navmobilequick" class="visible-xs-block nav navbar-nav navbar-left col-xs-6"><li><a href="/">Home</a></li>
+                  <li><a href="/most-popular">Most Popular</a></li>
+                  <li><a id="mobilecurrentissue" href="http://www.yesmagazine.org/issues/science">Current Issue</a></li>
+                  <li><a href="/for-teachers">For Teachers</a></li>
+                  <li><a href="/about">About</a></li>
+                </ul><ul id="nav" class="nav navbar-nav navbar-left col-xs-6 col-sm-11"><li>
+    	        <a href="http://www.yesmagazine.org/peace-justice" class="peace-justice">Peace &amp; Justice</a>
+    		</li>
+    	
+    	    <li>
+    	        <a href="http://www.yesmagazine.org/planet" class="planet">Planet</a>
+    		</li>
+    	
+    	    <li>
+    	        <a href="http://www.yesmagazine.org/new-economy" class="new-economy">New Economy</a>
+    		</li>
+    	
+    	    <li>
+    	        <a href="http://www.yesmagazine.org/people-power" class="people-power">People Power</a>
+    		</li>
+    	
+    	    <li>
+    	        <a href="http://www.yesmagazine.org/happiness" class="happiness">Happiness</a>
+    		</li>
+    	
+            
+	</ul><button id="search-toggle" type="button" class="hidden-xs icon" data-toggle="collapse" data-target="#topsearchbox"><img src="/++theme++yes.diazotheme/++theme++yes.diazotheme/img/yes/search_icon.png" alt="search" /></button>
+
+
+                <ul id="tertiarynav" class="hidden-xs nav navbar-nav navbar-right"><li><a href="/native-leadership">Native Leadership</a></li>
+                  <li><a href="http://issues.yesmagazine.org/">Digital Edition</a></li>
+                  <li><a href="/issues">Magazine Issues</a></li>
+                  <li><a href="/for-teachers">For Teachers</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="http://store.yesmagazine.org">Store</a></li>  
+                </ul></div><!-- /navbar-bottom -->
+
+
+
+            </div><!-- /topnav-collapse -->
+
+
+          </div>
+
+         </nav>
+<!--/navbar-default -->
+    <div id="container" class="container"><!-- span all 12 cols -->
+
+          <div id="phonebanner" class="visible-xs center-block"></div>
+
+
+                <div id="content-columns">  
+
+
+                  <div id="topsearchbox" class="hidden-xs collapse height">
+                    <button type="button" style="position:relative; top:-15px; right:25px" class="close" data-toggle="collapse" data-target="#topsearchbox"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <form class="form-inline center-block" role="search" action="http://www.yesmagazine.org/@@search">
+                      <div class="form-group">
+                        <label class="sr-only" for="searchGadget">Search</label><!-- screen reader only -->
+                        <input id="searchGadget" class="form-control" name="SearchableText" placeholder="Search" autocomplete="off" />
+                         <button class="btn btn-default" type="submit"><span class="fa fa-search fa-lg"></span></button>
+                      </div>
+                      <div class="LSResult" id="LSResult"><div class="LSShadow" id="LSShadow"></div></div>
+                    </form>
+
+                  </div>             
+                  
+                     <div id="center-column" class="col-md-8">
+
+                        <div id="main" role="main" class="icons-on"><dl class="portalMessage info" id="kssPortalMessage" style="display:none"><dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+                           
+
+                                                       
+
+                          
+
+
+                          <!-- /#homepage-content -->
+
+                          <!-- /.leftcolborderedsection.row -->  
+
+                          <!-- /.row.leftcolborderedsection -->  
+
+
+
+                            <!-- /.leftcolborderedsection.row -->
+
+
+                          <!-- /.row.leftcolborderedsection -->                            
+
+
+                          <article><div id="content" class="content">
+
+                              <header><div class="row">
+                                  <div id="content-header" class="article-header col-sm-offset-1 col-sm-10">
+                                    <h1 id="content-title" class="article-title"> 
+            
+        <span class="" id="parent-fieldname-title-8d77fb0d4392445a9313df9b23dd0089">
+            How to Contact the 17 Banks Funding the Dakota Access Pipeline
+        </span>
+    
+        </h1>
+
+                                    <div id="content-description" class="article-description">
+            
+        <span class="" id="parent-fieldname-subheadline-8d77fb0d4392445a9313df9b23dd0089">
+            Here are CEO names, emails, and phone numbers—because banks have choices when it comes to what projects they give loans to.
+        </span>
+    
+        </div>
+                                  </div>
+
+                                </div>
+
+                                <div id="article-lead-image-row" class="row">
+                                  <figure class="article-lead-image"><img class=" img-responsive no-min" src="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929/standing-rock-banks.jpg/image" alt="Standing Rock Banks" height="390" width="650" /><figcaption class="caption col-sm-6"><div class="col-sm-offset-1 col-sm-11"> <p>Photo by <a class="ng-binding" href="http://www.istockphoto.com/portfolio/KristinaJovanovic" id="contributor-name" target="_self">KristinaJovanovic</a> / iStock.</p></div>
+                                    </figcaption></figure></div>
+
+                                <div class="row">  
+                                  <aside class="col-sm-offset-1 col-sm-10"><div id="content-sharebar" class="share-bar row">
+                                      <div class="like-block col-xs-3 col-sm-2 no-gutter-pad">
+                                        <a id="like-fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929">
+                                        <div data-min-width-0="&#10;                                          &lt;img class=&quot;like-button share&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_fb_on.png&quot;&#10;                                            width=&quot;35&quot; alt=&quot;Share on Facebook&quot; /&gt;" data-min-width-667="&#10;                                          &lt;img class=&quot;like-button share s_facebook&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_fb_on.png&quot;&#10;                                            alt=&quot;Share on Facebook&quot; width=&quot;40&quot; /&gt;"></div></a>
+                                        <div class="like-counter counter c_facebook"></div>
+                                      </div>
+                                      <div class="like-block col-xs-3 col-sm-2 no-gutter-pad">
+                                        <a id="like-twitter" target="_blank" href="http://twitter.com/intent/tweet?via=yesmagazine&amp;text=How to Contact the 17 Banks Funding the Dakota Access Pipeline&amp;url=http%3A//www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929">
+                                        <div data-min-width-0="&#10;                                          &lt;img class=&quot;like-button share&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_tw_on.png&quot;&#10;                                            width=&quot;35&quot; alt=&quot;Tweet this&quot; /&gt;" data-min-width-667="&#10;                                          &lt;img class=&quot;like-button share s_twitter&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_tw_on.png&quot;&#10;                                            alt=&quot;Tweet this&quot;  width=&quot;40&quot; /&gt;"></div></a>
+                                        <div class="like-counter counter c_twitter"></div>
+                                      </div>
+                                      <div class="like-block col-xs-3 col-sm-2 no-gutter-pad">
+                                        <a id="like-gplus" target="_blank" href="http://plus.google.com/share?url=http%3A//www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929">
+                                          <div data-min-width-0="&#10;                                          &lt;img class=&quot;like-button share&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_g+_on.png&quot;&#10;                                            width=&quot;35&quot; alt=&quot;Share on Google+&quot; /&gt;" data-min-width-667="&#10;                                          &lt;img class=&quot;like-button share s_plus&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_g+_on.png&quot;&#10;                                            alt=&quot;Share on Google+&quot; width=&quot;40&quot; /&gt;"></div></a>
+                                        <div class="like-counter counter c_plus"></div>
+                                      </div>
+                                      <div class="like-block col-xs-3 col-sm-2 no-gutter-pad">
+                                        <a id="like-email" rel="overlay" href="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929/sendto_form?ica=Email_this"><div data-min-width-0="&#10;                                          &lt;img class=&quot;like-button share&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_email_on.png&quot;&#10;                                            width=&quot;35&quot; alt=&quot;Share in email&quot; /&gt;" data-min-width-667="&#10;                                          &lt;img class=&quot;like-button share&quot;&#10;                                            src=&quot;++theme++yes.diazotheme/img/yes/share_email_on.png&quot;&#10;                                            alt=&quot;Share in email&quot; width=&quot;40&quot;/&gt;"></div></a>
+                                      </div>
+                                    </div>
+                                  </aside></div>
+
+                                <div class="row byline">
+                                  <div class="col-sm-offset-1 col-sm-10">
+                                    <span class="author" rel="author"><a class="articleAuthor" href="http://www.yesmagazine.org/@@also-by?author=Emily+Fuller">Emily Fuller</a></span> 
+                                    <time pubdate="" class="published updated" datetime="2014-02-16" title="February 16, 2014">posted Sep 29, 2016</time></div>
+                                </div>
+
+                              </header><div class="row">  
+                                <div id="story-content" class="col-sm-offset-1 col-sm-10">
+          
+        <div class="" id="parent-fieldname-text-8d77fb0d4392445a9313df9b23dd0089">
+            <p><em><span class="discreet">Updated Nov. 30, 2016</span></em><br /><br />The Dakota Access pipeline is funded directly by 17 banks, many of which—Citibank, Wells Fargo—are ones you’ve probably heard of or do business with.</p>
+<blockquote class="pullquote">Banks are more susceptible to public pressure than the oil and gas giants.</blockquote>
+<p>Researchers with the nonprofit Food &amp; Water Watch found that 38 banking institutions are involved in funding the proposed Bakken pipeline, which would stretch from Canada to the Gulf of Mexico. A section of this project is the Dakota Access pipeline, where the Standing Rock Sioux and thousands of allies have physically put themselves in the path of the pipeline to protect their reservation and a stretch of the Missouri River.</p>
+<p>Bill McKibben, founder of 350.org, recently wrote <a title="" href="http://www.yesmagazine.org/people-power/standing-rock-is-a-two-front-war-big-oil-and-big-banks-but-maybe-thats-good-news-20160922" class="external-link" target="_self">an article for YES!</a> suggesting that banks are more susceptible to public pressure than the oil and gas giants, which depend on bank loans and lines of credit to build their pipelines. “It’s probably sustained public pressure that will do the most good,” he wrote.</p>
+<p>Wondering what to say to a bank executive?</p>
+<p>Food &amp; Water Watch researcher Hugh MacMillan: “Ask these banks to clarify whether funds they are providing are being used, in any amount, to pay for the heavily militarized response to the Standing Rock Sioux, including the attack dogs, sound-cannon trucks, heavily armed officers.”</p>
+<div id="AppleMailSignature">
+<p>“People should also ask these institutions why they are sinking so much money into maximizing the amounts of oil and gas that can be brought to the surface and burned at a time when climate science is clear we have to maximize what we keep in the ground instead,” said MacMillan.</p>
+<p class="callout">Like what you're reading? We're nonprofit and ad-free—we depend on readers like you. <a class="external-link" href="https://store.yesmagazine.org/subscribe/?ica=SupportYES&amp;icl=Inline" target="_self" title="">Subscribe</a> or <a class="external-link" href="https://store.yesmagazine.org/donate/?ica=SupportYES&amp;icl=Inline" target="_self" title="">donate</a> today to keep YES! going strong.</p>
+<p>The organization’s deputy communications director, Seth Gladstone, suggests saying: “As a customer of your financial institution, I reject the notion of my <span>money helping to support your investment in the Dakota Access pipeline, an inherently dangerous and unjust oil pipeline that threatens air and water quality in many states, and violates sacred lands of the Standing Rock Sioux tribe. I urge you to give up your financial stake in the Dakota </span>Access pipeline immediately.”</p>
+<div>
+<p>Here are names of CEOs and other bank executives involved in these decisions—along with their phone numbers and email addresses. The first 17 banks (*) are directly funding the Dakota Access pipeline. The rest of these banks are offering credit lines to its parent companies: Sunoco Logistics, Energy Transfer Partners, and Energy Transfer Equity.</p>
+<p><em>The following bank information has been updated periodically, most recently Nov. 30, 2016. Some banks have disconnected phones and disabled email addresses since the start of the campaign. Contact us with adjustments.</em></p>
+</div>
+<p> </p>
+<h4><strong>Wells Fargo*</strong></h4>
+<p>CEO Timothy J. Sloan<br />timothy.j.sloan@wellsfargo.com<br />BoardCommunications@wellsfargo.com<br />866-249-3302</p>
+<p>Corporate Office:<br />Wells Fargo<br />420 Montgomery Street<br />San Francisco, CA 94104</p>
+<p> </p>
+<h4><strong>BNP Paribas*</strong></h4>
+<p>CEO Jean-Laurent Bonnafe<br />jean-laurent.bonnafe@bnpparibas.com</p>
+<p>Corporate Office:<br />3 rue d’Antin<br />75002 Paris, France<br />00-33-157-082-200</p>
+<p>U.S. Office:<br />787 Seventh Avenue - The Equitable Tower<br />New York, NY 10019<br />212-841-3000</p>
+<p> </p>
+<h4><strong>SunTrust*</strong></h4>
+<p>CEO William H. Rodgers Jr.</p>
+<p>Corporate Office:<br />303 Peachtree Street NE<br />Atlanta, GA 30308<br />800-786-8787</p>
+<p>Chief Communications Officer:<br />Sue Mallino<br />404-813-0463<br /><a href="mailto:sue.mallino@suntrust.com">sue.mallino@suntrust.com</a></p>
+<p> </p>
+<h4><strong>The Bank of Tokyo-Mitsubishi UFJ*</strong></h4>
+<p>Chairman Nobuyuki Hirano</p>
+<p>CEO and President Takashi Oyamada</p>
+<p>Corporate Office:<br />2-7-1, Marunouchi, Chiyoda-ku<br />Tokyo, Japan<br />81-3-3240-8111</p>
+<p>U.S. Office:<br />1251 Avenue of the Americas<br />New York, NY 10020-1104<br />212-782-4000</p>
+<p> </p>
+<h4><strong>Mizuho Bank*</strong></h4>
+<p>President and CEO Nobuhide Hayashi</p>
+<p>Corporate Office:<br />Otemachi Tower<br />1-5-5, Otemachi, Chiyoda-ku<br />Tokyo 100-8176, Japan<br />81-3-3214-1111</p>
+<p>U.S. Office:<br />1251 Avenue of the Americas<br />New York, NY 10020<br />212-282-3000</p>
+<p> </p>
+<h4><strong>Citibank (CitiGroup)*</strong></h4>
+<p>CEO Michael Corbat<br />Michael.L.Corbat@citi.com<br />212-793-1201</p>
+<p>Corporate Office:<br />388 Greenwich Street<br />New York, NY 10013<br />Phone: 800-285-3000 and 212-793-0710</p>
+<p> </p>
+<h4><strong>TD Securities*</strong></h4>
+<p>Chairman, CEO, and President Bob Dorrance</p>
+<p>Corporate Office:<br />P.O. Box 1, TD Bank Tower<br />66 Wellington Street W<br />Toronto, Ontario<br />M5K 1A2</p>
+<p>Investment Banking: 416-307-8500<br />Equity Research: 416-307-9360<br />Trading Floor Enquiries: 416-944-6978</p>
+<p>U.S. Office:<br />31 West 52nd Street<br />New York, NY 10019-6101<br />212-827-7000</p>
+<p> </p>
+<h4><strong>Credit Agricole*</strong></h4>
+<p>CEO Jean-Paul Chifflet</p>
+<p>Office:<br />12, Place des Etats-Unis<br />Montrouge, France 92545<br />33-1-43-23-52-02</p>
+<p>U.S. Office:<br />1301 Avenue of the Americas,<br />New York, NY 10019<br />infoamericas@ca-cib.com</p>
+<p> </p>
+<h4><strong>Intesa SanPaolo*</strong></h4>
+<p>CEO Carlo Messina</p>
+<p>Corporate Office:<br />Piazza San Carlo, 156<br />10121 Torino, Italy<br />39-011-555-1</p>
+<p>Corporate Social Responsibility Unit:<br />39-02-8796-3435<br />CSR@intesasanpaolo.com<br />sostenibilita.ambientale@intesasanpaolo.com</p>
+<p> </p>
+<h4><strong>ING Bank*</strong></h4>
+<p>CEO and Executive Board Chairman Ralph A.J.G Hamers</p>
+<p>Wholesale Banking, Operations &amp; IT, Sustainability, Corporate Governance:<br />Carolien van der Giessen<br />carolien.van.der.giessen@ing.com<br />31-20-576-63-86</p>
+<p>Head of Media Relations:<br />Raymond Vermuelen<br />raymond.vermeulen@ing.com<br />31-20-576-63-69</p>
+<p>Corporate Office:<br />Amsterdamse Poort<br />Bijlmerplein 888<br />1102 MG Amsterdam<br />The Netherlands<br />31-20-5639111</p>
+<p>Mailing Address:<br />ING Bank N.V.<br />P.O. Box 1800<br />1000 BV Amsterdam<br />The Netherlands</p>
+<p>U.S. Office:<br />ING Financial Holdings LLC<br />1325 Avenue of the Americas<br />New York, NY 10019<br />646-424-6000</p>
+<p> </p>
+<h4><strong>Natixis*</strong></h4>
+<p>CEO Pierre Servant</p>
+<p>Corporate Office:<br />Natixis Global Asset Management, S.A.<br />21 quai d’Austerlitz<br />75634 Paris Cedex 13, France<br />33-1-78-40-90-00</p>
+<p>U.S. Office:<br />Natixis Global Asset Management, L.P.<br />399 Boylston Street<br />Boston, MA<br />617-449-2100 </p>
+<p><strong> <br /></strong></p>
+<h4><strong>BayernLB*</strong></h4>
+<p>CEO Johannes-Jorg Riegler</p>
+<p>Head of Communications:<br />Matthias Priwitzer<br />Matthias.Priwitzer@bayernlb.de<br />49-89-2171-21255</p>
+<p>Corporate Office:<br />Brienner Straße 18<br />80333 Munich<br />49-89-2171-27176</p>
+<p>U.S. Office:<br />560 Lexington Avenue<br />New York City, NY 10022<br />212-310-9800</p>
+<p> </p>
+<h4><strong>BBVA Securities*</strong></h4>
+<p>CEO Carlos Torres Villa</p>
+<p>Executive Chairman Francisco Gonzalez Rodriguez</p>
+<p>Corporate Office:<br />Calle Azul, 4<br />28050 Madrid, Spain</p>
+<p>34-902-22-44-66</p>
+<p> </p>
+<h4><strong>DNB Capital*</strong></h4>
+<p>U.S. office:<br />200 Park Avenue, 31st Floor New York, N.Y. 10166-0396 <br />212-681-3800</p>
+<p> </p>
+<h4><strong>ICBC London*</strong></h4>
+<p>CEO and Managing Director Jin Chen</p>
+<p>Corporate Office:<br />20 Gresham Street<br />London EC2V 7JE, United Kingdom<br />44-203-145-5000</p>
+<p>U.S. Office:<br />520 Madison Avenue 28th Floor<br />New York, NY 10022<br />212-407-5000</p>
+<p> </p>
+<h4><strong>SMBC Nikko Securities*</strong></h4>
+<p>President and CEO Yoshihiko Shimizu</p>
+<p>Corporate Office:<br />3-1, Marunouchi 3-chome, Chiyoda-ku<br />Tokyo 100-8325, Japan<br />81-3-5644-3111</p>
+<p> </p>
+<h4><strong>Societe General*</strong></h4>
+<p>CEO Frederic Oudea<br />https://www.linkedin.com/in/fredericoudea</p>
+<p class="p1"><span class="s1">Email: <a href="mailto:frederic.oudea@socgen.com"><span class="s2">frederic.oudea@socgen.com</span></a></span></p>
+<p class="p2"><span class="s3">Phone: 33-1-41-45-9825 (Paris number)</span></p>
+<p>Chiarman of the Board Lorenzo Bini Smaghi<br /><br /></p>
+<p class="p1"><span class="s1">Email: <a href="mailto:lorenzo.binismaghi@socgen.com"><span class="s2">lorenzo.binismaghi@socgen.com</span></a></span></p>
+<p class="p2"><span class="s3">Phone: 33-14-21-30941 (Paris number)</span></p>
+<p>Corporate Office:<br />29 boulevard Haussmann 75009<br />Paris, France<br />2.0@societegenerale<br />33-1-42-14-20-00</p>
+<p>U.S. Office:<br />245 Park Avenue<br />New York City, NY 10167<br />212-278-6000</p>
+<p><br /> The following banks are involved in funding for the entire Bakken pipeline:</p>
+<p> </p>
+<h4><strong>Royal Bank of Scotland</strong> <strong></strong></h4>
+<p>CEO Ross McEwan<br />ross.mcewan@rbs.co.uk</p>
+<p>Director of Media Relations:<br />Chris Turner<br />44-20-7672-4515</p>
+<p>Corporate Office:<br />Gogarburn<br />175 Glasgow Road<br />Edinburgh, United Kingdom<br />44-131-626-3263</p>
+<p>U.S. Office:<br />600 Washington Boulevard<br />Stamford, CT 06901<br />203-897-2700</p>
+<p> </p>
+<h4><strong>ABN Amro Capital</strong></h4>
+<p>Chairman of the Board Gerrit Zalm</p>
+<p>Corporate Office:<br />ABN AMRO Bank N.V.<br />Gustav Mahlerlaan 10<br />1082 PP Amsterdam<br />The Netherlands<br />31-10-241-17-23</p>
+<p>U.S. Office:<br />100 Park Avenue, 17th floor<br />New York, NY 10017<br />917-284-6800</p>
+<p> </p>
+<h4><strong>Bank of Nova Scotia (Scotiabank)</strong></h4>
+<p>CEO and President Brian J. Porter</p>
+<p>Corporate Office:<br />Scotia Plaza<br />44 King Street W<br />Toronto, Ontario<br />Canada M5H 1H1<br />416-866-6161<br />email@scotiabank.com</p>
+<p>U.S. Office:<br />250 Vesey Street,<br />23rd and 24th floors<br />New York, NY 10281<br />212-225-5000</p>
+<p>Scotia Howard Weil (“Energy Investment Boutique”):<br />Energy Centre<br />1100 Poydras Street Suite 3500<br />New Orleans, LA 70163<br />504-582-2500 and 800-322-3005<br />howardweil@howardweil.com</p>
+<p> </p>
+<h4><strong>Citizens Bank</strong></h4>
+<p>Chairman and CEO Bruce Van Saun</p>
+<p>Head of Media Relations:<br />Peter Lucht<br />Peter.Lucht@citizensbank.com<br />781-655-2289</p>
+<p>Consumer Lending, Business Banking, Wealth Management, Corporate:<br />Lauren DiGeronimo<br />Lauren.Digeronimo@citizensbank.com<br />781-471-1454</p>
+<p>Corporate Office:<br />1 Citizens Plaza<br />Providence, RI 02903<br />401-456-7000</p>
+<p> </p>
+<h4><strong>Comerica Bank</strong></h4>
+<p>Chairman and CEO Ralph W. Babb Jr.</p>
+<p>Investor Relations:<br />214-462-6831</p>
+<p>Corporate Contacts:<br />Wendy Bridges<br />wwbridges@comerica.com<br />214-462-4443</p>
+<p>Wayne Mielke<br />wjmielke@comerica.com<br />214-462-4463</p>
+<p>Corporate Office:<br />Comerica Bank Tower<br />1717 Main Street<br />Dallas, TX 75201<br />800-521-1190</p>
+<p> </p>
+<h4><strong>U.S. Bank</strong></h4>
+<p>Chairman and CEO Richard K. Davis<br />richard.davis@usbank.com</p>
+<p>Senior Vice President of Corporate Communications Dana Ripley<br />dana.ripley@usbank.com<br />612-303-3167</p>
+<p>Brand, Corporate Social Responsibility, Sponsorships:<br />Susan Beatty<br />susan.beatty@usbank.com<br />612-303-9229</p>
+<p>Corporate Office:<br />U.S. Bancorp Center<br />800 Nicollet Mall<br />Minneapolis, MN 55402<br />800-685-5065 and 651-466-3000</p>
+<p> </p>
+<h4><strong>PNC Bank</strong></h4>
+<p>Chairman, President, and CEO William S. Demchak</p>
+<p>Media Relations:<br />Fred Solomon<br />corporate.communications@pnc.com<br />412-762-4550</p>
+<p>Investor Relations:<br />Bryan K. Gill<br />investor.relations@pnc.com<br />412-768-4143</p>
+<p>Corporate Office:<br />300 Fifth Avenue<br />The Tower at PNC Plaza<br />Pittsburgh, PA 15222<br />412-762-2000</p>
+<p> </p>
+<h4><strong>Barclays</strong></h4>
+<p>Chairman John McFarlane<br />john.mcfarlane@barclays.com<br />CEO Jes Staley</p>
+<p>Corporate Office:<br />Barclays Bank PLC<br />1 Churchill Place<br />London E14 5HP, United Kingdom<br />44-20-7116-1000</p>
+<p>U.S. Office:<br />Barclays<br />745 7th Avenue<br />New York, NY 10019<br />212-526-7000</p>
+<p>Press Office:<br />212-526-7000<br />CorporateCommunicationsAmericas@barclays.com</p>
+<p> </p>
+<h4><strong>JPMorgan Chase</strong></h4>
+<p>Chairman and CEO Jamie Dimon<br />jamie.dimon@jpmchase.com<br />212-270-1111</p>
+<p>Corporate Contacts:<br />Andrew Gray<br />andrew.s.gray@jpmchase.com</p>
+<p>Jennifer Lavoie<br />jennifer.h.lavoie@jpmchase.com</p>
+<p>Brian Marchiony<br />brian.j.marchiony@jpmorgan.com</p>
+<p>Corporate Office:<br />270 Park Avenue<br />New York, NY 10017-2014</p>
+<p> </p>
+<h4><strong>Bank of America</strong></h4>
+<p>President, CEO, and Chairman Brian Moynihan</p>
+<p>brian.t.moynihan@bankofamerica.com</p>
+<p>Executive Relations, Office of the CEO:<br />Matthew Task<br />813-805-4873</p>
+<p>Corporate Office:<br />100 N Tryon Street<br />Charlotte, NC 28255</p>
+<p> </p>
+<h4><strong>Deutsche Bank</strong></h4>
+<p>CEO John Cryan</p>
+<p>Corporate Contact:<br />Renee Calabro<br />renee.calabro@db.com<br />212-250-5525</p>
+<p>Corporate Address:<br />Deutsche Bank AG<br />Taunusanlage 12<br />60325 Frankfurt Am Main (for letters and postcards: 60262)<br />Germany<br />49-69-910-00</p>
+<p>U.S. Office:<br />Deutsche Bank AG<br />60 Wall Street<br />New York, NY 10005<br />212-250-7171</p>
+<p> </p>
+<h4><strong>Compass Bank</strong></h4>
+<p>Chairman and CEO Manolo Sanchez</p>
+<p>Director of External Communications:<br />Christina Anderson<br />christina.anderson@bbva.com</p>
+<p>Communications:<br />Al Ortiz<br />al.ortiz@bbva.com<br />281-433-5640</p>
+<p>Corporate Office:<br />15 S 20th Street<br />Birmingham, AL 35233<br />205-297-1986</p>
+<p> </p>
+<h4><strong>Credit Suisse</strong></h4>
+<p>CEO Tidjane Thiam</p>
+<p>Board Chairman Urs Rohner</p>
+<p>Suisse Banking Ombudsman:<br />Bahnhofplatz 9<br />P.O. Box 1818<br />CH 8021 Zurich, Switzerland<br />41-43-266-14-14</p>
+<p>Corporate Office:<br />Uetlibergstrasse 231<br />P.O. Box 700<br />CH 8070 Zurich, Switzerland<br />41-44-333-11-11</p>
+<p>U.S. Office:<br />650 California Street<br />San Francisco, CA 94108<br />Phone: 415-249-2100</p>
+<p> </p>
+<h4><strong>DNB Capital/ASA</strong></h4>
+<p>CEO Rune Bjerke<br /><a href="https://www.linkedin.com/in/rune-bjerke-04714639">https://www.linkedin.com/in/rune-bjerke-04714639</a></p>
+<p>Chairwoman of the Board Anne Carine Tanum<br />47-915-04800</p>
+<p>Executive Vice President Communications Even Westerveld<br />47-400-16-744</p>
+<p>Corporate Address:<br />Dronning Eufemias Gate 30<br />0191 Oslo, Norway</p>
+<p> </p>
+<h4><strong>Sumitomo Mitsui Bank</strong></h4>
+<p>President and CEO Takeshi Kunibe</p>
+<p>Corporate Office:<br />1-1-2, Marunouchi, Chiyoda-ku<br />Tokyo, Japan<br />81-3-3282-8111</p>
+<p>U.S. Office:<br />277 Park Avenue<br />New York, NY 10172<br />212-224-4000</p>
+<p> </p>
+<h4><strong>Royal Bank of Canada</strong></h4>
+<p>CEO David I. McKay</p>
+<p>CEO and Board Communications:<br />Paul French<br />paul.french@rbc.com<br />416-974-3718</p>
+<p>Corporate Media Relations:<br />Catherine Hudon<br />catherine.hudon@rbc.com<br />416-974-5506</p>
+<p>Corporate Address:<br />200 Bay Street P.O. Box 1<br />Royal Bank Plaza<br />Toronto, Canada<br />416-974-5151 and 416-842-2000</p>
+<p> </p>
+<h4><strong>UBS</strong></h4>
+<p>CEO Sergio Ermotti</p>
+<p>https://www.linkedin.com/in/sergiopermotti</p>
+<p>Head Group External Communications:<br />Mark Hengel<br /><a href="mailto:Hengelmark.hengel@ubs.com">mark.hengel@ubs.com<br /></a>Phone: 41-44-234-32-21</p>
+<p>Chief Communication Officer-Americas:<br />Marsha Askins<br />marsha.askins@ubs.com<br />212-713-6151 office and 917-226-4743 cell</p>
+<p>Corporate Office:<br />Bahnhofstrasse 45, CH-8098<br />8001 Zurich, Switzerland<br />41-44-234-11-11</p>
+<p>U.S. Office:<br />1285 Avenue of the Americas <br />New York, NY 10019 <br />212-713-2000</p>
+<p> </p>
+<h4><strong>Goldman Sachs</strong></h4>
+<p>Chairman and CEO Lloyd C. Blankfein<br />lloyd.blankfein@gs.com<br />917-743-0939 and 212-902-0593</p>
+<p>Media Contacts Americas:<br />212-902-5400</p>
+<p>Corporate Address:<br />Goldman, Sachs &amp; Co.<br />200 West Street<br />New York, NY 10282<br />212-902-1000</p>
+<p> </p>
+<h4><strong>Morgan Stanley</strong></h4>
+<p>CEO James P. Gorman<br />jgorman@morganstanley.com<br />212-761-4000</p>
+<p>Corporate Office:<br />Morgan Stanley<br />1585 Broadway<br />New York, NY 10036<br />212-761-4000</p>
+<p> </p>
+<h4><strong>Origin Bank (formerly Community Trust)</strong></h4>
+<p>Chairman, President, and CEO Drake Mills<br />https://www.linkedin.com/in/drake-mills-554a3a20 <br />www.ctbonline.com<br />318-768-3048</p>
+<p>Corporate Office:<br />3921 Elm St.<br />Choudrant, LA 71227</p>
+<p> </p>
+<h4><strong>HSBC Bank</strong></h4>
+<p>Chairman Douglas Flint</p>
+<p>Group Chief Executive Stuart Gulliver<br />managingdirectoruk@hsbc.com</p>
+<p>Corporate Address:<br />8 Canada Square<br />London E14 5HQ, United Kingdom<br />44-20-7991-8888</p>
+<p>U.S. Office:<br />HSBC Headquarters<br />425 5th Avenue<br />New York, NY 10018<br />212-525-5600</p>
+<p>Head of Media Relations, HSBC USA:<br />Rob Sherman<br />212-525-6901</p>
+<p><span class="discreet"><em>The information compiled here is from the latest information from Food &amp; Water Watch research, Bloomberg data, and contact information reported by the banks. If there are corrections or additions that we should consider, please let us know. This information will be updated as needed.</em></span></p>
+</div>
+            
+        </div>
+    
+        </div><!-- /#story-content -->
+                            </div><!-- /.row -->
+
+
+                          </div><!-- /#content -->
+
+                          <footer><div class="row below-content-newsletter-wrapper" style="padding-bottom: 30px;">  
+				<span class="article-description col-sm-offset-1 col-sm-10">Producing in-depth, thoughtful journalism for a better world is expensive – but supporting us isn’t. If you value ad-free independent journalism,
+                                  <a class="external-link" href="https://store.yesmagazine.org/subscribe/?ica=Subscribe&amp;icl=ArticleEnd">consider subscribing to YES!</a> today.</span>
+                              <aside class="col-sm-offset-1 col-sm-10"><div id="below-content-newsletter" class="row">
+                                  <div>
+				    <a href="https://store.yesmagazine.org/newsletter/signup.php?ica=Signup_graphic">
+                                      <img src="http://www.yesmagazine.org/images/article_email_signup.jpg" class="img-responsive no-min" alt="Email Signup" style="padding-bottom:0pt;" /></a>
+					<form name="newsletterformform1" method="get" class="form-inline" action="@@newsletter-signup" onsubmit="javascript:void(0);" id="newsletterformform1">
+					  <div class="centered-text">
+					    <div class="input-group">
+					      <label class="sr-only" for="email">Email address</label><!-- screen reader only -->
+					      
+					      <input id="email" class="form-control input-sm" name="email" type="email" placeholder="Email Address" /><input id="newsletter-name-field" class="newsletter-name" name="name" type="text" placeholder="Full Name" /><!-- add href attr to button help overlayhelpers -->
+        <input type="hidden" name="_authenticator" value="fbb1f9406cc5700b4c663dbba89d17a2b47b5438" /><span class="input-group-btn">
+						  <button class="btn btn-primary btn-sm" type="submit">Sign Up</button>
+					      </span>
+					    </div>
+					  </div>
+					</form>  
+                                  </div>
+                                </div>
+                              </aside></div>
+
+                            <div id="article-attribution"><div class="vcard row"><address rel="author" class="author"><div class="article-author-photo col-sm-offset-1 col-xs-4 col-sm-2"><a rel="author" class="url"><img class="photo img-responsive" width="78" height="93" src="resolveuid/afae2b54e54a46249d68a147f11b9bba" alt="" title="" /></a></div><div id="article-attribution" class="col-xs-8">Emily Fuller wrote this article for <a class="external-link" href="../../" target="_self" title="">YES! Magazine</a>. Emily is a freelance journalist based in Portland, Ore.</div></address></div></div>
+
+                            <!-- <div class="row paging">
+                              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-7 col-sm-4">
+                                <ul id="pagination" class="pagination" data-total-pages="4"></ul>
+                                <div><a href="javascript:void(0);">View as single page</a></div>
+                                <noscript>
+                                  <a rel="next" href="#">Next page</a>
+                                </noscript>  
+                              </div>
+                            </div> -->
+
+                          <div class="flexcontainer">
+
+                          <div class="row">  
+                            <aside class="col-sm-offset-1 col-sm-10"><div id="below-content-sharebar" class="share-bar row">
+                              <!-- jquery fill in with html from above share-bar -->  
+                            </div>
+
+                            </aside></div>
+
+                            <div class="row" id="belowcontentportlets">
+                              <!-- below content portlets -->
+                              </div>                            
+
+
+                            <aside class="more-on-topic row"><div class="no-gutter-pad col-xs-offset-0.5 col-xs-11">
+                                <div data-min-width-0="&#10;                                &lt;header&gt;&lt;h5&gt;Read More&#10;                                " data-min-width-667="&lt;header&gt;&lt;h6&gt;Read More&lt;/h6&gt;&lt;/header&gt;"></div>
+                                <!-- more from topic -->
+                                <div class="row"><div class="more-item col-xs-10 col-sm-4"><figure><a href="http://www.yesmagazine.org/people-power/is-your-bank-funding-dapl-heres-how-to-find-one-that-isnt-20161201"><div class="hidden-xs" data-min-width-667="&lt;img src='http://www.yesmagazine.org/people-power/is-your-bank-funding-dapl-heres-how-to-find-one-that-isnt-20161201/nodapl-banks.jpg/@@images/989ba2b7-7c3d-47fc-8d07-f06451e7b710.jpeg' height='390' width='650' class='img-responsive no-min' class='img-responsive' /&gt;"></div></a><figcaption><a href="http://www.yesmagazine.org/people-power/is-your-bank-funding-dapl-heres-how-to-find-one-that-isnt-20161201" class="state-published" title="There’s an entire industry of ethically minded banks and financial institutions out there to choose from.">Is Your Bank Funding DAPL? Here’s How to Find One That Isn’t</a></figcaption></figure></div><div class="more-item col-xs-10 col-sm-4"><figure><a href="http://www.yesmagazine.org/people-power/7-ways-to-make-an-even-bigger-impact-when-you-divest-from-dapl-20161201"><div class="hidden-xs" data-min-width-667="&lt;img src='http://www.yesmagazine.org/people-power/7-ways-to-make-an-even-bigger-impact-when-you-divest-from-dapl-20161201/banks-override.jpg/@@images/195681ea-5332-46f6-94bb-219cc08b3b44.jpeg' height='390' width='650' class='img-responsive no-min' class='img-responsive' /&gt;"></div></a><figcaption><a href="http://www.yesmagazine.org/people-power/7-ways-to-make-an-even-bigger-impact-when-you-divest-from-dapl-20161201" class="state-published" title="Closing your bank account is just the beginning.">7 Ways to Make an Even Bigger Impact When You Divest From DAPL</a></figcaption></figure></div><div class="more-item col-xs-10 col-sm-4"><figure><a href="http://www.yesmagazine.org/people-power/standing-rock-is-a-two-front-war-big-oil-and-big-banks-but-maybe-thats-good-news-20160922"><div class="hidden-xs" data-min-width-667="&lt;img src='http://www.yesmagazine.org/people-power/standing-rock-is-a-two-front-war-big-oil-and-big-banks-but-maybe-thats-good-news-20160922/dell-chasing-trucks.jpg/@@images/74e7d011-d74e-4e63-830f-a824275b35ed.jpeg' height='390' width='650' class='img-responsive no-min' class='img-responsive' /&gt;"></div></a><figcaption><a href="http://www.yesmagazine.org/people-power/standing-rock-is-a-two-front-war-big-oil-and-big-banks-but-maybe-thats-good-news-20160922" class="state-published" title="A key pipeline loan is still pending, and banks can be vulnerable to public pressure. We can fight alongside the Standing Rock Sioux at any one of 38 banks.">A Strategy to Stop the Funding Behind the Dakota Access Pipeline</a></figcaption></figure></div></div>
+
+                              </div>
+                            </aside><aside class="row disqus"><div class="col-sm-offset-0.5 col-sm-11">
+                                <header><div data-min-width-0="&#10;                                  &lt;h4 class=&quot;toggler centered-text&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#disqus_thread&quot;&gt;Comment on This Article&#10;                                  &lt;!-- &lt;span class=&quot;fa fa-caret-right fa-lg&quot;&gt;&lt;/span&gt; --&gt;&lt;/h4&gt;" data-min-width-667="&#10;                                  &lt;h4&gt;Comment on This Article&lt;/h4&gt;"></div>
+                                </header><div id="disqus_thread" class="collapse collapse-mobile"></div>
+                                <script type="text/javascript">         var disqus_identifier = '8d77fb0d4392445a9313df9b23dd0089';         var disqus_developer = 0;         (function() {          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;          dsq.src = 'http://yesmagazine.disqus.com/embed.js';          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);         })();</script><noscript>Please enable JavaScript to view the comments powered by
+                                  <a href="http://disqus.com/?ref_noscript=yesmagazine">Disqus</a>.</noscript>
+                                <!-- <footer>       
+                                  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </footer> -->
+                              </div>  
+                            </aside></div><!-- /.flexcontainer -->
+
+                          </footer></article></div><!-- /#main -->
+                      
+                       
+                     </div><!-- /#center-column -->
+                     
+                      <div id="right-column" class="col-md-4">
+
+                        <aside id="right-column-content"><div id="rightcolcolumns">
+
+                            <div class="yestagline row hidden-xs hidden-sm">
+                              <div class="no-gutter-pad col-sm-offset-1 col-sm-10">
+                                Nonprofit.  Independent.  <span style="white-space:nowrap">Reader-supported.</span>
+                              </div>
+                            </div>
+
+                            <div id="newsletterform" class="hidden-xs hidden-sm row rightcolplainsection">
+                              <div class="no-gutter-pad col-sm-offset-1 col-xs-offset-0.5 col-xs-11 col-sm-11 dog-eared green">
+                                <h4 class="centered-text"><big>YES! By Email</big></h4>
+                                <h6 class="centered-text">Get the best of YES! each week FREE!</h6>
+                                <form name="newsletterformform2" method="get" class="form-inline" action="@@newsletter-signup" onsubmit="javascript:void(0);" id="newsletterformform2">
+                                  <div class="centered-text">
+                                    <div class="input-group">
+                                      <label class="sr-only" for="email">Email address</label><!-- screen reader only -->
+                                      
+                                      <input id="email" class="form-control input-sm" name="email" type="email" placeholder="Email Address" /><input id="newsletter-name-field" class="newsletter-name" name="name" type="text" placeholder="Full Name" /><!-- add href attr to button help overlayhelpers -->
+        <input type="hidden" name="_authenticator" value="fbb1f9406cc5700b4c663dbba89d17a2b47b5438" /><span class="input-group-btn">
+					  <button class="btn btn-primary btn-sm" type="submit">Sign Up</button>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </form>  
+                              </div>
+                            </div>
+
+
+                            <div class="share-bar follow-bar rightcolborderedsection row">
+                              <div class="no-gutter-pad col-md-offset-1 col-md-10">
+                                <div class="row">
+                                    <div class="col-xs-5 col-md-12">
+                                      <h4><big>Follow Us</big></h4>
+                                    </div>  
+                                    <div class="like-block col-xs-2 col-md-4 no-gutter-pad centered-text">
+                                      <a href="https://facebook.com/yesmagazine"><img src="/++theme++yes.diazotheme/img/yes/follow_fb.png" width="46" height="42" alt="Like us on Facebook" /></a>
+                                      <div class="like-counter counter f_facebook"></div>
+                                    </div>
+                                    <div class="like-block col-xs-2 col-md-4 no-gutter-pad centered-text">
+                                      <a href="https://twitter.com/intent/user?screen_name=yesmagazine"><img src="/++theme++yes.diazotheme/img/yes/follow_tw.png" width="46" height="42" alt="Follow us on Twitter" /></a>
+                                      <div class="like-counter counter f_twitter"></div>
+                                    </div>
+                                    <div class="like-block col-xs-2 col-md-4 no-gutter-pad centered-text">
+                                      <a href="https://plus.google.com/+yesmagazine/posts"><img src="/++theme++yes.diazotheme/img/yes/follow_g+.png" width="46" height="42" alt="Plus One us on Google+" /></a>
+                                      <div class="like-counter counter f_plus"></div>
+                                    </div>
+                                  </div>                                  
+                              </div> 
+                            </div>  
+
+
+                            <div class="hidden-xs hidden-sm tabbedportlets rightcolborderedsection row">
+                              <div class="col-md-offset-1 col-md-10 no-gutter-pad">
+
+                                <ul class="nav nav-tabs" role="tablist"><li id="tab-most-popular" class="active"><a href="#mostpopular" role="tab" data-toggle="tab">Most Popular</a></li>
+                                  <li id="tab-most-recent"><a href="#mostrecent" role="tab" data-toggle="tab">Most Recent</a></li>
+                                </ul><div class="tab-content">
+
+                                  <div class="tab-pane active" id="mostpopular">
+                                    <ol>
+        
+            <li class="tileItem visualIEFloatFix vevent article-title">
+             <a class="internal-link" href="http://www.yesmagazine.org/people-power/if-trump-makes-it-one-year-without-impeachment-then-lets-talk-supreme-court-nominees-20170210">If Trump Makes It One Year Without Impeachment, Then Let’s Talk Supreme Court Nominees</a><br /></li>
+    
+        
+            <li class="tileItem visualIEFloatFix vevent article-title">
+             <a class="internal-link" href="http://www.yesmagazine.org/people-power/how-the-indivisible-movement-is-fueling-resistance-to-trump-2017-02-11">The “Indivisible” Movement’s Key Strategy: Focus on Your Own Members of Congress</a><br /></li>
+    
+        
+            <li class="tileItem visualIEFloatFix vevent article-title">
+             <a class="internal-link" href="http://www.yesmagazine.org/people-power/what-my-mostly-white-town-is-doing-to-defeat-trumpism-20170217">What My Mostly White Town Is Doing to Defeat Trumpism</a><br /></li>
+    
+        
+            <li class="tileItem visualIEFloatFix vevent article-title">
+             <a class="internal-link" href="http://www.yesmagazine.org/issues/science/how-norway-avoided-becoming-a-fascist-state-20170216">How Norway Avoided Becoming a Fascist State</a><br /></li>
+    
+        
+            <li class="tileItem visualIEFloatFix vevent article-title">
+             <a class="internal-link" href="http://www.yesmagazine.org/issues/science/to-survive-the-democratic-party-needs-to-stand-up-to-wall-street-and-global-corporations-20170220">To Survive, the Democratic Party Needs to Stand Up to Wall Street and Global Corporations</a><br /></li>
+    
+        <span class="portletBottomLeft"></span>
+        <span>
+            <a href="http://www.yesmagazine.org/most-popular">
+               <span>More…</span>
+            </a>
+        </span>
+        <span class="portletBottomRight"></span>
+    </ol></div><!-- /#mostpopular -->
+
+                                  <div class="tab-pane" id="mostrecent">
+                                    <ul class="list-unstyled">
+        <li><a href="http://www.yesmagazine.org/new-economy/to-billionaire-doomsday-preppers-your-wealth-wont-save-you-20170221" class="tile contenttype-article" title="The only solution is to bring your wealth home and invest in community resilience to ensure the survival of all.">
+            To Billionaire Doomsday Preppers: Your Wealth Won’t Save You
+            
+        </a></li>
+    
+        <li><a href="http://www.yesmagazine.org/planet/the-student-built-website-that-keeps-government-climate-data-safe-20170221" class="tile contenttype-article" title="Since Trump’s election, scientists have been scrambling to save climate change data sets. And one Michigan graduate student thought the more copies, the better.">
+            The Student-Built Website That Keeps Government Climate Data Safe
+            
+        </a></li>
+    
+        <li><a href="http://www.yesmagazine.org/issues/science/to-survive-the-democratic-party-needs-to-stand-up-to-wall-street-and-global-corporations-20170220" class="tile contenttype-article" title="If Democrats want to retake government, they will need to do more than be the party that isn’t as bad as Trump, starting with closing the wealth gap.">
+            To Survive, the Democratic Party Needs to Stand Up to Wall Street and Global Corporations
+            
+        </a></li>
+    
+        <li><a href="http://www.yesmagazine.org/issues/science/none-of-texas-members-of-congress-support-trumps-wall-20170220" class="tile contenttype-article" title="And 23 other facts you should probably know.">
+            None of Texas’ Members of Congress Support Trump’s Wall
+            
+        </a></li>
+    
+        <li><a href="http://www.yesmagazine.org/people-power/what-my-mostly-white-town-is-doing-to-defeat-trumpism-20170217" class="tile contenttype-article" title="As a Black woman, I was anxious about moving to a conservative state. But, surprisingly, I found a community ready to embrace me and fight for equality.">
+            What My Mostly White Town Is Doing to Defeat Trumpism
+            
+        </a></li>
+    
+        <span class="portletBottomLeft"></span>
+        <span>
+        <li><a href="http://www.yesmagazine.org/recent-changes">
+           <span class="hiddenStructure">Most Recent - </span>
+           <span>More…</span>
+        </a></li>
+        </span>
+        <span class="portletBottomRight"></span>
+    </ul></div><!-- /#mostrecent -->
+
+                                </div><!-- /.tab-content -->
+
+                              </div><!-- /.tabbedportlets -->  
+                            
+                            </div><!-- /.col-sm-10 -->
+                             
+
+                            <div id="voicesfromyes" class="hidden-xs hidden-sm row rightcolborderedsection">
+                              <div class="no-gutter-pad col-md-offset-1 col-md-10">
+                                <h4 class="dog-eared">Voices from YES!</h4>
+
+                                <div id="voices-rows"><div class="media"><a class="pull-left" href="http://www.yesmagazine.org/@@also-by?author=Sarah+van+Gelder"><img class="media-object" src="http://www.yesmagazine.org/portal_memberdata/portraits/svangelder" alt="Sarah van Gelder" /></a><div class="media-body"><h5 class="media-heading"><a href="http://www.yesmagazine.org/@@also-by?author=Sarah+van+Gelder">Sarah van Gelder</a></h5><a class="pull-left" href="http://www.yesmagazine.org/issues/science/to-survive-the-democratic-party-needs-to-stand-up-to-wall-street-and-global-corporations-20170220">To Survive, the Democratic Party Needs to Stand Up to Wall Street and Global Corporations</a></div></div><div class="media"><a class="pull-left" href="http://www.yesmagazine.org/@@also-by?author=Zenobia+Jeffries"><img class="media-object" src="http://www.yesmagazine.org/portal_memberdata/portraits/zjeffries" alt="Zenobia Jeffries" /></a><div class="media-body"><h5 class="media-heading"><a href="http://www.yesmagazine.org/@@also-by?author=Zenobia+Jeffries">Zenobia Jeffries</a></h5><a class="pull-left" href="http://www.yesmagazine.org/peace-justice/black-communities-not-trump-executive-orders-will-end-carnage-20170213">Black Communities, not Trump Executive Orders, Will End “Carnage”</a></div></div><div class="media"><a class="pull-left" href="http://www.yesmagazine.org/@@also-by?author=David+Korten"><img class="media-object" src="http://www.yesmagazine.org/portal_memberdata/portraits/davidk" alt="David Korten" /></a><div class="media-body"><h5 class="media-heading"><a href="http://www.yesmagazine.org/@@also-by?author=David+Korten">David Korten</a></h5><a class="pull-left" href="http://www.yesmagazine.org/new-economy/trumps-coup-attemp-requires-us-to-rise-above-position-and-party-20170208">Trump’s Coup Attempt Requires Us to Rise Above Position and Party</a></div></div><div class="media"><a class="pull-left" href="http://www.yesmagazine.org/@@also-by?author=Mark+Trahant"><img class="media-object" src="http://www.yesmagazine.org/portal_memberdata/portraits/mtrahant" alt="Mark Trahant" /></a><div class="media-body"><h5 class="media-heading"><a href="http://www.yesmagazine.org/@@also-by?author=Mark+Trahant">Mark Trahant</a></h5><a class="pull-left" href="http://www.yesmagazine.org/people-power/on-the-day-dakota-access-oil-flows-go-one-day-without-oil-20170212">Pipeline Resistance Broadens: On the Day Dakota Access Oil Flows, Go One Day Without Oil</a></div></div><div class="media"><a class="pull-left" href="http://www.yesmagazine.org/@@also-by?author=Jennifer+Luxton"><img class="media-object" src="http://www.yesmagazine.org/portal_memberdata/portraits/jluxton" alt="Jennifer Luxton" /></a><div class="media-body"><h5 class="media-heading"><a href="http://www.yesmagazine.org/@@also-by?author=Jennifer+Luxton">Jennifer Luxton</a></h5><a class="pull-left" href="http://www.yesmagazine.org/people-power/what-makes-america-great-artists-resist-trump-with-100-days-of-posters-20170206">What Makes America Great? Artists Resist Trump With 100 Days of Posters</a></div></div><div class="media"><a class="pull-left" href=""><img class="media-object" src="" alt="" /></a><div class="media-body"><h5 class="media-heading"><a href=""></a></h5><a class="pull-left" href=""></a></div></div></div><!-- /#voices-rows -->
+                              </div> 
+
+
+                            </div>  
+
+                          </div><!-- /#rightcolcolumns -->
+
+                        
+                        
+            
+                
+
+
+<div id="" class="hidden-xs hidden-sm row rightcolborderedsection"><div class="portlet portletSubscribeFormPortlet no-gutter-pad col-md-offset-1 col-md-10"><h4 class="dog-eared green">
+        
+        Subscribe Now and Save
+        
+    </h4><dd class="portletItem portletSubscribeForm">
+      <div class="subscribe-form-issue center-block">
+        <div class="prepend-sm-1">
+          <img src="http://www.yesmagazine.org/issues/science/@@images/f575afce-ba97-4f62-8c2e-ec1fe29746bd.jpeg" height="208" width="161" alt="Cover of issue Why Science Can’t Be Silent" /></div>
+      </div>    
+
+      <div class="subscribe-form-deal center-block" style="margin-top:-40px">
+        <img src="http://www.yesmagazine.org/++contextportlets++plone.rightcolumn/subscribe_form_root/@@portlet-image" alt="" /></div>
+
+        <form role="form" class="enableUnloadProtection prepend-sm-1 append-sm-1 col-sm-11 col-sm-offset-0.5" action="https://store.yesmagazine.org/express/subscribe/" method="post" enctype="multipart/form-data" id="subscribeform">
+
+          <div class="row">
+            <div class="form-group col-sm-5">
+              <label for="fname" class="sr-only horizontal">First Name</label>    
+              <input id="subscribeform-widgets-fname" name="fname" class="form-control input-sm required" required="" placeholder="FIRST" value="" type="text" /></div>
+
+            <div class="form-group col-sm-7"> 
+              <label for="lname" class="sr-only horizontal">Last Name</label>    
+              <input id="subscribeform-widgets-lname" name="lname" class="form-control input-sm required" placeholder="LAST NAME" value="" required="" type="text" /></div>
+          </div>
+
+          <div class="form-group"> 
+            <label for="address1" class="sr-only horizontal">Address</label>    
+            <input id="subscribeform-widgets-address1" name="address1" class="form-control input-sm required textline-field" placeholder="ADDRESS" value="" required="" type="text" /></div>
+
+          <div class="form-group"> 
+            <label for="address2" class="sr-only horizontal">Address line 2</label>    
+            <input id="subscribeform-widgets-address2" name="address2" class="form-control input-sm textline-field" value="" type="text" /></div>
+
+          <div class="form-group"> 
+            <label for="city" class="sr-only horizontal">City</label>    
+            <input id="subscribeform-widgets-city" name="city" class="form-control input-sm required textline-field" value="" required="" placeholder="CITY" type="text" /></div>
+
+          <div class="row">
+            <div class="form-group col-sm-5"> 
+              <label for="state" class="sr-only horizontal">State</label>            
+              <input id="subscribeform-widgets-state" name="state" class="form-control input-sm required textline-field" required="" value="" placeholder="STATE" type="text" /></div>
+
+            <div class="form-group col-sm-7"> 
+              <label for="zipcode" class="sr-only horizontal">Zip/Postal Code</label>    
+              <input id="subscribeform-widgets-zipcode" name="zipcode" class="form-control input-sm required textline-field" required="" value="" placeholder="ZIP" type="text" /></div>
+          </div>
+
+         <button name="subscribe" type="submit" class="btn btn-danger btn-lg"><strong>SUBSCRIBE &gt;&gt;</strong></button>
+
+        </form>
+
+        <div class="clearfix"></div>
+
+    </dd></div></div>
+
+
+
+
+
+<div id="" class="hidden-xs hidden-sm row rightcolborderedsection"><div class="portlet portletStoreItems no-gutter-pad col-md-offset-1 col-md-10"><h4 class="dog-eared">
+        
+        From the YES! Store
+        
+    </h4><dd class="media">
+
+        
+                 <div class="row">   
+                     <div class="col-xs-5" style="text-align:center">
+                        <a href="https://store.yesmagazine.org/products/other/165/yes-chicobag/" title="View this item in our Store"><img src="http://www.yesmagazine.org/store-items/yes-chico-bag/image_mini" alt="YES! Chico Bag" title="" height="115" width="84" /></a>
+                    </div>    
+
+
+                    <div class="mediaBody col-xs-7">
+                      <b><a href="https://store.yesmagazine.org/products/other/165/yes-chicobag/">YES! Chico Bag</a></b><br /><span class="upsell">Never forget your grocery bag again! This handy reusable bag is made of 100% recycled PET and can fit in your pocket. </span>
+
+                    </div>
+                </div>
+
+                
+
+    </dd><dd class="media">
+
+        
+                 <div class="row">   
+                     <div class="col-xs-5" style="text-align:center">
+                        <a href="https://store.yesmagazine.org/gifts/" title="View this item in our Store"><img src="http://www.yesmagazine.org/store-items/2-for-1-yes-gift-subscriptions/image_mini" alt="YES! Gift Subscriptions" title="" height="97" width="102" /></a>
+                    </div>    
+
+
+                    <div class="mediaBody col-xs-7">
+                      <b><a href="https://store.yesmagazine.org/gifts/">YES! Gift Subscriptions</a></b><br /><span class="upsell">Give friends and family a year of inspiration! Now with print and digital editions. </span>
+
+                    </div>
+                </div>
+
+                
+
+    </dd><dd class="media">
+
+        
+                 <div class="row">   
+                     <div class="col-xs-5" style="text-align:center">
+                        <a href="https://store.yesmagazine.org/back-issues/247/life-after-oil/" title="View this item in our Store"><img src="http://www.yesmagazine.org/store-items/life-after-oil-issue/image_mini" alt="Life After Oil Issue" title="" height="115" width="89" /></a>
+                    </div>    
+
+
+                    <div class="mediaBody col-xs-7">
+                      <b><a href="https://store.yesmagazine.org/back-issues/247/life-after-oil/">Life After Oil Issue</a></b><br /><span class="upsell">How we can get to post-carbon—and what life will be like when we do. </span>
+
+                    </div>
+                </div>
+
+                
+
+    </dd><dd class="media last">
+
+        
+                 <div class="row">   
+                     <div class="col-xs-5" style="text-align:center">
+                        <a href="https://store.yesmagazine.org/products/books/256/the-revolution-where-you-live/" title="View this item in our Store"><img src="http://www.yesmagazine.org/store-items/the-revolution-where-you-live/image_mini" alt="The Revolution Where You Live" title="" height="115" width="74" /></a>
+                    </div>    
+
+
+                    <div class="mediaBody col-xs-7">
+                      <b><a href="https://store.yesmagazine.org/products/books/256/the-revolution-where-you-live/">The Revolution Where You Live</a></b><br /><span class="upsell">Looking for hope? You'll find it in Sarah van Gelder's new book. Bill McKibben calls it "A passionate, powerful account."</span>
+
+                    </div>
+                </div>
+
+                
+
+    </dd><dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd></div></div>
+
+<div id="" class="hidden-xs hidden-sm row rightcolborderedsection"><div class="portletStaticText portlet-static-rwyl-ad no-gutter-pad col-md-offset-1 col-md-10"><div class="portletStaticText portlet-static-rwyl-ad"><p><a class="external-link" href="https://store.yesmagazine.org/products/books/256/the-revolution-where-you-live/" target="_self" title=""><img src="http://www.yesmagazine.org/TRWYLSidebarAd1.png" alt="The Revolution Where You Live" class="image-inline" title="The Revolution Where You Live" /></a></p></div></div></div>
+
+<div id="" class="hidden-xs hidden-sm row rightcolborderedsection"><div class=" no-gutter-pad col-md-offset-1 col-md-10"><div style="display:none">
+<script>
+var popform = {};
+popform.got_cookies = null;
+popform.cookies_enabled = function(uid) {
+    if (readCookie(uid) != null) {
+        return false;
+    }
+    createCookie(uid, '1', 2);
+    return readCookie(uid) != null;
+};
+</script><script type="text/javascript">
+jQuery(function($) {
+    if (popform.cookies_enabled("popform-newsletter-form-popup")) {
+        $('a#popform-newsletter-form-popup').prepOverlay({
+            subtype:'ajax',
+            urlmatch:'$',
+            urlreplace:'/fg_embedded_view_p3?show_text=1 .pfg-embedded,#content&gt;*',
+            formselector:'form',
+            noform:'',
+            config:{closeOnClick:false},
+            width:"285px",
+            redirect:"None"});
+        $(function(){ setTimeout( function() {
+            $("a#popform-newsletter-form-popup").click()}, 45000);
+            });
+    }
+});
+</script><a href="http://www.yesmagazine.org/newsletter-form-popup" id="popform-newsletter-form-popup">link</a>
+</div></div></div>
+
+
+
+
+            
+        </aside><!-- /#right-column-content --></div><!-- /#right-column -->
+ 
+
+                     <div class="visualClear"> </div>
+                     
+                    <aside class="row hidden-xs" id="licensing"><div class="col-sm-offset-0.5 col-sm-11">
+
+  <div id="copyright-button">
+    <a class="link-plain" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" title="Creative Commons License">
+    <img style="vertical-align: text-top; margin-top: 3px; padding-left: 5px" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" alt="Creative Commons License" /></a>
+    
+  </div>
+
+  <div id="copyright-text">
+    <a href="http://www.yesmagazine.org/about/reprints">Reprints and reposts:</a>
+    YES! Magazine encourages you to make free use of this article by taking these <a href="http://www.yesmagazine.org/about/reprints">easy steps</a>.
+    
+      
+      <a class="link-plain" rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" title="Creative Commons License">Creative Commons License</a>
+      <!-- Name of license -->
+      
+    
+  </div>
+
+
+</div>
+                    </aside></div><!--/#content-columns -->
+
+
+               <footer role="navigation" class="col-xs-12"><div id="information" class="col-sm-3 col-sm-offset-0.5 hidden-xs"> <h4><a class="plain" href="/about/">About</a></h4>
+                    <ul id="information-list" class="list-unstyled"><li><a href="http://www.yesmagazine.org/about/staff/board-staff">Staff/Board</a></li> 
+                      <li><a href="http://www.yesmagazine.org/about/jobs-internships">Jobs &amp; Internships</a></li>
+                      <li><a href="http://www.yesmagazine.org/about/privacy-policy">Privacy Policy</a></li>
+                      <li><a href="http://www.yesmagazine.org/about/contact-us">Contact Us</a></li>           
+                    </ul></div>
+                    
+                  <div id="support" class="col-sm-3 hidden-xs"><h4><a class="plain" href="/support-yes/">Support Our Work</a></h4>
+                    <ul id="support-list" class="list-unstyled"><li><a href="http://store.yesmagazine.org/donate/?ica=Don_txt_DonateNow_multi&amp;icl=Footer_1667">Donate</a></li>
+                      <li><a href="http://www.yesmagazine.org/support-yes/name-yes-in-your-will-or-retirement-plan">Planned Giving</a></li>
+                    </ul></div>
+                  <div id="services" class="col-sm-3 hidden-xs"><h4><a class="plain" href="/subscribe">Subscribe</a></h4>
+                    <ul id="services-list" class="list-unstyled"><li><a href="http://store.yesmagazine.org/account/login/?ica=Mnge_txt_ManageSubscription_multi&amp;icl=Footer_1667">My Subscription</a></li>  
+                      <li><a href="http://store.yesmagazine.org/gifts/?ica=Gift_txt_GiftSubscriptions_2for1&amp;icl=Footer_1667">Give a Gift</a></li>
+                      <li><a href="http://store.yesmagazine.org">YES! Store</a></li>
+                    </ul></div>
+                  <div id="follow" class="col-sm-2 hidden-xs"><h4>Follow Us</h4>
+                    <ul id="follow-list" class="list-unstyled"><li><a href="http://store.yesmagazine.org/newsletter/signup.php">Get YES! Emails</a></li>
+                      <li><a href="http://www.facebook.com/yesmagazine">Facebook</a></li>
+                      <li><a href="http://twitter.com/yesmagazine">Twitter</a></li> 
+                      <li><a href="http://plus.google.com/+yesmagazine/posts">Google+</a></li> 
+                      <li><a href="http://www.yesmagazine.org/rss-feeds">RSS</a></li>
+                    </ul></div>
+
+                  <div id="address-info-wrapper" class="col-sm-12">
+
+                    <div id="address">
+                      <div class="adr">
+                          <span class="fn org org-name">YES! Magazine</span>,
+                          <span class="street-address">284 Madrona Way NE, Ste 116</span>,
+                          <span class="locality">Bainbridge Island</span>,
+                          <span class="region">WA</span>
+                          <span class="postal-code">98110-2870</span> <span class="telephone">800/937-4451</span>
+                      </div>
+                    </div>
+
+                    <br /><span class="plone-site-info hidden">
+                      <span>
+                        <a href="http://www.yesmagazine.org/about/site-credits">Site Credits</a>                        
+                      </span>
+                      <span id="powered-by-plone" class="hidden-xs">
+                        Powered by <a href="http://plone.org">Plone</a>
+                        <br /><br />
+                        Please <span> <a href="mailto:webmaster@yesmagazine.org">report problems here</a>. </span>
+                      </span>
+                   </span> 
+
+                  </div>
+
+               </footer></div>
+<!--! end of #container -->
+    <div id="site-scripts"></div>
+    <script>
+              $('input#newsletter-name-field').hide();
+            </script>
+<!-- end scripts-->
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+            chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+            <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+            <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+            <![endif]-->
+    <script type="text/javascript">//<!--
+window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a7147ba24c","agent":"","transactionName":"YlRTYhdVD0sHBUwLV1sea1kVUVMXBxRMC1tZVG5ADFEWFhYS","applicationID":"5609745","errorBeacon":"bam.nr-data.net","applicationTime":519}
+//--></script>
+  </body>
+</html>

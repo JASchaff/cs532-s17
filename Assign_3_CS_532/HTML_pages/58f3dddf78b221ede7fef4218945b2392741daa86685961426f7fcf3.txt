@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+Glen Robertson
+
+
+
+
+Blog
+
+
+Projects
+
+
+Resume
+
+
+Contact
+
+
+
+
+
+
+
+
+Recent posts
+
+
+
+
+04 Feb 2013
+ » 
+Django JS/CSS compression with django-pipeline
+
+
+13 Jan 2013
+ » 
+How to host a blog for free using Github Pages and Jekyll
+
+
+
+
+
+
+
+
+Recent projects
+
+
+
+
+
+
+
+
+Trulia Crime Map
+
+
+
+
+
+
+
+
+Trulia Commute Map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

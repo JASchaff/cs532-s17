@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMFV1NVGwAAUFVTBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/sites/default/themes/dtheme/img/logo-app.png">
+  <link rel="shortcut icon" href="/sites/main/files/dtheme_favicon.png" type="image/x-icon" />
+<meta name="twitter:site" content="@EdWriters" />
+<meta name="twitter:title" content=" The Education Secretaries Betsy DeVos Would Follow - Education Writers Association" />
+<meta name="twitter:description" content="A Senate committee is slated to vote tomorrow on President Donald Trump’s nominee for U.S. secretary of education -- ..." />
+<meta name="twitter:image" content="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/2831894133_6fce61e9c1_z.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@EWAEmily" />
+<meta name="og:site_name" content="Education Writers Association" />
+<meta name="fb:app_id" content="468891759920560" />
+<meta name="og:title" content=" The Education Secretaries Betsy DeVos Would Follow - Education Writers Association" />
+<meta name="og:description" content="A Senate committee is slated to vote tomorrow on President Donald Trump’s nominee for U.S. secretary of education -- ..." />
+<meta name="og:type" content="article" />
+<meta name="og:image" content="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/2831894133_6fce61e9c1_z.jpg" />
+<meta name="og:url" content="http://www.ewa.org/blog-educated-reporter/education-secretaries-betsy-devos-would-follow" />
+<link rel="canonical" href="http://www.ewa.org/blog-educated-reporter/education-secretaries-betsy-devos-would-follow" />
+  <title> The Education Secretaries Betsy DeVos Would Follow - Education Writers Association</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_a589abe3f3ef8be98266720e4ed79868_0.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_cbab193ae603649952e779e7ae6cb9a4_0.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_ce7e9b2e1f4d1c79337deb1d93c9afc2_0.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/ie.css?z" />
+<![endif]-->
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie8.css?z" />
+<![endif]-->
+<!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie7.css?z" />
+<![endif]-->
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/css/theme.min.css?cb=z">
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/dtheme-direct.css?cb=z">
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/05020533-b4dd-4243-988c-2c2fa165f553.css"/>
+<script id="twitter-wjs" src="https://platform.twitter.com/widgets.js" async></script>  </head>
+<body class="node-14571 pt-show-social-block no-event-date t307 wt307 wt617 wt2 wt0 t966 wt966 wt1031 wt1056 wt0 t117 wt117 wt520 wt313 wt0 t142 wt142 wt121 wt1031 wt1056 wt0 t544 wt544 wt119 wt1031 wt1056 wt0 t148 wt148 wt121 wt1031 wt1056 wt0 t144 wt144 wt121 wt1031 wt1056 wt0 t145 wt145 wt121 wt1031 wt1056 wt0 t149 wt149 wt121 wt1031 wt1056 wt0 access-normal has-image has-images has-embed has-embedded pt307 has-8-nt not-front not-logged-in node-type-post one-sidebar sidebar-right page-blog-educated-reporter-education-secretaries-betsy-devos-would-follow section-blog-educated-reporter dd-cache user-not-admin live launched pn14571 n section-node role-anonymous-user role-not-admin">
+  <div class="accessibility offscreen">
+    <a href="#content">Skip to main content</a>
+    <a href="#navigation">Skip to site navigation</a>  </div>
+
+  
+  <div class="page">
+    <header class="page-header headroom">
+      <div class="inner layout">
+        <div class="site-identity">
+          <div class="site-logo">
+            <a href="/" title="Back to home" rel="home"><img src="/sites/default/themes/dtheme/img/logo-theme.svg" alt="Education Writers Association"/></a>
+          </div>
+                      <h1 class="site-name">
+              <a href="/" title="Back to home" rel="home">Education Writers Association</a>
+            </h1>
+                                <div class="site-slogan">EWA.org</div>
+                            </div>
+        <div class="site-navigation">
+                    <nav class="primary-navigation" id="navigation" role="navigation">
+            <div id="block-nice_menus-3" class=" main-navigation  dd block block-nice_menus region-odd even region-count-1 count-2"><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-3"><li class="menu-4131 mt-51  first  odd  depth-1"></li>
+<li class="menu-10745 menuparent mt-1056  even  depth-1"><a href="/topics" title="Topics" class=" menu-link depth-1 tid-1056"><span class="menu-title">Topics</span></a><ul class="depth-2"><li class="menu-10713 menuparent mt-1031  first  odd  last  depth-2"><a href="/topics" title="All Topics" class=" menu-link depth-2 tid-1031"><span class="menu-title">All Topics</span></a><ul class="depth-3"><li class="menu-10359 mt-966  first  odd  depth-3"><a href="/election" title="2016 U.S. Elections" class=" menu-link depth-3 tid-966"><span class="menu-title">2016 Elections</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9118 mt-121  even  depth-3"><a href="/p-12" title="P-12" class=" menu-link depth-3 tid-121"><span class="menu-title">P-12</span></a></li>
+<li class="menu-9116 mt-119  odd  last  depth-3"><a href="/higher-education" title="Higher Education" class=" menu-link depth-3 tid-119"><span class="menu-title">Higher Education</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-9410 menuparent mt-320  odd  depth-1"><a href="/upcoming-events" title="Events" class=" menu-link depth-1 tid-320"><span class="menu-title">Events</span></a><ul class="depth-2"><li class="menu-9679 menuparent mt-501  first  odd  depth-2"><a href="/upcoming-events" title="Upcoming Events" class=" menu-link depth-2 tid-501"><span class="menu-title">Upcoming Events</span></a><ul class="depth-3"><li class="menu-9689 mt-512  first  odd  depth-3"></li>
+<li class="menu-10709 mt-1024  even  last  depth-3"><a href="/2017National" title="70th EWA National Seminar" class=" menu-link depth-3 tid-1024"><span class="menu-title">EWA National Seminar</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+</ul>
+</li>
+<li class="menu-9451 mt-361  even  depth-2"></li>
+<li class="menu-9680 menuparent mt-502  odd  last  depth-2"><a href="/past-events" title="Past Events" class=" menu-link depth-2 tid-502"><span class="menu-title">Past Events</span></a><ul class="depth-3"><li class="menu-10708 mt-1023  first  odd  depth-3"><a href="/doing-more-higher-ed-data" title="Doing More With Higher Ed Data" class=" menu-link depth-3 tid-1023"><span class="menu-title">Higher Ed Data</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-10707 mt-1022  even  depth-3"><a href="/covering-charter-schools-25-year-mark" title="Covering Charter Schools at the 25-Year Mark" class=" menu-link depth-3 tid-1022"><span class="menu-title">Charter Schools</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-10711 mt-1028  odd  last  depth-3"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-9403 menuparent mt-313  even  depth-1"><a href="/resources" title="Resources" class=" menu-link depth-1 tid-313"><span class="menu-title">Resources</span></a><ul class="depth-2"><li class="menu-9682 menuparent mt-504  first  odd  depth-2"><a href="/directories" title="Directories" class=" menu-link depth-2 tid-504"><span class="menu-title">Directories</span></a><ul class="depth-3"><li class="menu-9428 mt-338  first  odd  depth-3"><a href="/career-center" title="Career Center" class=" menu-link depth-3 tid-338"><span class="menu-title">Jobs</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9427 mt-337  even  depth-3"><a href="/sourcesearch" title="SourceSearch" class=" menu-link depth-3 tid-337"><span class="menu-title">Sources</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9879 mt-524  odd  depth-3"><a href="/press-release-center" title="Press Release Center" class=" menu-link depth-3 tid-524"><span class="menu-title">Press Releases</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-10678 mt-998  even  last  depth-3"><a href="/post-directories" title="Post to Directories" class=" menu-link depth-3 tid-998"><span class="menu-title">Post to Directories</span></a></li>
+</ul>
+</li>
+<li class="menu-9875 menuparent mt-520  even  depth-2"><a href="/education-news" title="Education News" class=" menu-link depth-2 tid-520"><span class="menu-title">Education News</span></a><ul class="depth-3"><li class="menu-9874 mt-519  first  odd  depth-3"><a href="/latest-news" title="Latest News" class=" menu-link depth-3 tid-519"><span class="menu-title">Latest News</span></a></li>
+<li class="menu-9114 mt-117  even  depth-3"><a href="/blog-educated-reporter" title="Blog: The Educated Reporter" class=" menu-link depth-3 tid-117"><span class="menu-title">The Educated Reporter</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9111 mt-114  odd  depth-3"></li>
+<li class="menu-10358 mt-964  even  depth-3"><a href="/blog-higher-ed-beat" title="Blog: Higher Ed Beat" class=" menu-link depth-3 tid-964"><span class="menu-title">Higher Ed Beat</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9109 mt-112  odd  depth-3"><a href="/blog-latino-ed-beat" title="Blog: Latino Ed Beat" class=" menu-link depth-3 tid-112"><span class="menu-title">Latino Ed Beat</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9688 mt-511  even  depth-3"></li>
+<li class="menu-9686 mt-508  odd  depth-3"><a href="/ewa-radio" title="EWA Radio" class=" menu-link depth-3 tid-508"><span class="menu-title">EWA Radio</span></a></li>
+<li class="menu-10332 mt-938  even  depth-3"><a href="http://salsa4.salsalabs.com/o/50807/blastContent.jsp" title="Newsletters" class=" menu-link depth-3 tid-938"><span class="menu-title">Newsletters</span></a></li>
+<li class="menu-9151 mt-154  odd  last  depth-3"></li>
+</ul>
+</li>
+<li class="menu-9243 menuparent mt-239  odd  last  depth-2"><a href="/reporters-toolbox" title="Reporter&#039;s Toolbox" class=" menu-link depth-2 tid-239"><span class="menu-title">Reporter&#039;s Toolbox</span></a><ul class="depth-3"><li class="menu-10688 mt-1003  first  odd  depth-3"><a href="/BeatReport" title="State of the Education Beat" class=" menu-link depth-3 tid-1003"><span class="menu-title">State of the Ed Beat</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9160 mt-163  even  depth-3"><a href="/reporter-guides" title="Reporter Guides" class=" menu-link depth-3 tid-163"><span class="menu-title">Reporter Guides</span></a></li>
+<li class="menu-9166 mt-169  odd  depth-3"><a href="/PublicEditor" title="The Public Editor" class=" menu-link depth-3 tid-169"><span class="menu-title">The Public Editor</span></a></li>
+<li class="menu-9783 mt-517  even  depth-3"></li>
+<li class="menu-9901 mt-543  odd  depth-3"><a href="/glossary-education-reform" title="Glossary of Education Reform" class=" menu-link depth-3 tid-543"><span class="menu-title">Ed Reform Glossary</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-10090 mt-545  even  depth-3"><a href="/tuition-tracker" title="Tuition Tracker" class=" menu-link depth-3 tid-545"><span class="menu-title">Tuition Tracker</span></a></li>
+<li class="menu-9687 mt-509  odd  depth-3"><a href="/ewa-listservs" title="EWA Listservs" class=" menu-link depth-3 tid-509"><span class="menu-title">EWA Listservs</span></a></li>
+<li class="menu-10336 mt-940  even  depth-3"></li>
+<li class="menu-10665 mt-978  odd  last  depth-3"><a href="/fellowship" title="EWA Reporting Fellowship" class=" menu-link depth-3 tid-978"><span class="menu-title">Fellowship</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-9161 menuparent mt-164  odd  depth-1"><a href="/awards" title="Awards" class=" menu-link depth-1 tid-164"><span class="menu-title">Awards</span></a><ul class="depth-2"><li class="menu-10740 mt-1049  first  odd  depth-2"><a href="/2016-awards" title="2016 EWA National Awards for Education Reporting" class=" menu-link depth-2 tid-1049"><span class="menu-title">2016 Awards</span><span class="menu-description"><br class="accessible-break"/>2016 EWA National Awards for Education Reporting</span></a></li>
+<li class="menu-10664 mt-977  even  depth-2"><a href="/eddie-award" title="The Eddie Award" class=" menu-link depth-2 tid-977"><span class="menu-title">Eddie Award</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9888 mt-533  odd  depth-2"><a href="/fred-m-hechinger-grand-prize" title="The Fred M. Hechinger Grand Prize" class=" menu-link depth-2 tid-533"><span class="menu-title">Hechinger Prize</span><span class="menu-description"><br class="accessible-break"/></span></a></li>
+<li class="menu-9194 menuparent mt-196  even  last  depth-2"><a href="/past-awards" title="Past Awards" class=" menu-link depth-2 tid-196"><span class="menu-title">Past Awards</span></a><ul class="depth-3"><li class="menu-9683 mt-505  first  odd  last  depth-3"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-9159 menuparent mt-162  even  depth-1"><a href="/about-ewa" title="About EWA" class=" menu-link depth-1 tid-162"><span class="menu-title">About</span><span class="menu-description"><br class="accessible-break"/></span></a><ul class="depth-2"><li class="menu-9191 mt-193  first  odd  depth-2"><a href="/announcements" title="Announcements" class=" menu-link depth-2 tid-193"><span class="menu-title">Announcements</span></a></li>
+<li class="menu-9192 mt-194  even  depth-2"><a href="/contact-us" title="Contact Us" class=" menu-link depth-2 tid-194"><span class="menu-title">Contact Us</span></a></li>
+<li class="menu-10338 mt-942  odd  depth-2"><a href="/sponsorship-opportunities" title="Sponsorship Opportunities" class=" menu-link depth-2 tid-942"><span class="menu-title">Sponsorship Opportunities</span></a></li>
+<li class="menu-10172 mt-608  even  depth-2"><a href="/ewa-funders" title="Major funders of EWA" class=" menu-link depth-2 tid-608"><span class="menu-title">EWA Funders</span><span class="menu-description"><br class="accessible-break"/>Major funders of EWA</span></a></li>
+<li class="menu-9685 menuparent mt-507  odd  last  depth-2"><a href="/governance" title="Governance" class=" menu-link depth-2 tid-507"><span class="menu-title">Governance</span></a><ul class="depth-3"><li class="menu-9781 mt-514  first  odd  depth-3"><a href="/boards-committees" title="Boards &amp; Committees" class=" menu-link depth-3 tid-514"><span class="menu-title">Boards &amp; Committees</span></a></li>
+<li class="menu-10744 mt-1055  even  depth-3"><a href="/strategic-plan" title="Strategic Plan" class=" menu-link depth-3 tid-1055"><span class="menu-title">Strategic Plan</span></a></li>
+<li class="menu-9187 mt-189  odd  last  depth-3"><a href="/bylaws" title="Bylaws" class=" menu-link depth-3 tid-189"><span class="menu-title">Bylaws</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-9408 menuparent mt-318  odd  depth-1"><a href="/join" title="Join" class=" menu-link depth-1 tid-318"><span class="menu-title">Join</span></a><ul class="depth-2"><li class="menu-9882 menuparent mt-527  first  odd  depth-2"><a href="/join-ewa" title="Join EWA" class=" menu-link depth-2 tid-527"><span class="menu-title">Join EWA</span></a><ul class="depth-3"><li class="menu-10350 mt-956  first  odd  last  depth-3"><a href="/post/refer-future-ewa-member" title="Know someone that would benefit from EWA membership?" class=" menu-link depth-3 tid-956"><span class="menu-title">Refer A Member</span><span class="menu-description"><br class="accessible-break"/>Know someone that would benefit from EWA membership?</span></a></li>
+</ul>
+</li>
+<li class="menu-9883 mt-528  even  last  depth-2"><a href="http://salsa4.salsalabs.com/o/50807/profile/" title="Update Your Info" class=" menu-link depth-2 tid-528"><span class="menu-title">Update Your Info</span></a></li>
+</ul>
+</li>
+<li class="menu-9189 mt-191  even  depth-1"><a href="https://salsa4.salsalabs.com/o/50807/donate_page/donate" title="Donate" class=" menu-link depth-1 tid-191"><span class="menu-title">Donate</span></a></li>
+<li class="menu-10180 menuparent mt-619  odd  last  depth-1"><ul class="depth-2"><li class="menu-10191 mt-630  first  odd  depth-2"></li>
+<li class="menu-10181 menuparent mt-620  even  depth-2"><ul class="depth-3"><li class="menu-10692 mt-1007  first  odd  depth-3"></li>
+<li class="menu-10728 mt-1046  even  depth-3"></li>
+<li class="menu-10182 mt-621  odd  depth-3"></li>
+<li class="menu-10694 mt-1009  even  depth-3"></li>
+<li class="menu-10200 mt-642  odd  depth-3"></li>
+<li class="menu-10343 mt-949  even  depth-3"></li>
+<li class="menu-10317 mt-924  odd  depth-3"></li>
+<li class="menu-10342 mt-948  even  depth-3"></li>
+<li class="menu-10183 mt-622  odd  depth-3"></li>
+<li class="menu-10201 mt-643  even  depth-3"></li>
+<li class="menu-10318 mt-925  odd  depth-3"></li>
+<li class="menu-10693 mt-1008  even  depth-3"></li>
+<li class="menu-10695 mt-1010  odd  depth-3"></li>
+<li class="menu-10696 mt-1011  even  last  depth-3"><a href="/wt-grant-16" title="WT Grant 16" class=" menu-link depth-3 tid-1011"><span class="menu-title">WT Grant 16</span></a></li>
+</ul>
+</li>
+<li class="menu-10691 menuparent mt-1006  odd  depth-2"><ul class="depth-3"><li class="menu-10321 mt-929  first  odd  depth-3"></li>
+<li class="menu-10187 mt-626  even  depth-3"></li>
+<li class="menu-10184 mt-623  odd  depth-3"></li>
+<li class="menu-10185 mt-624  even  depth-3"></li>
+<li class="menu-10190 mt-629  odd  depth-3"></li>
+<li class="menu-10186 mt-625  even  depth-3"></li>
+<li class="menu-10188 mt-627  odd  depth-3"></li>
+<li class="menu-10193 mt-633  even  depth-3"></li>
+<li class="menu-10344 mt-950  odd  depth-3"></li>
+<li class="menu-10189 mt-628  even  last  depth-3"></li>
+</ul>
+</li>
+<li class="menu-10351 menuparent mt-957  even  depth-2"><ul class="depth-3"><li class="menu-10570 mt-973  first  odd  depth-3"></li>
+<li class="menu-10569 mt-972  even  depth-3"></li>
+<li class="menu-10352 mt-958  odd  depth-3"></li>
+<li class="menu-10355 mt-961  even  last  depth-3"></li>
+</ul>
+</li>
+<li class="menu-9900 mt-542  odd  depth-2"></li>
+<li class="menu-9112 menuparent mt-115  even  last  depth-2"><a href="/topic" title="Topic" class=" menu-link depth-2 tid-115"><span class="menu-title">Topic</span></a><ul class="depth-3"><li class="menu-10715 mt-1033  first  odd  depth-3"></li>
+<li class="menu-10716 mt-1034  even  last  depth-3"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+          </nav>
+                  </div>
+        <div class="site-toolbar" role="presentation">
+          <button class="search-icon" role="button">Search</button>
+          <button class="menu-icon" role="button">Menu</button>
+        </div>
+                <div class="site-utilities">
+          <div id="block-digitaldcore-search" class="block block-digitaldcore region-odd odd region-count-1 count-1  search-keywords  "><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div id="dd-search" class="dd-search"><form action="/blog-educated-reporter/education-secretaries-betsy-devos-would-follow"  accept-charset="UTF-8" method="post" id="faceted-search-ui-form-1" class=" dd-search-standard">
+<div><div class="dd-search-keywords"><div id="edit-keywords-wrapper" class="form-item type-textfield">
+ <input type="text" maxlength="255" name="keywords" id="edit-keywords" size="20" value="" title="Search keywords" class="form-text" />
+</div>
+</div><input type="hidden" name="stage" id="edit-stage" value="results"  />
+<input type="hidden" name="facet-key" id="edit-facet-key" value=""  />
+<input type="hidden" name="facet-id" id="edit-facet-id" value=""  />
+<input type="hidden" name="facet-sort" id="edit-facet-sort" value=""  />
+<div class="dd-search-submit"><button class="dd-search-submit-button" type="submit"></button><div class="legacy-button"><input type="submit" name="op" id="edit-submit" value=""  class="form-submit" />
+</div></div><div class="dd-search-more"><a href="/find/" class="faceted-search-more">More options</a></div><input type="hidden" name="form_build_id" id="form-6zPtNmFgQ1NF0ri-XBiSRX1-YrykBPCVNII409PHsE8" value="form-6zPtNmFgQ1NF0ri-XBiSRX1-YrykBPCVNII409PHsE8"  />
+<input type="hidden" name="form_id" id="edit-faceted-search-ui-form-1" value="faceted_search_ui_form_1"  />
+<input type="hidden" name="box_text" id="edit-box-text" value="Search"  />
+
+</div></form>
+</div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div>
+              </div>
+    </header>
+
+    <span class="overlay"></span>
+
+    <section class="page-main">
+      
+      <div class="page-center layout">
+        
+        <main class="page-content" id="content" role="main">
+                                                  <article id="node-full" class="  fif-lt fiw-40 no-2col-lists te-show-related-profiles  dd node node-type-post node-full node-14571 pt-show-date pt-show-social-block no-event-date t307 wt307 wt617 wt2 wt0 t966 wt966 wt1031 wt1056 wt0 t117 wt117 wt520 wt313 wt0 t142 wt142 wt121 wt1031 wt1056 wt0 t544 wt544 wt119 wt1031 wt1056 wt0 t148 wt148 wt121 wt1031 wt1056 wt0 t144 wt144 wt121 wt1031 wt1056 wt0 t145 wt145 wt121 wt1031 wt1056 wt0 t149 wt149 wt121 wt1031 wt1056 wt0 access-normal has-image has-images has-embed has-embedded pn pt307 has-8-nt">
+    <div class="node-inner">
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Blog: The Educated Reporter'>Blog: The Educated Reporter</span>  </div></div>
+        
+    <h1 class="node-header node-item">
+      <span class="title">The Education Secretaries Betsy DeVos Would Follow</span>
+          </h1>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='meta-item post-date'><time datetime="2017-01-31T15:00:00">January 31, 2017</time></span> <span class='last meta-item meta-profile meta-profile-link'><a href="/profile/emily-richmond">Emily Richmond</a></span>         </div>
+    </div>
+    
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1"><a href="/sites/main/files/imagecache/lightbox/main-images/2831894133_6fce61e9c1_z.jpg" rel="lightbox[14571][The exterior of the U.S. Department of Education in Washington, D.C. (Flickr/Ken Lund)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/2831894133_6fce61e9c1_z.jpg" alt="" title="The exterior of the U.S. Department of Education in Washington, D.C. (Flickr/Ken Lund)"  width="500" height="375" /></a></span></div>
+    
+    <div class="node-content content node-item">
+            <p>A Senate committee is slated to vote tomorrow on President Donald Trump’s nominee for U.S. secretary of education — philanthropist and school choice advocate Betsy DeVos. The Education Department is one of the newer&nbsp;federal departments, created during President Jimmy Carter’s administration and beginning its work in May of 1980.</p>
+
+<p>The department’s <a href="https://www2.ed.gov/about/overview/mission/mission.html">stated mission </a>is to&nbsp;“supplement and complement the efforts of states, the local school systems and other instrumentalities of the states, the private sector, public and private nonprofit educational research institutions, community-based organizations, parents, and students to improve the quality of education.” If approved, DeVos will oversee a department with about 4,400 employees (including political appointees) an operating budget of about $68 billion.</p>
+
+<p>If confirmed, DeVos would be the 11th U.S. secretary of education. Here are some fast facts (and a few quirky tidbits) about the other 10 people to hold this Cabinet-level post:</p>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/shirley_hufstedler_november_12_2007_1.jpg" rel="lightbox[14571][Shirley Hufstedler in 2007 (Wikimedia Commons)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/shirley_hufstedler_november_12_2007_1.jpg" alt="Shirley Hufstedler" title="Shirley Hufstedler in 2007 (Wikimedia Commons)"  width="200" height="250" /></a></span></p>
+
+	<p><strong>1. Shirley Hufstedler</strong> (1979-81)<br />
+		Appointed by: Jimmy Carter</p>
+
+	<p>As the nation’s first education secretary, Hufstedler also became the highest-ranking woman in the federal branch. Hufstedler was one of 72 women featured in a debut set of “feminine” trading cards, intended to compete with male-dominated cards for professional sports. The original set is now on display in the Museum of Modern Art in New York.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/terrelbell.jpg" rel="lightbox[14571][Terrel Bell (Wikimedia Commons)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/terrelbell.jpg" alt="Terrel Bell" title="Terrel Bell (Wikimedia Commons)"  width="224" height="140" /></a></span></p>
+
+	<p><strong>2 . Terrel Bell </strong>(1981-85)<br />
+		Appointed by: Ronald Reagan</p>
+
+	<p>Prior to the creation of the U.S. Department of Education, Bell was the nation’s highest-ranking education official, serving as the U.S. commissioner of education under presidents Nixon and Ford. A member of the Mormon church, Bell focused early in his tenure on trying to ban “controversial” books from schools, including “The Catcher in the Rye,” “Lord of the Flies,” and “Slaughterhouse-Five.” According to <a href="http://www.csmonitor.com/1981/0326/032654.html">a 1981 profile</a> of him, Bell’s “favorite dish is pumpkin pie, but he’s also fond of a late-night snack of a bowl of bread and milk.”</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/bennett-01.jpg" rel="lightbox[14571][William Bennett in 2007. (Wikimedia Commons/c.berlet/publiceye.org)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/bennett-01.jpg" alt="William Bennett" title="William Bennett in 2007. (Wikimedia Commons/c.berlet/publiceye.org)"  width="465" height="384" /></a></span></p>
+
+	<p><strong>3 . William Bennett</strong> (1985-88)<br />
+		Appointed by: Ronald Reagan</p>
+
+	<p>Bennett is the author and editor of “The Children’s Book of Virtues,” later developed into an animated television series by PBS. In 2003, several news outlets reported that the <a href="http://www.nytimes.com/2003/05/03/us/relentless-moral-crusader-is-relentless-gambler-too.html">“relentless moral crusader is a relentless gambler, too.”</a> While Bennett acknowledged his gambling activities and said that over a decade of betting he likely broke even, subsequent news stories estimated his losses during that time frame at around $8 million.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/fbcavazos.jpg" rel="lightbox[14571][Lauro Cavazos (Wikimedia Commons/United States Department of State)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/fbcavazos.jpg" alt="Lauro Cavazos" title="Lauro Cavazos (Wikimedia Commons/United States Department of State)"  width="200" height="280" /></a></span></p>
+
+	<p><strong>4. Lauro Cavazos</strong> (1988-90)<br />
+		Appointed by: Ronald Reagan</p>
+
+	<p>A Democrat, Cavazos&nbsp;was the first Hispanic to serve in a president’s Cabinet, and served under two Republican chief executives: Reagan and George H.W. Bush. But Cavazos and Bush clashed over the administration’s decision to bar federal aid from colleges and universities that offered scholarships specifically to minority students. Cavazos’ “terse” resignation letter<a href="http://www.nytimes.com/1990/12/13/us/cavazos-quits-as-education-chief-amid-pressure-from-white-house.html?pagewanted=all"> “omitted the customary thanks</a> to the President for the honor of serving in the Cabinet,” according to The New York Times.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/sen._alexander_reelected_to_senate_republican_leadership.jpg" rel="lightbox[14571][Lamar Alexander in 2008 (Wikimedia Commons/United States Senate)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/sen._alexander_reelected_to_senate_republican_leadership.jpg" alt="Lamar Alexander" title="Lamar Alexander in 2008 (Wikimedia Commons/United States Senate)"  width="345" height="212" /></a></span></p>
+
+	<p><strong>5. Lamar Alexander </strong>(1991-93)<br />
+		Appointed by: George H. W. Bush</p>
+
+	<p>Alexander is the chairman of the Senate committee responsible for vetting DeVos. He praised DeVos during her confirmation hearing this month. As a senator, Alexander was a key architect of the federal Every Student Succeeds Act, which replaced the No Child Left Behind Act as the main federal law for K-12 education. He also served two terms as governor of Tennessee and made two unsuccessful bids for president (in 1996 and 2000). Known for his penchant for plaid shirts, Alexander is a classically trained pianist, and his inspired performance of a Jerry Lee Lewis song brought down the house at a festival in Memphis in 1982 … when he was governor of Tennessee. In 2008, <a href="http://www.politico.com/blogs/anneschroeder/0508/Shenanigans_Hidden_talents.html">he opened for The Four Tops</a>, performing with the Memphis Symphony Orchestra and an audience of 20,000.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/richard_riley_official_department_of_education_photo.jpg" rel="lightbox[14571][Richard Riley (Wikimedia Commons/U.S. Dept. of Education)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/richard_riley_official_department_of_education_photo.jpg" alt="Richard Riley" title="Richard Riley (Wikimedia Commons/U.S. Dept. of Education)"  width="216" height="270" /></a></span></p>
+
+	<p><strong>6. Richard Riley</strong> (1993-2001)<br />
+		Appointed by: Bill Clinton</p>
+
+	<p>Riley turned down Clinton’s first offer: to be nominated for a spot on the U.S. Supreme Court. That vacancy was eventually filled by Ruth Bader Ginsburg. Riley was so popular as South Carolina’s Democratic governor that the state’s constitution was amended to enable him to run for, and eventually serve, a second term. After his tenure as education secretary Riley was named a distinguished professor at his alma mater, Furman University. In 2001, Washington Post columnist David Broder called Riley one of the “most decent and honorable people in public life.”</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/rod_paige.jpg" rel="lightbox[14571][Rod Paige (Wikimedia Commons/U.S. Dept. of Education)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/rod_paige.jpg" alt="Rod Paige" title="Rod Paige (Wikimedia Commons/U.S. Dept. of Education)"  width="671" height="940" /></a></span></p>
+
+	<p><strong>7.&nbsp;Rod Paige</strong> (2001-05)<br />
+		Appointed by: George W. Bush</p>
+
+	<p>Paige came to Washington after serving as the superintendent of the Houston school district. He is the only U.S. education secretary to have prior experience as a university football coach — and a highly successful one, at that. Among the notable players he recruited and coached at Jackson State University from 1964-68 was Lem Barney, who went on to play for the Detroit Lions and was inducted into the Pro Football Hall of Fame. The No Child Left Behind Act was approved during Paige’s tenure as education secretary. Also during his tenure, the department revised Title IX language to allow <a href="http://articles.latimes.com/2002/may/09/nation/na-singlesex9">single-sex classrooms in public schools</a>, provided participation was optional.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/margaret_spellings_speaking_at_the_university_of_houston.jpg" rel="lightbox[14571][Margaret Spellings speaking at the University of Houston in 2006 (Wikimedia Commons/U.S. Dept. of Education)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/margaret_spellings_speaking_at_the_university_of_houston.jpg" alt="Margaret Spellings" title="Margaret Spellings speaking at the University of Houston in 2006 (Wikimedia Commons/U.S. Dept. of Education)"  width="300" height="400" /></a></span></p>
+
+	<p><strong>8. Margaret Spellings</strong> (2005-09)<br />
+		Appointed by: George W. Bush</p>
+
+	<p>As an advisor to the president prior to her appointment, Spellings helped to write the No Child Left Behind Act. She appeared on Celebrity Jeopardy in 2006, coming in second to actor Michael McKean. Now president of the University of North Carolina system, Spellings recently <a href="http://www.npr.org/sections/ed/2017/01/16/508970536/a-former-education-secretarys-advice-for-betsy-devos">told NPR</a> that “the reason we’ve moved the needle for poor and minority students is because we’ve cared enough to find out how they’re doing and made them a priority … The federal role in education is, and has always been, a civil rights focus.”</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/03012013_-_rolling_terrace_elementary_23-r.jpg" rel="lightbox[14571][Arne Duncan visits students at Rolling Terrace Elementary (Md.) in 2013. (Wikimedia Commons/U.S. Dept. of Education)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/03012013_-_rolling_terrace_elementary_23-r.jpg" alt="Arne Duncan" title="Arne Duncan visits students at Rolling Terrace Elementary (Md.) in 2013. (Wikimedia Commons/U.S. Dept. of Education)"  width="625" height="940" /></a></span></p>
+
+	<p><strong>9.&nbsp;Arne Duncan</strong> (2009-15)<br />
+		Appointed by: Barack Obama</p>
+
+	<p>Duncan’s prowess on the basketball court is well known. Following college, he played professionally in Australia for four years, after being turned down for the Boston Celtics. He was a standout for the NBA All-Star Celebrity Games from 2011 to 2014. Duncan’s decision to issue waivers to states from some of NCLB’s requirements (a response to the long delay by Congress in reauthorizing the federal education law) was decried as overreaching his authority by some Republican lawmakers. ESSA <a href="http://blogs.edweek.org/edweek/campaign-k-12/2016/11/thanks_to_essa_trump_cant_get_.html">now prohibits</a> the office of the education secretary from incentivizing states to adopt — or reject — specific academic standards — a response to Duncan’s push on behalf of the Common Core.</p>
+</div>
+
+<div style="overflow:auto;">
+	<p><span class="field-image field-not-video field-image-preset-medium croppable  c1  c-1 image right w25"><a href="/sites/main/files/imagecache/lightbox/main-images/john_king_jr._at_little_rock_central_high_school_national_historic_site.jpg" rel="lightbox[14571][John King visits Little Rock Central High School National Historic Site. (Wikimedia Commons/U.S. Dept. of Education)]"><img src="http://www.ewa.org/sites/main/files/imagecache/medium/main-images/john_king_jr._at_little_rock_central_high_school_national_historic_site.jpg" alt="John King" title="John King visits Little Rock Central High School National Historic Site. (Wikimedia Commons/U.S. Dept. of Education)"  width="940" height="642" /></a></span></p>
+
+	<p><strong>10. John B. King, Jr.</strong> (2016-17)<br />
+		Appointed by: Barack Obama</p>
+
+	<p>As a student at Phillips Exeter Academy, King rebelled against the strict rules of the elite New England boarding school, and was expelled during his junior year. “I sort of resented adult authority,” he told The <a href="http://www.nytimes.com/2011/05/17/nyregion/new-york-names-new-state-education-commissioner.html">New York Times</a>. “At the time, I felt like adults had let me down in my life.” He later graduated from Harvard, and <a href="https://www2.ed.gov/news/staff/bios/king.html">began his career</a> teaching high school social studies in Boston and Puerto Rico. King also co-founded a charter school and served as New York commissioner of education.</p>
+
+	<p>King earned a law degree from Yale, as well as a master’s in education and a doctoral degree in educational leadership from Columbia University. As of last year, King was <a href="http://www.dailytexanonline.com/2016/03/21/new-secretary-of-education-addresses-student-loan-repayment-options-debt-relief-scams">still paying off his student loans</a>.</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p><span class="field-embed  c1  c-1"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEdWriters%2Fvideos%2F10154931741167836%2F&width=300&show_text=true&appId=468891759920560&height=466" width="300" height="466" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></span></p><div class="epilogue"><hr>
+
+<p><br></p>
+
+<p><i>Have a question, comment or concern for the Educated Reporter? Contact <a href="http://www.ewa.org/general-information/send-us-message?profile=1136">Emily Richmond</a>. Follow her on Twitter <a href="http://www.twitter.com/EWAEmily">@EWAEmily</a>.</i></p>
+  
+  
+<p><strong><a href="http://www.ewa.org/blog-educated-reporter">Read other Educated Reporter articles.</a></strong></p></div>    </div>
+
+    
+      </div>
+</article>
+                            </main>
+
+                <aside class="page-right" role="complementary">
+          <div class="page-sidebar inner">
+            <div id="block-digitaldcore-node_nav_terms" class="block block-digitaldcore region-odd odd region-count-1 count-3  left-nav appearing-nav  "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">This item appears in</span></h2>
+  
+  <div class="block-content content">
+    <div class="field-nav-terms-appears-in"><div id="nav-back"><a href="javascript:history.back();">Back</a></div><div class="small">This item appears in:</div><ul class="links"><li class="term-id-966 first"><a href="/election" rel="tag" title="">2016 U.S. Elections</a></li>
+<li class="term-id-117"><a href="/blog-educated-reporter" rel="tag" title="">Blog: The Educated Reporter</a></li>
+<li class="term-id-142"><a href="/common-core" rel="tag" title="">Common Core</a></li>
+<li class="term-id-148"><a href="/topic-essa" rel="tag" title="">Topic: ESSA</a></li>
+<li class="term-id-544"><a href="/sexual-assault-title-ix" rel="tag" title="">Sexual Assault &amp; Title IX</a></li>
+<li class="term-id-144"><a href="/federal-k-12-funding" rel="tag" title="">Federal K-12 Funding</a></li>
+<li class="term-id-145"><a href="/federal-k-12-reform" rel="tag" title="">Federal K-12 Reform</a></li>
+<li class="term-id-149 last"><a href="/standards-testing" rel="tag" title="">Standards &amp; Testing</a></li>
+</ul></div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-utility_links" class=" utility-links  dd block block-digitaldcore region-even even region-count-2 count-4"><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div class="print-html"><a href='javascript:window.print();'>Print-friendly</a></div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-node_profiles" class=" ip-above  dd block block-digitaldcore region-odd odd region-count-3 count-5  channel profile-posts posts  "><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div class="view-content"><div class="views-row views-row-odd views-row-1"><article id="node-1136-teaser" class=" te-show-contact te-show-tweetbutton  dd node node-teaser node-type-post node-1136 pt-show-post-type pt-hide-contact-info pt-show-social-block no-event-date t7 wt7 wt2 wt0 t194 wt194 wt162 wt0 t534 wt534 wt506 wt189 wt507 wt162 wt0 access-normal has-image has-more pt7 has-2-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/profile/emily-richmond" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/20585564220321188279652324534636269344n.jpg" alt="" title=""  width="420" height="244" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Profiles'>Profile</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/profile/emily-richmond" title="Emily Richmond">
+        <span class="title">Emily Richmond</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">Public Editor</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2013-04-25T19:54:00">April 25, 2013</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+      <p>Emily Richmond is the public editor of the Education Writers Association.</p>    </div>
+
+        <div class="node-contact node-item">
+      <div class="node-contact-wrapper">
+
+<div class="fouc field-email"><a href="/contact-us?profile=1136">Send message</a></div></div>    </div>
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first"><span><a href="/profile/emily-richmond"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-twitter last"><span>  <a href="http://twitter.com/EWAEmily" class="twitter-follow-button" data-button="grey" data-show-count="true" data-width="280px" data-show-screen-name="true">Follow Emily Richmond</a></span></li>
+</ul>    </div>
+      </div>
+</article>
+</div></div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+          </div>
+        </aside>
+              </div>
+
+            <div class="page-bottom">
+        <div class="inner layout">
+          <div id="block-digitaldcore-node_bundled" class=" vlim-96 icp-home-grid ip-above tiles-layout tiles  dd block block-digitaldcore region-odd even region-count-1 count-6  channel bundled-posts tagged-posts posts  "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Related Posts</span></h2>
+  
+  <div class="block-content content">
+    <div class="view-content"><div class="views-row views-row-odd views-row-1"><article id="node-14494-teaser" class="node node-teaser node-type-post node-14494 pt-show-date pt-show-social-block no-event-date t307 wt307 wt617 wt2 wt0 t117 wt117 wt520 wt313 wt0 t123 wt123 wt119 wt1031 wt1056 wt0 t140 wt140 wt121 wt1031 wt1056 wt0 t141 wt141 wt121 wt1031 wt1056 wt0 t131 wt131 wt121 wt1031 wt1056 wt0 t544 wt544 wt119 wt1031 wt1056 wt0 t144 wt144 wt121 wt1031 wt1056 wt0 t145 wt145 wt121 wt1031 wt1056 wt0 t134 wt134 wt121 wt1031 wt1056 wt0 access-normal has-image has-more pt307 has-9-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-home-grid croppable  c1  c-1"><a href="/blog-educated-reporter/trump-pick-devos-confirmation-hearing-bear" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/home-grid/main-images/devos-grab.jpg" alt="" title="(Image Capture/U.S. Senate HELP Committee)"  width="980" height="664" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Blog: The Educated Reporter'>Blog: The Educated Reporter</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/blog-educated-reporter/trump-pick-devos-confirmation-hearing-bear" title="For Trump Pick DeVos, Confirmation Hearing Is a Bear">
+        <span class="title">For Trump Pick DeVos, Confirmation Hearing Is a Bear</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='meta-item post-date'><time datetime="2017-01-18T18:36:00">January 18, 2017</time></span> <span class='last meta-item meta-profile meta-profile-link'><a href="/profile/emily-richmond">Emily Richmond</a></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+      <p>Tuesday’s confirmation hearing for billionaire school advocate Betsy DeVos — President-elect Donald Trump’s pick for U.S. secretary of education — was a doozy.</p>
+
+<p>DeVos sought to present herself as ready to oversee the federal agency, but some of her remarks suggested a lack of familiarity with the federal laws governing the nation’s schools.</p>
+
+<p>In her opening statement before the Senate Committee on Health, Education, Labor, and Pensions, DeVos said:</p>    </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/blog-educated-reporter/trump-pick-devos-confirmation-hearing-bear"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+</div><div class="views-row views-row-even views-row-2"><article id="node-10374-teaser" class="node node-teaser node-type-post node-10374 pt-show-date pt-show-social-block no-event-date t307 wt307 wt617 wt2 wt0 t609 wt609 wt1028 wt502 wt320 wt0 t117 wt117 wt520 wt313 wt0 t148 wt148 wt121 wt1031 wt1056 wt0 t144 wt144 wt121 wt1031 wt1056 wt0 t145 wt145 wt121 wt1031 wt1056 wt0 t814 wt814 wt0 access-normal has-image has-more pt307 has-5-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-home-grid croppable  c1  c-1"><a href="/blog-educated-reporter/arne-duncan-education-great-equalizer-not-yet-national-priority" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/home-grid/main-images/dsc_2476.jpg" alt="U.S. Secretary of Education Arne Duncan fields reporters&#039; questions culled by Motoko Rich of the New York Times at EWA&#039;s National Seminar in Chicago, April 21, 2015. (Lloyd Degrane for EWA)" title="U.S. Secretary of Education Arne Duncan fields reporters&#039; questions culled by Motoko Rich of the New York Times at EWA&#039;s National Seminar in Chicago, April 21, 2015. (Lloyd Degrane for EWA)"  width="980" height="664" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Blog: The Educated Reporter'>Blog: The Educated Reporter</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/blog-educated-reporter/arne-duncan-education-great-equalizer-not-yet-national-priority" title="Arne Duncan: Education Is ‘Great Equalizer’ But Not Yet National Priority">
+        <span class="title">Arne Duncan: Education Is ‘Great Equalizer’ But Not Yet National Priority</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='meta-item post-date'><time datetime="2015-04-21T22:02:00">April 21, 2015</time></span>  <span class='last meta-item meta-custom meta-custom-0'>Alyson Klein of Education Week for EWA</span>       </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+      <p><span style="line-height:1.5em;">U.S. Secretary of Education Arne Duncan subjected himself to what might have been the ultimate edu-press conference in Chicago Tuesday, allowing hundreds of reporters to grill him on testing, No Child Left Behind, college ratings (and yes, White Suburban moms) at the Education Writers Association’s 68th National Seminar. </span></p>    </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/blog-educated-reporter/arne-duncan-education-great-equalizer-not-yet-national-priority"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+</div></div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-node_referring" class=" vlim-96 icp-home-grid ip-above tiles-layout tiles  dd block block-digitaldcore region-even odd region-count-2 count-7  channel referring-posts tagged-posts posts  "><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div class="view view-related view-id-related view-display-id-default view-dom-id-1">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div>
+      </div>
+      
+      <a href="#" class="back-to-top">Back to Top</a>
+    </section>
+
+    <span class="footprint"></span>
+
+    <footer class="page-footer">
+      <div class="inner layout">
+                <div id="block-views_blocks-term-block_1-7" class=" ip-above  dd block block-views_blocks region-odd even region-count-1 count-8 menu-pods views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <article id="node-14540-teaser" class="node node-teaser node-type-post node-14540 pt-show-social-block no-event-date t268 wt268 wt0 t320 wt320 wt0 access-normal has-image no-more pt268 has-1-nt is-current">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/2017National" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/washington-dc-1034860.jpg" alt="" title=""  width="940" height="705" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/2017National" title="70th EWA National Seminar">
+        <span class="title">70th EWA National Seminar</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">Register for EWA&#039;s Premier Conference</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2017-01-24T19:08:00">January 24, 2017</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/2017National"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <article id="node-14181-teaser" class="node node-teaser node-type-post node-14181 pt-show-social-block no-event-date t268 wt268 wt0 t1056 wt1056 wt0 access-normal has-image no-more pt268 has-1-nt is-current">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/school-climate-safety" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-a-very-sad-boy-in-school-playg-83243594.jpg" alt="" title=""  width="900" height="600" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/school-climate-safety" title="School Climate &amp; Safety">
+        <span class="title">School Climate &amp; Safety</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2016-11-17T19:25:00">November 17, 2016</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/school-climate-safety"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <article id="node-12221-teaser" class="node node-teaser node-type-post node-12221 pt-show-social-block no-event-date t268 wt268 wt0 t162 wt162 wt0 access-normal has-image no-more pt268 has-1-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/sponsorship-opportunities" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-hand-holding-a-megaphone-55380404.jpg" alt="" title=""  width="900" height="900" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/sponsorship-opportunities" title="Sponsorship &amp; Message Opportunities">
+        <span class="title">Sponsorship &amp; Message Opportunities</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">EWA can help your organization&#039;s outreach.</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2016-01-15T14:48:00">January 15, 2016</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/sponsorship-opportunities"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <article id="node-12220-teaser" class="node node-teaser node-type-post node-12220 pt-show-social-block no-event-date t268 wt268 wt0 t320 wt320 wt0 access-normal has-image no-more pt268 has-1-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/webinar/back-school-you-need-stories-weve-got-ideas" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/14868308880_a08d57b70b_z.jpg" alt="" title=""  width="640" height="429" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/webinar/back-school-you-need-stories-weve-got-ideas" title="Back-to-School: You Need Stories, We’ve Got Ideas">
+        <span class="title">Back-to-School: You Need Stories, We’ve Got Ideas</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">Watch a Recording</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2016-01-14T20:49:00">January 14, 2016</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/webinar/back-school-you-need-stories-weve-got-ideas"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <article id="node-12219-teaser" class="node node-teaser node-type-post node-12219 pt-show-social-block no-event-date t268 wt268 wt0 access-normal has-image no-more pt268 has--nt is-current">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/story-lab/story-lab-student-data-privacy" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-modern-laptop-with-closeup-of--79874737.jpg" alt="" title=""  width="900" height="600" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/story-lab/story-lab-student-data-privacy" title="Student Data Privacy">
+        <span class="title">Student Data Privacy</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">EWA Story Lab</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2016-01-14T20:43:00">January 14, 2016</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/story-lab/story-lab-student-data-privacy"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <article id="node-10570-teaser" class="node node-teaser node-type-post node-10570 pt-show-social-block no-event-date t268 wt268 wt0 t313 wt313 wt0 access-normal has-image no-more pt268 has-1-nt is-current">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/reporter-guide/making-sense-education-research" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-conceptual-network-86475872.jpg" alt="" title=""  width="900" height="675" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/reporter-guide/making-sense-education-research" title="Making Sense of Education Research">
+        <span class="title">Making Sense of Education Research</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">EWA Reporter Guides</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2015-05-21T13:35:00">May 21, 2015</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/reporter-guide/making-sense-education-research"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <article id="node-7087-teaser" class="node node-teaser node-type-post node-7087 pt-show-social-block no-event-date t268 wt268 wt0 access-normal has-image no-more pt268 has--nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/2015-awards" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/awards-wide-2015-03.png" alt="" title=""  width="621" height="420" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/2015-awards" title="EWA Reporting Awards">
+        <span class="title">EWA Reporting Awards</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">Learn More</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2014-11-26T18:26:00">November 26, 2014</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/2015-awards"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <article id="node-4680-teaser" class="node node-teaser node-type-post node-4680 pt-show-social-block no-event-date t268 wt268 wt0 t1031 wt1031 wt1056 wt0 t115 wt115 wt619 wt0 access-normal has-image no-more pt268 has-2-nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/summer-learning" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-centered-yellow-orange-summer--29999876.jpg" alt="" title=""  width="940" height="626" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/summer-learning" title="Summer Learning">
+        <span class="title">Summer Learning</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">What happens to the knowledge kids accumulate during the school year when the warmer months hit?</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2014-01-09T21:54:00">January 9, 2014</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/summer-learning"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-9 views-row-odd views-row-last">
+    <article id="node-4679-teaser" class="node node-teaser node-type-post node-4679 pt-show-social-block no-event-date t268 wt268 wt0 access-normal has-image no-more pt268 has--nt">
+    <div class="node-inner">
+        <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/tuition-tracker" rel=""><img src="http://www.ewa.org/sites/main/files/imagecache/thumbnail/main-images/bigstock-education-saving-21684401.jpg" alt="" title=""  width="900" height="598" /></a></span></div>
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Menu Pods'>Menu Pod</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/tuition-tracker" title="Tuition Tracker">
+        <span class="title">Tuition Tracker</span>
+                  <br class='accessible-break'/>
+          <span class="subtitle">How much does college really cost?</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2014-01-09T21:46:00">January 9, 2014</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/tuition-tracker"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-9" class="block block-views_blocks region-even odd region-count-2 count-9 footer-links views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <article id="node-3166-teaser" class="node node-teaser node-type-post node-3166 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+    <div class="node-inner">
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Footer links'>Footer link</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/footer-link/education-writers-association" title="Education Writers Association">
+        <span class="title">Education Writers Association</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2013-07-25T21:45:00">July 25, 2013</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/footer-link/education-writers-association"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+    <article id="node-3167-teaser" class="node node-teaser node-type-post node-3167 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+    <div class="node-inner">
+    
+          <div class="node-upper-meta meta node-item"><div class='meta-inner'><span class='last meta-item post-type' data-plural='Footer links'>Footer link</span>  </div></div>
+        
+    <h2 class="node-header node-item">
+      <a href="/footer-link/3516-connecticut-avenue-nw-washington-dc-20008" title="3516 Connecticut Avenue NW, Washington, DC 20008">
+        <span class="title">3516 Connecticut Avenue NW, Washington, DC 20008</span>
+              </a>
+    </h2>
+
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+         <span class='last meta-item post-date'><time datetime="2013-07-25T21:46:00">July 25, 2013</time></span>         </div>
+    </div>
+    
+    
+    <div class="node-content content node-item">
+          </div>
+
+    
+    
+    
+        <div class='node-links node-item'>
+      <ul class="links inline"><li class="link link-read-more first last"><span><a href="/footer-link/3516-connecticut-avenue-nw-washington-dc-20008"><span class="read-more-text">Read more</span></a></span></li>
+</ul>    </div>
+      </div>
+</article>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+      </div>
+    </footer>
+  </div>
+
+  <div class="below-page">
+        <div class="closure inner layout">
+      <div id="block-dd_login-login" class="block block-dd_login region-odd even region-count-1 count-10"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Log in</span></h2>
+  
+  <div class="block-content content">
+    <form action="/blog-educated-reporter/education-secretaries-betsy-devos-would-follow?destination=node%2F14571"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div id="edit-name-wrapper" class="form-item type-textfield">
+ <label for="edit-name">E-mail or username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" tabindex="1" required="" class="form-text required" />
+</div>
+<div id="edit-pass-wrapper" class="form-item type-password">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15" tabindex="2" required="" class="form-text required" />
+</div>
+<div id="edit-remember-me-wrapper" class="form-item type-checkbox">
+ <label class="option" for="edit-remember-me"><input type="checkbox" name="remember_me" id="edit-remember-me" value="1"  checked="checked"  tabindex="3" class="form-checkbox" /> Remember me</label>
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Log in"  tabindex="4" class="form-submit" />
+<div class="item-list"><ul><li class="first last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input type="hidden" name="form_build_id" id="form-MnqAP92NH0FDdvgl0ivmBkHEwFmFqtX3e7cyoCySjek" value="form-MnqAP92NH0FDdvgl0ivmBkHEwFmFqtX3e7cyoCySjek"  />
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-command_menu" class="block block-digitaldcore region-even odd region-count-2 count-11"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Commands</span></h2>
+  
+  <div class="block-content content">
+    <div class="menu-block-dcore menu-name-dd-cmd parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="leaf first menu-mlid-10469"><a href="/help" title="" class=" menu-help-center help depth-1">Help</a></li>
+<li class="leaf last menu-mlid-10470"><a href="/user/login" title="" class=" menu-login user-login depth-1">Log in</a></li>
+</ul></div>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+    </div>
+        <div class="script">
+      <script type="text/javascript" src="/sites/main/files/advagg_js/js_448e880f79745472758c2eec8cb9d978_0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)sites\/main\/files","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":1,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":640,"iframe_height":385,"iframe_border":0,"enable_video":0},"ddCaptcha":1971,"ddPoll":{"resultsURI":"\/sites\/all\/modules\/_dd\/dd_poll\/dd_poll_results.php"},"ddTwitterFeed":{"getTweetsURI":"\/dd_twitter_feed\/get_tweets"},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":1,"extExclude":"","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto"},"CToolsUrlIsAjaxTrusted":{"\/blog-educated-reporter\/education-secretaries-betsy-devos-would-follow":[true,true],"\/blog-educated-reporter\/education-secretaries-betsy-devos-would-follow?destination=node%2F14571":true},"cssInit":{"node.css":true,"defaults.css":true,"system.css":true,"system-menus.css":true,"user.css":true,"content-module.css":true,"ctools.css":true,"date.css":true,"datepicker.css":true,"jquery.timeentry.css":true,"filefield.css":true,"lightbox_alt.css":true,"logintoboggan.css":true,"nice_menus.css":true,"nice_menus_default.css":true,"dd_captcha.css":true,"dd_classes.experimental.css":true,"dd_classes.do_timeout.css":true,"dd_classes.gallery.css":true,"dd_create.css":true,"compiled-classes.css":true,"dd_embed.css":true,"dd_login.css":true,"dd_poll.css":true,"dd_twitter_feed.css":true,"dd_user_roles.css":true,"farbtastic.css":true,"calendar.css":true,"extlink.css":true,"fieldgroup.css":true,"views.css":true,"printlinks.css":true,"dtheme-direct.css":true,"html-elements.css":true,"tabs.css":true,"messages.css":true,"block-editing.css":true,"wireframes.css":true,"zen.css":true,"dmodel-layout.css":true,"dmodel.css":true,"dd_social.css":true},"jsInit":{"misc\/jquery.js":true,"misc\/drupal.js":true,"sites\/all\/modules\/google_analytics\/googleanalytics.js":true,"sites\/all\/modules\/_dd\/dd_captcha\/dd_captcha.js":true,"sites\/all\/modules\/_dd\/dd_classes\/dd_classes.js":true,"sites\/all\/modules\/_dd\/dd_classes\/plugins\/do_timeout\/dd_classes.do_timeout.js":true,"sites\/all\/modules\/_dd\/dd_classes\/plugins\/gallery\/dd_classes.gallery.js":true,"sites\/all\/modules\/_dd\/dd_create\/dd_create.js":true,"sites\/all\/modules\/_dd\/dd_embed\/dd_embed.js":true,"sites\/all\/modules\/_dd\/dd_login\/dd_login.js":true,"sites\/all\/modules\/_dd\/dd_poll\/dd_poll.js":true,"sites\/all\/modules\/_dd\/dd_twitter_feed\/dd_twitter_feed.js":true,"sites\/all\/modules\/extlink\/extlink.js":true,"sites\/all\/modules\/_dd\/digitaldcore\/digitaldcore.js":true,"sites\/all\/modules\/_dd\/digitaldcore\/modernizr.js":true,"sites\/all\/modules\/_dd\/digitaldcore\/browser-detect.js":true,"sites\/all\/modules\/_dd\/digitaldcore\/dd-search.js":true,"sites\/all\/modules\/jquery_ui\/jquery.ui\/ui\/minified\/ui.core.min.js":true,"sites\/all\/modules\/jquery_ui\/jquery.ui\/ui\/minified\/ui.dialog.min.js":true,"sites\/all\/modules\/_dd\/digitaldcore\/digitaldcore.monkey-patch.js":true,"sites\/all\/themes\/dmodel\/dmodel.js":true}});
+//--><!]]>
+</script>
+            <!--[if gte IE 9]>
+      <script src="/sites/default/themes/dtheme/bower_components/raf.js/raf.min.js"></script>
+      <script src="/sites/default/themes/dtheme/bower_components/classlist/classList.min.js"></script>
+      <![endif]-->
+      <script>require = {urlArgs: 'z'};</script>
+      <script data-main="/sites/default/themes/dtheme/js/main.min" src="/sites/default/themes/dtheme/bower_components/requirejs/require.js" async></script>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/sites/main/files/advagg_js/js_ec6fb474d3d709120cb606b8913826b8_0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-1596158-5"]);_gaq.push(["_setDomainName",".ewa.org"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()
+//--><!]]>
+</script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ca0e37fff2298f" async></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"51e9ee0927","applicationID":"3044101","transactionName":"bwBRZUoEC0NXUEEKXlZKclJMDApeGWxHBkdRFlpeVgwLV2lFXAZG","queueTime":0,"applicationTime":598,"atts":"Q0dGEwIeR0VFVkcwRVkRRkIaX0dRWFxbGlxXEEATFEcWUVhXVwxJcQERCxoAElFpAQVSB0oAQEFXCxZZQFYXHh0aBBELQxgY","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

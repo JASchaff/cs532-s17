@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMEU1BRDhAEUFVRAgkCVg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+	<!-- Static common meta tag for all the views -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+		<link rel='dns-prefetch' href='//optimized-by.rubiconproject.com'>
+	<link rel='dns-prefetch' href='//fastlane.rubiconproject.com'>
+	<link rel="preload" href="//www.googletagservices.com/tag/js/gpt.js" as="script">
+	<link rel="preload" href="//c.amazon-adsystem.com/aax2/amzn_ads.js" as="script">
+	<link rel="preload" href="https://www.thesun.co.uk/wp-content/themes/thesun/js/head.js" as="script">
+	<link rel="preload" href="//static.criteo.net/js/ld/publishertag.js" as="script">
+<title>Three youths 'looking for trouble' branded US Army veteran a 'little f***ing immigrant' in vile racist tram rant</title>
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="C0q6rLPIDXHU7PcyZ9CmiFRLM46bbWgS4qxZ-woBItM" />
+<meta name="p:domain_verify" content="c061a8052bd9e93315b7f01447fa4124" />
+<link rel='dns-prefetch' href='//cdn.livefyre.com' />
+<link rel='dns-prefetch' href='//c.amazon-adsystem.com' />
+<link rel='dns-prefetch' href='//static.criteo.net' />
+<link rel='dns-prefetch' href='//www.googletagservices.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//player.ooyala.com' />
+<link rel='dns-prefetch' href='//widgets.outbrain.com' />
+<link rel='dns-prefetch' href='//video.unrulymedia.com' />
+<link rel='dns-prefetch' href='//s.skimresources.com' />
+<link rel='dns-prefetch' href='//prod-sunbets-widgets.s3-eu-west-1.amazonaws.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="The Sun &raquo; Feed" href="https://www.thesun.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Sun &raquo; Comments Feed" href="https://www.thesun.co.uk/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Sun &raquo; Three youths &#8216;looking for trouble&#8217; branded US Army veteran a &#8216;little f***ing immigrant&#8217; in vile racist tram rant Comments Feed" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/feed/" />
+<meta name='description' content='Aaron Cauchi, 19, Robert Molloy, 20, and a 16-year-old spat in the face of one victim and used &#039;foul language&#039;' />
+<meta name='keywords' content='racist, tram, Manchester' />
+<meta name='news_keywords' content='racist, tram, Manchester' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.thesun.co.uk\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='thesun-ooyala-skin-css'  href='//player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.css?ver=v4' type='text/css' media='' />
+<link rel='stylesheet' id='all-css-2' href='https://www.thesun.co.uk/_static/??/wp-content/themes/thesun/css/swiper.css,/wp-content/themes/thesun/css/style.css?m=1487612906' type='text/css' media='all' />
+<link rel='stylesheet' id='thesun-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C700%7CRoboto+Slab&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-4' href='https://www.thesun.co.uk/_static/??-eJyNjMsKwjAQRX/IdFDsw4X0UyRMQjqazAQnQfz7PqCLbsTduXDOhU82KFw8F0jV5FgDscLTl2zxBUlcjV5BJ/v2zjr33ZA4NKh6gt/1gxhBBclGEyWIHkaTiP95WZSdV31M9/N16Nqh7S+3GTsURq8=' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.thesun.co.uk/wp-content/plugins/livefyre-apps/assets/js/lfapps.js?m=1478608615g'></script>
+<script type='text/javascript' src='https://cdn.livefyre.com/Livefyre.js?ver=1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thesun_ad_settings = {"providers":[{"bidder":"rubicon","params":{"accountId":"7753","siteId":"15119","zoneId":"445790"}},{"bidder":"appnexus","params":{"placementId":"6546370"}},{"bidder":"criteo","params":{"accountId":"4713"}},{"bidder":"amazon","params":{"accountId":"3360"}},{"bidder":"pubmatic","params":{"publisherId":"156034","adSlotPrefix":"TheSun"}},{"bidder":"indexExchange","params":{"siteID":"188806"}}],"prebid_timeout":"2000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.thesun.co.uk/wp-content/themes/thesun/js/generic.js?m=1478608615g'></script>
+<script type='text/javascript' async="async" onload="try { amznads.getAdsAsync(3360); } catch(e) { console.error(e); }" src='//c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+<script type='text/javascript' async="async" onload="try { Criteo.CallRTA({'networkid' : '4713'}); Criteo.SetTargeting({'adserver' : 'DFP'}); } catch(e) { console.error(e); }" src='//static.criteo.net/js/ld/publishertag.js'></script>
+<script type='text/javascript' async="async" src='//www.googletagservices.com/tag/js/gpt.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thesun_googletag = {"networkID":"3048","dfpSiteID":"d.thesun","sectionID":"news\/uknews","path":"\/news\/2799551\/three-youths-branded-army-veteran-immigrant\/","sec_id":"327","sec":"art","topics":"courts,racism,manchester","kw":"three,youths,looking,for,trouble,branded,us,army,veteran,a,little,fing,immigrant,in,vile,racist,tram,rant,by,ellie,flynn,aaron,cauchi,19,robert,molloy,20,and,16yearold,spat,the,face,of,one,victim,used,foul,language,dont,chat,s,when,youre,not,from,england,news,uknews,manchester","aid":"2799551","search":"null","article_type":"post","hide_ads":"","article_slug":"null"};
+var utag_data = {"page_site_name":"the sun","amp_page_site_name":"the sun amp","page_site_region":"uk","page_restrictions":"public","page_name":"article: Three youths 'looking for trouble' branded US Army veteran a 'little f***ing immigrant' in vile racist tram rant","page_section":"News","page_section_id":"316","page_section_2":"News:UK News","page_section_2_id":"327","page_type":"article","article_name":"Three youths 'looking for trouble' branded US Army veteran a 'little f***ing immigrant' in vile racist tram rant","article_publish_timestamp":"2017\/02\/06 18:26 Monday","article_id":"2799551","article_author":"By ELLIE FLYNN","article_id_type":"wordpress","article_tag_name":"","page_tags":"Courts,Racism,Manchester","article_publish_latest":"2017\/02\/06 19:20 Monday","article_name_latest":"Three youths \u2018looking for trouble\u2019 branded US Army veteran a \u2018little f***ing immigrant\u2019 in vile racist tram rant","article_kicker_name":"'DON'T CHAT S*** WHEN YOU'RE NOT FROM ENGLAND'"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+
+		var pbjs = pbjs || {};
+		pbjs.que = pbjs.que || [];
+</script>
+<script type='text/javascript' src='https://www.thesun.co.uk/wp-content/themes/thesun/js/head.js?m=1484818959g'></script>
+<script type='text/javascript'>
+		var gs_channels="DEFAULT";
+		(function() {
+			var gsurl=window.location!=window.top.location?document.referrer:window.location;
+			var s=document.createElement('script');
+			s.async=true;
+			s.onload=function(){
+				googletag.cmd.push(function() {
+					googletag.pubads().setTargeting("gs_cat", gs_channels);
+				});
+			}
+			s.src='//newscorp.grapeshot.co.uk/thesun/channels.cgi?url=' +encodeURIComponent(gsurl);
+			document.head.appendChild(s);
+		})();
+</script>
+<script type='text/javascript' async="async" src='https://www.thesun.co.uk/wp-content/themes/thesun/js/vendor/prebid.min.js'></script>
+<script type='text/javascript' src='https://www.thesun.co.uk/wp-content/themes/thesun/js/Imager.js?m=1481900655g'></script>
+<script type='text/javascript' async="async" src='https://widgets.outbrain.com/outbrain.js'></script>
+<script type='text/javascript' async="async" src='https://video.unrulymedia.com/native/native-loader.js'></script>
+<script type='text/javascript' src='https://www.thesun.co.uk/_static/??-eJyFjcEORTAQRX8I40UJC3nfQg3a6Hg6LfH3KmnektVZ3HNy4filciWH5MDNaJBvsCfQDGMYxk7i2jPaHW1mFGWaE3iKAu6O/1EMFMnFD0ENjt482jPiVUiNmmznMN5/TfsRdSmqvClqfQEGiUgU'></script>
+<link rel='https://api.w.org/' href='https://www.thesun.co.uk/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.thesun.co.uk/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.thesun.co.uk/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel="canonical" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/" />
+<link rel='shortlink' href='https://wp.me/p7ygYG-bKi3' />
+<link rel="alternate" type="application/json+oembed" href="https://www.thesun.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thesun.co.uk%2Fnews%2F2799551%2Fthree-youths-branded-army-veteran-immigrant%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.thesun.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thesun.co.uk%2Fnews%2F2799551%2Fthree-youths-branded-army-veteran-immigrant%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<style type='text/css'>img#wpstats{display:none}</style>	<script type="text/javascript">
+		/* Tealium */
+		(function(a, b, c, d) {
+			a = "https://tags.tiqcdn.com/utag/newsinternational/thesun.2016.web/prod/utag.js";
+			b = document;
+			c = 'script';
+			d = b.createElement(c);
+			d.src = a;
+			d.type = 'text/java' + c;
+			d.async = true;
+			a = b.getElementsByTagName(c)[0];
+			a.parentNode.insertBefore(d, a);
+		})();
+	</script>
+	<link rel="amphtml" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/amp/" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Three youths branded US Army veteran a &#039;little f***ing immigrant&#039; in vile rant" />
+<meta property="og:url" content="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/" />
+<meta property="og:description" content="THREE youths who were &#8220;looking for trouble&#8221; branded a US Army veteran a &#8220;little f***ing immigrant&#8221; in a vile racist tram rant. Aaron Cauchi, 19, Robert Molloy, 20, and anoth…" />
+<meta property="article:published_time" content="2017-02-06T18:26:09+00:00" />
+<meta property="article:modified_time" content="2017-02-06T19:20:18+00:00" />
+<meta property="og:site_name" content="The Sun" />
+<meta property="og:image" content="https://www.thesun.co.uk/wp-content/uploads/2017/02/dk-composite-racist.jpg?strip=all&#038;w=750&#038;h=500&#038;crop=1" />
+<meta property="og:image:width" content="750" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="article:publisher" content="161385360554578" />
+<meta property="article:tag" content="Courts, Racism, Manchester" />
+<meta property="fb:app_id" content="144647118961553" />
+<meta name="twitter:site" content="@thesun" />
+<meta name="robots" content="noarchive,noodp" />
+<meta property="article:author" content="https://www.facebook.com/thesun" />
+<meta property="fb:pages" content="161385360554578" />
+<link rel="icon" href="https://www.thesun.co.uk/wp-content/uploads/2016/04/icon-e1459786005667.png?strip=all&#038;w=32" sizes="32x32" />
+<link rel="icon" href="https://www.thesun.co.uk/wp-content/uploads/2016/04/icon-e1459786005667.png?strip=all&#038;w=192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.thesun.co.uk/wp-content/uploads/2016/04/icon-e1459786005667.png?strip=all&#038;w=180" />
+<meta name="msapplication-TileImage" content="https://www.thesun.co.uk/wp-content/uploads/2016/04/icon-e1459786005667.png?strip=all&#038;w=270" />
+</head>
+
+<body class="post-template-default single single-post postid-2799551 single-format-standard">
+
+<div class="mobile-top-cover"></div>
+
+<div class="sun-container theme-news">	<div class="sun-newsuk">
+
+		<div class="close open-newsuk for-mobile"></div>
+
+		<div class="sun-row">
+
+			<div class="col sun-col-6">
+
+				<div class="panel panel--slim">
+					<div class="panel--slim-left">
+						<p>News Corp is a network of leading companies in the worlds of diversified media, news, education, and information services.</p>
+					</div>
+					<div class="panel--slim-right">
+						<h3 class="panel__title">Follow The Sun</h3>
+
+						<div class="follow-sun">
+							<a href="https://www.facebook.com/thesun/" class="follow-facebook"><span class="icon icon-facebook"></span></a>
+							<a href="https://twitter.com/thesun?lang=en-gb" class="follow-twitter"><span class="icon icon-twitter"></span></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel for-mobile">
+					<h3 class="panel__title">Your Sun</h3>
+					<ul class="no-columns">
+						<li class="sign-in">
+							<a href="https://login.thesun.co.uk">Sign in</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="panel for-mobile">
+					<h3 class="panel__title">Editions</h3>
+						<ul class='no-columns'>
+					<li>
+				<a href="https://www.thescottishsun.co.uk/">Scottish Sun</a>
+			</li>
+					<li>
+				<a href="http://www.thesun.ie/">Irish Sun</a>
+			</li>
+			</ul>
+					</div>
+
+				<div class="panel">
+					<h3 class="panel__title">The Sun</h3>
+					<ul id="menu-service-menu" class="menu"><li id="menu-item-1196700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196700"><a href="http://www.thescottishsun.co.uk">The Scottish Sun</a></li>
+<li id="menu-item-1196701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196701"><a href="http://www.thesun.ie">The Irish Sun</a></li>
+<li id="menu-item-1196685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196685"><a href="https://www.dreamteamfc.com/">Dream Team</a></li>
+<li id="menu-item-1542915" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1542915"><a href="https://www.sunbets.co.uk">Sun Bets</a></li>
+<li id="menu-item-1235296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235296"><a href="http://www.thesun.co.uk/fabulous">Fabulous</a></li>
+<li id="menu-item-1542920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1542920"><a href="http://favourite.thesun.co.uk">Sun Favourite</a></li>
+<li id="menu-item-1235284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235284"><a href="http://www.sunmotors.co.uk/">Sun Motors</a></li>
+<li id="menu-item-1235283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235283"><a href="http://www.sunbingo.co.uk/">Sun Bingo</a></li>
+<li id="menu-item-1235315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235315"><a href="http://thesun.inthepaper.co.uk/">Sun Gifts</a></li>
+</ul>				</div>
+
+				<div class="panel panel--half">
+					<h3 class="panel__title">News Corp</h3>
+					<ul id="menu-news-corp-service-menu" class="menu"><li id="menu-item-1196677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196677"><a href="http://www.wsj.com/">WSJ.com</a></li>
+<li id="menu-item-1196678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196678"><a href="http://nypost.com/">New York Post</a></li>
+<li id="menu-item-1196679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196679"><a href="http://www.theaustralian.com.au/">The Australian</a></li>
+<li id="menu-item-1196680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196680"><a href="http://www.news.com.au/">News.com.au</a></li>
+<li id="menu-item-1196681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196681"><a href="https://storyful.com/">Storyful</a></li>
+<li id="menu-item-1196682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196682"><a href="https://www.harpercollins.co.uk/">Harper Collins</a></li>
+<li id="menu-item-1196683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196683"><a href="http://www.realtor.com/">Realtor.com</a></li>
+</ul>				</div>
+
+				<div class="panel panel--half panal--services">
+					<h3 class="panel__title">Services</h3>
+		            <ul id="menu-footer" class="menu"><li id="menu-item-1236019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1236019"><a href="https://www.thesun.co.uk/sign-up-to-the-sun/">Sign Up To The Sun</a></li>
+<li id="menu-item-1235852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235852"><a href="https://www.thesun.co.uk/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-1235452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235452"><a href="https://www.thesun.co.uk/editorial-complaints/">Editorial Complaints</a></li>
+<li id="menu-item-1237807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1237807"><a href="https://www.thesun.co.uk/admin/clarifications/">Clarifications and Corrections</a></li>
+<li id="menu-item-1235451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235451"><a href="https://www.thesun.co.uk/syndication/">Syndication</a></li>
+<li id="menu-item-1388523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1388523"><a href="http://www.newsukadvertising.co.uk">Advertising</a></li>
+<li id="menu-item-1235453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235453"><a href="https://www.thesun.co.uk/contact-us/">Contact Us</a></li>
+<li id="menu-item-2313093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2313093"><a href="https://www.thesun.co.uk/commissioning-terms/">Commissioning Terms</a></li>
+<li id="menu-item-1235319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235319"><a href="http://help.thesun.co.uk/">Help Hub</a></li>
+</ul>				</div>
+
+				<span class="sun-newsuk__button open-newsuk">The Sun, A News UK Company <span class="icon icon-arrow-down icon-arrow-down--dark"></span></span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="sun-header-bg">
+		<span class="sun-header-bg-color"></span>
+		<div class="back-to-top">
+			<span class="icon icon-back-to-top"></span>
+			<span class="text-top">TOP</span>
+		</div>
+	</div>
+
+	<div class="sun-row sun-header--wrap">
+
+		<div class="col sun-col-2 no-gutters logo">
+			<a href="#" class="mobile-search toggle-mobile-search"><span class="icon icon-search"></span></a>
+
+			<div id="logo"><a href="/"></a></div>
+
+			<div class="mobile-toggles open-newsuk">
+				<div class="mobile-toggle"></div>
+				<div class="mobile-toggle"></div>
+				<div class="mobile-toggle"></div>
+			</div>
+		</div>
+
+		<div class="col sun-col-2 no-gutters weather">
+			<div class="weather-icon"></div>
+
+			<div class="weather-content">
+				<div class="place open-popup-box"><span class="place-inner">London</span> <span class="icon icon-arrow-down"></span></div>
+				<div class="popup-box">
+					<span class="popup-box--close"></span>
+
+					<h3>Set your weather</h3>
+
+					<form action="">
+						<div class="input-text-wrap">
+							<input type="text" placeholder="Search for town" />
+						</div>
+
+						<div class="suggestions"></div>
+					</form>
+				</div>
+
+				<div class="temps">
+					<div class="temp now">
+						<span class="nowTitle">Now</span>
+						<span class="nowTemp">0&deg;C</span>
+					</div>
+					<div class="temp later">
+						<span class="laterTitle">9pm</span>
+						<span class="laterTemp">0&deg;C</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="col sun-col-2 no-gutters follow">
+
+			<div class="sign-in">
+				<a href="https://login.thesun.co.uk">Sign in <span class="icon icon-avatar"></span></a>
+			</div>
+
+			<div class="edition">
+				<a href="#" class="open-popup-box">UK Edition <span class="icon icon-arrow-down"></span></a>
+
+				<div class="popup-box">
+					<span class="popup-box--close"></span>
+
+						<ul class=''>
+					<li>
+				<a href="https://www.thescottishsun.co.uk/">Scottish Sun</a>
+			</li>
+					<li>
+				<a href="http://www.thesun.ie/">Irish Sun</a>
+			</li>
+			</ul>
+					</div>
+			</div>
+
+			<div class="search-bar">
+				<a href="#" class="open-popup-box">Search <span class="icon icon-search"></span></a>
+
+				<div class="popup-box">
+					<span class="popup-box--close"></span>
+
+					<form action="https://www.thesun.co.uk/">
+						<input type="text" placeholder="Search The Sun" name="s" />
+						<input type="submit" value="Search" />
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="sun-row sun-header--search">
+
+		<div class="col sun-col-6 no-gutters">
+
+			<a href="#" class="close-search toggle-mobile-search"><span class="icon icon-close"></span></a>
+
+			<form action="https://www.thesun.co.uk/">
+				<input type="text" placeholder="Search The Sun" name="s" />
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="sun-row sun-header--nav">
+
+		<div class="sun-nav-heavy-rule"></div>
+
+		<div id="logo-mini"><a href="/"></a></div>
+
+		<div class="col sun-col-6 no-gutters swiper-container sun-header--nav-wrap">
+			<ul id="sun-menu" class="sun-menu swiper-wrapper"><li id="menu-item-1196686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1196686 swiper-slide theme-main"><a href="https://www.thesun.co.uk/">Home</a></li>
+<li id="menu-item-1196675" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1196675 swiper-slide theme-football"><a href="https://www.thesun.co.uk/sport/football/">Football</a></li>
+<li id="menu-item-1196672" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1196672 swiper-slide theme-sport"><a href="https://www.thesun.co.uk/sport/">Sport</a></li>
+<li id="menu-item-1196674" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1196674 swiper-slide theme-showbiz"><a href="https://www.thesun.co.uk/tvandshowbiz/">TV &amp; Showbiz</a></li>
+<li id="menu-item-1196673" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1196673 swiper-slide theme-living"><a href="https://www.thesun.co.uk/living/">Living</a></li>
+<li id="menu-item-1196671" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1196671 swiper-slide theme-news active"><a href="https://www.thesun.co.uk/news/">News</a></li>
+<li id="menu-item-1196806" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196806 swiper-slide theme-videos"><a href="https://www.thesun.co.uk/videos">Videos</a></li>
+<li id="menu-item-1926192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1926192 swiper-slide theme-sun-bingo"><a href="https://www.sunbingo.co.uk/">Sun Bingo</a></li>
+<li id="menu-item-1926209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1926209 swiper-slide theme-sun-bets"><a href="https://www.sunbets.co.uk/">Sun Bets</a></li>
+</ul>
+			<div class="swiper-button-prev swiper-button-disabled">
+				<span class="icon icon-arrow-left"></span>
+			</div>
+			<div class="swiper-button-next swiper-button-disabled">
+				<span class="icon icon-arrow-right"></span>
+			</div>
+		</div>
+
+	</div>
+
+<div class="sub-nav__mobile-head theme__background-color">
+	<span class="sub-nav__mobile-head-text">All News</span> <span class="icon icon-arrow-circled-down"></span>
+</div>
+
+<section class="sun-container sub-nav__container theme__background-color">
+	<div class="sun-row no-gutters">
+		<div class="col sun-col-6 no-gutters">
+			<div class="sub-nav">
+
+				<div class="swiper-container theme-news-secondary">
+
+					<ul class="swiper-wrapper sub-nav__list">
+						<li class="active sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/" class="theme--secondary__border-color">
+								All News							</a>
+						</li>
+						<li class="active sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/uknews/" class="theme--secondary__border-color">
+								UK News							</a>
+						</li>
+
+						<li class=" sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/worldnews/" class="theme--secondary__border-color">
+								World News							</a>
+						</li>
+
+						<li class=" sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/politics/" class="theme--secondary__border-color">
+								Politics							</a>
+						</li>
+
+						<li class=" sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/techandscience/" class="theme--secondary__border-color">
+								Tech and science							</a>
+						</li>
+
+						<li class=" sub-nav__item swiper-slide theme__copy-color theme__border-color theme--secondary__background-before-color theme--secondary__background-color-mobile">							<a href="https://www.thesun.co.uk/news/opinion/" class="theme--secondary__border-color">
+								Opinion							</a>
+						</li>
+
+											</ul><!-- .swiper-wrapper .sub-nav__list -->
+
+					<div class="swiper-button-prev theme--secondary__background-before-color theme__background-color swiper-button-disabled">
+						<span class="icon icon-arrow-left icon-arrow-left-white theme__background-color"></span>
+					</div>
+
+					<div class="swiper-button-next theme--secondary__background-before-color theme__background-color swiper-button-disabled">
+						<span class="icon icon-arrow-right icon-arrow-right-white theme__background-color"></span>
+					</div>
+
+				</div><!-- .swiper-container .{theme-slug}-secondary -->
+
+			</div><!-- .sub-nav -->
+		</div><!-- .col .sun-col-6 .no-gutters -->
+	</div><!-- sun-row .no-gutters -->
+</section><!-- .sun-container .sub-nav__container .theme__background-color -->
+
+	<div class="main-content-wrap theme-main has-section-nav">
+
+		
+		
+<div class="billboard">
+	<div class="sun-row">
+		<div class="col sun-col-6">
+							<div class="dfp-ad" id="billboard">
+					<script type="text/javascript">
+						document.addEventListener('DOMContentLoaded', function () {
+							googletag.cmd.push( function() {
+								googletag.display( 'billboard' );
+							} );
+						});
+					</script>
+				</div>
+					</div>
+	</div>
+</div>
+
+		<section class="sun-container__article-section theme-news">
+			
+				<div class="sun-row">
+										<div class="col sun-col-4">
+
+														<article class="article">
+
+								
+<header class="article__header">
+	<div class="article__strapline">
+	</div>
+
+	
+<section class="article__headline-section">
+			<span class="article__kicker theme__copy-color">&#039;DON&#039;T CHAT S*** WHEN YOU&#039;RE NOT FROM ENGLAND&#039;</span>
+		<h1 class="article__headline">Three youths &#8216;looking for trouble&#8217; branded US Army veteran a &#8216;little f***ing immigrant&#8217; in vile racist tram rant</h1></section>
+
+		<div class="article__subdeck theme__border-color">
+		<p>Aaron Cauchi, 19, Robert Molloy, 20, and a 16-year-old spat in the face of one victim and used 'foul language'</p>
+	</div>
+	</header><!-- .article__header -->
+
+<div class="article__meta">
+	
+	<div class="article__name-date">
+					<div class="article__author theme__copy-color">
+				<span class="article__author-name theme__copy-color">
+					By ELLIE FLYNN				</span>
+			</div>
+		
+		<div class="article__published">
+							<span>6th February 2017, 6:26 pm</span>
+					</div>
+	</div>
+</div><!-- .article__meta -->
+
+<div class="social social--article">
+
+		<div class="article-social__meta article-social__meta--comment-count-mobile">
+		<div class="article-social__share-icon">
+			<a href="#comments">
+				<svg class="article-data__svg article-comment" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="886.2 203.6 42.7 40.4" enable-background="new 886.2 203.6 42.7 40.4" xml:space="preserve">
+					<path fill="#EAEEEF" d="M886.2,203.6v40.4h42.7v-40.4H886.2z M926.9,233.7c0,0.9-0.7,1.6-1.6,1.6h-19.5l-5.3,6.4
+					c-0.2,0.3-0.5,0.4-0.9,0.4c-0.3,0-0.7-0.1-0.9-0.4l-5.3-6.4h-3.6c-0.9,0-1.6-0.7-1.6-1.6v-26.4c0-0.9,0.7-1.6,1.6-1.6h35.4
+					c0.9,0,1.6,0.7,1.6,1.6V233.7z"/>
+				</svg>
+
+				<div class="article-social__share-no">
+					<div class="share-no-amount theme__copy-color livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2799551"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+			<div class="social-share-buttons">
+		<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-2799551" class="share-twitter sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-2799551" class="share-facebook sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="whatsapp://send?text=Three%20youths%20branded%20US%20Army%20veteran%20a%20%27little%20f%2A%2A%2Aing%20immigrant%27%20in%20vile%20rant https%3A%2F%2Fwww.thesun.co.uk%2Fnews%2F2799551%2Fthree-youths-branded-army-veteran-immigrant%2F" target="_blank" title="Click to share on WhatsApp"><span></span><span class="sharing-screen-reader-text">Click to share on WhatsApp (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+	
+		<div class="article-social__meta article-social__meta--comment-count">
+		<div class="article-social__share-icon">
+			<a href="#comments">
+				<svg class="article-data__svg article-comment" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5796.3 2189.3 2024.7 1916.8" enable-background="new 5796.3 2189.3 2024.7 1916.8" xml:space="preserve">
+					<path fill="#E92129" d="M7740.1,2189.3H5877.3c-40.5,0-81,40.5-81,81v1390.3c0,40.5,40.5,81,81,81h189l283.5,337.5
+					c13.5,13.5,27,27,40.5,27c13.5,0,40.5-13.5,40.5-27l283.5-337.5H7740c40.5,0,81-40.5,81-81V2270.3
+					C7821,2229.8,7780.5,2189.3,7740.1,2189.3z M7362.1,3377.1H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54
+					S7389.1,3377.1,7362.1,3377.1z M7362.1,3026.2H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54
+					S7389.1,3026.2,7362.1,3026.2z M7362.1,2675.2H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54S7389.1,2675.2,7362.1,2675.2z" />
+				</svg>
+			</a>
+		</div>
+
+		<div class="article-social__share-no">
+			<div class="share-no-amount theme__copy-color livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2799551">
+			</div>
+			<div class="share-no-name">Comments</div>
+		</div>
+	</div>
+
+</div><!-- .social social--article -->
+								<div class="article__content">
+									<p class="article__content article__content--intro">THREE youths who were &#8220;looking for trouble&#8221; branded a US Army veteran a &#8220;little f***ing immigrant&#8221; in a vile racist tram rant.</p>
+<p>Aaron Cauchi, 19, Robert Molloy, 20, and another youth aged 16, who cannot be named for legal reasons, spat in the face of one victim and used foul language during the sick &#8220;rampage&#8221;.</p>
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="0">
+
+		<a href="#"><img class="wp-image-2799959 size-thesun-article-image" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702368.jpg?strip=all&amp;w=667" alt="Robert Molloy" width="667" height="960" /></a>
+
+				<div class="article__credit">
+			Cavendish Press		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		Robert Molloy attacked a US Army veteran in a sick racist assault	</figcaption>
+	</figure>
+
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="1">
+
+		<a href="#"><img class="wp-image-2799972 size-thesun-article-image" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299735008.jpg?strip=all&amp;w=737" alt="Aaron Cauchi" width="737" height="960" /></a>
+
+				<div class="article__credit">
+			Andy Kelvin / Kelvin Media		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		Aaron Cauchi was one of three youths who launched the unprovoked tram attack	</figcaption>
+	</figure>
+
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="2">
+
+		<a href="#"><img class="wp-image-2799947 size-thesun-article-image" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702361.jpg?strip=all&amp;w=352" alt=" Juan Jasso" width="352" height="328" /></a>
+
+				<div class="article__credit">
+			Cavendish Press (Manchester) Ltd		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		The group labelled Juan Jasso a &#8216;little f***ing immigrant&#8217;	</figcaption>
+	</figure>
+
+<p>All three had been up all night and were drinking when they abused three people who were on their way to work in Manchester City Centre on June 28 last year.</p>
+<p>Joseph O&#8217;Connor, prosecuting, said the racist attack came just five days after the EU referendum.</p>
+<p>The outcome resulted in a 41 per cent increase in hate crime, according to Home Office statistics.</p>
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="3">
+
+		<a href="#"><img class="size-thesun-article-image wp-image-2799968" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702395.jpg?strip=all&amp;w=960" alt="Boy" width="960" height="639" /></a>
+
+				<div class="article__credit">
+			Cavendish Press		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		A 16-year-old boy, who can not be named for legal reasons, was also convicted today	</figcaption>
+	</figure>
+
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="4">
+
+		<a href="#"><img class="size-thesun-article-image wp-image-2799970" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702393.jpg?strip=all&amp;w=717" alt="Abuse" width="717" height="960" /></a>
+
+				<div class="article__credit">
+			Cavendish Press (Manchester) Ltd		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		All three had been up all night and were drinking when they abused three people on their way to work in Manchester City Centre	</figcaption>
+	</figure>
+
+<p>Trouble first began around 7.45am when a passenger heard &#8220;disgusting, vile abuse&#8221; on the tram, which was packed with mums and babies, schoolchildren and commuters, the court heard.</p>
+<p>One of the youths was shouting: &#8220;I&#8217;m going to lick your mum&#8217;s pussy.&#8221;</p>
+<p>Dad-of-one Juan Jasso, a former US serviceman who has lived in England for 18 years, stepped forward and tackled the group &#8211; telling them to mind their language.</p>
+<p>All three turned on him in response, with instigator Molloy telling him: &#8220;Don&#8217;t chat shit when you&#8217;re not even from England, you little f***ing immigrant.</p>
+<p>&#8220;Get off the f***ing tram now. Get back to Africa.&#8221;</p>
+	<!--googleoff: all-->
+		<div class="sun-grid-container sun-grid-container--white">
+	
+	<div class="sun-row ">
+		<div class="col sun-col-6">
+
+			<div class="rail rail--classic  rail--trending theme-news" data-slide-count="4" data-slide-count-tablet="4">				<div class="swiper-container">
+
+					<div class="rail__header">
+
+											<h3 class="rail__title theme__after-color">RELATED STORIES</h3>
+
+											
+					
+					</div>
+
+					
+					<div class="swiper-pagination theme__swiper-pagination"></div>
+
+					<div class="swiper-wrapper">
+						
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2797938/three-labour-mps-in-rotherham-given-54000-each-in-libel-payout-by-ukip-mep-who-claimed-they-knew-about-child-abuse-and-did-nothing/">
+				<div class="delayed-image-load-landscape" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000298315777.jpg?crop=0px%2C543px%2C2703px%2C1801px&#038;resize=300%2C192&#038;ssl=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000298315777.jpg?crop=0px%2C543px%2C2703px%2C1801px&#038;resize=300%2C192&#038;ssl=1"></div>
+			</a>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				UKIPPER BUSTED			</h3>
+							<span class="rail__item-sub">
+				Three Labour MPs given £54k payout after Ukip MEP said they knew about child abuse and didn&#039;t stop it			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2797938/three-labour-mps-in-rotherham-given-54000-each-in-libel-payout-by-ukip-mep-who-claimed-they-knew-about-child-abuse-and-did-nothing/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2797480/thug-jailed-for-sickening-racist-attack-on-bus-passenger-who-he-abused-in-three-minute-tirade/">
+				<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/idiot-composite.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/idiot-composite.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+			</a>
+							<!-- Add video indicator if article has feature video. -->
+				<div class="rail__item-play theme__background-color-rgba-80">
+					<span></span>
+				</div>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				BUS RACIST CAGED			</h3>
+							<span class="rail__item-sub">
+				Thug jailed for sickening racist attack on bus passenger who he abused in three-minute tirade			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2797480/thug-jailed-for-sickening-racist-attack-on-bus-passenger-who-he-abused-in-three-minute-tirade/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2796358/racist-niqab-muslim-woman/">
+				<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-scotter.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-scotter.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+			</a>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				&#039;YOU&#039;RE IN OUR COUNTRY NOW&#039;			</h3>
+							<span class="rail__item-sub">
+				Vile racist admits yanking niqab off Muslim woman and telling anti-Islamic abuse in her face			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2796358/racist-niqab-muslim-woman/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2792860/donald-trump-protester-assaulted-and-abused-by-racist-passenger-while-travelling-on-the-london-underground/">
+				<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/as-comp-pic-line.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/as-comp-pic-line.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+			</a>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				&#039;RACE TRAITOR!&#039;			</h3>
+							<span class="rail__item-sub">
+				Donald Trump protester &#039;assaulted and abused by racist passenger on London Underground&#039;			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2792860/donald-trump-protester-assaulted-and-abused-by-racist-passenger-while-travelling-on-the-london-underground/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2784170/racist-bus-manchester-video-salford/">
+				<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/idiot-composite.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/idiot-composite.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+			</a>
+							<!-- Add video indicator if article has feature video. -->
+				<div class="rail__item-play theme__background-color-rgba-80">
+					<span></span>
+				</div>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				bus racism storm			</h3>
+							<span class="rail__item-sub">
+				Shocking moment man launches vile stream of abuses at stranger on the bus			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2784170/racist-bus-manchester-video-salford/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+
+<div class="rail__item swiper-slide">
+
+					<div class="rail__item-image">
+			<a href="https://www.thesun.co.uk/news/2778105/solicitor-ranted-racist-abuse-at-mum-and-toddler-on-train-saying-they-shouldnt-be-in-first-class/">
+				<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/sd-racist-composite-v2.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+				<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/sd-racist-composite-v2.jpg?strip=all&#038;w=300&#038;h=192&#038;crop=1"></div>
+			</a>
+							<!-- Add video indicator if article has feature video. -->
+				<div class="rail__item-play theme__background-color-rgba-80">
+					<span></span>
+				</div>
+					</div><!-- .rail__item-image -->
+	
+	<div class="rail__item-content">
+					<h3 class="rail__item-headline theme__copy-color">
+				&#039;YOU&#039;RE A DRUNKEN RACIST&#039;			</h3>
+							<span class="rail__item-sub">
+				Guard confronts solicitor who spewed abuse at mum and son, four, on train			</span>
+			</div><!-- .rail__item-content -->
+	<div class="rail__item-gradient-light">
+
+	</div>
+	<a href="https://www.thesun.co.uk/news/2778105/solicitor-ranted-racist-abuse-at-mum-and-toddler-on-train-saying-they-shouldnt-be-in-first-class/" class="rail__item-anchor"></a>
+
+</div><!-- .rail__item .swiper-slide -->
+					</div><!-- .swiper-wrapper -->
+
+					<div class="swiper-button-prev theme__background-color-rgba-80"></div>
+					<div class="swiper-button-next theme__background-color-rgba-80"></div>
+
+				</div><!-- .swiper-container -->
+			</div><!-- .rail .{rail} .swiper-video-rail .{theme-slug} -->
+
+		</div><!-- .col .sun-col-6 -->
+	</div><!-- .sun-row .{row} .rail-video-index-->
+	</div> <!-- .sun-grid-container .sun-grid-container--{color} -->
+	<!--googleon: all-->
+	
+<p>Molloy then flicked beer over Juan from the bottle he was holding before all three got off the tram.</p>
+<p>Minutes later they surrounded Alistair Lambert, who was with a female work colleague, &#8220;with their chests stuck out and shoulders back&#8221;.</p>
+<p>The trio struck Alistair with a cigarette lighter to intimidate him, Mr O&#8217;Connor said.</p>
+<p>They then passed Andrew Guest, who was cycling to work, shortly after.</p>
+<p>One or more spat in his face and down his body.</p>
+<p>When video of the tram attack went viral, all three were identified and later arrested.</p>
+<p>All three pleaded guilty to the offences today.</p>
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="5">
+
+		<a href="#"><img class="size-thesun-article-image wp-image-2799946" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702206.jpg?strip=all&amp;w=612" alt="tram abuse" width="612" height="960" /></a>
+
+				<div class="article__credit">
+			Cavendish Press		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		All three pleaded guilty to public order offences at Manchester Crown Court today	</figcaption>
+	</figure>
+
+<figure class="article__media">
+	<div class="article__media-img-container open-gallery" data-index="6">
+
+		<a href="#"><img class="size-thesun-article-image wp-image-2799961" src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000299702364.jpg?strip=all&amp;w=365" alt=" Juan Jasso" width="365" height="453" /></a>
+
+				<div class="article__credit">
+			Cavendish Press (Manchester) Ltd		</div>
+		
+				<div class="article__gallery-count theme__background-color-rgba-80">
+			<a href=""><span class="article__gallery-count-value theme__copy-color">7</span></a>
+		</div>
+			</div>
+
+		<figcaption class="article__media-caption">
+		Dad-of-one Juan was on his way to work when he was abused by the three youths	</figcaption>
+	</figure>
+
+<p>The 16-year-old, who cannot be named because of his age, was accompanied to court by his grandmother and pleaded guilty to using threatening words or behaviour towards Mr Jasso and Mr Lambert and common assault to Mr Guest.</p>
+<p>Cauchi, of Spa Crescent, Little Hulton, Salford, pleaded guilty to the same public order offences against Mr Jasso and Mr Lambert, and assault on Mr Guest.</p>
+<p>Molloy, of no fixed address, pleaded guilty to a racially aggravated assault on Mr Jasso, common assault on Mr Guest and using threatening words and behaviour to Mr Lambert.</p>
+<p>The 16-year-old was sentenced to a six month referral order and was ordered to pay £100 costs and £60 compensation.</p>
+<p>Molloy and Cauchi will be sentenced tomorrow morning.</p>
+<hr />
+<p><b>We pay for your stories! Do you have a story for The Sun Online news team? Email us at <a href="mailto:tips@the-sun.co.uk" target="_blank">tips@the-sun.co.uk</a> or call 0207 782 4368.</b></p>
+<hr />
+<p>&nbsp;</p>
+<div class="fb-page social--fb-page-button" data-href="https://www.facebook.com/thesun" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/thesun" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thesun">The Sun</a></blockquote></div>								</div><!-- .article__content -->
+																<div class="tags tags--article">
+										<ul class="tags__list">
+					<li class="tags__item">
+				<span class="theme__copy-color">Topics</span>
+			</li>
+							<li class="tags__item theme__after-color">
+				<a href="https://www.thesun.co.uk/topic/courts/">
+					Courts				</a>
+			</li>
+					<li class="tags__item theme__after-color">
+				<a href="https://www.thesun.co.uk/topic/racism/">
+					Racism				</a>
+			</li>
+					<li class="tags__item theme__after-color">
+				<a href="https://www.thesun.co.uk/where/manchester/">
+					Manchester				</a>
+			</li>
+			</ul>
+									</div><!-- .tags .tags--article -->
+								
+<div class="social social--article">
+
+		<div class="article-social__meta article-social__meta--comment-count-mobile">
+		<div class="article-social__share-icon">
+			<a href="#comments">
+				<svg class="article-data__svg article-comment" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="886.2 203.6 42.7 40.4" enable-background="new 886.2 203.6 42.7 40.4" xml:space="preserve">
+					<path fill="#EAEEEF" d="M886.2,203.6v40.4h42.7v-40.4H886.2z M926.9,233.7c0,0.9-0.7,1.6-1.6,1.6h-19.5l-5.3,6.4
+					c-0.2,0.3-0.5,0.4-0.9,0.4c-0.3,0-0.7-0.1-0.9-0.4l-5.3-6.4h-3.6c-0.9,0-1.6-0.7-1.6-1.6v-26.4c0-0.9,0.7-1.6,1.6-1.6h35.4
+					c0.9,0,1.6,0.7,1.6,1.6V233.7z"/>
+				</svg>
+
+				<div class="article-social__share-no">
+					<div class="share-no-amount theme__copy-color livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2799551"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+			<div class="social-share-buttons">
+		<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-2799551" class="share-twitter sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-2799551" class="share-facebook sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="whatsapp://send?text=Three%20youths%20branded%20US%20Army%20veteran%20a%20%27little%20f%2A%2A%2Aing%20immigrant%27%20in%20vile%20rant https%3A%2F%2Fwww.thesun.co.uk%2Fnews%2F2799551%2Fthree-youths-branded-army-veteran-immigrant%2F" target="_blank" title="Click to share on WhatsApp"><span></span><span class="sharing-screen-reader-text">Click to share on WhatsApp (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+	
+		<div class="article-social__meta article-social__meta--comment-count">
+		<div class="article-social__share-icon">
+			<a href="#comments">
+				<svg class="article-data__svg article-comment" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5796.3 2189.3 2024.7 1916.8" enable-background="new 5796.3 2189.3 2024.7 1916.8" xml:space="preserve">
+					<path fill="#E92129" d="M7740.1,2189.3H5877.3c-40.5,0-81,40.5-81,81v1390.3c0,40.5,40.5,81,81,81h189l283.5,337.5
+					c13.5,13.5,27,27,40.5,27c13.5,0,40.5-13.5,40.5-27l283.5-337.5H7740c40.5,0,81-40.5,81-81V2270.3
+					C7821,2229.8,7780.5,2189.3,7740.1,2189.3z M7362.1,3377.1H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54
+					S7389.1,3377.1,7362.1,3377.1z M7362.1,3026.2H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54
+					S7389.1,3026.2,7362.1,3026.2z M7362.1,2675.2H6255.2c-27,0-40.5-27-40.5-54s27-54,40.5-54h1106.9c27,0,40.5,27,40.5,54S7389.1,2675.2,7362.1,2675.2z" />
+				</svg>
+			</a>
+		</div>
+
+		<div class="article-social__share-no">
+			<div class="share-no-amount theme__copy-color livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2799551">
+			</div>
+			<div class="share-no-name">Comments</div>
+		</div>
+	</div>
+
+</div><!-- .social social--article -->
+
+								<div id="sidebar-mobile"></div>
+
+								<div class="OUTBRAIN" data-src="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/" data-widget-id="AR_3" data-ob-template="TheSun_1"></div>
+<script>
+	(function() {
+		var done = false,
+			ob   = document.createElement("script");ob.type = "text/javascript";ob.async = true;ob.src = "https://widgets.outbrain.com/outbrain.js";
+		//Make sure code is here!!
+		ob.onload = ob.onreadystatechange = function() {
+			if ( !done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
+				OBR.extern.onOdbReturn("AR_3",function() {
+					// Edit the desktop widget
+					setTimeout(function(){
+						var ob_first       = document.getElementsByClassName('ob-first')[0],
+							rec_containers = ob_first.getElementsByClassName('ob-dynamic-rec-container');
+
+						for (i = 0 ; i < rec_containers.length ; i++) {
+							var text_author = rec_containers[i].getElementsByClassName('ob-rec-author')[0],
+								text_title = rec_containers[i].getElementsByClassName('ob-rec-text')[0],
+								text_full = text_author.textContent + text_title.textContent;
+
+							if(text_full.length >= 100) {
+								text_title.textContent = text_title.textContent.substring(0,60) + '...';
+							}
+						}
+					},300);
+				});
+
+				OBR.extern.onOdbReturn("CRMB_2",function() {
+					//Edit the mobile widget
+					setTimeout(function(){
+						var ob_first = document.getElementsByClassName('ob-first')[0],
+							rec_containers = ob_first.getElementsByClassName('ob-dynamic-rec-container');
+
+						for (i = 0 ; i < rec_containers.length ; i++) {
+							var text_author = rec_containers[i].getElementsByClassName('ob-rec-author')[0],
+								text_title = rec_containers[i].getElementsByClassName('ob-rec-text')[0],
+								text_full = text_author.textContent + text_title.textContent;
+
+							if(text_full.length >= 140) {
+								text_title.textContent = text_title.textContent.substring(0,100) + '...';
+							}
+						}
+					},300);
+				});
+			}
+		};
+
+		//Inject
+		var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ob, s);
+	})();
+</script>
+
+
+																<div class="comments" id="comments">
+									<div class="comments-header-wrap">
+										<h3>Comments</h3>
+									</div>
+
+									<div id="livefyre-comments"></div>								</div>
+								
+							</article><!-- .article -->
+					</div><!-- .col sun-col-4/6 -->
+
+										<div id="sidebar" class="col sun-col-2 article-sidebar">
+						<aside id="thesun_dfp_ad_widget-2" class="widget widget_thesun_dfp_ad_widget"><div class="dfp-ad-container mpu-container">
+	<div class="dfp-ad teaser-item teasermedium teasermedium--mpu mpu" id="mpu">
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				var thesun_ad_cmd = thesun_ad_cmd || [];
+				thesun_ad_cmd.push( function() {
+					googletag.display( 'mpu' );
+				} );
+			});
+		</script>
+	</div>
+</div>
+
+</aside><aside class="widget sidebar sidebar__section teaser theme-news"><h3 class="sidebar__title theme__after-color">Most Read in News</h3><!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/rr-composite-hydrogen.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/rr-composite-hydrogen.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+					<h2 class="teaser__headline theme__copy-color">HAS PUTIN TESTED NUKE?</h2>
+		
+		<p class="teaser__subdeck">
+			US sends specialist &#039;nuke sniffer&#039; plane to the UK as &#039;radiation spike&#039; sparks fears Russian leader&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2915352"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+		<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303325702.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303325702.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+					<h2 class="teaser__headline theme__copy-color">BACK FROM THE DEAD</h2>
+		
+		<p class="teaser__subdeck">
+			Indian teen wakes up on way to his own FUNERAL after he was written off as dead by his family		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2911217"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+		<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/km-composite-inset-1-google.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/km-composite-inset-1-google.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+					<h2 class="teaser__headline theme__copy-color">GOOGLE SNAP!</h2>
+		
+		<p class="teaser__subdeck">
+			Man stunned after using Google Maps to find directions to his friend - only to see her pictured at same spot		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2913418"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+		<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-demon-childv1-rr.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-demon-child.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/">
+					<h2 class="teaser__headline theme__copy-color">DEVIL CHILD</h2>
+		
+		<p class="teaser__subdeck">
+			Shocking moment &#039;possessed&#039; girl screams and writhes while pastor performs harrowing exorcism to expel her&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2924217"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/">
+		<a href="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2924217/exorcism-video-possessed-girl-screams-demons/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-female-cyclist.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-female-cyclist.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+					<h2 class="teaser__headline theme__copy-color">AT BRAKING POINT</h2>
+		
+		<p class="teaser__subdeck">
+			Female cyclist hits back at disgusting catcaller who asked her if she was &#039;on her period&#039; - but was it real?		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2922701"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+		<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/dd-composite-maddie1.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/dd-composite-maddie1.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Exclusive</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/">
+					<h2 class="teaser__headline theme__copy-color">&#039;THIS IS PURE SPECULATION&#039;</h2>
+		
+		<p class="teaser__subdeck">
+			McCanns hit out at This Morning for broadcasting ex-cop&#039;s theory that Maddie looked for them		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2921628"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/">
+		<a href="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2921628/kate-gerry-madeleine-mccann-ex-cop-mark-williams-thomas-theory/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/">
+					<div class="delayed-image-load-landscape" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303492424.jpg?crop=0px%2C1515px%2C3120px%2C2080px&amp;resize=150%2C100&amp;ssl=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303492424.jpg?crop=0px%2C1515px%2C3120px%2C2080px&amp;resize=620%2C413&amp;ssl=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/">
+					<h2 class="teaser__headline theme__copy-color">&#039;COME OFF IT!&#039;</h2>
+		
+		<p class="teaser__subdeck">
+			The Walking Dead fans&#039; fury after Primark removes show&#039;s t-shirts from stores featuring &#039;racist&#039; slogan		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2916848"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/">
+		<a href="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2916848/the-walking-dead-fans-fury-primark-racist-tshirt/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-twitch-gamer-dies.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-twitch-gamer-dies.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Exclusive</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/">
+					<h2 class="teaser__headline theme__copy-color">&#039;REST IN PEACE&#039;</h2>
+		
+		<p class="teaser__subdeck">
+			Dad dies during Twitch live stream of 24 hour charity gaming marathon		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2919560"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/">
+		<a href="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2919560/father-of-three-dies-during-24-hour-charity-gaming-marathon-live-streamed-on-twitch/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-michaella-mccollumv2.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-michaella-mccollumv2.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/">
+					<h2 class="teaser__headline theme__copy-color">BACK TO THE SCENE OF THE CRIME</h2>
+		
+		<p class="teaser__subdeck">
+			Peru Two drugs mule Michaella McCollum returns to Spain four years after hatching&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2926738"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/">
+		<a href="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2926738/peru-two-drug-smuggling-plot-mule-michaella-mccollum-spain-ibiza/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/selfie-girl-composite1.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/selfie-girl-composite1.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/">
+					<h2 class="teaser__headline theme__copy-color">REAL LIFE MRS ROBINSON</h2>
+		
+		<p class="teaser__subdeck">
+			Sex mad teacher who slept with pupil &#039;hundreds of times&#039; and sent him seedy selfies is jailed		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2894802"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/">
+		<a href="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2894802/teacher-pupil-sex-selfies/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-maddie3.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-maddie3.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/">
+					<h2 class="teaser__headline theme__copy-color">MADDIE THEORY</h2>
+		
+		<p class="teaser__subdeck">
+			Maddie &#039;left apartment and went looking for her parents&#039; on night she disappeared, claims TV detective		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2917800"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/">
+		<a href="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2917800/madeleine-mccann-left-apartment-and-went-looking-for-her-parents-in-tapas-bar-on-night-she-went-missing-claims-tv-detective/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-barcelona-truck.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-barcelona-truck.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Latest</span>
+		</div>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/">
+					<h2 class="teaser__headline theme__copy-color">COPS BLAST RUNAWAY TRUCK</h2>
+		
+		<p class="teaser__subdeck">
+			Barcelona cops &#039;shoot at and arrest crazed driver of stolen truck packed with butane gas cylinders&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2915325"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/">
+		<a href="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2915325/barcelona-truck-shooting-butane/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000302101044.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000302101044.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/">
+					<h2 class="teaser__headline theme__copy-color">SECOND EARTH?</h2>
+		
+		<p class="teaser__subdeck">
+			Nasa calls news conference to reveal &#039;discovery beyond our solar system&#039; that could aid quest for alien life		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2916119"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/">
+		<a href="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2916119/nasa-exoplanet-announcement-expected-to-reveal-big-news-about-alien-planet/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-lauren-walker-toddler.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-lauren-walker-toddler.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/">
+					<h2 class="teaser__headline theme__copy-color">&#039;HE WAS A GODSEND&#039;</h2>
+		
+		<p class="teaser__subdeck">
+			Stressed-out mum hails M&amp;S cashier a hero after he lets restless tot sit behind checkout so she can&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2918872"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/">
+		<a href="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2918872/m-and-s-cashier-hero-baby-sit-behind-checkout/"></a>
+
+</div>
+<!-- SMALL TEASER - 150PX -->
+<div class="teaser-item teaser__small theme-news" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/jh-composite-twin-up-hazard-tweak.jpg?strip=all&amp;w=150&amp;h=100&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/jh-composite-twin-up-hazard-tweak.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/">
+					<h2 class="teaser__headline theme__copy-color">WHAT HAVE THEY FOUND?</h2>
+		
+		<p class="teaser__subdeck">
+			Cops remove wheelie bins plastered with biohazard stickers as they dig Christopher Halliwell&#039;s garden&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2920943"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/">
+		<a href="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2920943/christopher-halliwell-garden-dig-for-bodies/"></a>
+
+</div>
+</aside><aside id="thesun_dfp_ad_widget-7" class="widget widget_thesun_dfp_ad_widget"><div class="dfp-ad-container mpu2-container">
+	<div class="dfp-ad teaser-item teasermedium teasermedium--mpu mpu2" id="mpu2">
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				var thesun_ad_cmd = thesun_ad_cmd || [];
+				thesun_ad_cmd.push( function() {
+					googletag.display( 'mpu2' );
+				} );
+			});
+		</script>
+	</div>
+</div>
+
+</aside><aside id="thesun_outbrain_widget-2" class="widget widget_thesun_outbrain_widget"><div
+	class="OUTBRAIN"
+	data-src="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/"
+	data-widget-id="SB_3"
+	data-ob-template="TheSun_1"
+></div>
+</aside><aside class="widget sidebar sidebar__section teaser theme-main"><h3 class="sidebar__title theme__after-color">Most Popular</h3><!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/">
+					<div class="delayed-image-load-landscape" data-src="https://i0.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-dog-sex.jpg?crop=0px%2C0px%2C750px%2C500px&amp;resize=300%2C192&amp;ssl=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://i0.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-dog-sex.jpg?crop=0px%2C0px%2C750px%2C500px&amp;resize=620%2C413&amp;ssl=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/">
+					<h2 class="teaser__headline theme__copy-color">DOG SEX RAP</h2>
+		
+		<p class="teaser__subdeck">
+			Woman, 43, arrested for having sex with a DOG after vile bestiality video was posted online		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2924410"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/">
+		<a href="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2924410/woman-sex-with-dog-video-posted-online-arrested/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-rare-coins.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/hd-composite-rare-coins.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Exclusive</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/">
+					<h2 class="teaser__headline theme__copy-color">how much are your £1 coins worth?</h2>
+		
+		<p class="teaser__subdeck">
+			Revealed, the rarest and most valuable &pound;1 coins in circulation &ndash; and how to&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/living/" class="theme__copy-color">
+				Living				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2919798"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/">
+		<a href="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/living/2919798/rarest-and-most-valuable-1-coins-revealed-how-to-find-out-if-yours-is-worth-up-to-thirty-times-its-value/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/rr-composite-hydrogen.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/rr-composite-hydrogen.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+					<h2 class="teaser__headline theme__copy-color">HAS PUTIN TESTED NUKE?</h2>
+		
+		<p class="teaser__subdeck">
+			US sends specialist &#039;nuke sniffer&#039; plane to the UK as &#039;radiation spike&#039; sparks fears Russian leader&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2915352"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+		<a href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2915352/russia-nuclear-bombs-arctic-radioactive-particles-europe/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-domestic-violence1.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/ad-composite-domestic-violence1.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Exclusive</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/">
+					<h2 class="teaser__headline theme__copy-color">inside an abusive home</h2>
+		
+		<p class="teaser__subdeck">
+			Chilling photo series documents the real-life domestic violence a teen mum suffered at hands of her ex		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/living/" class="theme__copy-color">
+				Living				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2908890"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/">
+		<a href="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/living/2908890/chilling-photography-series-documents-the-violent-abuse-a-teen-mum-suffered-from-her-ex-before-bravely-rebuilding-her-life/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/">
+					<div class="delayed-image-load-landscape" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/dk-composite-muscle-food1.jpg?crop=0px%2C0px%2C750px%2C500px&amp;resize=300%2C192&amp;ssl=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://i2.wp.com/www.thesun.co.uk/wp-content/uploads/2017/02/dk-composite-muscle-food1.jpg?crop=0px%2C0px%2C750px%2C500px&amp;resize=620%2C413&amp;ssl=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/">
+					<h2 class="teaser__headline theme__copy-color">CHEAP AS CHIPS</h2>
+		
+		<p class="teaser__subdeck">
+			Supersaver mum feeds a family of five for just &pound;16.60 a WEEK - and here&rsquo;s how you can make&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/living/" class="theme__copy-color">
+				Living				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2922425"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/">
+		<a href="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/living/2922425/supersaver-mum-feeds-a-family-of-five-for-just-16-60-a-week-and-heres-how-you-can-make-delicious-meals-for-just-62p-a-portion/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303325702.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/nintchdbpict000303325702.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+					<h2 class="teaser__headline theme__copy-color">BACK FROM THE DEAD</h2>
+		
+		<p class="teaser__subdeck">
+			Indian teen wakes up on way to his own FUNERAL after he was written off as dead by his family		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2911217"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+		<a href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2911217/indian-teen-wakes-up-on-way-to-his-own-funeral-after-he-was-written-off-as-dead-by-his-family-following-lethal-dog-bite/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/jh-mini-kitchen-new-composite.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/jh-mini-kitchen-new-composite.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/">
+					<h2 class="teaser__headline theme__copy-color">SPACE SAVERS</h2>
+		
+		<p class="teaser__subdeck">
+			Aldi launches space-saving kitchen range including a mini fridge and table-top dishwasher		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/living/" class="theme__copy-color">
+				Living				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2919416"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/">
+		<a href="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/living/2919416/aldi-launches-space-saving-kitchen-range-including-a-mini-fridge-oven-and-even-a-table-top-dishwasher/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/km-composite-inset-1-google.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/km-composite-inset-1-google.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+					<h2 class="teaser__headline theme__copy-color">GOOGLE SNAP!</h2>
+		
+		<p class="teaser__subdeck">
+			Man stunned after using Google Maps to find directions to his friend - only to see her pictured at same spot		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2913418"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+		<a href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2913418/google-maps-street-view-friend/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-singlemum.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-singlemum.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/">
+					<h2 class="teaser__headline theme__copy-color">She&#039;s blown it</h2>
+		
+		<p class="teaser__subdeck">
+			Mum splashes out &pound;6,000 on meals, clothes and perfume in four weeks after being given &pound;26,000 to&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/living/" class="theme__copy-color">
+				Living				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2915808"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/">
+		<a href="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/living/2915808/single-meals-clothes-perfume-four-weeks-26000-benefits/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-female-cyclist.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-female-cyclist.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+					<h2 class="teaser__headline theme__copy-color">AT BRAKING POINT</h2>
+		
+		<p class="teaser__subdeck">
+			Female cyclist hits back at disgusting catcaller who asked her if she was &#039;on her period&#039; - but was it real?		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/news/" class="theme__copy-color">
+				News				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2922701"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+		<a href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/news/2922701/female-cyclist-takes-revenge-on-disgusting-catcaller-by-ripping-off-his-wing-mirror-when-he-stops-at-red-light/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/af-composite-grey-tshirt1.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/af-composite-grey-tshirt1.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+				<!-- Add video indicator if article has feature video. -->
+		<div class="teaser__item-play theme__background-color-rgba-80">
+			<span></span>
+		</div>
+	</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/">
+					<h2 class="teaser__headline theme__copy-color">WHAT NOT TO BARE</h2>
+		
+		<p class="teaser__subdeck">
+			Fashion guru Trinny Woodall reveals more than a style tip as she flashes her boob during a Facebook video&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/tvandshowbiz/" class="theme__copy-color">
+				TV &amp; Showbiz				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2922304"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/tvandshowbiz/2922304/fashion-guru-trinny-woodall-reveals-more-than-a-style-tip-as-she-flashes-her-breast-during-a-facebook-video-blog/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/stacey.png?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/stacey.png?strip=all&amp;w=606&amp;h=401&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/">
+					<h2 class="teaser__headline theme__copy-color">No kidding</h2>
+		
+		<p class="teaser__subdeck">
+			Stacey Solomon doesn&#039;t want a baby with Joe Swash as she doesn&#039;t want her children to have different dads		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/tvandshowbiz/" class="theme__copy-color">
+				TV &amp; Showbiz				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2919354"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/tvandshowbiz/2919354/stacey-solomon-doesnt-want-a-baby-with-joe-swash-as-she-doesnt-want-her-children-to-have-different-dads/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/pm3-composite-4-wayemmerdale.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/pm3-composite-4-wayemmerdale.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Spoiler</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/">
+					<h2 class="teaser__headline theme__copy-color">SOAP SHOCKS</h2>
+		
+		<p class="teaser__subdeck">
+			Emmerdale boss reveals massive spoilers including Ashley&#039; death, Emma&#039;s confession and a secret love triangle		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/tvandshowbiz/" class="theme__copy-color">
+				TV &amp; Showbiz				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2918411"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/tvandshowbiz/2918411/emmerdale-boss-reveals-massive-spoilers-including-ashley-thomas-heartbreaking-death-emma-bartons-confession-and-a-secret-love-triangle/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/pm6-composite-twin-upmichelle.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/pm6-composite-twin-upmichelle.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/">
+					<h2 class="teaser__headline theme__copy-color">&#039;how can Lauren take him back?&#039;</h2>
+		
+		<p class="teaser__subdeck">
+			Michelle Keegan laughed at Mark Wright&#039;s &#039;cringe&#039; romance with Lauren Goodger		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/tvandshowbiz/" class="theme__copy-color">
+				TV &amp; Showbiz				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2920731"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/tvandshowbiz/2920731/michelle-keegan-laughed-at-mark-wrights-cringe-romance-with-lauren-goodger-four-years-before-she-married-him/"></a>
+
+</div>
+<!-- MEDIUM TEASER - 300PX -->
+<div class="teaser-item teaser__medium theme-main" >
+
+	<!-- TEASER IMAGE -->
+<div class="teaser__image-container" >
+	<div class="teaser-grad"></div>
+	<a href="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/">
+					<div class="delayed-image-load-landscape" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-mcconnell1.jpg?strip=all&amp;w=300&amp;h=192&amp;crop=1"></div>
+			<div class="delayed-image-load-mobile" data-src="https://www.thesun.co.uk/wp-content/uploads/2017/02/kh-composite-mcconnell1.jpg?strip=all&amp;w=620&amp;h=413&amp;crop=1"></div>
+			</a>
+			<!-- EXCLUSIVE TAG -->
+		<div class="teaser-slug">
+			<span class="teaser-slug__copy liveblog-teaser-slug-disable">Exclusive</span>
+		</div>
+		</div>
+
+	
+<div class="teaser__copy-container">
+	<a class="text-anchor-wrap" href="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/">
+					<h2 class="teaser__headline theme__copy-color">DADDY&#039;S HOME</h2>
+		
+		<p class="teaser__subdeck">
+			Jeremy McConnell sets up home in Liverpool with Stephanie Davis and newborn Caben-Albi and has &#039;no intention of&hellip;		</p>
+
+			</a>
+</div><!-- .teaser__copy-container -->
+
+	
+<div class="article-data teaser__social">
+
+			<div class="article-data__item article-data__tag">
+						<a href="https://www.thesun.co.uk/tvandshowbiz/" class="theme__copy-color">
+				TV &amp; Showbiz				<span class="icon icon-arrow-right"></span>
+			</a>
+		</div><!-- .article-data__item .article-data__tag -->
+	
+	<div class="article-data__item article-data__comment">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/#comments">
+			<span class="icon icon-comment"></span>
+			<span class="livefyre-commentcount" data-lf-site-id="289969" data-lf-article-id="2926689"></span>
+		</a>
+	</div><!-- .article-data__item .article-data__comment -->
+
+	<div class="article-data__item article-data__share" data-url="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/">
+		<a href="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/">
+			<svg class="article-data__svg article-share" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5661.3 2202.8 2294.7 1835.8" enable-background="new 5661.3 2202.8 2294.7 1835.8" xml:space="preserve">
+				<path fill="#E92129" d="M7038.1,4038.5v-458.9c0,0-917.9-229.5-1376.8,458.9c0-755.9,620.9-1376.8,1376.8-1376.8v-458.9l917.9,917.9
+				L7038.1,4038.5z" />
+			</svg>
+			<span class="share-count"></span>
+		</a>
+	</div><!-- .article-data__item article-data__share -->
+
+</div><!-- .article-data teaser__social -->
+
+<a class="teaser-anchor" href="https://www.thesun.co.uk/tvandshowbiz/2926689/jeremy-mcconnell-sets-up-home-in-liverpool-with-stephanie-davis-and-newborn-son-caben-albi-and-has-no-intention-of-returning-to-dublin/"></a>
+
+</div>
+</aside>					</div><!-- .col sun-col-2 -->
+					
+				</div><!-- .sun-row -->
+			
+			
+		</section><!--. sun-container__article-section theme-sport -->
+
+	</div><!-- .main-content-wrap -->
+
+		<div class="gallery-popup">
+		<a href="#" class="close-gallery"><span class="icon icon-close"></span></a>
+
+		<div class="gallery-image-load-cover"></div>
+		<div class="gallery-container">
+			<div class="swiper-container">
+				<div class="swiper-wrapper"></div>
+
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div><!-- .swiper-container -->
+		</div><!-- .gallery-container -->
+
+		<div class="swiper-caption">
+			<div class="swiper-caption-toggle"><span class="arrow"></span></div>
+
+			<div class="swiper-pagination"></div>
+
+			<span class="swiper-caption-list"></span>
+
+			<div class="sharingButtons social social--gallery">
+					<div class="social-share-buttons">
+		<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-2799551" class="share-twitter sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-2799551" class="share-facebook sd-button share-icon no-text" href="https://www.thesun.co.uk/news/2799551/three-youths-branded-army-veteran-immigrant/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="whatsapp://send?text=Three%20youths%20branded%20US%20Army%20veteran%20a%20%27little%20f%2A%2A%2Aing%20immigrant%27%20in%20vile%20rant https%3A%2F%2Fwww.thesun.co.uk%2Fnews%2F2799551%2Fthree-youths-branded-army-veteran-immigrant%2F" target="_blank" title="Click to share on WhatsApp"><span></span><span class="sharing-screen-reader-text">Click to share on WhatsApp (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+				</div>
+		</div><!-- .swiper-caption -->
+	</div><!-- .gallery-popup -->
+
+<div id="cookie-bar">
+    <div class="sun-row">
+        <div class="col sun-col-6">
+            <p>By continuing to use the site, you agree to the use of cookies. You can change this and find out more by following <a href="http://www.newsprivacy.co.uk/single/">this link</a></p>
+            <a class="accept-cookies">Close</a>
+        </div>
+    </div>
+</div>
+
+</div><!-- .sun-container .theme -->
+
+<div class="dfp-ad" id="pixel">
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			var thesun_ad_cmd = thesun_ad_cmd || [];
+			thesun_ad_cmd.push( function() {
+				googletag.display( 'pixel' );
+			} );
+		});
+	</script>
+</div>
+<div class="dfp-ad" id="pixelSkin">
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			var thesun_ad_cmd = thesun_ad_cmd || [];
+			thesun_ad_cmd.push( function() {
+				googletag.display( 'pixelSkin' );
+			} );
+		});
+	</script>
+</div>
+<div class="dfp-ad" id="pixelTeads">
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			var thesun_ad_cmd = thesun_ad_cmd || [];
+			thesun_ad_cmd.push( function() {
+				googletag.display( 'pixelTeads' );
+			} );
+		});
+	</script>
+</div>
+
+<footer>
+
+	<div class="sun-row">
+		<div class="col sun-col-2 footer-follow">
+			<h3 class="footer-title-follow">Follow The Sun</h3>
+
+			<div class="follow-sun">
+				<a href="https://www.facebook.com/thesun/" class="follow-facebook"><span class="icon icon-facebook"></span></a>
+				<a href="https://twitter.com/thesun?lang=en-gb" class="follow-twitter"><span class="icon icon-twitter"></span></a>
+			</div>
+		</div>
+
+		<div class="col sun-col-4 footer-nav">
+			<h3 class="footer-title-services">Services</h3>
+			<ul id="menu-footer" class="menu"><li id="menu-item-1236019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1236019"><a href="https://www.thesun.co.uk/sign-up-to-the-sun/">Sign Up To The Sun</a></li>
+<li id="menu-item-1235852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235852"><a href="https://www.thesun.co.uk/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-1235452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235452"><a href="https://www.thesun.co.uk/editorial-complaints/">Editorial Complaints</a></li>
+<li id="menu-item-1237807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1237807"><a href="https://www.thesun.co.uk/admin/clarifications/">Clarifications and Corrections</a></li>
+<li id="menu-item-1235451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235451"><a href="https://www.thesun.co.uk/syndication/">Syndication</a></li>
+<li id="menu-item-1388523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1388523"><a href="http://www.newsukadvertising.co.uk">Advertising</a></li>
+<li id="menu-item-1235453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1235453"><a href="https://www.thesun.co.uk/contact-us/">Contact Us</a></li>
+<li id="menu-item-2313093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2313093"><a href="https://www.thesun.co.uk/commissioning-terms/">Commissioning Terms</a></li>
+<li id="menu-item-1235319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1235319"><a href="http://help.thesun.co.uk/">Help Hub</a></li>
+</ul>		</div>
+
+		<div class="col sun-col-2 footer-col-dummy"></div>
+
+		<div class="col sun-col-4">
+			<div class="terms">
+				<p>&copy;News Group Newspapers Limited in England No. 679215 Registered office: 1 London Bridge Street, London, SE1 9GF. "The Sun", "Sun", "Sun Online" are registered trademarks or trade names of News Group Newspapers Limited. This service is provided on News Group Newspapers' Limited's <a href="https://www.thesun.co.uk/terms-and-conditions/">Standard Terms and Conditions</a> in accordance with our <a href="http://www.newsprivacy.co.uk/">Privacy &amp; Cookie Policy</a>. To inquire about a licence to reproduce material, visit our <a href="https://www.thesun.co.uk/syndication/">Syndication</a> site. View our online Press Pack. For other inquiries, <a href="https://www.thesun.co.uk/contact-us/">Contact Us</a>. To see all content on The Sun, please use the Site Map. The Sun website is regulated by the <a href="https://www.thesun.co.uk/editorial-complaints/">Independent Press Standards Organisation (IPSO)</a></p>
+<p>Our journalists strive for accuracy but on occasion we make mistakes. For further details of our complaints policy and to make a complaint please click <a href="https://www.thesun.co.uk/editorial-complaints/">here</a>.</p>
+			</div>
+		</div>
+	</div><!-- .sun-row -->
+
+</footer>
+
+	<div style="display:none">
+	</div>
+
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="thesun.co.uk"></div>
+</div>
+<script data-cfasync="false">
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.setAttribute('data-cfasync', 'false'); e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
+		<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.thesun.co.uk\/news\/2799551\/three-youths-branded-army-veteran-immigrant\/"},"headline":"Three youths &#8216;looking for trouble&#8217; branded US Army veteran a &#8216;little f***ing immigrant&#8217; in vile racist tram rant","url":"http:\/\/www.thesun.co.uk\/news\/2799551\/three-youths-branded-army-veteran-immigrant\/","thumbnailUrl":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/dk-composite-racist.jpg?strip=all&w=750&h=500&crop=1","image":{"@type":"ImageObject","url":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/dk-composite-racist.jpg?strip=all&#038;w=750&#038;h=500&#038;crop=1","width":750,"height":500},"dateCreated":"2017-02-06T18:26:09Z","datePublished":"2017-02-06T18:26:09+00:00","dateModified":"2017-02-06T19:20:18+00:00","articleSection":"News","author":{"@type":"Person","name":"eflynn"},"creator":["eflynn"],"publisher":{"@type":"Organization","name":"The Sun","logo":{"@type":"ImageObject","url":"https:\/\/www.thesun.co.uk\/wp-content\/themes\/thesun\/images\/the-sun-structured-data-logo.jpg","width":139,"height":60}},"keywords":["Section: News:UK News","Courts","Racism","Manchester"],"description":"Aaron Cauchi, 19, Robert Molloy, 20, and a 16-year-old spat in the face of one victim and used 'foul language'","name":"Three youths &#8216;looking for trouble&#8217; branded US Army veteran a &#8216;little f***ing immigrant&#8217; in vile racist tram rant"}		</script>
+		<div id="fb-root"></div>	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+		fbq('init', '752905198150451');
+		fbq('track', "PageView");
+	</script>
+
+	<noscript>
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=752905198150451&ev=PageView&noscript=1" />
+	</noscript>
+
+	<script type="text/javascript">
+    var livefyre_auth_loaded = false;
+</script>
+    <script type="text/javascript">
+        var load_livefyre_auth = function() {};
+    </script>
+
+<script type="text/javascript">
+    var networkConfigComments = {
+        network: "thesun.fyre.co"    };
+    var convConfigComments2799551 = {
+        siteId: "289969",
+        articleId: 2799551,
+        el: "livefyre-comments",
+        collectionMeta: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczpcL1wvd3d3LnRoZXN1bi5jby51a1wvbmV3c1wvMjc5OTU1MVwvdGhyZWUteW91dGhzLWJyYW5kZWQtYXJteS12ZXRlcmFuLWltbWlncmFudFwvIiwidGl0bGUiOiJUaHJlZSB5b3V0aHMgJiM4MjE2O2xvb2tpbmcgZm9yIHRyb3VibGUmIzgyMTc7IGJyYW5kZWQgVVMgQXJteSB2ZXRlcmFuIGEgJiM4MjE2O2xpdHRsZSBmKioqaW5nIGltbWlncmFudCYjODIxNzsgaW4gdmlsZSByYWNpc3QgdHJhbSByYW50IiwiYXJ0aWNsZUlkIjoyNzk5NTUxLCJ0YWdzIjpbIkNvdXJ0cyIsIlJhY2lzbSJdLCJ0eXBlIjoibGl2ZWNvbW1lbnRzIn0.FsJMd0MkQ3A1hTPq5LY6QLl443bk7ghlLBxbaKdm5ZE",
+        checksum: "0f7966dcb9607bfbe62a37e9df1a5176"    };
+    if (typeof (liveCommentsConfig) !== 'undefined') {
+        convConfigComments2799551 = Livefyre.LFAPPS.lfExtend(liveCommentsConfig, convConfigComments2799551);
+    }
+
+    Livefyre.require(["fyre.conv#3"], function (ConvComments) {
+        load_livefyre_auth();
+        new ConvComments(networkConfigComments,
+                [convConfigComments2799551],
+                function (commentsWidget) {
+                    var livecommentsListeners = Livefyre.LFAPPS.getAppEventListeners('livecomments');
+                    if (livecommentsListeners.length > 0) {
+                        for (var i = 0; i<livecommentsListeners.length; i++) {
+                            var livecommentsListener = livecommentsListeners[i];
+                            commentsWidget.on(livecommentsListener.eventName, livecommentsListener.callback);
+                        }
+                    }
+                }
+        );
+    });
+</script><script type="text/javascript" data-lf-domain="thesun.fyre.co" id="ncomments_js" src="https://cdn.livefyre.com/libs/commentcount/v1.0/commentcount.js"></script>
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/www.thesun.co.uk\/news\/2799551\/three-youths-branded-army-veteran-immigrant\/":2799551};
+	</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201708'></script>
+<script type='text/javascript' src='//player.ooyala.com/static/v4/stable/latest/core.min.js?ver=v4'></script>
+<script type='text/javascript' src='//player.ooyala.com/static/v4/stable/latest/skin-plugin/html5-skin.min.js?ver=v4'></script>
+<script type='text/javascript' src='//player.ooyala.com/static/v4/stable/latest/video-plugin/main_html5.min.js?ver=v4'></script>
+<script type='text/javascript' src='//player.ooyala.com/static/v4/stable/latest/ad-plugin/google_ima.min.js?ver=v4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thesun_main_settings = {"wunderground":{"city":"London","countryCode":"GB","defaultCoords":{"lat":"51.505276","long":"0.055277"}}};
+var galleryData = [{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702368.jpg?strip=all&w=667","caption":"Robert Molloy attacked a US Army veteran in a sick racist assault","credit":"Cavendish Press"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299735008.jpg?strip=all&w=737","caption":"Aaron Cauchi was one of three youths who launched the unprovoked tram attack","credit":"Andy Kelvin \/ Kelvin Media"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702361.jpg?strip=all&w=352","caption":"The group labelled Juan Jasso a 'little f***ing immigrant'","credit":"Cavendish Press (Manchester) Ltd"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702395.jpg?strip=all&w=960","caption":"A 16-year-old boy, who can not be named for legal reasons, was also convicted today","credit":"Cavendish Press"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702393.jpg?strip=all&w=717","caption":"All three had been up all night and were drinking when they abused three people on their way to work in Manchester City Centre","credit":"Cavendish Press (Manchester) Ltd"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702206.jpg?strip=all&w=612","caption":"All three pleaded guilty to public order offences at Manchester Crown Court today","credit":"Cavendish Press"},{"img":"https:\/\/www.thesun.co.uk\/wp-content\/uploads\/2017\/02\/nintchdbpict000299702364.jpg?strip=all&w=365","caption":"Dad-of-one Juan was on his way to work when he was abused by the three youths","credit":"Cavendish Press (Manchester) Ltd"}];
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thesunOoyalaSettings = {"pcode":"5nbWk6UPHAPHIpkunRhFyQE8fR1e","playerBrandingId":"NDcyOWI0M2YyMDdkN2YwODU5Mzc5MDUz","skinUrl":"\/\/player.ooyala.com\/static\/v4\/stable\/latest\/skin-plugin\/skin.json"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.thesun.co.uk/_static/??-eJzTLy/QTc7PK0nNK9EvyUjNTS0GUcWlefpZxfq5iZl5elnFOvr4FJVlpqTmE1SVmpuUmlIMVGafa2toYmFqbmlkZmqSBQDgui3o'></script>
+<script type='text/javascript' async="async" defer src='//s.skimresources.com/js/34784X1028065.skimlinks.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://www.thesun.co.uk/_static/??/wp-content/themes/thesun/js/swiper.min.js,/wp-content/themes/thesun/js/gsa.js?m=1484907981j'></script>
+<script type='text/javascript' async="async" src='https://prod-sunbets-widgets.s3-eu-west-1.amazonaws.com/static/sunbet/betsense.min.js?ver=4.7.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.thesun.co.uk/_static/??/wp-includes/js/wp-embed.min.js,/wp-content/mu-plugins/jetpack/modules/sharedaddy/sharing.js?m=1485460938j'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-201708.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.6',blog:'111602770',post:'2799551',tz:'0',srv:'www.thesun.co.uk'} ]);
+	_stq.push([ 'clickTrackerInit', '111602770', '2799551' ]);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3aaf38205d","applicationID":"44435850","transactionName":"NlJSYUIEXhdTBkUPXQ8YcVZEDF8KHRZYCFUUW1FH","queueTime":0,"applicationTime":364,"atts":"GhVFFwoeTUgQBBNcSRxK","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

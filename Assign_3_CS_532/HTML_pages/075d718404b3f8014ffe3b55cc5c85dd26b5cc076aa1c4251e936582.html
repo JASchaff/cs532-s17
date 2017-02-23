@@ -1,0 +1,1836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:c="http://s.opencalais.com/1/pred/"
+  xmlns:sys="http://s.opencalais.com/1/type/sys/"
+  xmlns:lid="http://s.opencalais.com/1/type/lid/"
+  xmlns:cat="http://s.opencalais.com/1/type/cat/"
+  xmlns:resolved="http://s.opencalais.com/1/type/er/"
+  xmlns:cgeo="http://s.opencalais.com/1/type/er/Geo/"
+  xmlns:eventfact="http://s.opencalais.com/1/type/em/r/"
+  xmlns:entity="http://s.opencalais.com/1/type/em/e/"
+  xmlns:cld="http://s.opencalais.com/1/linkeddata/pred/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1487601798,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"6b60ecbbc9ac849f5782575531dc4971",petok:"cc9c07d9252d1d595e9a518bc4b9ed8cfe3892e6-1487787376-21600",zone:"alternet.org",rocket:"a",apps:{}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js"><'+'\/script>');}}catch(e){};
+//]]>
+</script>
+<script type="text/rocketscript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMDUlNTCRADUVRaBwMAVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<meta property="twitter:site" content="@alternet" />
+<meta property="og:url" content="http://www.alternet.org/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" />
+<meta property="og:site_name" content="Alternet" />
+<meta property="twitter:title" content="If Your Money Is in One of These Banks, You&#039;re Helping to Fund the Dakota Access Pipeline" />
+<meta property="twitter:url" content="http://www.alternet.org/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:description" content="At a recent Standing Rock benefit in New York City for opponents of the Dakota Access Pipeline, co-hosts Mark Ruffalo and Josh Fox were clear about what people should do if they want to help stop the pipeline: Take your money out of the banks that are funding it." />
+<meta property="twitter:image" content="http://www.alternet.org/sites/default/files/story_images/31517375095_f4385321ca_k.jpg" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://www.alternet.org/sites/default/files/story_images/31517375095_f4385321ca_k.jpg" />
+<meta property="fb:page_id" content="17108852506" />
+<link rel="shortlink" href="http://www.alternet.org/node/1070240" />
+<link rel="canonical" href="http://www.alternet.org/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" />
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0" />
+<meta name="description" content="Standing Rock activists have a simple, yet powerful message: Withdraw your money from banks funding the pipeline.
+ At a recent Standing Rock benefit in New York City for opponents of the Dakota Access Pipeline, co-hosts Mark Ruffalo and Josh Fox were clear about what people should do if they want to help stop the pipeline: Take your money out of the banks that are funding it." />
+<meta property="article:published_time" content="Array Array" />
+<meta property="og:title" content="If Your Money Is in One of These Banks, You&#039;re Helping to Fund the Dakota Access Pipeline" />
+<meta property="og:description" content="Standing Rock activists have a simple, yet powerful message: Withdraw your money from banks funding the pipeline.
+ At a recent Standing Rock benefit in New York City for opponents of the Dakota Access Pipeline, co-hosts Mark Ruffalo and Josh Fox were clear about what people should do if they want to help stop the pipeline: Take your money out of the banks that are funding it." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+  <title>If Your Money Is in One of These Banks, You're Helping to Fund the Dakota Access Pipeline | Alternet</title>
+  <link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_FFMDRYZ2nSV6HGDyDVpm9-yNY8H0IkhZ90k-a2N9jFE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_Dp2hIfXtLQBttSNrETAl59izBieDwmNiWcsAEzZUFYE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_iuZ0qkQmXUX7il9acfQ9ZkB_oA9nL9apzent2mNP5TU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_Z-L6uKv-_hSUmer26uwVpZ7fbMbYte5FDvMMijICATA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_qvcB92flbmMSVuLIv_QROXbpo2eWxaNiN6L413JKeUE.css" media="all" />
+
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_JENxnKrGQdPJ-lM1oa8Bfiz8mh4lo767OGMpkF3fX5A.css" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_pHTN7_GNsVcfklRZdKEyIrEWv2zeIIABOmccHFz6YyY.css" media="all" />
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_nuMTdeuxc_QtSu1QyGSTbBpKYGEFyZwcApAftyxT0UQ.css" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_qFr6xz_L1ZO7CGFpapZRnhSZXvkQDQ98HaGjIwMkbrQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.alternet.org/sites/default/files/css/css_e0Oi8I1L8cGJ7KxcUbimLkO-ivlPDoZXuBZMWKAz5GY.css" media="print" />
+
+  <script type="text/rocketscript">
+    var disableShareFloat = false;
+    if (window.location.hostname.indexOf('surveywinprizes.biz') > 0) {window.location='http://www.alternet.org/';}
+  </script>
+
+  <!--[if IE 7]>
+  	<link rel="stylesheet" type="text/css" href="/sites/all/themes/custom/alternet/css/IE7.1.1.css">
+  <![endif]-->
+
+  <!-- <script type="text/javascript" src="http://cdn.onswipe.com/synapse/on.js?usr=alternet" id="onswipe_synapse"></script> -->
+  <meta name="google-site-verification" content="-yUzdOYz6i2iShII0x_PYzsvnhQUG2f751funoPlCNM" />
+
+  		<!--
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: 'ca-pub-6512936480753445',
+            enable_page_level_ads: true,
+            overlays: {google_ad_channel: '6916694011'}
+        });
+      </script>
+	  -->
+    
+  <!-- Verification for FB INSTANT -->
+  <meta property="fb:pages" content="17108852506" />
+  
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1070240 node-type-story section-environment section-environment" >
+
+    <div class='mobile-anchor-ad'>
+        <!-- BEGIN JS TAG - Alternet.org 320x50 Mobile Anchor (RS) < - DO NOT MODIFY -->
+        <!-- <SCRIPT SRC="http://dat.springserve.com/ttj?id=4939346&cb=${CACHEBUSTER}" TYPE="text/javascript"></SCRIPT> -->
+        <!-- END TAG -->
+    </div>
+
+  <!-- START Parse.ly Include: Standard -->
+  <!--
+  <div id="parsely-root" style="display: none">
+    <div id="parsely-cfg" data-parsely-site="alternet.org"></div>
+  </div>
+  <script>
+   (function(s, p, d) {
+    var h=d.location.protocol, i=p+"-"+s,
+    e=d.getElementById(i), r=d.getElementById(p+"-root"),
+    u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+    :"static."+p+".com";
+    if (e) return;
+    e = d.createElement(s); e.id = i; e.async = true;
+    e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+    })("script", "parsely", document);
+  </script>
+  -->
+  <!-- END Parse.ly Include -->
+
+  <script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-289449-1";
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_Xjzh1hVfcgVAixhmmB6Go8TUMPOiprA-2vkC-oWXARQ.js"></script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+var _sf_startpt=(new Date()).getTime();
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/all/libraries/mediaelement/build/mediaelement-and-player.min.js?v=2.1.6"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_5ZvYbR_RpAnAa4Gy_hGCjwhuaBQEWzQIAwlMCStkIuU.js"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_LarD7BOxQyu9q5aYICOkykrNoWKAB81yfJq738fqukg.js"></script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+var alternet_default_coverage_area = 'Environment';
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+googletag.defineSlot('/1010624/New_AlterNet_300x250_1', [300, 250], 'div-gpt-ad-1420248654549-0').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_FRONT_2', [[300, 250], [300, 600]], 'div-gpt-ad-1420248654549-1').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_FRONT_3', [300, 250], 'div-gpt-ad-1420248654549-2').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_FRONT_4', [[300, 250], [300, 600]], 'div-gpt-ad-1420248654549-3').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_EMBED_1', [300, 250], 'div-gpt-ad-1420251685282-0').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_EMBED_2', [300, 250], 'div-gpt-ad-1420251685282-1').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_EMBED_3', [300, 250], 'div-gpt-ad-1420251685282-2').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_EMBED_4', [300, 250], 'div-gpt-ad-1420251685282-3').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_SIDEBAR_1', [[300, 250], [300, 600]], 'div-gpt-ad-1420251685282-4').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_SIDEBAR_2', [300, 250], 'div-gpt-ad-1420251685282-5').addService(googletag.pubads());
+googletag.defineSlot('/1010624/New_AlterNet_300x250_STORY_SIDEBAR_3', [[300, 250], [300, 600]], 'div-gpt-ad-1420251685282-6').addService(googletag.pubads()); 
+/* googletag.defineSlot('/1010624/Alt_970', [[970, 90], [728, 90], [970, 250], [720, 300]], 'div-gpt-ad-1445384856025-0').addService(googletag.pubads()); */
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_IDBX5SzkJ9gGNq7x-qOE_2DZsexqguTJQGMKvi4w-Uw.js"></script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+window._taboola = window._taboola || []; _taboola.push({article:'auto'}); !function (e, f, u) { e.async = 1; e.src = u; f.parentNode.insertBefore(e, f); }(document.createElement('script'), document.getElementsByTagName('script')[0],'http://cdn.taboola.com/libtrc/rs-alternet/loader.js');
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_iMxKuFRLB8gAehTRkf9R4F2QaKcRrxNufCC_PBJ_Tmk.js"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_DUJWkACv8imNZU9mt07byz37C5FiKIKGp4uNuKgqoWo.js"></script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"alternet","theme_token":"AaRCVTnuKeSJ3s8phA3u9BGYMJx38yEFuT374rbe3og","js":{"0":1,"1":1,"2":1,"sites\/all\/modules\/custom\/altsocial\/js\/jquery.cookie.js":1,"sites\/all\/modules\/custom\/altsocial\/js\/resize.js":1,"https:\/\/apis.google.com\/js\/plusone.js":1,"3":1,"4":1,"5":1,"sites\/all\/modules\/contrib\/disqus\/disqus.js":1,"6":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"7":1,"sites\/all\/libraries\/mediaelement\/build\/mediaelement-and-player.min.js":1,"misc\/jquery.cookie.js":1,"misc\/jquery.form.js":1,"misc\/ajax.js":1,"misc\/progress.js":1,"sites\/all\/modules\/custom\/altslideshow\/js\/altslideshow-embed.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/superfish.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/jquery.bgiframe.min.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus.js":1,"sites\/all\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/all\/modules\/contrib\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/contrib\/quickbar\/js\/quickbar.js":1,"sites\/all\/modules\/contrib\/mediaelement\/mediaelement.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"8":1,"9":1,"10":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"11":1,"sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/themes\/custom\/alternet\/js\/jquery.expander.min.js":1,"sites\/all\/themes\/custom\/alternet\/js\/alternet.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/mediaelement\/build\/mediaelementplayer.min.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/modules\/contrib\/field_group\/field_group.css":1,"sites\/all\/modules\/custom\/altslideshow\/css\/altslideshow-embed.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus.css":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus_default.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/contrib\/quickbar\/theme\/quickbar.css":1,"sites\/all\/themes\/custom\/alternet\/css\/fields.css":1,"sites\/all\/themes\/custom\/alternet\/css\/html-reset.css":1,"sites\/all\/themes\/custom\/alternet\/css\/page-backgrounds.css":1,"sites\/all\/themes\/custom\/alternet\/css\/layout-fixed.css":1,"sites\/all\/themes\/custom\/alternet\/css\/wireframes.css":1,"sites\/all\/themes\/custom\/alternet\/css\/tabs.css":1,"sites\/all\/themes\/custom\/alternet\/css\/media-node.css":1,"sites\/all\/themes\/custom\/alternet\/css\/media-padding.css":1,"sites\/all\/themes\/custom\/alternet\/css\/master.css":1,"sites\/all\/themes\/custom\/alternet\/css\/ie.css":1,"sites\/all\/themes\/custom\/alternet\/css\/blogads2_v5.css":1,"sites\/all\/themes\/custom\/alternet\/css\/IE6.1.0.css":1,"sites\/all\/themes\/custom\/alternet\/css\/pages.css":1,"sites\/all\/themes\/custom\/alternet\/css\/blocks.css":1,"sites\/all\/themes\/custom\/alternet\/css\/navigation.css":1,"sites\/all\/themes\/custom\/alternet\/css\/views-styles.css":1,"sites\/all\/themes\/custom\/alternet\/css\/nodes.css":1,"sites\/all\/themes\/custom\/alternet\/css\/comments.css":1,"sites\/all\/themes\/custom\/alternet\/css\/forms.css":1,"sites\/all\/themes\/custom\/alternet\/css\/search.css":1,"sites\/all\/themes\/custom\/alternet\/css\/system.theme.css":1,"sites\/all\/themes\/custom\/alternet\/css\/print.css":1}},"chartbeat":{"uid":848,"domain":"alternet.org"},"nice_menus_options":{"delay":800,"speed":1},"mediaelementAll":true,"disqusComments":"alternet","googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"urlIsAjaxTrusted":{"\/environment\/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing":true,"\/quicktabs\/ajax\/best_of_the_week\/0\/view\/best_of_the_week\/default\/1\/node%252F1070240\/":true,"\/quicktabs\/ajax\/best_of_the_week\/1\/block\/altsocial_delta_mail_top\/1":true,"\/quicktabs\/ajax\/best_of_the_week\/2\/block\/altsocial_delta_disqus_popular_threads\/1":true,"\/quicktabs\/ajax\/best_of_the_week\/3\/block\/altsocial_delta_reddit_top\/1":true,"\/quicktabs\/ajax\/best_of_the_week\/4\/block\/altsocial_delta_digg_widget\/1":true},"ajax":{"quicktabs-tab-best_of_the_week-0":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/best_of_the_week\/0\/view\/best_of_the_week\/default\/1\/node%252F1070240\/"},"quicktabs-tab-best_of_the_week-1":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/best_of_the_week\/1\/block\/altsocial_delta_mail_top\/1"},"quicktabs-tab-best_of_the_week-2":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/best_of_the_week\/2\/block\/altsocial_delta_disqus_popular_threads\/1"},"quicktabs-tab-best_of_the_week-3":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/best_of_the_week\/3\/block\/altsocial_delta_reddit_top\/1"},"quicktabs-tab-best_of_the_week-4":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/best_of_the_week\/4\/block\/altsocial_delta_digg_widget\/1"}},"quicktabs":{"qt_best_of_the_week":{"name":"best_of_the_week","tabs":[{"vid":"best_of_the_week","display":"default","args":"","view_path":"node%2F1070240","view_dom_id":1,"ajax_args":"","actual_args":[]},{"bid":"altsocial_delta_mail_top","hide_title":1},{"bid":"altsocial_delta_disqus_popular_threads","hide_title":1},{"bid":"altsocial_delta_reddit_top","hide_title":1},{"bid":"altsocial_delta_digg_widget","hide_title":1}],"disqusComments":"alternet"}}});
+//--><!]]>
+</script>
+  <div id="skip-link">
+    <a href="#main-menu" class="element-invisible element-focusable">Jump to Navigation</a>
+  </div>
+
+  
+  <!-- /1010624/Alt_970 -->
+  <!--
+  <div id='div-gpt-ad-1445384856025-0' class='hide_on_mobile' style='margin: 0px auto; text-align: center;'>
+    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1445384856025-0'); });</script>
+  </div>
+  -->
+
+  
+
+<div id="root_header">
+  <div class="container"></div>
+    
+  <div id="above_banner">
+  
+    <div class="social">
+        <a href="https://www.facebook.com/AlterNetNews" class="facebook" target="_blank"><img src="http://www.rawstory.com/rs/wp-content/uploads/2014/08/facebook.png" style="width:20px;height:20px;" class="icon"></a>
+        <a href="https://twitter.com/AlterNet" class="twitter" target="_blank"><img src="http://www.rawstory.com/rs/wp-content/uploads/2014/08/twitter.png" style="width:20px;height:20px;" class="icon"></a>
+        <a href="http://feeds.feedblitz.com/alternet" class="rss" target="_blank"><img src="http://www.rawstory.com/rs/wp-content/uploads/2014/08/rss.png" style="width:20px;height:20px;" class="icon"></a>
+      </div>
+      
+      <div class="banner_search_box"><!-- search form --><span class="banner_search"> SEARCH </span>  <div class="region region-header-search">
+    <div id="block-search-form" class="block block-search first last odd count-1">
+
+      
+  <div class="content">
+    <form action="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-eS2czFBs2IyxlDLYHvAQFFZ4soDiRCqAFxht5Il8FBM" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+</div>
+  
+  </div>
+  
+  <div id="banner" class="banner_ banner_environment">
+    <div id="banner_container">
+              <div class="logo">
+          <a href="/" title="Home" rel="home" id="logo"><img src="http://www.alternet.org/sites/all/themes/custom/alternet/logo.png" alt="Home" /></a>
+        </div>
+            
+      
+        <div class="region region-navigation">
+    <div id="block-nice-menus-1" class="block block-nice-menus first last odd count-1">
+
+      
+  <div class="content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li class="menu-8025 menuparent menu-path-front first  odd  last ◀"><a href="/" title="">◀</a><ul><li class="menu-866 menuparent menu-path-taxonomy-term-964 first  odd environment / food"><a href="/environment" title="">Environment / Food</a><ul><li class="menu-867 menu-path-taxonomy-term-964 first  odd environment"><a href="/environment" title="">Environment</a></li>
+<li class="menu-868 menu-path-taxonomy-term-967 even food"><a href="/food" title="">Food</a></li>
+<li class="menu-4785 menu-path-taxonomy-term-22985 odd fracking"><a href="/fracking" title="">Fracking</a></li>
+<li class="menu-869 menu-path-taxonomy-term-963 even  last water"><a href="/water" title="">Water</a></li>
+</ul>
+</li>
+<li class="menu-860 menuparent menu-path-taxonomy-term-968 even economy"><a href="/economy" title="">Economy</a><ul><li class="menu-861 menu-path-taxonomy-term-968 first  odd economy"><a href="/economy" title="">Economy</a></li>
+<li class="menu-6048 menu-path-taxonomy-term-22984 even labor"><a href="/labor" title="">Labor</a></li>
+<li class="menu-8038 menu-path-taxonomy-term-92366 odd  last local"><a href="/LPE" title="">Local</a></li>
+</ul>
+</li>
+<li class="menu-882 menu-path-taxonomy-term-985 odd education"><a href="/education" title="">Education</a></li>
+<li class="menu-862 menuparent menu-path-taxonomy-term-970 even rights"><a href="/rights" title="">Rights</a><ul><li class="menu-863 menu-path-taxonomy-term-970 first  odd human rights"><a href="/rights" title="">Human Rights</a></li>
+<li class="menu-864 menu-path-taxonomy-term-983 even lgbtq"><a href="/lgbtq" title="">LGBTQ</a></li>
+<li class="menu-865 menu-path-taxonomy-term-965 odd  last immigration"><a href="/immigration" title="">Immigration</a></li>
+</ul>
+</li>
+<li class="menu-870 menuparent menu-path-taxonomy-term-982 odd media / culture"><a href="/media" title="">Media / Culture</a><ul><li class="menu-8037 menu-path-taxonomy-term-982 first  odd media"><a href="/media" title="">Media</a></li>
+<li class="menu-872 menu-path-taxonomy-term-981 even culture"><a href="/culture" title="">Culture</a></li>
+<li class="menu-871 menu-path-taxonomy-term-971 odd books"><a href="/books" title="">Books</a></li>
+<li class="menu-8039 menu-path-taxonomy-term-94864 even  last documentaries"><a href="/documentaries-0" title="">Documentaries</a></li>
+</ul>
+</li>
+<li class="menu-878 menu-path-taxonomy-term-972 even health"><a href="/health" title="">Health</a></li>
+<li class="menu-876 menu-path-taxonomy-term-969 odd drugs"><a href="/drugs" title="">Drugs</a></li>
+<li class="menu-880 menu-path-taxonomy-term-984 even activism"><a href="/activism" title="">Activism</a></li>
+<li class="menu-1408 menu-path-taxonomy-term-977 odd belief"><a href="/belief" title="">Belief</a></li>
+<li class="menu-8026 menuparent menu-path-taxonomy-term-979 even  last pleasure"><a href="/sex" title="">Pleasure</a><ul><li class="menu-879 menu-path-taxonomy-term-979 first  odd  last sex-relationships"><a href="/sex" title="">Sex &amp; Relationships</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+
+    </div>
+  </div>
+      
+  <div class="banner_shadow_outer_container"></div>
+  <div class="banner_shadow_container"></div>
+    
+</div>
+<!-- end header -->
+<!-- start: body -->
+<div id="body_main" class="clearfix">
+  
+    <a id="main-content"></a>
+          
+      <div class="main_left_column">
+    
+  <div class="story-body-container environment">
+                
+        <div class="coverage_header_bar coverage_header_bar_environment">
+        <span>
+            Environment        </span>
+    </div>
+                    
+              <div class="region region-content">
+    <div id="block-system-main" class="block block-system first last odd count-1">
+
+      
+  <div class="content">
+    
+<div id="node-1070240" class="node node-story view-mode-full clearfix=" about="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" typeof="sioc:Item foaf:Document">
+
+  
+  <!-- start: headline -->
+  <div class="headline">
+        <h1 class="node-title">If Your Money Is in One of These Banks, You&#039;re Helping to Fund the Dakota Access Pipeline</h1>
+    <span property="dc:title" content="If Your Money Is in One of These Banks, You&#039;re Helping to Fund the Dakota Access Pipeline" class="rdf-meta element-hidden"></span>  </div>
+  <!-- end: headline -->
+    
+  <!-- start: teaser -->
+      <div class="teaser">
+      <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-teaser field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">Standing Rock activists have a simple, yet powerful message: Withdraw your money from banks funding the pipeline.
+</div></div></div>    </div>
+    <!-- end: teaser -->
+  
+      <!-- start: byline -->
+    <div class="byline environment">
+              <em>By</em> <em><a href="/authors/reynard-loki">Reynard Loki</a></em>
+             /               <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span>          </div>
+    <div class="story-date"><em><span class="field field-name-field-date field-type-date field-label-hidden"><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-01-18T23:30:00-08:00">January 18, 2017</span></span></span></span></em></div>
+    <!-- end: byline -->
+    
+  <script type="text/rocketscript">
+    var authors = '1033887';
+  </script>
+  <div class="authors_signup"><div class="item-list"><ul><li class="first last"></li>
+</ul></div></div>
+  
+  <div class='top-tools'>
+      <div class='left'>
+        <!-- top share tool : addthis -->
+        <script type="text/rocketscript">
+            var addthis_share = {
+                title: "If Your Money Is in One of These Banks, You're Helping to Fund the Dakota Access Pipeline @alternet"
+            }
+        </script>
+        <div class="addthis_sharing_toolbox"></div>
+        <script type="text/rocketscript" data-rocketsrc="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f789fb568b97eca" async></script>
+        <div class="story_tools_print"><a href="/print/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing" class="social-print">Print</a></div>
+      </div>
+      <div class='right'>
+                <div class="talk_box"><a href="http://www.alternet.org/comments/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing#disqus_thread" class="comments disqus-comments" data-disqus-identifier="node/1070240">Comments</a></div>
+              </div>
+  </div>
+  
+  <div class="clear-divider"></div>
+  
+              <!-- <div class="rssemail" style="clear: both;">MailChimp RSS-Email Widget</div> -->    
+  
+  <!-- start: body -->
+  <div class="the_body body_environment clearfix" >
+          <div class="story_images">
+      <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/story_image/public/story_images/31517375095_f4385321ca_k.jpg?itok=4HJ7EqX2" /></div></div></div>              <div class="story-image-sourcing">
+          <div class="story-image-source"><p>Standing Rock 
+Nov. 30th to Dec.7th<br /><cite>Photo Credit: Dark Sevier/Shutterstock</cite></p></div>
+        </div>
+            </div>
+        
+    <!-- BODY -->
+ <p dir="ltr">At a recent Standing Rock benefit in New York City for opponents of the Dakota Access Pipeline, co-hosts Mark Ruffalo and Josh Fox were clear about what people should do if they want to help stop the pipeline: Take your money out of the banks that are funding it.</p><p dir="ltr">Fox, an Academy Award-nominated filmmaker whose 2010 documentary <em>Gasland</em> helped launch the anti-fracking movement, called Wells Fargo, Chase, CitiBank, TD Bank and Bank of America "the biggest fracking sites that we have." But they're not the only ones: <a href="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929">17 banks</a> are directly funding the pipeline, having given a total of $2.5 billion to Dakota Access LLC, the subsidiary of Energy Transfer Partners developing the pipeline. In addition, according to research conducted by Food &amp; Water Watch, the companies involved in building the pipeline have been extended a credit line of <a href="http://www.yesmagazine.org/people-power/how-to-contact-the-17-banks-funding-the-dakota-access-pipeline-20160929">$10.25 billion</a> from 38 banks.</p><p dir="ltr">The 17 banks are Bank of Tokyo-Mitsubishi UFJ, BayernLB, BNP Paribas, BVA Securities, Citibank (CitiGroup), Credit Agricole, DNB Capital, ING Bank, Natixis, Intesa SanPaolo, ICBC London, Mizuho Bank, SMBC Nikko Securities, Societe General, Sun Trust, TD Bank and Wells Fargo.</p><div class='in_content_ad_container hide_on_mobile ad_3'><!-- New_AlterNet_300x250_STORY_EMBED_1 --><div id='div-gpt-ad-1420251685282-0' style='width:300px; height:250px;'><script type="text/rocketscript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1420251685282-0'); });</script></div></div><div class='in_content_ad_container hide_on_desktop ad_3'><a href='https://donate.alternet.org/SP15-SPLASH4-1/'><img src='http://www.alternet.org/files/story_images/green.gif' style='border: 0px;' /></a></div><p dir="ltr">The graphic shows which banks are involved in funding the entire Bakken pipeline.</p><p dir="ltr"><a href="http://www.foodandwaterwatch.org/news/who's-banking-dakota-access-pipeline" target="_blank"><div alt="" class="media-image" height="1737" style="width: 600px; height: 1256px;" width="830"><img alt="" class="media-image" height="1737" style="width: 600px; height: 1256px;" width="830" typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/web_1612_daplbakkensankey161205.jpeg" /></div></a></p><p dir="ltr"><em>Image © <a data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://FOODANDWATERWATCH.ORG&amp;source=gmail&amp;ust=1484162217069000&amp;usg=AFQjCNH7YQVFGE_3aPjmRGcowU6lFsiBYQ" href="http://foodandwaterwatch.org/" target="_blank">Foodandwaterwatch.org</a> (<a href="http://www.alternet.org/files/story_images/web_1612_daplbakkensankey161205.jpeg">click</a> to enlarge).</em></p><p dir="ltr">If completed, the $3.8 billion, 1,172-mile pipeline would transport 500,000 barrels of crude oil every single day from the Bakken oil fields in North Dakota south to Illinois en route to terminals in the Gulf of Mexico.</p><p dir="ltr">Mark Ruffalo, an actor and activist who was instrumental in the successful movement to ban fracking in New York state, was confident that withdrawing money from pro-pipeline banks is a successful strategy. "This is real. We can stop this pipeline by doing this," he told the benefit attendees, who were gathered at Deepak HomeBase, at ABC Carpet and Home in downtown Manhattan. "You want to know how we can stop it? We stop it by doing this. This is the soft, gooey underbelly of the beast, of the black snake. The more pressure we put on them financially, the harder it is to move forward. It doesn't mean a damn thing what Trump does."</p><p dir="ltr">Last month, the U.S. Army Corps of Engineers <a href="http://www.alternet.org/environment/feds-block-final-permit-dakota-access-pipeline-video">announced</a> it would not grant the final permit the Dakota Access Pipeline needs to be completed. Instead, officials said, an environmental impact review will be conducted to investigate the possibility of routing the pipeline in a way to prevent it from crossing the Missouri River. While the decision is a big victory for the Standing Rock Sioux tribe and its allies, who say the pipeline threatens drinking water supplies, proponents of the pipeline have a powerful ally in President-elect Donald Trump, who said he supports its completion. But without funding from banks, the pipeline is endangered.</p><p dir="ltr">But it's not only the pipeline that the banks—and possibly your money—is funding. Fox connected that money to the official violence being committed against the peaceful Standing Rock protesters and the environment at large. If you've got money in these banks, "you've got rubber bullets in the bank account that are being shot at these people, you've got tear gas that is being sprayed at the water protectors. You've got concussion grenades being hurled at your fellow New Yorkers. That's what's in the bank. You have an oil spill happening when you put that ATM card in. That has become an act of violence. That is our system."</p><p dir="ltr">Tokata Iron Eyes, a 13-year-old water protector who came to New York for the benefit, asked attendees to be vocal about taking their money out. "When you are pulling your money from the banks, be sure to be public about it because we need that message to spread. … They're paying for the traumas and the atrocities that children have to witness. I've had to see my mom be arrested, taken away from me. I've had to see my aunts and uncles on the front lines being beaten and maced. That's something that no kid should have to see, but that's what these banks are paying for."</p><p dir="ltr">Fox suggested recording the event. "When you walk into the bank, and you have your livestream going from your iPhone or whatever, or you just take a selfie with your banker, and you say, I don't want my money to be supporting these pipelines. I want the bank here to know."</p><p dir="ltr">Ruffalo advocated a harsher tone, suggesting the following statement as you withdraw your money: "I'm taking every dime out of this bank if by the 21st, you guys haven't made a formal statement to take the money out of this brutal, bloodless, taking of our health and the health of our future generations."</p><div class='in_content_ad_container ad_13'><!-- New_AlterNet_300x250_STORY_EMBED_2 --><div id='div-gpt-ad-1420251685282-1' style='width:300px; height:250px;'><script type="text/rocketscript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1420251685282-1'); });</script></div></div><p dir="ltr">The call to withdraw money from the banks follows a <a href="http://www.telesurtv.net/english/news/400-Organizations-Demand-Banks-Cut-Dakota-Access-Pipeline-Loans-20161130-0027.html">letter</a> signed by more than 400 environmental, human rights and other social organizations from more than 50 countries demanding that the banks pull their financial support from the project. The campaign is working: More than $45 million has been divested from the Dakota Access Pipeline so far, according to the activist group DefundDAPL. And the figure continues to rise as more people withdraw their money.</p><p dir="ltr">In an article last year, 350.org founder Bill McKibben put it bluntly. He said that although "most Americans live far from the path of the Dakota Access pipeline," if you keep your money in one of these banks, "you inadvertently <a href="http://www.yesmagazine.org/people-power/standing-rock-is-a-two-front-war-big-oil-and-big-banks-but-maybe-thats-good-news-20160922">helped pay</a> for the guard dogs that attacked Native Americans as they tried to keep bulldozers from mowing down ancestral grave sites." McKibben suggested that withdrawing money from these banks is more effective than campaigning against the companies building the pipeline.</p><p dir="ltr">"Many of these banks may be vulnerable to pressure," he said. "For one thing, they’re eager to appear green: Bank of America, for instance, recently announced plans to make all its bank branches 'carbon-neutral' by 2020."</p><p dir="ltr">Instead of keeping your money in pro-fossil fuel banks, consider credit unions, which are nonprofit cooperatives that pool deposits so that members can borrow at low interest rates and generally invest in local projects. Another type of bank worth looking into is a community development bank, which often invests in socially responsible projects. In New York, Fox recommended Amalgamated Bank. If you're on the West Coast, check out Beneficial State Bank, which supports local communities and the environment. Native American Bank, which is run and operated by Native Americans, is another option. For a list of alternatives, check the <a href="http://www.defunddapl.org/copy-of-alternatives">DefundDAPL website</a>.</p><p dir="ltr">Watch the video "<a href="https://www.democracynow.org/2016/9/6/whos_investing_in_the_dakota_access">Who's Investing in the Dakota Access Pipeline? Meet the Banks Financing Attacks on Protesters</a>," by Democracy Now:</p><p><iframe allowfullscreen="true" frameborder="0" height="338" scrolling="no" src="https://www.democracynow.org/embed/story/2016/9/6/whos_investing_in_the_dakota_access" width="600"></iframe></p>     
+	<div wibbitz="embed-main-player"></div>
+  
+          <div class="bio-new body_environment">
+                  <div class="author-bio"> <!--smart_paging_filter--><!--smart_paging_autop_filter--><p>Reynard Loki is AlterNet's environment and food editor. Follow him on Twitter <a href="https://twitter.com/reynardloki" target="_blank">@reynardloki</a>. Email him at <a href="/cdn-cgi/l/email-protection#1567706c7b7467715574796170677b70613b7a6772"><span class="__cf_email__" data-cfemail="1d6f7864737c6f795d7c7169786f73786933726f7a">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>.</p> </div>              </div>
+    	
+  </div>
+  <!-- end: body -->
+
+    
+  
+                
+  <!-- if tagged posts -->
+    
+  <div class="bottom-tools">
+        <div class="left facebook">
+            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.alternet.org/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing','','width=658,height=354,scrollbars=no');return false;">
+            <span class="facebook-icon"> &nbsp; &nbsp; &nbsp; &nbsp; </span>
+            <span class="longname">Share on Facebook</span>
+            <span class="shortname">Share</span>
+            </a>
+        </div>
+        <div class="right twitter">                                                                                                                                           
+            <a href="#" onclick="window.open('https://twitter.com/share?url=http://www.alternet.org/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing&amp;text=If%20Your%20Money%20Is%20in%20One%20of%20These%20Banks%2C%20You%27re%20Helping%20to%20Fund%20the%20Dakota%20Access%20Pipeline @alternet','','width=550, height=350, scrollbars=no');return false;">
+            <span class="twitter-icon"> &nbsp; &nbsp; &nbsp; &nbsp; </span>
+            <span class="longname">Share on Twitter</span>
+            <span class="shortname">Tweet</span>
+            </a>
+        </div>
+        <div class="clear"><br></div>
+        <!-- Alternet - Main Content Ad Unit Embed -->
+        
+		<!-- LOCKERDOME -->
+		<div style="margin-top: 25px;"><br></div>
+		<!-- <div id="ld-3290-6509"></div><script>(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:8133149183980647,size:[0, 0],id:"ld-3290-6509"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdome.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");</script><div class="clear" style="height: 20px;"></div> -->
+		
+        <div class="typos">
+            <a href="/cdn-cgi/l/email-protection#dab9b5a8a8bfb9aeb3b5b4a99abbb6aebfa8b4bfaef4b5a8bde589afb8b0bfb9aee78ea3aab5fab5b4fa93bcfa83b5afa8fa97b5b4bfa3fa93a9fab3b4fa95b4bffab5bcfa8eb2bfa9bffa98bbb4b1a9f6fa83b5affcf9eae9e3e1a8bffa92bfb6aab3b4bdfaaeb5fa9cafb4befaaeb2bffa9ebbb1b5aebbfa9bb9b9bfa9a9fa8ab3aabfb6b3b4bf">Report typos and corrections to <span class="__cf_email__" data-cfemail="c4e3a7abb6b6a1a7b0adabaab784a5a8b0a1b6aaa1b0eaabb6a3">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>'.</a>
+        </div>
+        <div class="clear"></div>
+        <div class="commentlink">
+            <span class="commentlink-icon"> &nbsp; &nbsp; &nbsp; &nbsp; </span>
+            <a href=''><a href="http://www.alternet.org/comments/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing#disqus_thread" class="comments disqus-comments" data-disqus-identifier="node/1070240">Comments</a></a>
+        </div>
+  </div>
+  
+  <style type="text/css">
+	/* Below Post Subscription Widget */
+	#bpcontainer { width: 630px; height: auto; background: #f1602c; border-radius: .333em; margin-bottom: 10px; }
+	#bpcontainer .header { background: #f1602c; font-size: 24px; font-family: 'Lato', sans-serif; font-weight:bold; padding: 0px; text-align: center; line-height: 30px; margin: 10px 0 0 15px; float: left; }
+	#bpcontainer .teaser { float: left; font-family: 'Lato', san-serif; font-size: 16px; margin: 8px 0 0 15px; padding: 3px 0 0 15px;  color: #333; text-align: left; border-left: 2px solid #333; }
+	#bpcontainer .content { margin: 0 15px; }
+	#bpcontainer .content #id_email { width: 160px; }
+	#bpcontainer .content .submit { background: #000; color: #fff; font-weight: bold; border: 0px; padding: 3px 5px; }
+	#bpcontainer label { font-size: 12px; color: #333; font-weight: bold; margin: 0 5px 0 0; }
+	#bpcontainer .email_field { float: left; margin: 15px; }
+	#bpcontainer .additional_lists_field { float: left; margin: 15px 0 0 20px; min-width: 35%; }
+	#bpcontainer .bp_option_button { font-size: 15px; color: #fff; cursor: pointer; font-weight: 200; }
+	#bpcontainer .bp_close_option { text-align: right; display: none; color: #ff0000; background: #eaeaea; float: right; padding: 5px; margin-top: 15px; }
+	#bpcontainer .bp_options { height: auto; display: none; border: 1px dotted #eaeaea; padding: 0; margin: 10px 0; width: 600px; }
+	#bpcontainer .instruction { font-size: 14px; color: #fff; margin-bottom: 15px; width: 100%; }
+	#bpcontainer .option_item { margin: 0 0 0 10px; font-size: 14px; color: #fff; font-weight: 200; width: 30%; float: left;  }
+	.clear { height: 1px; clear: both; }
+	</style>
+
+	<div id='bpcontainer'>
+		<form accept-charset="utf-8" action="http://act.alternet.org/act/" class="action_form" id="actbp" method="POST" name="actbp">
+			<input type="hidden" name="utf8" value="&#x2714;">
+			<input type="hidden" name="page" value="sidebar_main_list_signup">
+			<input type="hidden" name="lists" value="1" /> 
+			<input type="hidden" name="lists" value="5" /> 
+			<div class='header'>Stay Ahead of the Rest</div>
+			<div class='teaser'>Sign Up for AlterNet's Daily Newsletter</div>
+			<div class='clear'></div>
+			<div class='content'>        
+				<div class="email_field">
+					<label>EMAIL: </label><input id="bp_id_email" name="email" type="text" />
+					<input class='submit' type="submit" value="SUBSCRIBE" />
+				</div>
+				<div class="additional_lists_field">
+					<div class='bp_option_button bp_open_option'>+ sign up for additional lists</div>
+					<div class='bp_option_button bp_close_option'>[x]</div>
+				</div>
+				<div class='bp_options clear'>
+					<div class='instruction'>Select additional lists by selecting the checkboxes below before clicking Subscribe:</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="7"> Rights & Liberties</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="35"> Education</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="4"> Drugs</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="13"> Economy</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="10"> Environment</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="41"> Labor</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="22"> Food</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="21"> World</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="14"> Politics</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="23"> Investigation</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="11"> Personal Health</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="16"> Water</div>
+					<div class='option_item'><input type="checkbox" id="lists" name="lists" value="6"> Media</div>
+					<div class='clear'></div>
+				</div>
+			</div>
+			
+			<div class='clear'></div>
+		</form>
+	</div>
+	
+	<script type="text/rocketscript">
+
+		function resizebp() {
+			console.log('resizing ..');
+			var height = document.getElementsByTagName("html")[0].scrollHeight;
+			window.parent.postMessage(["setHeight", height], "*"); 
+		}
+
+		jQuery('#actbp').submit(function() {
+			var hasError = false;
+			var errorMsg = '';
+			// validate email
+			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var emailaddressVal = jQuery("#bp_id_email").val();
+			if(emailaddressVal == '') { errorMsg += 'Please enter your email address.\\n'; hasError = true; }
+			else if(!emailReg.test(emailaddressVal)) { errorMsg += 'Please enter a valid email address.\\n'; hasError = true; }
+			if(hasError == true) { alert( errorMsg ); return false; }
+		});
+
+		jQuery('.bp_option_button').click(function(){
+			jQuery('.bp_option_button').toggle();
+			if( jQuery('.bp_close_option').is(":visible") ){
+				jQuery('.bp_options').show();
+				resizebp();
+			} else {
+				jQuery('.bp_options').hide();
+				resizebp();
+			}
+		});
+
+	</script>
+  
+  <!-- newsletter subscribe -->
+    
+  <!--
+  <div id="ld-3290-6509"></div><script>(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:8133149183980647,size:[0, 0],id:"ld-3290-6509"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdome.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");</script>
+  -->
+  
+  <div wibbitz="embed-player-widget"></div>
+  
+              <div class="taboola" style="clear: both; position:relative; z-index: 1;">
+        
+          <div id="taboola-autosized-generated-2r"></div>
+          <script type="text/rocketscript">
+                window._taboola = window._taboola || [];
+                _taboola.push({mode:'autosized-generated-2r', container:'taboola-autosized-generated-2r'});
+          </script>
+        
+          <div id="taboola-text-links-vertical"></div>
+          <script type="text/rocketscript">
+                window._taboola = window._taboola || [];
+                _taboola.push({mode:'text-links-vertical', container:'taboola-text-links-vertical'});
+          </script>
+        
+        </div>    
+    
+  
+</div><!-- /.node -->
+
+
+<!-- FILAMENT SCRIPT FOR HIGHLIGHT AND SHARE -->
+<!-- <script data-cfasync="false" type="text/javascript" src="//filamentapp.s3.amazonaws.com/c0d7c993c159bf007561048a332a9e8a.js" async="async"></script> -->
+
+
+<!-- CUSTOM SCRIPT TO SHOW FB LIKE SLIDER -->
+
+<script type="text/rocketscript">
+
+    // get offset of the div from top
+    var marker = jQuery('div.bottom-tools');
+    var marker_offset = marker.offset();
+    
+    var window_height = jQuery(window).height();
+    var window_width = jQuery(window).width();
+    
+    var fblike_pop_in_yPos = marker_offset.top - window_height - 300;
+    
+    var on_off_toggle = 'on';
+    
+    var off_forever_cookie = String( jQuery.cookie('fb_like_widget_off_forever') );
+    console.log( 'Off forever cookie: ' + off_forever_cookie );
+    
+    if( off_forever_cookie == 'true' ){
+        var off_forever = true;
+    } else {
+        var off_forever = false;
+    }
+    
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    
+    function toggle(){
+                
+        if( off_forever == false ){
+            
+            var elem = jQuery('#like_alternet_on_fb');
+            
+            elem.animate({
+                marginLeft: parseInt(elem.css('marginLeft'),10) == 0 ? elem.outerWidth() : 0
+            }, 500);
+                                    
+            if( on_off_toggle == 'on' ){
+                on_off_toggle = 'off';
+            } else {
+                on_off_toggle = 'on';
+            }
+        }
+        
+    }
+    
+    function calculate_slide_div_top_offset(){
+        return ( jQuery(window).height() / 4 ) * 3 + 'px';
+    }
+    
+    function calculate_slide_div_left_offset(){
+        return jQuery(window).width() - 460 + 'px';    
+    }
+    
+    function turn_off_forever(){
+        
+        console.log('off_forever');
+        toggle();
+        off_forever = true;
+        
+        /* SET COOKIE */
+        jQuery.cookie('fb_like_widget_off_forever', off_forever, { path: '/', expires: 1209600 }); 
+        
+    }
+    
+    function create_slide_div(){
+
+                
+        var html = '<!-- Section Class: Environment --><div id="like_alternet_on_fb"><div style="margin: 10px 25px;"><div style="float:right" onclick="turn_off_forever();">[ X ]<div class="clear:both;"></div></div><div style="margin: 5px 0px; font-size: 12px;">Like Alternet on Facebook</div><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAlterNet%2F17108852506&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></div></div>';
+        jQuery('#root_subfooter').before( html );
+        
+        var slide_top_offset = calculate_slide_div_top_offset();
+        var slide_left_offset = calculate_slide_div_left_offset();
+        
+        jQuery('#like_alternet_on_fb')
+            .css('position','fixed')
+            .css('top','-150px')
+            .css('width','450px')
+            .css('height','115px')
+            .css('background','#E8E8FB')
+            .css('border','10px solid #223BBE')
+            .css('border-right','0px');
+                                           
+        toggle();
+        
+    }   
+    
+    function resize_slide_div(){
+        
+        var slide_top_offset = calculate_slide_div_top_offset();
+        var slide_left_offset = calculate_slide_div_left_offset();
+        jQuery('#like_alternet_on_fb')
+            .css('top',slide_top_offset)
+            .css('left',slide_left_offset);
+        
+    }
+    
+    /* HOOK SCRIPT INTO EVENTS */
+    
+    var paging = String( getUrlVars()["page"] );
+    
+    if( paging == 'off' ){
+        var is_paging_off = true;
+    } else {
+        var is_paging_off = false;
+    }
+    
+    //console.log( 'Is paging off ? [' + is_paging_off + '] ' + getUrlVars()["paging"] );
+    
+    var page = String( getUrlVars()["page"] );
+    
+    if( page == 'undefined' ){
+        var is_first_page = true;
+    } else {
+        var is_first_page = false;
+    }
+    
+    //console.log( 'Is first page ? [' + is_first_page + '] ' + page );
+
+    jQuery(window).scroll(function() {
+        
+        var fblike_scrollYpos = jQuery(document).scrollTop();
+        
+        if( fblike_scrollYpos >= fblike_pop_in_yPos && on_off_toggle == 'off' ){
+            toggle();
+        }
+        
+        if( fblike_scrollYpos <= fblike_pop_in_yPos && on_off_toggle == 'on' ){
+            toggle();   
+        }
+        
+    });
+    
+    jQuery(window).ready(function(){
+        console.log( "off_forever: " + off_forever );
+        if( off_forever == false ){
+            create_slide_div();
+            timeoutID = window.setTimeout(resize_slide_div, 2000);
+        }
+    })
+    
+    jQuery(window).resize(function() {
+        resize_slide_div();
+    });
+    
+</script>
+
+<!-- ANTHEM SCRIPT -->
+<!--
+<script>
+    (function (w, d) {
+        var s1 = d.getElementsByTagName('script')[0],
+            s = d.createElement('script'),
+            cid = '446';
+        s.src = '//tru.am/scripts/ta-pagesocial-sdk.js';
+        if (s.addEventListener) {
+            s.addEventListener('load', function () {
+                w.TRUE_ANTHEM.configure(cid);
+            }, false);
+        } else {
+            s.onreadystatechange = function () {
+                if (s.readyState in {loaded: 1, complete: 1}) {
+                    s.onreadystatechange = null;
+                    w.TRUE_ANTHEM.configure(cid);
+                }
+            };
+        }
+        s1.parentNode.insertBefore(s, s1);
+    }(window, document));
+</script>
+-->
+
+<!-- CUSTOM SCRIPT TO LINK EMBED IMAGES TO ORIGINAL SIZE VERSION -->
+<!--
+<script type="text/javascript">
+    var src; var parts;
+    var enlarge_html = '<div style="text-align:right; position: relative; top: -28px; left: 2px; width: 80px; border: 1px solid #999; padding: 2px; line-height: 10px; background: #fff;"><small>Click to enlarge.</small></div>';
+    jQuery('div.media-image').each( function(index){
+        src = String(jQuery(this).children('img.media-image').attr('src'));
+        if( src != '' && src != 'undefined' ){
+            parts = src.split('/');
+            if( parts[parts.length-2] == 'slideshow' ){ new_src = '/files/slideshow/'+parts[parts.length-1]; }
+            else if( parts[parts.length-2] == 'AFP' ){ new_src = '/files/images/AFP/'+parts[parts.length-1]; }
+            else if( parts[parts.length-2] == 'public' ){ new_src = '/files/'+parts[parts.length-1]; }
+            else if( parts[parts.length-3] == 'public' ){ new_src = '/files/'+parts[parts.length-2]+'/'+parts[parts.length-1]; }
+            else { new_src = false; }
+            if( new_src ){ jQuery(this).html('<a href="'+new_src+'" rel="lightbox">'+jQuery(this).html()+enlarge_html+'</a>'); }
+        }
+    });
+    
+    var slideshowdiv; var new_html; var img_obj; var sourcediv; var titlediv; var captiondiv; var title; var caption;
+    
+    jQuery('div.slideshow-body div.slideshow div.field-item').each( function(index){
+        
+        slideshowdiv = jQuery(this).find('div.altslideshow-embedded-gallery');
+        img_obj = slideshowdiv.find('img');
+        src = img_obj.attr('src');
+        
+        title = slideshowdiv.children('div.altslideshow-title').html();
+        if( title == null ){ title = ''; }
+        
+        caption = slideshowdiv.children('div.altslideshow-caption').html();
+        if( caption == null ){ caption = ''; }
+        
+        if( src != '' && src != 'undefined' ){
+            // alert( 'SRC: '+src );
+            parts = src.split('/');
+            if( parts[parts.length-2] == 'slideshow' ){ new_src = '/files/slideshow/'+parts[parts.length-1]; }
+            else if( parts[parts.length-2] == 'AFP' ){ new_src = '/files/images/AFP/'+parts[parts.length-1]; }
+            else if( parts[parts.length-2] == 'public' ){ new_src = '/files/'+parts[parts.length-1]; }
+            else if( parts[parts.length-3] == 'public' ){ new_src = '/files/'+parts[parts.length-2]+'/'+parts[parts.length-1]; }
+            else { new_src = false; }
+            // alert( 'New SRC: '+new_src );
+            if( new_src ){
+            img_obj.parent().attr('href',new_src).attr('rel','lightbox[slides]').attr('title',title+'<br>'+caption).append('<div style="clear: left; float: left; padding-left: 20px; width: 100px; padding: 3px; line-height: 10px; background: #ccc;">&nbsp;<small>Click to enlarge.</small></div>');
+          }
+        }
+      
+      //sourcediv = jQuery(this).find('div.altslideshow-source');
+      //titlediv = jQuery(this).find('div.altslideshow-title');
+      //captiondiv = jQuery(this).find('div.altslideshow-caption');
+      //sourcediv.after( titlediv ).after( captiondiv );
+      
+   });
+</script>
+-->
+
+<!-- slimbox style sheet for image modals -->
+<link rel="stylesheet" href="https://files.alternet.org/css/slimbox2.css" type="text/css" media="screen" />
+
+<!-- slimbox js for image modals -->
+<!-- <script type="text/javascript" src="http://files.alternet.org/js/slimbox2.js"></script> -->
+
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+  
+    <div class="region region-middle">
+    <div id="block-altads-skyscraper" class="block block-altads first last odd count-1">
+
+      
+  <div class="content">
+    <div id="google_ads_div_AlterNet_ROS_160" class="gam-holder" style="width:160px;height:600px;"><script type="text/rocketscript">if (typeof window.GA_googleFillSlotWithSize == 'function') {  GA_googleFillSlotWithSize('ca-pub-5155643920455169', 'AlterNet_ROS_160', 160, 600); }</script></div>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+        </div>
+    
+      <div class="main_right_column">
+        <div class="region region-sidebar-second column sidebar"><div class="section">
+    <div id="block-altsocial-sidebar-subscription-widget" class="block block-altsocial first odd count-1">
+
+      
+  <div class="content">
+            <div id='sidebar_weather_widget_container'>
+            <a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+            <!-- By accessing and/or using this code snippet, you agree to AccuWeather�s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather�s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy. -->
+            </a><div id="awcc1424722441461" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1424722441461"></div><script type="text/rocketscript" data-rocketsrc="http://oap.accuweather.com/launch.js"></script>
+        </div>
+		
+        <div  id="sidebar_subscription_widget_container" style="width:310px; height:165px;">
+            <style type="text/css">
+/* Sidebar Subscription Widget */
+#sidebar_subscription_widget_container { height: auto !important; }
+#container { border: 10px solid #000; width: 285px; height: auto; min-height: 150px; background: #f1602c; }
+#container .header { width: 100%; background: #f1602c; font-size: 24px; font-family: 'Lato', sans-serif; font-weight:bold; padding: 0px; text-align: center; line-height: 30px; margin-top: 10px; }
+#container .teaser { display: block; font-family: 'Lato', san-serif; font-size: 14px; margin: 15px; color: #fff; text-align: left; }
+#container .content { margin: 15px 15px 0 15px; }
+#container .content #id_email { width: 160px; }
+#container .content .submit { background: #000; color: #fff; font-weight: bold; border: 0px; padding: 3px 5px; }
+#container .option_button { font-size: 13px; color: #fff; margin-top: 10px; cursor: pointer; }
+#container .close_option { text-align: right; display: none; color: #ff0000; background: #eaeaea; float: right; padding: 3px; }
+#container .options { height: auto; display: none; border: 1px dotted #eaeaea; padding: 5px; 0px; }
+#container .instruction { font-size: 12px; color: #fff; margin-bottom: 15px; }
+#container .option_item { margin: 0 0 0 10px; font-size: 12px; color: #fff; font-weight: 200; }
+.clear { height: 1px; clear: both; }
+</style>
+
+<div id='container'>
+    <form accept-charset="utf-8" action="http://act.alternet.org/act/" class="action_form" id="act" method="POST" name="act">
+        <input type="hidden" name="utf8" value="&#x2714;"> <input type="hidden" name="page" value="sidebar_main_list_signup"> <input type="hidden" name="lists" value="1" /> <input type="hidden" name="lists" value="5" /> 
+        <div class='header'>Stay Ahead of the Rest</div>
+        <div class='teaser'>Sign Up for AlterNet's Daily Newsletter</div>
+        <div class='content'>        
+            <div class="field">
+                <input id="id_email" name="email" type="text" />
+                <input class='submit' type="submit" value="SUBSCRIBE" />
+            </div>
+            <div>
+				<div class='option_button open_option'>+ select additional lists</div>
+				<div class='option_button close_option'>[x]</div>
+			</div>
+			<div class='options clear'>
+				<div class='instruction'>Select additional lists by selecting the checkboxes below before clicking Subscribe:</div>
+				<div class='option_item'><input type="checkbox" id="lists" name="lists" value="7"> Rights & Liberties</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="35"> Education</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="4"> Drugs</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="13"> Economy</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="10"> Environment</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="41"> Labor</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="22"> Food</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="21"> World</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="14"> Politics</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="23"> Investigation</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="11"> Personal Health</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="16"> Water</div><div class='option_item'><input type="checkbox" id="lists" name="lists" value="6"> Media</div>
+			</div>
+        </div>
+		
+		<div class='clear'></div>
+    </form>
+</div>
+        </div>  </div>
+
+</div><!-- /.block -->
+<div id="block-altads-sidebar-1" class="block block-altads even count-2">
+
+      
+  <div class="content">
+    <!-- New_AlterNet_300x250_STORY_SIDEBAR_1 --><div class='dfp_ad_slot' id='div-gpt-ad-1420251685282-4'><script type="text/rocketscript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1420251685282-4'); });</script></div>  </div>
+
+</div><!-- /.block -->
+<div id="block-views-enviro-newswire-block" class="block block-views odd count-3">
+
+        <h2 class="block-title">Enviro Newswire</h2>
+    
+  <div class="content">
+    <div class="view view-enviro-newswire view-id-enviro_newswire view-display-id-block view-dom-id-1">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-body">        <div class="field-content"> <!--smart_paging_autop_filter--><div id="enviro-newswire-head"><span class="head">Enviro Newswire</span><br />presented by <a href="http://www.globalpossibilities.org/"><img src="http://www.alternet.org/files/story_images/globalpossibilitieslogo.png" style="border: 0px;" /></a></div><div id="enviro-newswire-feed-content"> </div><script type="text/rocketscript">
+<!--//--><![CDATA[// ><!--
+
+
+jQuery(function(){
+
+    var url =  "http://files.alternet.org/pinboard-proxy.php";
+
+    jQuery.ajax({
+
+        type: "GET",
+        url: url,
+        dataType: "xml",
+        error: function(){
+            console.log('Unable to load feed ('+url+'). Incorrect path or invalid feed.');
+        },
+        success: function(xml){
+			var count = 0;
+			jQuery(xml).find('item').each(function(){
+				count++;
+				if( count < 10 ){
+					var title = jQuery(this).find('title').text();
+					var link = jQuery(this).find('link').text();
+					//console.log( 'xml: ' + title + link );
+					jQuery('#enviro-newswire-feed-content').append( '<li><a href="' + link + '">' + title + '' );
+				}
+			})
+			
+        }
+    });
+
+});
+
+//--><!]]>
+</script></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+<div id="block-quicktabs-best-of-the-week" class="block block-quicktabs even count-4">
+
+        <h2 class="block-title">Best of the week</h2>
+    
+  <div class="content">
+    <div  id="quicktabs-best_of_the_week" class="quicktabs-wrapper quicktabs-style-nostyle"><ul class="quicktabs-tabs quicktabs-style-nostyle clearfix"><li class="tab-0 active"><div class="tab_border"><a href="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing?qt-best_of_the_week=0#qt-best_of_the_week" id="quicktabs-tab-best_of_the_week-0" class="active">Most Read</a></div></li><li class="tab-1"><div class="tab_border"><a href="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing?qt-best_of_the_week=1#qt-best_of_the_week" id="quicktabs-tab-best_of_the_week-1" class="active">Most Emailed</a></div></li><li class="tab-2"><div class="tab_border"><a href="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing?qt-best_of_the_week=2#qt-best_of_the_week" id="quicktabs-tab-best_of_the_week-2" class="active">Most Discussed</a></div></li><li class="tab-3"><div class="tab_border"><a href="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing?qt-best_of_the_week=3#qt-best_of_the_week" id="quicktabs-tab-best_of_the_week-3" class="active">On Reddit</a></div></li><li class="tab-4"><div class="tab_border"><a href="/environment/if-your-money-one-these-banks-youre-funding-dakota-access-pipeline-and-hurting-standing?qt-best_of_the_week=4#qt-best_of_the_week" id="quicktabs-tab-best_of_the_week-4" class="active">On Digg</a></div></li></ul><div style="clear: both; height: 1px;"></div><div id="quicktabs-container-best_of_the_week" class="quicktabs_main quicktabs-style-nostyle"><ol><div  id="quicktabs-tabpage-best_of_the_week-0" class="quicktabs-tabpage "><div class="view view-best-of-the-week view-id-best_of_the_week view-display-id-default view-dom-id-1">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <li><div id="altfrontedition__teaser node-1072562" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/right-wing/scandal-cpac-after-unearthed-video-shows-milo-yiannopoulos-defending-sex-between-children" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/right-wing/scandal-cpac-after-unearthed-video-shows-milo-yiannopoulos-defending-sex-between-children"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/screen_shot_2017-02-20_at_1.03.22_pm.png?itok=vLo6TmiR" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="the-right-wing frontpage_dedup"><a href="/right-wing/scandal-cpac-after-unearthed-video-shows-milo-yiannopoulos-defending-sex-between-children">Scandal at CPAC After Unearthed Video Shows Milo Yiannopoulos Defending Sex Between Children and Adults</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/kali-holloway">Kali Holloway</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-20T09:44:00-08:00">Mon, 02/20/2017 - 09:44</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <li><div id="altfrontedition__teaser node-1072272" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/environment/trumps-border-wall-will-have-severe-ecological-consequences" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/environment/trumps-border-wall-will-have-severe-ecological-consequences"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/21072179179_9bee5a8f7e_z.jpg?itok=oGL-0XR0" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="environment frontpage_dedup"><a href="/environment/trumps-border-wall-will-have-severe-ecological-consequences">Trump&#039;s Border Wall Will Have Severe Ecological Consequences</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/shonil-bhagwat">Shonil Bhagwat</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://www.theconversation.com">The Conversation</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-20T12:00:00-08:00">Mon, 02/20/2017 - 12:00</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <li><div id="altfrontedition__teaser node-1072598" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/grayzone-project/bill-maher-bigtime-bigot-his-outrageous-statements-about-islam-and-muslims-are" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/grayzone-project/bill-maher-bigtime-bigot-his-outrageous-statements-about-islam-and-muslims-are"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/screen_shot_2017-02-20_at_6.40.08_pm.png?itok=Kbi5ilo6" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="grayzone-project frontpage_dedup"><a href="/grayzone-project/bill-maher-bigtime-bigot-his-outrageous-statements-about-islam-and-muslims-are">Bill Maher, Bigtime Bigot: His Outrageous Statements About Islam and Muslims Are Beyond the Pale</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/dan-cohen">Dan Cohen</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-20T15:33:00-08:00">Mon, 02/20/2017 - 15:33</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <li><div id="altfrontedition__teaser node-1072533" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/economy/robert-reich-why-trumponomics-will-fail-spectacularly" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/economy/robert-reich-why-trumponomics-will-fail-spectacularly"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/rreich1.jpg?itok=w30ibSC-" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="economy frontpage_dedup"><a href="/economy/robert-reich-why-trumponomics-will-fail-spectacularly">Robert Reich: Why Trumponomics Will Fail Spectacularly</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/robert-reich-0">Robert Reich</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://robertreich.org/">RobertReich.org</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-20T03:50:00-08:00">Mon, 02/20/2017 - 03:50</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <li><div id="altfrontedition__teaser node-1072669" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/right-wing/milo-yiannopoulos-debacle-tells-us-some-terrible-truths-about-right" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/right-wing/milo-yiannopoulos-debacle-tells-us-some-terrible-truths-about-right"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/milo.png?itok=mnEoeJpv" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="the-right-wing frontpage_dedup"><a href="/right-wing/milo-yiannopoulos-debacle-tells-us-some-terrible-truths-about-right">The Milo Yiannopoulos Debacle Tells Us Some Terrible Truths About the Right</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/kali-holloway">Kali Holloway</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T15:36:00-08:00">Tue, 02/21/2017 - 15:36</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <li><div id="altfrontedition__teaser node-1072630" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/right-wing/most-dangerous-man-donald-trumps-world-might-be-mike-pence" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/right-wing/most-dangerous-man-donald-trumps-world-might-be-mike-pence"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/shutterstock_512594668.jpg?itok=HCPSTK8S" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="the-right-wing frontpage_dedup"><a href="/right-wing/most-dangerous-man-donald-trumps-world-might-be-mike-pence">The Most Dangerous Man in Donald Trump&#039;s World Might Be Mike Pence</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/alexandra-rosenmann">Alexandra Rosenmann</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T08:30:00-08:00">Tue, 02/21/2017 - 08:30</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <li><div id="altfrontedition__teaser node-1072650" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/news-amp-politics/leaked-tapes-reveal-trumps-offer-his-real-group" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/news-amp-politics/leaked-tapes-reveal-trumps-offer-his-real-group"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/29829421110_c710ea2e3c_z.jpg?itok=pDRG6QWH" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="news--politics frontpage_dedup"><a href="/news-amp-politics/leaked-tapes-reveal-trumps-offer-his-real-group">Leaked Tapes Reveal Trump&#039;s Offer to His &#039;Real Group&#039;</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/mark-sumner-1">Mark Sumner</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://www.dailykos.com">DailyKos</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T11:01:00-08:00">Tue, 02/21/2017 - 11:01</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <li><div id="altfrontedition__teaser node-1072666" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/activism/michael-moore-steps-resistance-calendar-and-website-devoted-stopping-president-trump" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/activism/michael-moore-steps-resistance-calendar-and-website-devoted-stopping-president-trump"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/shutterstock_514491679.jpg?itok=-LWxpnA_" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="activism frontpage_dedup"><a href="/activism/michael-moore-steps-resistance-calendar-and-website-devoted-stopping-president-trump">Michael Moore Steps Up With Resistance Calendar and Website Devoted to Stopping President Trump</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/don-hazen">Don Hazen</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://alternet.org">AlterNet</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T15:15:00-08:00">Tue, 02/21/2017 - 15:15</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <li><div id="altfrontedition__teaser node-1072618" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/national-security-council-spokesman-quits-cia-writes-scathing-editorial-washington-post" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/national-security-council-spokesman-quits-cia-writes-scathing-editorial-washington-post"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/shutterstock_389315497.jpg?itok=en80VDuQ" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="no-coverage frontpage_dedup"><a href="/national-security-council-spokesman-quits-cia-writes-scathing-editorial-washington-post">National Security Council Spokesman Quits CIA, Writes Scathing Editorial in Washington Post</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/matthew-rozsa-0">Matthew Rozsa</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://www.salon.com">Salon</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T06:44:00-08:00">Tue, 02/21/2017 - 06:44</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+    <li><div id="altfrontedition__teaser node-1072646" class="node node-story view-mode-altfrontedition_teaser clearfix" about="/human-rights/ill-never-bring-my-phone-international-flight-again-neither-should-you" typeof="sioc:Item foaf:Document">
+      <div class="left">
+      <div class="coverage_overlay">
+                  <div class="teaser_image">
+            <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/human-rights/ill-never-bring-my-phone-international-flight-again-neither-should-you"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/default_310_wide/public/story_images/shutterstock_25359169_0.jpg?itok=P0XugkmK" width="315" height="224" /></a></div></div></div>          </div>
+              </div>
+      <div class="title_overlay">
+        <h2 class="human-rights frontpage_dedup"><a href="/human-rights/ill-never-bring-my-phone-international-flight-again-neither-should-you">I&#039;ll Never Bring My Phone on an International Flight Again—Neither Should You</a></h2>
+        <div class="teaser"></div>
+                    <div class='author'><h3><a href="/authors/quincy-larson">Quincy  Larson</a> / <span class="field field-name-field-sources field-type-node-reference field-label-hidden"><span class="field-items"><span class="field-item even"><a href="http://Medium.com">Medium</a></span></span></span></h3></div>
+                <div class='pubdate'><h3><span class="field field-name-field-date field-type-date field-label-above"><span class="field-label">Displayed Publishing Date:&nbsp;</span><span class="field-items"><span class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-02-21T10:22:00-08:00">Tue, 02/21/2017 - 10:22</span></span></span></span></h3></div>
+      </div>
+    </div>
+
+</div></li><!-- /.node -->
+
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div></ol></div></div>  </div>
+
+</div><!-- /.block -->
+<div id="block-altads-sidebar-2" class="block block-altads odd count-5">
+
+      
+  <div class="content">
+    <!-- New_AlterNet_300x250_STORY_SIDEBAR_2 --><div class='dfp_ad_slot' id='div-gpt-ad-1420251685282-5'><script type="text/rocketscript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1420251685282-5'); });</script></div>  </div>
+
+</div><!-- /.block -->
+<div id="todays_stories" class="todays_stories block block-altfrontedition even count-6">
+
+        
+  <div class="header"><span class='word1'>Today's </span><span class='word2'>Top </span><span class='word3'>Stories</span></div>
+
+  <div class="content">
+    <ol><li><div id="node-1072684" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/activism/law-enforcement-using-facebook-and-apple-data-mine-accounts-trump-protest-arrestees-0" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix activism">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/police1.jpg?itok=EUQAQf76" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="activism">
+        <li>
+          <a href="/activism">Activism</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/activism/law-enforcement-using-facebook-and-apple-data-mine-accounts-trump-protest-arrestees-0">Law Enforcement Using Facebook and Apple to Data-Mine Accounts of Trump Protest Arrestees</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072646" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/human-rights/ill-never-bring-my-phone-international-flight-again-neither-should-you" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix human-rights">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_25359169_0.jpg?itok=xtVryFG6" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="human-rights">
+        <li>
+          <a href="/rights">Human Rights</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/human-rights/ill-never-bring-my-phone-international-flight-again-neither-should-you">I&#039;ll Never Bring My Phone on an International Flight Again—Neither Should You</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072703" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/7-heated-town-halls-show-voters-are-turning-their-republican-senators" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/screen_shot_2017-02-22_at_10.17.51_am.png?itok=_IGoS6-1" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/7-heated-town-halls-show-voters-are-turning-their-republican-senators">7 Heated Town Halls That Show Voters Are Turning on Their Republican Senators</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072558" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/activism/verge-constitutional-collapse" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix activism">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_215115697-edited.jpg?itok=OkdoHjY0" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="activism">
+        <li>
+          <a href="/activism">Activism</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/activism/verge-constitutional-collapse">Why We Could Be on the Verge of a Constitutional Apocalypse</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072682" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/joe-scarborough-finally-comes-grips-horror-trumps-presidency" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/colbert_scarborough_2.22.jpg?itok=QRnF9WzL" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/joe-scarborough-finally-comes-grips-horror-trumps-presidency">Joe Scarborough Finally Comes to Grips with the Horror of Trump&#039;s Presidency</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072707" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/flight-erupts-celebration-after-racist-man-booted-harassing-pakistani-passengers" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/screen_shot_2017-02-22_at_12.18.09_pm.png?itok=kZ0SVhqt" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/flight-erupts-celebration-after-racist-man-booted-harassing-pakistani-passengers">Flight Erupts in Celebration After Racist Man Booted for Harassing Pakistani Passengers</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072690" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/culture/seth-meyers-annihilates-trumps-visit-national-museum-african-american-history-and-culture" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix culture">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/screen-shot-2017-02-22-at-4.47.17-am.png?itok=7ffvSRIz" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="culture">
+        <li>
+          <a href="/culture">Culture</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/culture/seth-meyers-annihilates-trumps-visit-national-museum-african-american-history-and-culture">Seth Meyers Annihilates Trump&#039;s Visit to the National Museum of African American History and Culture</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072665" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/immigration/im-undocumented-and-problem-much-more-trump" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix immigration">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/30020836983_0c6d0e542e_z.jpg?itok=S1RFfac1" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="immigration">
+        <li>
+          <a href="/immigration">Immigration</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/immigration/im-undocumented-and-problem-much-more-trump">I&#039;m Undocumented and the Problem Is Much More Than Trump</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072699" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/right-wing/biggest-reason-house-republicans-wont-stand-trump" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix the-right-wing">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_494675374.jpg?itok=vcjmY0N8" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="the-right-wing">
+        <li>
+          <a href="/right-wing">The Right Wing</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/right-wing/biggest-reason-house-republicans-wont-stand-trump">The Biggest Reason House Republicans Won&#039;t Stand Up to Trump</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072669" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/right-wing/milo-yiannopoulos-debacle-tells-us-some-terrible-truths-about-right" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix the-right-wing">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/milo.png?itok=2-SCyc2R" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="the-right-wing">
+        <li>
+          <a href="/right-wing">The Right Wing</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/right-wing/milo-yiannopoulos-debacle-tells-us-some-terrible-truths-about-right">The Milo Yiannopoulos Debacle Tells Us Some Terrible Truths About the Right</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072692" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/experts-agree-trumps-rosy-predictions-economic-growth-are-mathematic-impossibility" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_546409627_0.jpg?itok=BqrIiurf" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/experts-agree-trumps-rosy-predictions-economic-growth-are-mathematic-impossibility">Experts Agree Trump&#039;s Rosy Predictions of Economic Growth Are a Mathematic Impossibility</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072689" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/watch-furious-constituent-lays-mitch-mcconnell-during-town-hall" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/mitch_mcconnell-800x430.png?itok=BFDtKn1f" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/watch-furious-constituent-lays-mitch-mcconnell-during-town-hall">WATCH: Furious Constituent Lays into Mitch McConnell During Town Hall</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072683" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/news-amp-politics/robert-reich-7-signs-donald-trumps-presidency-sliding-tyranny" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix news--politics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/6100268897_da3606a8a7_z.jpg?itok=dc3H0fcT" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="news--politics">
+        <li>
+          <a href="/news">News &amp; Politics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/news-amp-politics/robert-reich-7-signs-donald-trumps-presidency-sliding-tyranny">Robert Reich: 7 Signs American Democracy Is Sliding into Tyranny</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072189" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/personal-health/6-diseases-could-skyrocket-or-become-far-more-deadly-if-affordable-care-act-repealed" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix personal-health">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/asthma_0.png?itok=9fqoW6pl" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="personal-health">
+        <li>
+          <a href="/health">Personal Health</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/personal-health/6-diseases-could-skyrocket-or-become-far-more-deadly-if-affordable-care-act-repealed">6 Diseases That Could Skyrocket or Become Far More Deadly If the Affordable Care Act Is Repealed</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072666" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/activism/michael-moore-steps-resistance-calendar-and-website-devoted-stopping-president-trump" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix activism">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_514491679.jpg?itok=x9ZyTU_p" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="activism">
+        <li>
+          <a href="/activism">Activism</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/activism/michael-moore-steps-resistance-calendar-and-website-devoted-stopping-president-trump">Michael Moore Steps Up With Resistance Calendar and Website Devoted to Stopping President Trump</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072434" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/food/americas-best-and-worst-foodie-cities-where-does-your-city-rank" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix food">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_223908613_0.jpg?itok=ft9Rtel5" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="food">
+        <li>
+          <a href="/food">Food</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/food/americas-best-and-worst-foodie-cities-where-does-your-city-rank">America&#039;s Best and Worst Foodie Cities: Where Does Your City Rank?</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072464" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/human-rights/fighting-freedom-america" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix human-rights">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_104221547.jpg?itok=4EhjMU-s" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="human-rights">
+        <li>
+          <a href="/rights">Human Rights</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/human-rights/fighting-freedom-america">Fighting for Utopia in Tough Times</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072575" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/activism/why-democrats-need-forget-about-reaching-out" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix activism">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_413108107.jpg?itok=ZADzf1Hx" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="activism">
+        <li>
+          <a href="/activism">Activism</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/activism/why-democrats-need-forget-about-reaching-out">Why Democrats Need to Forget About &#039;Reaching Out&#039;</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072642" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/belief/carol-howard-merritt-reclaiming-christianity" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix belief">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_198468683_copy.jpg?itok=QoZoh_ua" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="belief">
+        <li>
+          <a href="/belief">Belief</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/belief/carol-howard-merritt-reclaiming-christianity">&#039;Jesus Didn&#039;t Live in a Gated Community&#039;</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072654" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/right-wing/i-dont-need-gun-i-need-healthcare" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix the-right-wing">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/5464642250_fa0e30d363_z.jpg?itok=IK9D_RcV" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="the-right-wing">
+        <li>
+          <a href="/right-wing">The Right Wing</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/right-wing/i-dont-need-gun-i-need-healthcare">Dear Congress: I Don’t Need a Gun, I Need Health Care</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072657" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/right-wing/kellyanne-conway-floats-mass-recess-appointments-trump-nominees" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix the-right-wing">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/32274301152_1f5795dd41_b.jpg?itok=y4vS7L5G" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="the-right-wing">
+        <li>
+          <a href="/right-wing">The Right Wing</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/right-wing/kellyanne-conway-floats-mass-recess-appointments-trump-nominees">&#039;Everything&#039;s on the Table&#039;: Kellyanne Conway Floats Mass Recess Appointments of Trump Nominees</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072647" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/activism/josh-fox-rallies-hundreds-demanding-fracking-ban-heart-gas-drilling-country" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix activism">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/josh_fox_fracking_meeting.jpg?itok=J5FapUKm" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="activism">
+        <li>
+          <a href="/activism">Activism</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/activism/josh-fox-rallies-hundreds-demanding-fracking-ban-heart-gas-drilling-country">Josh Fox Rallies Hundreds Demanding a Fracking Ban in the Heart of Gas-Drilling Country</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072629" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/right-wing/donald-trump-profit-presidency" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix the-right-wing">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/story_images/shutterstock_519055522.jpg?itok=fuO_MIcm" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="the-right-wing">
+        <li>
+          <a href="/right-wing">The Right Wing</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/right-wing/donald-trump-profit-presidency">The For-Profit Presidency, Month One</a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+<li><div id="node-1072622" class="node node-story view-mode-altfrontedition_teaser_top_stories clearfix" about="/comics/jen-sorensen-orwellian-reversals" typeof="sioc:Item foaf:Document">
+  <div class="container clearfix comics">
+          <div class="teaser_image">
+        <!-- All divs have been put onto one line because of whitespace issues when rendered inline in browsers -->
+<div class="field field-name-field-story-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/teaser_95x67/public/orwellianreversals600.png?itok=e0luIQ8C" width="95" height="67" /></div></div></div>      </div>
+        <div class="ie8_fix classification">
+      <ul class="comics">
+        <li>
+          <a href="/comics">Comics</a>        </li>
+      </ul>
+    </div>
+              <h2 class="node-title"><a href="/comics/jen-sorensen-orwellian-reversals">AlterNet Comics: Jen Sorensen on 2017&#039;s Orwellian Reversals </a></h2>
+          </div>
+</div>
+</li><!-- /.node -->
+</ol>
+  </div>
+
+</div><!-- /.block -->
+
+<a href="https://www.rtqscore.com/?ptr=Alternet.org&logo=%2F%2Fwww.rtqscore.com%2Fbin%2Fuploads%2F2016%2F04%2Falternet.png&form=%2F%2Fwww.rtqscore.com%2Fbin%2Fuploads%2F2016%2F04%2Fniccosolicitorsdisc.pdf"><img src="http://www.alternet.org/files/story_images/rtq2.png" style="border: 0px; margin-left: 5px;" /></a>
+
+<div style='margin: 0px 0px 0px 5px;'><iframe width="300" height="168" src="//www.ora.tv/embed/partner/alternet/playlist/127/v/1"frameBorder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+
+<div id="NmWg1015" ></div><script type="text/rocketscript" data-rocketsrc="https://cdn.nmcdn.us/js/connectV3.js"></script><script type="text/rocketscript">  NM.init({WidgetID: 1015})</script><div id="block-altsocial-sidebar-idealmedia-widget" class="block block-altsocial odd count-7">
+
+      
+  <div class="content">
+            <div  id="sidebar_idealmedia_widget_container">
+            <div id="unit_83097"><a href="http://idealmedia.com/">News from idealmedia.com</a></div>
+            <script type="text/rocketscript" charset="utf-8">
+            (function() {
+                var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+                sc.src = '//news.fark.com/data/js/83097.js'; sc.charset = 'utf-8';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+            }());
+            </script>
+        </div>  </div>
+
+</div><!-- /.block -->
+<div id="block-views-alternet-originals-block" class="block block-views even count-8">
+  
+  <div class="alternet_originals">
+  
+    <div class="header"><span class="word1">Alternet </span><span class="word2">Originals</span></div>
+
+            
+    <div class="content">
+      <div class="view view-alternet-originals view-id-alternet_originals view-display-id-block view-dom-id-2">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div class="coverage_overlay">
+  <div class="field-content"><a href="/food/americas-best-and-worst-foodie-cities-where-does-your-city-rank"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/rectangle_150x107/public/story_images/shutterstock_223908613_0.jpg?itok=-nX8OCSA" width="630" height="449" /></a></div></div>
+
+<h2 class="no_coverage">
+  <a href="/food/americas-best-and-worst-foodie-cities-where-does-your-city-rank">America&#039;s Best and Worst Foodie Cities: Where Does Your City Rank?</a></h2>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div class="coverage_overlay">
+  <div class="field-content"><a href="/news-amp-politics/7-heated-town-halls-show-voters-are-turning-their-republican-senators"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/rectangle_150x107/public/story_images/screen_shot_2017-02-22_at_10.17.51_am.png?itok=np4qWBQu" width="630" height="449" /></a></div></div>
+
+<h2 class="no_coverage">
+  <a href="/news-amp-politics/7-heated-town-halls-show-voters-are-turning-their-republican-senators">7 Heated Town Halls That Show Voters Are Turning on Their Republican Senators</a></h2>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    <div class="coverage_overlay">
+  <div class="field-content"><a href="/culture/seth-meyers-annihilates-trumps-visit-national-museum-african-american-history-and-culture"><img typeof="foaf:Image" src="http://www.alternet.org/sites/default/files/styles/rectangle_150x107/public/story_images/screen-shot-2017-02-22-at-4.47.17-am.png?itok=yxMdihrn" width="630" height="449" /></a></div></div>
+
+<h2 class="no_coverage">
+  <a href="/culture/seth-meyers-annihilates-trumps-visit-national-museum-african-american-history-and-culture">Seth Meyers Annihilates Trump&#039;s Visit to the National Museum of African American History and Culture</a></h2>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  
+  </div>
+
+</div><!-- /.block --><div id="block-altads-sidebar-3" class="block block-altads last odd count-9">
+
+      
+  <div class="content">
+    <!-- New_AlterNet_300x250_STORY_SIDEBAR_3 --><div class='dfp_ad_slot' id='div-gpt-ad-1420251685282-6'><script type="text/rocketscript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1420251685282-6'); });</script></div>  </div>
+
+</div><!-- /.block -->
+  </div></div><!-- /.section, /.region -->
+    </div>
+  
+</div>
+
+<!-- begin footer -->
+
+<!-- start: footer -->
+<div id="root_footer">
+  <div class="break_container">
+    <div class="break"></div>
+      <div class="region region-footer">
+    <div id="block-system-main-menu" class="block block-system block-menu first last odd count-1">
+
+      
+  <div class="content" id="footer">
+    <ul class="menu"><li class="first last collapsed ◀"><a href="/" title="">◀</a></li>
+</ul>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+</div>
+
+<div id="root_subfooter">
+  <div class="left"></div>
+  <div class="middle_left">
+      <div class="region region-post-footer">
+    <div id="block-menu-menu-post-footer-links" class="block block-menu first last odd count-1">
+
+      
+  <div class="content">
+    <ul class="menu"><li class="first leaf our-mission"><a href="/about">Our Mission</a></li>
+<li class="leaf who-we-are"><a href="/staff">Who We Are</a></li>
+<li class="leaf about-imi"><a href="/the-independent-media-institute">About IMI</a></li>
+<li class="leaf foundation-support"><a href="/alternets-supporting-foundations">Foundation Support</a></li>
+<li class="leaf press-information"><a href="/press-information">Press Information</a></li>
+<li class="leaf writer-guidelines"><a href="/writer-guidelines">Writer Guidelines</a></li>
+<li class="leaf privacy-policy"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="leaf advertise-on-alternet"><a href="/advertise">Advertise on AlterNet</a></li>
+<li class="leaf contact-us"><a href="/feedback" title="">Contact Us</a></li>
+<li class="leaf donate"><a href="https://donate.alternet.org" title="">Donate</a></li>
+<li class="last leaf login"><a href="/user/login" title="">Login</a></li>
+</ul>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+  <div class="middle_right">
+      <div class="region region-post-footer2">
+    <div id="block-altsocial-social-links-footer" class="block block-altsocial first last odd count-1">
+
+      
+  <div class="content">
+    <div class="item-list"><ul id="social"><li class="twitter first"><a href="http://twitter.com/AlterNet"><img alt="follow AlterNet on twitter" src="/sites/all/themes/custom/alternet/images/spacer.gif" height="20px" width="22px" /></a></li>
+<li class="facebook"><a href="https://www.facebook.com/AlterNetNews"><img alt="be an AlterNet facebook fan" src="/sites/all/themes/custom/alternet/images/spacer.gif" height="20px" width="22px" /></a></li>
+<li class="rss last"><a href="http://feeds.feedblitz.com/alternet_environment"><img alt="subscribe to our rss" src="/sites/all/themes/custom/alternet/images/spacer.gif" height="20px" width="22px" /></a></li>
+</ul></div>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+  <div class="right"></div>
+</div>
+
+
+  <div id='bottom-ad'></div>
+
+    <div class="region region-page-bottom">
+    <noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-44Kjy7lrEDP7I.gif" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><div id="fb-root"></div>      <script type="text/rocketscript">(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>  </div><!-- /.region -->
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+var _qevents = _qevents || [];(function() {var elem = document.createElement("script");elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName("script")[0];scpt.parentNode.insertBefore(elem, scpt);})();_qevents.push({qacct:"p-44Kjy7lrEDP7I"});
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+      var _sf_async_config=Drupal.settings.chartbeat;
+      (function(){
+        function loadChartbeat() {
+          window._sf_endpt=(new Date()).getTime();
+          var e = document.createElement('script');
+          e.setAttribute('language', 'javascript');
+          e.setAttribute('type', 'text/javascript');
+          e.setAttribute('src',
+            (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+            "static.chartbeat.com/js/chartbeat.js");
+          document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+          loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+jQuery.post('/sites/all/modules/custom/altstats/altstats.php', {nid: 1070240});
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_61yrEfvbLZbDoWzS-ohG3WlZqajwgmKoGFXulNTHi1A.js"></script>
+<script type="text/rocketscript" data-rocketsrc="https://apis.google.com/js/plusone.js"></script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+          // Digg Button JS
+          var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+          s.type = 'text/javascript';
+          s.src = 'http://widgets.digg.com/buttons.js';
+          s1.parentNode.insertBefore(s, s1);
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-289449-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "http://www.alternet.org/sites/default/files/googleanalytics/ga.js?ologiu";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/rocketscript">
+<!--//--><![CDATA[//><!--
+
+jQuery('#act').submit(function () {
+    var hasError = false;
+    var errorMsg = '';
+    // validate email
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var emailaddressVal = jQuery("#id_email").val();
+    if (emailaddressVal == '') {
+        errorMsg += 'Please enter your email address.\n';
+        hasError = true;
+    }
+    else if (!emailReg.test(emailaddressVal)) {
+        errorMsg += 'Please enter a valid email address.\n';
+        hasError = true;
+    }
+    if (hasError == true) {
+        alert(errorMsg);
+        return false;
+    }
+});
+
+jQuery('.option_button').click(function () {
+    console.log('click');
+    jQuery('.option_button').toggle();
+    if (jQuery('.close_option').is(":visible")) {
+        jQuery('.options').show();
+    } else {
+        jQuery('.options').hide();
+    }
+});
+
+//--><!]]>
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.alternet.org/sites/default/files/js/js_ix99IaKNwg4XQrjVLFsrlxH0Czfb_Wvr8_P-vBK2zQU.js"></script>
+
+  <!-- script to override click action of nav menu -->
+
+  <script type="text/rocketscript">
+    /* environment */
+    jQuery('#block-nice-menus-1 .menu-866 > a').click(function(){
+        return false;
+    });
+    /* economy */
+    jQuery('#block-nice-menus-1 .menu-860 > a').click(function(){
+        return false;
+    });
+    /* rights */
+    jQuery('#block-nice-menus-1 .menu-862 > a').click(function(){
+        return false;
+    });
+  </script>
+  
+  <!-- script to handle newsletter iframe resize -->
+  
+  <script type="text/rocketscript">
+	window.addEventListener('message', function(e) {
+	  var $iframe = jQuery("#sidebar-signup-frame");
+	  var eventName = e.data[0];
+	  var data = e.data[1];
+	  switch(eventName) {
+		case 'setHeight':
+		  $iframe.height(data);
+		  break;
+	  }
+	}, false);
+  </script>
+
+    <!-- <script type="text/javascript" src="http://as.ebz.io/api/choixPubJS.htm?pid=1132622&screenLayer=1&mode=NONE&home=http://www.alternet.org"></script> -->
+
+    	<!-- 
+      <script type="text/javascript">
+        window._ttf = window._ttf || [];
+        var _tt_mutable = false;
+
+        if ((screen.width<=768)){
+          _tt_mutable = false;
+        }
+        if ((screen.width>=779)){
+          _tt_mutable = true;
+        }
+        _ttf.push({
+          pid          : 31353
+          ,lang        : "en"
+          ,slot        : '.node .the_body > p'
+          ,format      : "inread"
+          ,components  : { skip: {delay : 0}}
+          ,mutable     : _tt_mutable
+          ,css         : "margin: 0px 50px 22px;"
+        });
+
+        (function (d) {
+          var js, s = d.getElementsByTagName('script')[0];
+          js = d.createElement('script');
+          js.async = true;
+          js.src = '//cdn.teads.tv/media/format.js';
+          s.parentNode.insertBefore(js, s);
+        })(window.document);
+      </script>
+	  
+	-->
+    	
+	<!-- 
+    
+	<script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    </script>
+
+    <script type='text/javascript'>
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/1010624/NewAlterNet1x1', [1, 1], 'div-gpt-ad-1348518611907-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+    </script>
+    <div id='div-gpt-ad-1348518611907-0' style='width:1px; height:1px;'><script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1348518611907-0'); });</script></div>
+	
+	-->
+	
+	<script type="text/rocketscript" data-rocketsrc="http://cdn4.wibbitz.com/alternet/embed.js" async></script> 
+	
+<script type="text/rocketscript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"23d8e7987e","applicationID":"35580271","transactionName":"NANWNxZRXkoCVxJdWg1JdQAQWV9XTFoJUFA8FlUEAW9GUAZD","queueTime":0,"applicationTime":1473,"atts":"GERVQV5LTUQ=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/rocketscript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

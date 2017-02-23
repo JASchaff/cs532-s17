@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]> <html data-placeholder-focus="false" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie-8"> <![endif]-->
+<!--[if IE 9 ]> <html data-placeholder-focus="false" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie-9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html data-placeholder-focus="false" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js">
+<!--<![endif]-->
+
+<head>
+<!--[if lte IE 7]>
+<meta http-equiv="refresh" content="0; url=http://www.theblaze.com/update-browser/">
+<![endif]-->
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcCV15SCxADV1RRAQQPUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="google-site-verification" content="3B7zdQa9SoYW3NLinlATlqfL3LSy4s63kBmhJIkIeHQ" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>Learning a lesson in political modesty from Lady Gaga &#8211; TheBlaze</title>
+
+<!-- BEGIN Chartbeat header Tag -->
+ <script type="text/javascript">
+      var _sf_async_config = _sf_async_config || {};
+      /** CONFIGURATION START **/
+      _sf_async_config.uid = 12704;// ACCOUNT NUMBER
+      _sf_async_config.domain = 'theblaze.com';// DOMAIN
+      _sf_async_config.flickerControl = false;
+      _sf_async_config.useCanonical = true;
+      /** CONFIGURATION END **/
+      var _sf_startpt = (new Date()).getTime();
+  </script>
+  <script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
+<!-- BEGIN Chartbeat header Tag -->
+
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"TheBlaze","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"http://www.theblaze.com/search?q={search_term_string}"},"publisher":{"@context":"http://schema.org","@type":"Organization","logo":"http://www.theblaze.com/wp-content/themes/theblaze/images/favicons/apple-touch-icon-152x152.png","name":"TheBlaze","sameAs":["https://www.facebook.com/theblaze","https://twitter.com/theblaze","https://plus.google.com/u/0/+theblaze","https://www.youtube.com/channel/UCKgJEs_v0JB-6jWb8lIy9Xw"],"url":"http://www.theblaze.com"},"url":"http://www.theblaze.com"}</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","articleSection":"Politics","author":"TheBlaze","creator":"TheBlaze","dateModified":"2017-02-21T20:51:37Z","datePublished":"2017-02-07T1:00:51Z","headline":"Learning a lesson in political modesty from Lady Gaga","image":{"@type":"ImageObject","height":"720","url":"http://www.theblaze.com","width":"1280"},"keywords":"celebrities,entertainers,Final Thoughts,ignorance,Immigration,Lady Gaga,Meryl Streep,Super Bowl","mainEntityOfPage":"True","publisher":{"@context":"http://schema.org","@type":"Organization","logo":"http://www.theblaze.com/wp-content/themes/theblaze/images/favicons/apple-touch-icon-152x152.png","name":"TheBlaze","sameAs":["https://www.facebook.com/theblaze","https://twitter.com/theblaze","https://plus.google.com/u/0/+theblaze","https://www.youtube.com/channel/UCKgJEs_v0JB-6jWb8lIy9Xw"],"url":"http://www.theblaze.com"},"url":"http://www.theblaze.com/video/final-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga/"}</script>    <script>
+        window.tblz     = window.tblz || {};
+        tblz.ajaxUrl    = "http:\/\/www.theblaze.com\/wp-admin\/admin-ajax.php";
+        tblz.settings   = {"choices":{"emotions":[],"votes":{"posts":[],"comments":[]}},"userRoles":["guest"],"userCaps":["frontend_read","read"],"apiUrl":"http:\/\/www.theblaze.com\/api_ajax.php\/","userId":0,"postId":1235746,"siteUrl":"http:\/\/www.theblaze.com","esServer":"http:\/\/10.0.0.16","esPort":"9200","esIndex":"phoenix-prod"};
+    </script>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="TheBlaze &raquo; Learning a lesson in political modesty from Lady Gaga Comments Feed" href="/video/final-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga/feed/" />
+<script type="text/javascript">
+        // Criteo (remarketing company) Start
+        var crtg_nid="2045";
+        var crtg_cookiename="cto_blaze";
+        var crtg_varname="crtg_content";
+
+        function crtg_getCookie(c_name){ var i,x,y,ARRCookies=document.cookie.split(";");for(i=0;i<ARRCookies.length;i++){x=ARRCookies[i].substr(0,ARRCookies[i].indexOf("="));y=ARRCookies[i].substr(ARRCookies[i].indexOf("=")+1);x=x.replace(/^\s+|\s+$/g,"");if(x==c_name){return unescape(y);}}return'';}
+
+        var crtg_content    = crtg_getCookie(crtg_cookiename);var crtg_rnd=Math.floor(Math.random()*99999999999);
+        var crtg_url        = location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);crtg_url+='&cookieName='+escape(crtg_cookiename);crtg_url+='&rnd='+crtg_rnd;crtg_url+='&varName=' + escape(crtg_varname);
+        var crtg_script     = document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;
+
+        if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);else if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script);
+        // Criteo (remarketing company) End
+        // Quantcast
+        var _qevents = _qevents || [];
+        (function() {
+            var elem    = document.createElement('script');
+            elem.src    = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+            elem.async  = true;
+            elem.type   = "text/javascript";
+            var scpt    = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+</script>
+
+<script type='text/javascript'>
+
+function getGoogleTagsScrpt() {
+
+window.onload = function() {
+        jQuery.ajax({
+          dataType: "script",
+          cache: true,
+          url: '//d3.theblaze.servedbyopenx.com/w/1.0/jstag?nc=75484061-THEBLAZE',
+          success: function() {
+            $(function () {
+              $.ajax({
+                dataType: "script",
+                cache: true,
+                url: '//www.googletagservices.com/tag/js/gpt.js'
+              })
+            })
+          }
+        });
+}
+
+}
+
+getGoogleTagsScrpt();
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+/*
+(function(){ var gads = document.createElement('script');
+gads.async = true; gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+*/
+
+</script>
+<meta name="post-type" content="jwvideo" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@theblaze" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://content.jwplatform.com/thumbs/yR3Mdwwl-1280.jpg" />
+<meta name="twitter:description" content="On Tomi&#039;s &quot;Final Thoughts,&quot; she dishes &hellip;" />
+<meta name="twitter:title" content="Learning a lesson in political modesty from Lady Gaga" />
+<meta property="fb:app_id" content="990491837629352" />
+<meta property="og:title" content="Learning a lesson in political modesty from Lady Gaga" />
+<meta property="og:description" content="On Tomi&#039;s &quot;Final Thoughts,&quot; she dishes &hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.theblaze.com/video/final-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga/" />
+<meta property="og:site_name" content="TheBlaze" />
+<meta property="og:image" content="http://content.jwplatform.com/thumbs/yR3Mdwwl-1280.jpg" />
+<meta property="article:published_time" content="2017-02-06T20:00:51-05:00" />
+<meta property="article:tag" content="celebrities" />
+<meta property="article:tag" content="entertainers" />
+<meta property="article:tag" content="Final Thoughts" />
+<meta property="article:tag" content="ignorance" />
+<meta property="article:tag" content="Immigration" />
+<meta property="article:tag" content="Lady Gaga" />
+<meta property="article:tag" content="Meryl Streep" />
+<meta property="article:tag" content="Super Bowl" />
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+var dfp_map_billboard = googletag.sizeMapping()
+.addSize([970, 250], [970, 250])
+.addSize([728, 400], [728, 90])
+.addSize([320, 200], [320, 50])
+.addSize([0, 0], [320, 50])
+.build();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Minibar_980x27_109"]').is(":visible")) {
+if(window.console) {console.log('Minibar_980x27_109');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [980,27], "div-gpt-ad-Minibar_980x27_109")
+.setTargeting("pos", ["Minibar_980x27_109"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Billboard_970x90-970x250_170"]').is(":visible")) {
+if(window.console) {console.log('Billboard_970x90-970x250_170');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[970,250],[970,90],[728,90],[320,50]], "div-gpt-ad-Billboard_970x90-970x250_170")
+.setTargeting("pos", ["Billboard_970x90-970x250_170"])
+.defineSizeMapping(dfp_map_billboard)
+.setCollapseEmptyDiv(true)
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-1200x300_top-sticky-expandable_400"]').is(":visible")) {
+if(window.console) {console.log('1200x300_top-sticky-expandable_400');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[1200,300]], "div-gpt-ad-1200x300_top-sticky-expandable_400")
+.setTargeting("pos", ["1200x300_top-sticky-expandable_400"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-970x90_top-after-scroll_401"]').is(":visible")) {
+if(window.console) {console.log('970x90_top-after-scroll_401');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[970,90]], "div-gpt-ad-970x90_top-after-scroll_401")
+.setTargeting("pos", ["970x90_top-after-scroll_401"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-640x480_overlay-partial_402"]').is(":visible")) {
+if(window.console) {console.log('640x480_overlay-partial_402');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[1,1],[640,480]], "div-gpt-ad-640x480_overlay-partial_402")
+.setTargeting("pos", ["640x480_overlay-partial_402"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-1024x786_full-page_403"]').is(":visible")) {
+if(window.console) {console.log('1024x786_full-page_403');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[1,1],[1024,786]], "div-gpt-ad-1024x786_full-page_403")
+.setTargeting("pos", ["1024x786_full-page_403"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-468x60_in-stream_404"]').is(":visible")) {
+if(window.console) {console.log('468x60_in-stream_404');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[468,60]], "div-gpt-ad-468x60_in-stream_404")
+.setTargeting("pos", ["468x60_in-stream_404"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Right-Top_300x250-300x600_101"]').is(":visible")) {
+if(window.console) {console.log('Right-Top_300x250-300x600_101');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [[300,600],[300,250]], "div-gpt-ad-Right-Top_300x250-300x600_101")
+.setTargeting("pos", ["Right-Top_300x250-300x600_101"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-300x250_Right_Rail_178"]').is(":visible")) {
+if(window.console) {console.log('300x250_Right_Rail_178');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [300,250], "div-gpt-ad-300x250_Right_Rail_178")
+.setTargeting("pos", ["300x250_Right_Rail_178"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-In-Content_300x250_102"]').is(":visible")) {
+if(window.console) {console.log('In-Content_300x250_102');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [300,250], "div-gpt-ad-In-Content_300x250_102")
+.setTargeting("pos", ["In-Content_300x250_102"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-300x250_premium_300"]').is(":visible")) {
+if(window.console) {console.log('300x250_premium_300');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [300,250], "div-gpt-ad-300x250_premium_300")
+.setTargeting("pos", ["300x250_premium_300"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Under-Story_620x310_208"]').is(":visible")) {
+if(window.console) {console.log('Under-Story_620x310_208');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [620,310], "div-gpt-ad-Under-Story_620x310_208")
+.setTargeting("pos", ["Under-Story_620x310_208"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-300x600_test"]').is(":visible")) {
+if(window.console) {console.log('300x600_test');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [300,600], "div-gpt-ad-300x600_test")
+.setTargeting("pos", ["300x600_test"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-comment_300x250_203"]').is(":visible")) {
+if(window.console) {console.log('comment_300x250_203');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [300,250], "div-gpt-ad-comment_300x250_203")
+.setTargeting("pos", ["comment_300x250_203"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-top-mobile_320x50_212"]').is(":visible")) {
+if(window.console) {console.log('top-mobile_320x50_212');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [320,50], "div-gpt-ad-top-mobile_320x50_212")
+.setTargeting("pos", ["top-mobile_320x50_212"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-takeover_970x250"]').is(":visible")) {
+if(window.console) {console.log('takeover_970x250');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [970,250], "div-gpt-ad-takeover_970x250")
+.setTargeting("pos", ["takeover_970x250"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Left-Top-Skyscraper_160x600"]').is(":visible")) {
+if(window.console) {console.log('Left-Top-Skyscraper_160x600');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [160,600], "div-gpt-ad-Left-Top-Skyscraper_160x600")
+.setTargeting("pos", ["Left-Top-Skyscraper_160x600"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Right-Top-Skyscraper_160x600"]').is(":visible")) {
+if(window.console) {console.log('Right-Top-Skyscraper_160x600');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [160,600], "div-gpt-ad-Right-Top-Skyscraper_160x600")
+.setTargeting("pos", ["Right-Top-Skyscraper_160x600"])
+.addService(googletag.pubads());
+}
+})();
+(function() {
+if ($('[data-dfp-id="div-gpt-ad-Interstitial_640x480_194"]').is(":visible")) {
+if(window.console) {console.log('Interstitial_640x480_194');}
+googletag.defineSlot("/75484061/TheBlaze.com/Stories/jwvideo", [640,480], "div-gpt-ad-Interstitial_640x480_194")
+.setTargeting("pos", ["Interstitial_640x480_194"])
+.addService(googletag.pubads());
+}
+})();
+googletag.pubads().setTargeting("articleid",["1235746"]);
+googletag.pubads().setTargeting("channel",["Tomi Lahren"]);
+// Criteo (remarketing company) Start
+var s = crtg_content.split(';'); s.pop();
+if (s.length > 0){ for (var x = 0; x < s.length; x++){googletag.pubads().setTargeting(s[x].split('=')[0], s[x].split('=')[1]);}}
+// Criteo (remarketing company) End
+googletag.pubads().enableSingleRequest();
+googletag.pubads().enableAsyncRendering();
+googletag.enableServices();
+});
+</script>
+
+<!--[if !IE 9]><!-->
+<link rel='stylesheet' href='/wp-content/themes/theblaze/css/dist/styles.1702200919.css' type='text/css' media='screen' />
+<!--<![endif]-->
+
+<!--[if IE 9]>
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/vendor_styles.1702200919.css' type='text/css' media='screen' />
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/main_styles.1702200919.css' type='text/css' media='screen' />
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/secondary_styles.1702200919.css' type='text/css' media='screen' />
+<![endif]-->
+
+<!--[if IE]>
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/ie.1702200919.css' type='text/css' media='screen' />
+<![endif]-->
+
+<!--[if lt IE 10]>
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/ie-lt-10.1702200919.css' type='text/css' media='screen' />
+<![endif]-->
+
+<!--[if lt IE 9]>
+<link rel='stylesheet'  href='/wp-content/themes/theblaze/css/dist/ie-lt-9.1702200919.css' type='text/css' media='screen' />
+<![endif]-->
+
+<link rel='stylesheet' href='/wp-content/themes/theblaze/css/dist/print.1702200919.css' type='text/css' media='print' />
+
+
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js'></script>
+<![endif]-->
+
+<!--[if lt IE 10]>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js'></script>
+<script>
+(function(f){
+window.setTimeout=f(window.setTimeout);
+window.setInterval=f(window.setInterval);
+})(function(f){return function(c,t){
+var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.apply(this,a):eval(c)},t)}
+});
+</script>
+<![endif]-->
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        appId      : 990491837629352,
+        xfbml      : true,
+        version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript' src='http://www.theblaze.com/wp-content/themes/theblaze/js/dist/scripts.1702200919.js'></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/theblaze/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/wp-content/themes/theblaze/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/wp-content/themes/theblaze/images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/wp-content/themes/theblaze/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/wp-content/themes/theblaze/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/wp-content/themes/theblaze/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/wp-content/themes/theblaze/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/wp-content/themes/theblaze/images/favicons/safari-pinned-tab.svg" color="#e92500">
+    <link rel="shortcut icon" href="/wp-content/themes/theblaze/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#e92500">
+    <meta name="msapplication-TileImage" content="/wp-content/themes/theblaze/images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/wp-content/themes/theblaze/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#e92500">
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel='prev' title='Alexander Vershbow: A leader like Putin only respects strength' href='/video/alexander-vershbow-a-leader-like-putin-only-respects-strength/' />
+<link rel='next' title='How a Super Bowl half-time show should be, using Lady Gaga&#8217;s example' href='/video/how-a-super-bowl-half-time-show-should-be-using-lady-gagas-example/' />
+<link rel="canonical" href="/video/final-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga/" />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fvideo%2Ffinal-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fvideo%2Ffinal-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga%2F&#038;format=xml" />
+		<style>
+		.getty.alignleft {
+			margin-right: 5px;
+		}
+		.getty.alignright {
+			margin-left: 5px;
+		}
+		</style>
+		<script type="text/javascript" src="https://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script><meta name="sailthru.date" content="2017-02-06 20:00:51" />
+<meta name="sailthru.guid" content="theblaze/1235746" />
+<meta name="sailthru.tags" content="celebrities, entertainers, final-thoughts, ignorance, immigration, lady-gaga, meryl-streep, politics, super-bowl, author-skookum, site-theblaze, jwvideo, channel: Tomi Lahren" />
+<meta name="sailthru.image.thumb" content="http://www.theblaze.com" />
+<meta name="sailthru.image.full" content="http://content.jwplatform.com/thumbs/yR3Mdwwl-1280.jpg" />
+<meta name="sailthru.channels" content="Tomi Lahren" />
+        <script>
+            tblz.categories = [{"value":"books","label":"Books"},{"value":"business","label":"Business"},{"value":"campus","label":"Campus"},{"value":"crime","label":"Crime"},{"value":"education","label":"Education"},{"value":"entertainment","label":"Entertainment"},{"value":"environment","label":"Environment"},{"value":"faith","label":"Faith"},{"value":"government","label":"Government"},{"value":"health","label":"Health"},{"value":"law","label":"Law"},{"value":"lifestyle","label":"Lifestyle"},{"value":"media","label":"Media"},{"value":"nsa","label":"NSA"},{"value":"politics","label":"Politics"},{"value":"science","label":"Science"},{"value":"show","label":"Show"},{"value":"sports","label":"Sports"},{"value":"technology","label":"Technology"},{"value":"the-furnace","label":"The Furnace"},{"value":"theblaze-tv","label":"TheBlaze TV"},{"value":"uncategorized","label":"Uncategorized"},{"value":"us","label":"US"},{"value":"world","label":"World"}];
+        </script>
+<!-- TABOOLA HEAD -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/theblaze/loader.js',
+  'tb_loader_script');
+</script>
+<!-- TABOOLA HEAD END -->
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="single single-jwvideo postid-1235746 post-type-jwvideo article" rel="touch">
+  <audio id="xyz" src="/wp-content/themes/theblaze/audio/new-message.mp3" preload="auto"></audio>
+  <audio id="audio-swoosh" src="/wp-content/themes/theblaze/audio/swoosh.mp3" preload="auto"></audio>
+  <div class='main-wrap'>
+    <header id='header'>
+      <div class='limit-width clearfix text-center'>
+        <div id="main_menu_wrap">
+          <nav id='main_nav'>
+  <ul class='list-inline'>
+    <li>
+      <a href="#" id="open_sec_nav" class="hidden-lg hidden-md"><i class='fa fa-bars'></i></a>
+    </li>
+
+    <li class='logo-wrap'>
+      <a href="/">
+        <img class="img-responsive" src="/wp-content/themes/theblaze/images/logo.png" alt="TheBlaze">
+      </a>
+    </li>
+    <li class="menu-item-has-children">
+
+      <a href="/news"><i class='fa fa-newspaper-o'></i> News</a>
+      <div class="sub-menu">
+        <div class="limit-width">
+          <ul class="list-unstyled main-nav-list">
+                        
+            <li>
+                <a href="/news/2017/02/22/indiana-lawmaker-proposes-bill-targeting-sanctuary-campuses-heres-what-gave-him-the-idea/">
+                <img width="1280" height="720" src="/wp-content/uploads/2017/02/GettyImages-623647054-1280x720.jpg" class="img-responsive wp-post-image" alt="Indiana lawmaker proposes bill targeting &#8216;sanctuary campuses.&#8217; Here&#8217;s what gave him the idea." srcset="http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-623647054-1280x720.jpg 1280w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-623647054-768x432.jpg 768w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-623647054-384x216.jpg 384w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-623647054-192x108.jpg 192w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-623647054-96x54.jpg 96w" sizes="(max-width: 1280px) 100vw, 1280px" />                <span class="menu-article-title">Indiana lawmaker proposes bill targeting 'sanctuary campuses.' Here's what gave him the idea.</span>
+              </a>
+            </li>
+                        
+            <li>
+                <a href="/news/2017/02/22/double-standard-liberal-actor-george-takei-once-laughed-about-adultminor-sexual-relationships-too/">
+                <img width="1280" height="720" src="/wp-content/uploads/2017/02/AP_16272739730044-1280x720.jpg" class="img-responsive wp-post-image" alt="Double standard? Liberal actor George Takei once laughed about adult/minor sexual relationships, too" srcset="http://www.theblaze.com/wp-content/uploads/2017/02/AP_16272739730044-1280x720.jpg 1280w, http://www.theblaze.com/wp-content/uploads/2017/02/AP_16272739730044-768x432.jpg 768w, http://www.theblaze.com/wp-content/uploads/2017/02/AP_16272739730044-384x216.jpg 384w, http://www.theblaze.com/wp-content/uploads/2017/02/AP_16272739730044-192x108.jpg 192w, http://www.theblaze.com/wp-content/uploads/2017/02/AP_16272739730044-96x54.jpg 96w" sizes="(max-width: 1280px) 100vw, 1280px" />                <span class="menu-article-title">Double standard? Liberal actor George Takei once laughed about adult/minor sexual relationships, too</span>
+              </a>
+            </li>
+                        
+            <li>
+                <a href="/news/2017/02/22/former-wnba-player-i-was-bullied-for-being-straight/">
+                <img width="1280" height="720" src="/wp-content/uploads/2017/02/GettyImages-154435166-1280x720.jpg" class="img-responsive wp-post-image" alt="Former WNBA player: I was bullied for being straight" srcset="http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-154435166-1280x720.jpg 1280w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-154435166-768x432.jpg 768w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-154435166-384x216.jpg 384w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-154435166-192x108.jpg 192w, http://www.theblaze.com/wp-content/uploads/2017/02/GettyImages-154435166-96x54.jpg 96w" sizes="(max-width: 1280px) 100vw, 1280px" />                <span class="menu-article-title">Former WNBA player: I was bullied for being straight</span>
+              </a>
+            </li>
+                        
+            <li>
+                <a href="/news/2017/02/22/this-interracial-connecticut-couple-is-paying-a-100-fine-per-day-to-make-a-point/">
+                <img width="1280" height="720" src="/wp-content/uploads/2017/02/Graffiti-on-garage-1280x720.jpg" class="img-responsive wp-post-image" alt="This interracial Connecticut couple is paying a $100 fine per day to make a point" srcset="http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-1280x720.jpg 1280w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-300x168.jpg 300w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-768x432.jpg 768w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-384x216.jpg 384w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-192x108.jpg 192w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-96x54.jpg 96w, http://www.theblaze.com/wp-content/uploads/2017/02/Graffiti-on-garage-100x56.jpg 100w" sizes="(max-width: 1280px) 100vw, 1280px" />                <span class="menu-article-title">This interracial Connecticut couple is paying a $100 fine per day to make a point</span>
+              </a>
+            </li>
+                                  </ul>
+        </div>
+      </div>
+    </li>
+
+    <li class="menu-item-has-children">
+      <a href="/channels/"><i class='i-channel'></i> Channels</a>
+
+            <div class="sub-menu">
+        <div class="limit-width">
+          <ul class="list-unstyled main-nav-list clearfix">
+                    <li>
+                      <a href="/glenn-beck">
+                      <img src="/wp-content/uploads/2016/11/glenn_beck.jpg" class="img-responsive" />
+                        <span class="menu-article-title">Glenn Beck</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/dana-loesch">
+                      <img src="/wp-content/uploads/2016/11/dana_loesch-3.jpg" class="img-responsive" />
+                        <span class="menu-article-title">Dana Loesch</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/tomi">
+                      <img src="/wp-content/uploads/2016/11/tomi_lahren.jpg" class="img-responsive" />
+                        <span class="menu-article-title">Tomi Lahren</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/doc">
+                      <img src="/wp-content/uploads/2017/01/doc_thompson.jpg" class="img-responsive" />
+                        <span class="menu-article-title">Doc Thompson</span>
+                      </a>
+                    </li>
+          </ul>
+          <a href="/channels/" class="all-channel-menu">Check out all channels</a>
+        </div>
+      </div>
+      
+    </li>
+
+    <li>
+      <a href="/myvoice/"><i class='fa fa-bullhorn fa-fw'></i> MyVoice</a>
+    </li>
+
+    <li class="visible-lg-inline-block visible-md-inline-block">
+      <a href="/radio/"><i class="i-radio fa-fw"></i> Radio</a>
+    </li>
+
+    <li class="visible-lg-inline-block visible-md-inline-block">
+      <a href="/tv/"><i class='fa fa-desktop fa-fw'></i> TV</a>
+    </li>
+
+    <!--<li class="rewards-menu visible-lg-inline-block visible-md-inline-block">
+      <a href="/rewards/" class="reward-points-menu">
+        <i class='fa fa-gift'></i> Rewards
+      </a>
+    </li> -->
+  </ul>
+</nav>
+        </div>
+        <div class='right-wrap'>
+          <ul class="list-inline top-menu">
+    <li data-toggle="tooltip" title="Search TheBlaze">
+        <a data-toggle="modal" data-target="#search_nav_modal" href="#"><i class='fa fa-search fa-lg'></i></a>
+    </li>
+        <li><a class="text-link" data-toggle="modal" data-target="#login_modal" href="#">Login</a></li>
+        <li class="pr0"><a class="text-link" data-toggle="modal" data-target="#signup_modal" href="#">Join</a></li>
+</ul>
+        </div>
+        <div class='logo-wrap-mobile'>
+            <a href="/">
+              <img class="img-responsive big-logo" src="/wp-content/themes/theblaze/images/logo.png">
+              <img class="icon-logo" src="/wp-content/themes/theblaze/images/logo-icon.png" width="28" />
+            </a>
+        </div>
+        <div id='mobile_icons'>
+          <span class="profile-nav-message-indicator"></span>
+
+          <a class="mobile-nav-loggedin-menu" href="/profile/" style="display: none"><i class='fa fa-user fa-lg'></i></a>
+
+          <a class="mobile-nav-non-loggedin-menu mobile-account-link" href="#" ><i class="fa fa-user fa-lg"></i></a>
+
+          <a data-toggle="modal" data-target="#search_nav_modal" href="#"><i class='fa fa-search fa-lg'></i></a>
+
+          <a data-toggle="modal" data-target="#mobile_nav_modal" href="#"><i class='fa fa-bars fa-lg'></i></a>
+        </div>
+      </div>
+    </header>
+    <header id='print_header' class="hide" tabindex="-1" aria-hidden="true">
+        <img width="180" src="/wp-content/themes/theblaze/images/logo.png" />
+        <br/>
+        <div class="header-url">www.theblaze.com</div>
+    </header>
+
+    <main id="main" role="main">
+      
+            <div id="top_ad_banner" class="top-ad hidden-xs">
+            <div class="ad dart-ad billboard expandable  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-Billboard_970x90-970x250_170" data-dfp-script='&lt;div id=&quot;div-gpt-ad-Billboard_970x90-970x250_170&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-Billboard_970x90-970x250_170&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-Billboard_970x90-970x250_170 -->
+</div><!-- .ad dart-ad billboard expandable -->
+        </div>
+    
+
+<div class="top-ad top-mobile-ad visible-xs">
+    <div class="ad dart-ad billboard mobile  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-top-mobile_320x50_212" data-dfp-script='&lt;div id=&quot;div-gpt-ad-top-mobile_320x50_212&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-top-mobile_320x50_212&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-top-mobile_320x50_212 -->
+</div><!-- .ad dart-ad billboard mobile -->
+</div>
+
+<!-- index [ jwvideo ] -->
+
+
+<div class="limit-width">
+    <div class="content-wrap">
+        <div class="main-content">
+<!-- content-single -->
+<div class='single-wrap'>
+    <article id="post-1235746" class="single article post-1235746 jwvideo type-jwvideo status-publish category-politics tag-celebrities tag-entertainers tag-final-thoughts tag-ignorance tag-immigration tag-lady-gaga tag-meryl-streep tag-super-bowl channel-tomi" data-feed-type="clip">
+
+                
+        <header class="article-header">
+            <h1 class="page-title">Learning a lesson in political modesty from Lady Gaga</h1>            <div class="article-header-inner">
+          <a class="article-author" href="/tomi"> Tomi Lahren </a>            <span class="article-dates">
+        <time class="entry-date feed-time published" datetime="2017-02-06T20:00:51-05:00">Feb 6, 2017 8:00 pm</time>
+          </span>
+</div>
+
+        </header>
+
+        <div class="article-image media-wrap">
+                <div class="jw-video-wrap" id="jw_autoplay_video" data-jw-autostart="true" data-jw-id="yR3Mdwwl"></div>
+                    <div class='fav-wrap'>
+          <a id="fav-wrap-1235746" title="Save for later" data-type="jwvideo" data-ref-id="1235746" data-toggle="tooltip" class=" save-for-later " role="button">
+              <i class='fa fa-star'></i>
+          </a>
+      </div>
+        </div>
+
+        <aside class="article-misc media-wrap">
+        <a href="#comments" title="41 comments" data-toggle="tooltip" class="comments" data-scroll-to="#comsParent" role="button">41</a>
+        </aside><!-- .feed-header -->
+
+        <aside class="article-sharing mb20">
+            <ul class="sharing-wrap children-4">
+  <li class="big-wrap"><a data-post-type="jwvideo" class="facebook block" href="#" role="button"><i class="fa fa-facebook"></i>Share</a></li>
+  <li class="big-wrap"><a data-post-type="jwvideo" class="twitter block" href="#" role="button"><i class="fa fa-twitter"></i>Tweet</a></li>
+  <li class="sm-wrap"><a class="email link-inverse block" href="mailto:?subject=Check%20out%20this%20clip%20I%20found%20on%20TheBlaze!&amp;body=Check%20out%20this%20clip%20I%20found%20on%20TheBlaze:%0D%0A%0D%0ALearning a lesson in political modesty from Lady Gaga%0D%0Ahttp://www.theblaze.com/video/final-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga/" data-toggle="tooltip" title="Email this clip" role="button"><i class="fa fa-envelope-o"></i></a></li>
+  <li class="sm-wrap"><a class="print link-inverse block" data-toggle="tooltip" href="#" title="Print this clip" role="button"><i class="fa fa-print"></i></a></li>
+</ul>
+        </aside>
+
+        
+        <div class="entry-content article-styles">
+            <p>On Tomi&#8217;s &#8220;Final Thoughts,&#8221; she dishes on controversial pop star Lady Gaga, pointing out that she set an example other entertainers should follow during her Super Bowl halftime show. Tomi appreciates that Lady Gaga chose to keep her political opinions to herself throughout the performance, something Meryl Streep and other celebrities can learn from. Tomi contrasts this approach with many of the Super Bowl commercials, which &#8220;capitalized on political ignorance with a side of hypocrisy.&#8221;</p>
+<p>To see more from Tomi, visit her channel on <a href="http://bit.ly/2icDfGf">TheBlaze</a> and watch full episodes of “Tomi” live weeknights from 7–8pm ET or anytime on-demand at <a href="http://bit.ly/2jr5t0S">TheBlaze TV</a>.</p>
+        </div><!-- .entry-content -->
+    </article><!-- .single -->
+
+    
+    <div class="article-footer media-wrap">
+                
+<div class="article-emotions emoVote" data-id="1235746">
+  <div class="title">Rate this clip</div>
+  <ul class="list-inline">
+    <li>
+      <a class="happy emo1 emoOption" data-val="1" href="#" aria-label="Happy" role="button">
+        <i class="i-happy"></i>
+        <span class="emoticon-percentage">96%</span>
+      </a>
+    </li>
+    <li>
+      <a class="bored emo2 emoOption" data-val="2" href="#" aria-label="Bored" role="button">
+        <i class="i-bored"></i>
+        <span class="emoticon-percentage">0%</span>
+      </a>
+    </li>
+    <li>
+      <a class="sad emo3 emoOption" data-val="3" href="#" aria-label="Sad" role="button">
+        <i class="i-sad"></i>
+        <span class="emoticon-percentage">0%</span>
+      </a>
+    </li>
+    <li>
+      <a class="angry emo4 emoOption" data-val="4" href="#" aria-label="Angry" role="button">
+        <i class="i-angry"></i>
+        <span class="emoticon-percentage">1%</span>
+      </a>
+    </li>
+    <li>
+      <a class="wtf emo5 emoOption" data-val="5" href="#" aria-label="What The Hell?" role="button">
+        <i class="i-wtf"></i>
+        <span class="emoticon-percentage">3%</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+        <div class="sidebar-article-bottom">
+            <div class="sidebar-content widget widget-container below-article-video-sidebar widget_ad_dfp" id="tblz_dfp-22"><div class="ad dart-ad skyscraper1  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-Under-Story_620x310_208" data-dfp-script='&lt;div id=&quot;div-gpt-ad-Under-Story_620x310_208&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-Under-Story_620x310_208&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-Under-Story_620x310_208 -->
+</div><!-- .ad dart-ad skyscraper1 -->
+</div>        </div>
+    </div><!-- .article-footer -->
+
+            <section class="cmr-wrap-outer ">
+            
+<script>
+    var editableRoles = [];
+</script>
+
+<div id="comsParent" class="">
+    <section class="cmr-form my50" id="comments_form"></section>    <h3 class="underlined cmr-title">
+        <span class="comCount"><span class="comNum">41</span> Comments</span>
+    </h3>
+    <div id="comments" class="cmr-inner-wrap jsPrntCMR" data-type="comment">
+            </div>
+
+<div><div class="ad-comments-article"><div class="" id="ad_comments_article"><div class="ad dart-ad midrec  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-comment_300x250_203" data-dfp-script='&lt;div id=&quot;div-gpt-ad-comment_300x250_203&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-comment_300x250_203&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-comment_300x250_203 -->
+</div><!-- .ad dart-ad midrec -->
+</div></div></div>
+</div>
+        </section>
+    </div><!-- .single-wrap -->
+
+        </div><!-- .main-content -->
+
+        <div class="sidebar-outer-wrap">
+            <div class="sidebar-wrap">
+<div class="sidebar-content widget widget-container widget_sailthru_signup_widget" id="sailthru_signup_widget-3"><div class="form-wrap newsletter-form">
+    <form id="ajaxNewsletterForm" method="post" name="ajaxNewsletterForm" data-no-submit="true" novalidate="novalidate">
+        <h5 class="text-center">Get TheBlaze Newsletters</h5>
+        <div class="form-group form-group-xsm mb10">
+            <div class="input-grp clearfix">
+                <input id="ns_rounded_input" type="email" id="ns-Email" name="Email" placeholder="Email" class="form-control input-sm placeholder-block modal-focus-input" data-validation="required,email" data-required-msg="Please enter a valid email address" data-email-msg="Please enter a valid email address">
+                <button id="newsletter_submit" type="submit" class="btn btn-sm btn-default">
+                    <span class="text">Sign Up</span>
+                    <span class="loading"><i class="tblz-spinner"></i></span>
+                </button>
+            </div>
+        </div>
+        <input type="hidden" name="lists[TheBlaze Daily AM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Daily PM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Exclusives]" value="1" />
+        <input type="hidden" name="lists[Phoenix Transactional Messaging Notifications]" value="1" />
+        <input type="hidden" name="action" value="emailapi" />
+    </form>
+</div>
+
+<div class="text-center mt20 newsletter-refer-friends-link">
+    <a id="btn-referral" class="btn btn-info btn-sm" data-toggle="modal" data-target="#login_modal" href="#"><i class="fa fa-users mr5"></i>Refer Friends, Earn Rewards!</a></div>
+</div><div class="sidebar-content widget widget-container widget_ad_dfp" id="tblz_dfp-11"><div class="ad dart-ad midrec2 expandable  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-Right-Top_300x250-300x600_101" data-dfp-script='&lt;div id=&quot;div-gpt-ad-Right-Top_300x250-300x600_101&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-Right-Top_300x250-300x600_101&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-Right-Top_300x250-300x600_101 -->
+</div><!-- .ad dart-ad midrec2 expandable -->
+</div><div class="sidebar-content widget widget-container widget_text" id="text-6">			<div class="textwidget"><!—Header Script-->
+  <script type="text/javascript" src="//launch.newsinc.com/js/embed.js"></script>
+ 
+  <!--Player Script-->
+  <div class="inform-embed"
+  data-config-id="33841"
+  data-type="VideoLauncher/Slider"
+  data-tracking-group="90119"
+  style=”width: 300px; height: 349px;”></div>
+ 
+  <!--Embed Now Script, immediately after player div-->
+  <script type="text/javascript">_informq.push(['embed']);</script></div>
+		</div><div class="sidebar-content widget widget-container widget_ad_dfp" id="tblz_dfp-13"><div class="ad dart-ad midrec  frequency-interval" data-frequency-interval="1">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-300x250_Right_Rail_178" data-dfp-script='&lt;div id=&quot;div-gpt-ad-300x250_Right_Rail_178&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-300x250_Right_Rail_178&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-300x250_Right_Rail_178 -->
+</div><!-- .ad dart-ad midrec -->
+</div></div>
+        </div>
+    </div><!-- .content-wrap -->
+</div><!-- .limit-width -->
+
+
+</main><!-- #main -->
+</div><!-- .main-wrap -->
+
+<nav id="sec_nav">
+  <ul>
+    <li class="sec-menu-header">
+        Menu
+        <a href="#" class="close-sec-menu" role="button"><span aria-hidden='true'>×</span></a>
+    </li>
+    <li>
+      <a class="big-nav" href="/radio/"><i class='i-radio fa-fw'></i> Radio</a>
+    </li>
+    <li>
+      <a class="big-nav" href="/tv/"><i class='fa fa-desktop fa-fw'></i> TV</a>
+    </li>
+    <!-- <li>
+      <a class="big-nav" href="/rewards/" class="reward-points-menu">
+        <i class='fa fa-gift'></i> Rewards
+      </a>
+    </li> -->
+    <li class="sec-menu-sub-header">
+        Company
+    </li>
+    <li>
+        <a href="/help/">Help</a>
+    </li>
+    <li>
+        <a href="/jobs/">Jobs</a>
+    </li>
+    <li>
+        <a href="/advertise/">Advertise</a>
+    </li>
+    <li>
+        <a href="/content-partners/">Content Partners</a>
+    </li>
+    <li>
+        <a href="mailto:scoops@theblaze.com?subject=News%20tip!">Tips</a>
+    </li>
+  </ul>
+</nav>
+
+
+<footer id='footer' data-date="2017" data-invite-link="http://www.theblaze.com/r/0" data-social-link="http%3A%2F%2Fwww.theblaze.com%2Fr%2F0">
+  <div class='limit-width sm'>
+    <div class='row'>
+      <div class="col-md-4">
+        <div class="footer-nav-wrap">
+          <h5>Company</h5>
+          <ul class="list-unstyled footer-nav">
+            <li>
+                <a href="/help/">Help</a>
+            </li>
+            <li>
+                <a href="/jobs/">Jobs</a>
+            </li>
+            <li>
+                <a href="/advertise/">Advertise</a>
+            </li>
+            <li>
+                <a href="/content-partners/">Content Partners</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 text-center newsletter-wrap">
+        <div class="footer-sidebar-wrap">
+<div class="sidebar-content widget widget-container widget_sailthru_signup_widget" id="sailthru_signup_widget-6"><div class="form-wrap newsletter-form">
+    <form id="ajaxNewsletterForm" method="post" name="ajaxNewsletterForm" data-no-submit="true" novalidate="novalidate">
+        <h5 class="text-center">Get TheBlaze Newsletters</h5>
+        <div class="form-group form-group-xsm mb10">
+            <div class="input-grp clearfix">
+                <input id="ns_rounded_input" type="email" id="ns-Email" name="Email" placeholder="Email" class="form-control input-sm placeholder-block modal-focus-input" data-validation="required,email" data-required-msg="Please enter a valid email address" data-email-msg="Please enter a valid email address">
+                <button id="newsletter_submit" type="submit" class="btn btn-sm btn-default">
+                    <span class="text">Sign Up</span>
+                    <span class="loading"><i class="tblz-spinner"></i></span>
+                </button>
+            </div>
+        </div>
+        <input type="hidden" name="lists[TheBlaze Daily AM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Daily PM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Exclusives]" value="1" />
+        <input type="hidden" name="lists[Phoenix Transactional Messaging Notifications]" value="1" />
+        <input type="hidden" name="action" value="emailapi" />
+    </form>
+</div>
+
+<div class="text-center mt20 newsletter-refer-friends-link">
+    <a id="btn-referral" class="btn btn-info btn-sm" data-toggle="modal" data-target="#login_modal" href="#"><i class="fa fa-users mr5"></i>Refer Friends, Earn Rewards!</a></div>
+</div></div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="my10">
+          <ul class='list-inline mt10'>
+            <li class='footer-social'>
+              <a class="facebook link-inverse bigger" target="_blank" href="https://www.facebook.com/theblaze"><i class='fa fa-facebook-square fa-lg'></i></a>
+            </li>
+            <li class='footer-social'>
+              <a class="twitter link-inverse bigger" target="_blank" href="https://twitter.com/theblaze"><i class='fa fa-twitter-square fa-lg'></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="my10">
+          <a class="ios link-inverse" target="_blank" href="https://itunes.apple.com/us/app/theblaze/id414496806">
+            <img src='/wp-content/themes/theblaze/images/ios-store.png' width="120" />
+          </a>
+        </div>
+        <div class="my10">
+          <a class="android link-inverse" target="_blank" href="https://play.google.com/store/apps/details?id=com.theblaze">
+            <img src='/wp-content/themes/theblaze/images/google-store.png' width="120" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class='footer-bottom mt10'>
+      <div class='copyright small'>
+        &copy; 2017 TheBlaze, Inc. Your use of or registration on this site constitutes your acceptance of our
+        <a target="_blank" href="/terms/">Terms of Use</a>
+        and
+        <a target="_blank" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="close-footer"><i class="fa fa-angle-down fa-2x"></i></a>
+  <a href="#" class="open-footer"><i class="fa fa-angle-up fa-2x"></i></a>
+</footer>
+
+<div id="alert_wrapper"></div>
+
+<div id="bottom_footer">
+  
+  <div class="footer-mgmt-link">
+      </div>
+</div>
+
+
+    <div id="interstitial_ads"  class="ad-wrap ">
+        
+            <div id="interstitial_partial">
+            <div class="ad dart-ad takeover  frequency-interval" data-frequency-interval="2">
+
+
+<div class="dfp-script" data-dfp-id="div-gpt-ad-Interstitial_640x480_194" data-dfp-script='&lt;div id=&quot;div-gpt-ad-Interstitial_640x480_194&quot; class=&quot;dfp_ad_container&quot;&gt;&lt;script&gt;googletag.cmd.push(function() { googletag.display(&quot;div-gpt-ad-Interstitial_640x480_194&quot;); });&lt;/script&gt;&lt;/div&gt;&lt;!-- .dfp_ad_container --&gt;'></div>
+
+<!-- end ad tag div-gpt-ad-Interstitial_640x480_194 -->
+</div><!-- .ad dart-ad takeover -->
+            </div>
+
+        
+        <div class="interstitial-timer hide">This ad will close in <span id="interstitial_time">5</span> seconds</div>
+        <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed interstitial-close hide'>
+            <span aria-hidden='true'>×</span>
+        </button>
+    </div>
+
+
+
+
+    <script>
+        var   loginTemp        = Handlebars.templates['modals/loginModal']
+            , forgotTemp       = Handlebars.templates['modals/forgotModal']
+            , resetTemp        = Handlebars.templates['modals/resetPassModal']
+            , signupTemp       = Handlebars.templates['modals/signupModal']
+            , signupFollowTemp = Handlebars.templates['modals/signupModalFollow']
+            , body             = $('body')
+        ;
+
+        body.append(loginTemp);
+        body.append(forgotTemp);
+        body.append(resetTemp);
+        body.append(signupTemp);
+
+    </script>
+
+
+
+<div class='modal' id='mobile_nav_modal' role='dialog' tabindex='-1'>
+    <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed modal-focus-input' type='button'>
+        <span aria-hidden='true'>×</span>
+    </button>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-body pt0'>
+                <h3 class='modal-title text-center mb5'>Menu</h3>
+                <div class='pb5 mb5 text-center mobile-nav-loggedin-menu' style="display: none">
+                    <div class="profile-nav-points"></div>
+                </div>
+                <nav id='mobile_nav'>
+                    <ul class="main-list">
+                        <li><hr class='m0'></li>
+                        <li><a href="/news/"><i class='fa fa-newspaper-o'></i> News</a></li>
+                        <li><a href="/channels/"><i class='i-channel'></i> Channels</a></li>
+                        <li><a href="/myvoice/"><i class='fa fa-bullhorn'></i> MyVoice</a></li>
+                        <li><a href="/radio/"><i class='i-radio'></i> Radio</a></li>
+                        <li><a href="/tv/"><i class='fa fa-desktop'></i> TV</a></li>
+                        <!-- <li><a href="/rewards"><i class='fa fa-gift'></i> Rewards</a></li> -->
+                        <li class="mobile-nav-loggedin-menu" style="display: none"><a href="http://www.theblaze.com/wp-login.php?action=logout&amp;redirect_to=%2F&amp;_wpnonce=ec47867a8b"><i class='fa fa-power-off'></i>  Logout</a></li>
+                        <li><hr class='m0'></li>
+                    </ul>
+                    <ul class="mobile-nav-small-list text-muted">
+                        <li class="mobile-nav-loggedin-menu" style="display: none"><a class="link-inverse" href="/following">Following</a></li>
+                        <li class="mobile-nav-loggedin-menu" style="display: none"><a class="link-inverse" href="/saved">Saved Content</a></li>
+                        <li><a class="link-inverse" href="/help/">Help</a></li>
+                        <li><a class="link-inverse" href="/referrals/">Invite Friends</a></li>
+                        <li><a class="link-inverse" href="/contact/">Contact</a></li>
+                        <li><a class="link-inverse" href="/jobs/">Jobs</a></li>
+                        <li><a class="link-inverse" href="/advertise/">Advertise</a></li>
+                        <li><a class="link-inverse" href="/content-partners/">Content Partners</a></li>
+                        <li><a class="link-inverse" target="_blank" href="/terms/">Terms</a></li>
+                        <li><a class="link-inverse" target="_blank" href="/privacy/">Privacy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='modal' id='newsletter_modal' role='dialog' tabindex='-1'>
+  <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed' type='button'>
+    <span aria-hidden='true'>×</span>
+  </button>
+  <div class='modal-dialog'>
+    <div class='modal-content py20'>
+      <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed-inner' type='button'>
+        <span aria-hidden='true'>×</span>
+      </button>
+      <div class='modal-body p20 big'>
+                    <div class="newsletter-modal">
+            <div class="sidebar-content widget widget-container widget_sailthru_signup_widget" id="sailthru_signup_widget-7"><div class="form-wrap newsletter-form">
+    <form id="ajaxNewsletterForm" method="post" name="ajaxNewsletterForm" data-no-submit="true" novalidate="novalidate">
+        <h5 class="text-center">Get TheBlaze Newsletters</h5>
+        <div class="form-group form-group-xsm mb10">
+            <div class="input-grp clearfix">
+                <input id="ns_rounded_input" type="email" id="ns-Email" name="Email" placeholder="Email" class="form-control input-sm placeholder-block modal-focus-input" data-validation="required,email" data-required-msg="Please enter a valid email address" data-email-msg="Please enter a valid email address">
+                <button id="newsletter_submit" type="submit" class="btn btn-sm btn-default">
+                    <span class="text">Sign Up</span>
+                    <span class="loading"><i class="tblz-spinner"></i></span>
+                </button>
+            </div>
+        </div>
+        <input type="hidden" name="lists[TheBlaze Daily AM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Daily PM - last 270 days]" value="1" />
+        <input type="hidden" name="lists[TheBlaze Exclusives]" value="1" />
+        <input type="hidden" name="lists[Phoenix Transactional Messaging Notifications]" value="1" />
+        <input type="hidden" name="action" value="emailapi" />
+    </form>
+</div>
+
+<div class="text-center mt20 newsletter-refer-friends-link">
+    <a id="btn-referral" class="btn btn-info btn-sm" data-toggle="modal" data-target="#login_modal" href="#"><i class="fa fa-users mr5"></i>Refer Friends, Earn Rewards!</a></div>
+</div>            </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+<div class='modal' id='comments_faq_modal' role='dialog' tabindex='-1'>
+  <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed' type='button'>
+    <span aria-hidden='true'>×</span>
+  </button>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed-inner' type='button'>
+        <span aria-hidden='true'>×</span>
+      </button>
+      <div class='modal-body'>
+        <h3 class='h2 modal-title text-center mb20'>Comment Section FAQ</h3>
+        <section>
+          <h5 class="h4 mb5">I'm not seeing my post to MyVoice. How come?</h5>
+          <p class="bigger">Approved posts to MyVoice will be live on the site within a few hours. MyVoice is for posting intelligent, engaging, entertaining and thought-provoking commentary and stories, so following these guidelines will help get your post prioritized and noticed.</p>
+        </section>
+        <section>
+          <h5 class="h4 mb5">Why is there a red <img src="/wp-content/themes/theblaze/images/badge-flag-sample.png" alt="X" width="16" /> near my name?</h5>
+          <p class="bigger">Moderators assign strikes for violations of our comment policy. Strikes will disappear automatically in 24 hours, provided you have no further violations. However, if you earn three strikes within 24 hours, your account will be temporary suspended.</p>
+        </section>
+        <section>
+          <h5 class="h4 mb5">How can I delete my comments after I’ve posted them?</h5>
+          <p class="bigger">Please email <a href="mailto:moderation@theblaze.com">moderation@theblaze.com</a> to let us know you would like it removed.</p>
+        </section>
+        <section>
+          <h5 class="h4 mb5">I’m having trouble editing and replying to comments, or I’m getting an error when I try to post. What can I do?</h5>
+          <p class="bigger">If you notice something is not working as expected, please email us at <a href="mailto:moderation@theblaze.com">moderation@theblaze.com</a>.</p>
+        </section>
+        <section>
+          <h5 class="h4 mb5">What should I do if I see someone causing trouble?</h5>
+          <p class="bigger">You can report offending posts by clicking on the little flag icon below every post. This will automatically inform our moderators. If you spot a troublemaker, you can also email us at <a href="mailto:moderation@theblaze.com">moderation@theblaze.com</a>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    var   searchNavTemp = Handlebars.templates['modals/searchNavModal']
+        , blzRewardTemp = Handlebars.templates['modals/blazeRewardModal']
+        , verifyTemp    = Handlebars.templates['modals/resendVerificationModal']
+        , referralTemp  = Handlebars.templates['modals/referralModal']
+        //, messageTemp   = Handlebars.templates['modals/messageModal']
+        , body          = $('body')
+    ;
+
+    body.append(searchNavTemp);
+    body.append(blzRewardTemp);
+    body.append(verifyTemp);
+    body.append(referralTemp);
+    //body.append(messageTemp);
+</script>
+
+<div class='modal' id='community_rules_modal' role='dialog' tabindex='-1'>
+  <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed' type='button'>
+    <span aria-hidden='true'>×</span>
+  </button>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed-inner' type='button'>
+        <span aria-hidden='true'>×</span>
+      </button>
+      <div class='modal-body px20 big'>
+        <h3 class='text-center modal-title h2 mb10'>Community Rules</h3>
+        <p>Speak your mind. Please be respectful of our rules and community. Asking people to upvote you or your post are not allowed. No spam, abuse, obscenities, off-topic comments, racial or ethnic slurs, threats, hate, comments that incite violence or excessive use of flagging permitted.</p>
+        <p class="mb10">Please be respectful of our community and spread some love. Any of the following may result in a permanent ban:</p>
+        <ul class="pb20">
+          <li>Spam</li>
+          <li>Abusive</li>
+          <li>Obscene language</li>
+          <li>Obscene photos</li>
+          <li>Off-topic comments</li>
+          <li>Racial or ethnic slurs</li>
+          <li>Threats of any kind</li>
+          <li>Hate messages</li>
+          <li>Excessive use or the flagging (report as spam) feature</li>
+          <li>Asking people to upvote your comments or posts</li>
+        </ul>
+        <p class="small">For more information, please see our <a href="/terms" target="_blank">Terms of Use.</a> Now, go have fun and speak your mind!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="radio-outer-wrap">
+  <div class="radio-player-wrap">
+    <div class="radio-inner-wrap">
+      <div id="live_radio_player"></div>
+      <div id="live_radio_player_misc">
+        <div class="row">
+          <div class="col-sm-4 hidden-xs">
+            <div class="img-wrap pull-right"><img class="img-responsive radio-show-img" /></div>
+          </div>
+          <div class="col-sm-8">
+            <div class="show-name"><span class="radio-show-name-text"></span>&nbsp;<span class="text-primary"></span></div>
+            <div class="show-controls">
+              <a href="#" class="tutorial-live-radio"><i class="fa fa-lg fa-question-circle"></i></a>
+              <a href="#" class="resume-live-radio"><i class="fa fa-lg fa-play"></i></a>
+              <a href="#" class="pause-live-radio"><i class="fa fa-lg fa-pause"></i></a>
+              <a href="#" class="mute-live-radio radio-sound-link"><i class="fa fa-lg fa-volume-up"></i></a>
+              <a href="#" class="unmute-live-radio radio-sound-link"><i class="fa fa-lg fa-volume-off"></i></a>
+              <div id="radio_volume_slider" data-slider-range="0,100" data-slider-step="100" data-slider-snap="false" data-slider-highlight="true" data-slider-theme="volume"></div>
+            </div>
+            <div class="show-status"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="link-inverse icon close-radio-player">
+        <span aria-hidden="true">×</span>
+      </a>
+      <a href="#" class="tutorial-ondemand-radio link-inverse icon"><i class="fa fa-lg fa-question-circle"></i></a>
+      <div id="ondemand_radio_player"></div>
+    </div>
+  </div>
+</div>
+
+<div class='modal' data-backdrop='static' id='video_modal' role='dialog' tabindex='-1'>
+  <button aria-label='Close' class='btn btn-link modal-close-fixed modal-close  modal-focus-input' type='button'>
+    <span aria-hidden='true'>×</span>
+  </button>
+  <div class='modal-dialog modal-xlg'>
+    <div class='modal-content'>
+      <div class='modal-body'>
+        <button aria-label='Close' class='btn btn-link modal-close modal-close-fixed-inner' type='button'>
+          <span aria-hidden='true'>×</span>
+        </button>
+        <div id='video_wrap'></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- TABOOLA FOOTER BEGIN -->
+<script>
+    window._taboola = window._taboola || [];
+    _taboola.push({flush:true});
+</script>
+<!-- TABOOLA FOOTER END -->
+<!-- BEGIN Quantcast tag -->
+<script type="text/javascript">
+	window._qevents = window._qevents || [];
+	_qevents.push( { qacct:"p-71oNGphxIE1Is"} );
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-71oNGphxIE1Is.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<!-- END Quantcast tag -->
+<!-- BEGIN bounceexchange Tag -->
+<script>
+(function(d) {
+	var e = d.createElement('script');
+	e.src = d.location.protocol + '//bounceexchange.com/tag/815/i.js';
+	e.async = true;
+	d.getElementsByTagName("head")[0].appendChild(e);
+}(document));
+</script>
+<!-- END bounceexchange Tag -->
+<!-- BEGIN comScore Tag -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6036262" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6036262&amp;c4=%2Fvideo%2Ffinal-thoughts-learning-a-lesson-in-political-modesty-from-lady-gaga%2F" />
+</noscript>
+<!-- END comScore Tag -->
+<!-- BEGIN GA Tracking -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77303533-1', 'auto');
+
+
+    var dimensionValue = "post_type: jwvideo";
+    ga('set', 'dimension1', dimensionValue);
+	//_gaq.push("author: skookum");
+    var dimensionValue = "author: skookum";
+    ga('set', 'dimension2', dimensionValue);
+	//_gaq.push(["_setCustomVar",4,"category","politics",3]);
+      var dimensionValue = "channel: Tomi Lahren";
+      ga('set', 'dimension3', dimensionValue);
+	//_gaq.push("user_level: visitor");
+    var dimensionValue = "user_level: visitor";
+    ga('set', 'dimension4', dimensionValue);
+    ga('set', 'dimension5', 'not logged-in');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- END GA Tracking -->
+<script type='text/javascript' src='http://www.theblaze.com/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+<!-- BEGIN Chartbeat footer Tag -->
+<script type='text/javascript'>
+var _sf_async_config = _sf_async_config || {};
+/** CONFIGURATION START **/
+_sf_async_config.sections = 'Clips,Politics';
+_sf_async_config.authors = 'TheBlaze';
+
+
+/** CONFIGURATION END **/
+(function() {
+    function loadChartbeat() {
+        window._sf_endpt = (new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+
+ e.setAttribute('src', '//static.chartbeat.com/js/chartbeat_video.js');
+        document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() {
+            oldonload();
+            loadChartbeat();
+        };
+    
+    
+
+
+})(); </script>
+<!-- END Chartbeat footer Tag -->
+<!-- OMNITURE TRACKING BEGIN -->
+<script src="http://common.prndigital.com/js/s_code.js" type="text/javascript"></script>
+<script type="text/javascript">
+    if(typeof s !== 'undefined') {
+        s.pageName="articles:Learning a lesson in political modesty from Lady Gaga";
+        s.prop1="";
+        s.prop2="";
+        s.prop3="Learning a lesson in political modesty from Lady Gaga";
+        s.prop4=1235746;
+        s.prop5="website";
+        s.prop6="TheBlaze";
+        s.prop8="NEWSTALK" ;
+        s.prop10="articles";
+        s.prop35="guest";
+        s.hier2="TheBlaze,NEWSTALK";
+        <!--
+        /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+        var s_code=s.t();if(s_code)document.write(s_code)
+        //-->
+    }
+</script>
+<!-- OMNITURE TRACKING END -->
+<!-- Begin /75484061/AdSupplyUnit -->
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineOutOfPageSlot('/75484061/AdSupplyUnit', 'div-gpt-ad-1478183025130-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- End /75484061/AdSupplyUnit -->
+<!-- Begin /75484061/AdSupplyUnit -->
+<div id='div-gpt-ad-1478183025130-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1478183025130-0'); });
+</script>
+</div>
+<!-- End /75484061/AdSupplyUnit -->
+<!-- Sailthru Horizon ASYNC -->
+<script type="text/javascript">
+    (function() {
+        function loadHorizon() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://www.theblaze.com/wp-content/plugins/tblz_sailthru/js/2d981fd23cc1463801b421dd790dd80f.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+        loadHorizon();
+        var oldOnLoad = window.onload;
+        window.onload = function() {
+            if (typeof oldOnLoad === 'function') {
+                oldOnLoad();
+            }
+            try {
+		if (window.outerWidth < 800) {
+                	Sailthru.setup({"domain":"horizon.theblaze.com"});
+		}
+		else {
+			Sailthru.setup({ domain: 'horizon.theblaze.com', concierge:{from:"top",threshold:250,filter:{tags:"site-theblaze"}} });
+		}
+            }
+            catch(err) {
+            }
+        };
+    })
+    ();
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4053fa04f8","applicationID":"33536584","transactionName":"b1FbY0ZSDxBRUUVaWVYbeFRAWg4NH1tfV1NA","queueTime":0,"applicationTime":630,"atts":"QxZYFQ5IHB4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

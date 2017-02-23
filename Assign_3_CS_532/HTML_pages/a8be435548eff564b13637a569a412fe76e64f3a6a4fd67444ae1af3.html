@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6bff3705b4","applicationID":"4221086","transactionName":"JQxZEEAOClxRQBhSWQkEREtBCQlH","queueTime":0,"applicationTime":217,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug8EUFVWGwcCVlBSDwc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed
+</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-51385005-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+</script>
+<script>
+  ga('create', 'UA-69860157-1', 'auto', {'name': 'creatorTracker'});
+</script>
+<script>
+  ga('create', 'UA-75799775-1', 'auto');
+</script>
+
+<script type='text/javascript'>
+!function(e){"use strict";var r=function(r,n,t){function o(e){return u.body?e():void setTimeout(function(){o(e)})}function i(){s.addEventListener&&s.removeEventListener("load",i),s.media=t||"all"}var a,u=e.document,s=u.createElement("link");if(n)a=n;else{var d=(u.body||u.getElementsByTagName("head")[0]).childNodes;a=d[d.length-1]}var f=u.styleSheets;s.rel="stylesheet",s.href=r,s.media="only x",o(function(){a.parentNode.insertBefore(s,n?a:a.nextSibling)});var l=function(e){for(var r=s.href,n=f.length;n--;)if(f[n].href===r)return e();setTimeout(function(){l(e)})};return s.addEventListener&&s.addEventListener("load",i),s.onloadcssdefined=l,l(i),s};"undefined"!=typeof exports?exports.loadCSS=r:e.loadCSS=r}("undefined"!=typeof global?global:this),function e(r,n,t){function o(a,u){if(!n[a]){if(!r[a]){var s="function"==typeof require&&require;if(!u&&s)return s(a,!0);if(i)return i(a,!0);var d=new Error("Cannot find module '"+a+"'");throw d.code="MODULE_NOT_FOUND",d}var f=n[a]={exports:{}};r[a][0].call(f.exports,function(e){var n=r[a][1][e];return o(n?n:e)},f,f.exports,e,r,n,t)}return n[a].exports}for(var i="function"==typeof require&&require,a=0;a<t.length;a++)o(t[a]);return o}({1:[function(e){"use strict";var r=e("../helpers/browser_helper");!function(e){e.BrowserHelper=e.BrowserHelper||r,window.app=e}(window.app||{})},{"../helpers/browser_helper":2}],2:[function(e,r){"use strict";r.exports=function(e){var r={tablet:"768",desktop:"1024"},n=function(n){return e.matchMedia("(min-width: "+r[n]+"px)").matches},t=function(){return navigator.userAgent.indexOf("Android")>-1},o=function(){var e=navigator.userAgent;return e.indexOf("FBAN")>-1||e.indexOf("FBAV")>-1},i=function(e){e=e.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var r=new RegExp("[\\?&]"+e+"=([^&#]*)"),n=r.exec(location.search);return null===n?"":decodeURIComponent(n[1].replace(/\+/g," "))};return{screenSizeIsAtLeast:n,isAndroid:t,isFbInAppBrowser:o,urlParameter:i}}(window)},{}]},{},[1]);
+</script>
+<style>
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;padding:0}article,aside,header{display:block}a{background-color:transparent;text-decoration:none}h1{margin:.67em 0}h1,h5,p,ul{margin-top:0}img{border:0;vertical-align:middle;max-width:100%}button,input{color:inherit;font:inherit;border:none;margin:0;line-height:inherit}button{overflow:visible;text-transform:none;-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}*,::after,::before{box-sizing:inherit}html{box-sizing:border-box;font-size:93.75%;line-height:1.5em}@-ms-viewport{width:device-width}@-o-viewport{width:device-width}@viewport{width:device-width}h1,h5{margin-bottom:.5rem}p,ul{margin-bottom:1rem}h1{font-size:2.13333333em;line-height:1.078125em}h5{font-size:.8em;line-height:1.125em}.wrap--outer{background-color:#FFF;margin-top:50px;max-width:62.75em;margin-left:auto;margin-right:auto;padding:1.125em 1em}.wrap--outer:after{content:&quot; &quot;;display:block;clear:both}.wrap--inner{border-top-style:solid;border-top-width:1px;margin-top:1.125em;padding-bottom:1.5em;overflow:hidden}.container--main{padding-top:1.125em}.social-icons ul{margin:0;padding:0;list-style:none}.navigation-overlay__container:after,.navigation-overlay__item-list:after{content:&quot;&quot;;display:table;clear:both}.header-main--right,.header-main__logo,.header-main__nav-toggle{display:table-cell;width:15%;height:100%;vertical-align:middle}.header-main{height:55px;padding:.6rem 0;position:fixed;top:0;width:100%;z-index:100}.header-main__container{max-width:62.75em;margin-left:auto;margin-right:auto;display:table;padding:0 1em;table-layout:fixed;width:100%}.header-main__container:after{content:&quot; &quot;;display:block;clear:both}.header-main__logo{text-align:center;width:70%}.header-main__logo-image{max-height:35px}.header-main--right,.header-main__nav-toggle{font-size:1.3em;line-height:1.07692308em}.header-main__social-account-list{display:none}.header-main__search-form,.header-main__social-account-item{float:right}.header-main__search-form{border:none;position:relative;outline:0;z-index:10}.header-main__search-form-input{border:none;height:30px;padding-left:0;padding-right:0;position:absolute;right:-5px;top:-5px;width:0;font-size:.8em;line-height:1.125em}.header-main__search-form-submit{background-color:transparent;border:none;outline:0;padding:0;position:relative;right:0;top:0;z-index:101}@font-face{font-family:fanbreadicons;src:url(/assets/theme_templates/v3/fanbreadicons.eot?j0a902);src:url(/assets/theme_templates/v3/fanbreadicons.eot?#iefixj0a902) format(&quot;embedded-opentype&quot;),url(/assets/theme_templates/v3/fanbreadicons.ttf?j0a902) format(&quot;truetype&quot;),url(/assets/theme_templates/v3/fanbreadicons.woff?j0a902) format(&quot;woff&quot;),url(/assets/theme_templates/v3/fanbreadicons.svg?j0a902#icomoon) format(&quot;svg&quot;);font-weight:400;font-style:normal}[class*=fb-icon-]{display:inline-block;font-family:fanbreadicons;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fb-icon--large{font-size:2em}.fb-icon--play-square:before{content:&quot;\e600&quot;}.fb-icon--posts:before{content:&quot;\e601&quot;}.fb-icon--menu:before{content:&quot;\e607&quot;}.fb-icon--search:before{content:&quot;\e608&quot;}.fb-icon--close:before{content:&quot;\e900&quot;}.fb-icon--mail:before{content:&quot;\e902&quot;}.fb-icon--twitter:before{content:&quot;\f099&quot;}.fb-icon--facebook:before{content:&quot;\f09a&quot;}.fb-icon--google-plus:before{content:&quot;\f0d5&quot;}.fb-icon--question_mark:before{content:&quot;\f128&quot;}.fb-icon--youtube:before{content:&quot;\f16a&quot;}.navigation-overlay,.navigation-overlay-backdrop{bottom:0;display:none;left:0;position:fixed;right:0;top:0}.navigation-overlay-backdrop{background-color:rgba(0,0,0,.9);z-index:50}.navigation-overlay{overflow-x:hidden;overflow-y:auto;margin:10%;z-index:100}.navigation-overlay__container{color:#FFF;max-width:90%;margin-left:auto;margin-right:auto}.navigation-overlay__container:after{content:&quot; &quot;;display:block;clear:both}.navigation-overlay__close-button{color:#FFF;position:fixed;left:1rem;top:1rem;font-size:1.66666667em;line-height:1.08em}.navigation-overlay__item-list{clear:right;list-style:none;margin:3em 0 0;padding-left:0}.navigation-overlay__item-list--policies{margin-top:6em}.navigation-overlay__item-icon-container{border-radius:25px;display:inline-block;float:left;height:40px;margin-right:1.5rem;position:relative;text-align:center;width:40px}.navigation-overlay__item-icon{position:relative;top:4px}.fb-icon--question_mark{top:6px}.navigation-overlay__item{font-size:1.66666667em;line-height:1.5em;margin-bottom:1.5em}.navigation-overlay__item-policy{font-size:.8em;line-height:1.5em}.navigation-overlay__item-title{display:table-cell}.sidebar{display:none;padding-top:1.5em}.social-share{margin-bottom:1.5em}.social-share__button{color:#FFF;display:inline-block;padding:.5em;text-align:center;width:46.15384615%}.social-share__button:last-child{float:right;margin-right:0}.social-share__button-circle{color:#FFF;font-size:1.25em;text-align:center;width:50px;height:50px;border-radius:50%;display:table-cell;vertical-align:middle;padding:0}.social-share__button-circle:last-child{float:none}.social-share__button--facebook,.social-share__button-circle--facebook{background:#2f5f9d}.social-share__button--twitter,.social-share__button-circle--twitter{background:#2fc2f5}.social-share__button-circle--twitter{padding-top:5px}.social-share__button-circle--google_plus{background:#e41e33;padding-top:5px}.social-share__button-circle--mail{background:#000;padding-top:5px}.social-icons{display:none}.social-icons h5{color:#000}.posts-row{border-bottom-style:solid;border-bottom-width:1px;overflow:hidden}.posts-row .container--main{margin-bottom:0}.post-container{overflow:hidden;margin-bottom:1.5em}.post__title{font-size:2em;line-height:1.05em;margin-top:.375em;margin-bottom:.375em}.post-thumbnail{margin-bottom:.75em}.post-thumbnail__image{margin-bottom:.375em}.post-thumbnail__image img{width:100%}.post-thumbnail__source{text-align:right;font-style:italic;margin-right:10px;font-size:.75em;line-height:1.5em}.post-meta{margin-bottom:.75em}.post-meta__list{list-style:none;margin:0 0 .75em;padding:0}.post-meta__item{display:inline-block}.post__body p{margin-bottom:1.5em}
+</style>
+
+<script type='text/javascript'>
+loadCSS("http://a1.fanbread.com/assets/theme_templates/v3/application-886428cc1ceb302a616c65c19f55c59e.css")
+loadCSS('http://fonts.googleapis.com/css?family=Open Sans')
+loadCSS('http://fonts.googleapis.com/css?family=Open Sans')
+</script>
+<style>
+  h1, h2, h3, h4, h5 {
+    color: #e6e6e6; }
+  
+  body {
+    background-color: white;
+    color: #000000;
+    font-family: sans-serif; }
+    .fonts-loaded body {
+      font-family: open sans, sans-serif; }
+  
+  a {
+    color: #70469a; }
+    a:hover {
+      opacity: .8; }
+  
+  .header-main {
+    background-color: white; }
+  
+  .header-main__nav-toggle-link,
+  .header-main__social-account-link,
+  .header-main__search-link,
+  .header-main__search-form-submit {
+    color: #449ba7; }
+    .header-main__nav-toggle-link:hover,
+    .header-main__social-account-link:hover,
+    .header-main__search-link:hover,
+    .header-main__search-form-submit:hover {
+      color: #84c4cd; }
+  
+  .header-main__search-form {
+    border-left-color: #449ba7; }
+  
+  .header-main__search-form-input {
+    background-color: #d9d9d9;
+    color: #999999; }
+    .header-main__search-form-input::-webkit-input-placeholder {
+      color: #999999; }
+    .header-main__search-form-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #999999; }
+    .header-main__search-form-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #999999; }
+    .header-main__search-form-input:-ms-input-placeholder {
+      color: #999999; }
+  
+  .navigation-overlay__item-link {
+    color: white; }
+    .navigation-overlay__item-link:hover {
+      opacity: 1; }
+      .navigation-overlay__item-link:hover .navigation-overlay__item-icon {
+        color: #102528; }
+    .navigation-overlay__item-link .navigation-overlay__item-icon-container {
+      background-color: white; }
+    .navigation-overlay__item-link .navigation-overlay__item-icon {
+      color: #26585f; }
+  
+  .select2-container .select2-choice {
+    background: white;
+    color: gray !important; }
+  
+  .select2-drop {
+    background: white; }
+    .select2-drop li {
+      color: gray; }
+    .select2-drop .select2-highlighted {
+      background: #e6e6e6;
+      color: #999999; }
+  
+  .wrap--inner,
+  .container--main,
+  .heading-block,
+  .post-list__item--divided,
+  .post-grid,
+  .posts-row,
+  .load-more,
+  .load-more__post-list,
+  .footer-wrap__newsletter,
+  .post__body {
+    border-color: #b5b5b5; }
+  
+  .fonts-loaded .post-list__item-title, .fonts-loaded .post-grid__item-title, .fonts-loaded .post__title, .fonts-loaded .post-grid__title {
+    font-family: open sans, open sans, sans-serif; }
+  
+  .post-list__item-title, .post-grid__item-title, .load-more__link {
+    color: #8a44a7; }
+    .post-list__item-title:hover, .post-grid__item-title:hover, .load-more__link:hover {
+      opacity: .8; }
+  
+  .post__title, .listicle-item__title, .paginated-post__title {
+    color: #8a44a7; }
+  
+  .post-list__item-publish-date {
+    color: #5d2e71;
+    opacity: .25; }
+  
+  .post-grid__title {
+    color: #d9d9d9; }
+  
+  .web-push-opt-in {
+    background-color: white; }
+    .web-push-opt-in a {
+      color: #d9d9d9; }
+  
+  .footer a {
+    color: #f5fd35; }
+    .footer a:hover, .footer a:active {
+      opacity: .8; }
+  
+  .footer__wrap--newsletter {
+    background-color: white; }
+  
+  .footer-wrap__navigation--bottom {
+    background-color: black;
+    color: #4d4d4d; }
+  
+  .navigation__list-link {
+    color: #4d4d4d; }
+  
+  .post-meta, .post-thumbnail__source {
+    color: #4d4d4d; }
+  
+  .post-meta__item--author {
+    color: black; }
+  
+  .newsletter-signup--in-post {
+    background-color: #8a44a7;
+    border-top-color: #ad72c6; }
+  
+  .load-comments__btn, .next-button__link {
+    background-color: #70469a;
+    color: black; }
+  
+  footer {
+    background: #353535; }
+</style>
+
+<link href='http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed' rel='canonical'>
+<link rel="shortcut icon" type="image/x-icon" href="http://a1.fanbread.com/assets/shared/favicon-95f489a6613e0a08f20013b8afa6af4d.ico" />
+<!-- Javascript -->
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.environment="production";gon.currentSite={"id":133,"slug":"therealrickeysmiley","rootUrl":"http://blog.therealrickeysmiley.com","optedIntoAgreement":true,"gaTrackingId":"UA-69860157-1","title":"Team Smiley","fanbreadBlog":false,"paginateListicles":false,"revcontent":{"belowArticle":{"divId":"737629","srcId":"24070","enabled":true},"rightSidebar":{"divId":"f7c640","srcId":"24073","enabled":true},"relatedPosts":{"widgetId":"40110","enabled":true},"domain":"blog.therealrickeysmiley.com"},"ryFloater":{"guid":"72E3659091","enabled":true},"lkqdFloater":true,"carambola":{"pixel":"tv88","did":"110662","enabled":true},"nativo":true,"customAdJsDesktop":null,"customAdJsMobile":null,"customAdCssDesktop":null,"customAdCssMobile":null,"browserCloseRate":"1440","disqusShortname":"realteamsmiley"};gon.gid="gid://toaster/Blog/68718";gon.tags="Betsy-DeVos,politics";gon.type="Blog";gon.post={"id":68718,"originalPostId":68715,"title":"Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed","url":"http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed","publishDate":"2017-02-07T20:45:43.000Z","author":"Maria Elena","nextPostUrl":"http://blog.therealrickeysmiley.com/blogs/missy-elliott-is-back-with-a-hot-new-single-a-documentary-on-the-way"};
+//]]>
+</script>
+<!-- Ads -->
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/51698323/FB_ATF_Leaderboard', [728, 90], 'pl-div-fanbread-0')
+      .defineSizeMapping(googletag.sizeMapping().
+        // serve all large banners for screens 1010px
+        addSize([1010, 0], [[728, 90], [970, 90], [970,250]]).
+        // serve leaderboard only
+        addSize([768, 0], [728, 90]).
+        // serve mobile leaderboard and mrec
+        addSize([0, 0], [[320, 50],[300,100], [320,100]]).
+        build()
+      ).addService(googletag.pubads());
+  
+    googletag.display('pl-div-fanbread-0');
+  
+    googletag.defineSlot('/51698323/FB_ATF_MREC', [300, 250], 'pl-div-fanbread-1')
+      .defineSizeMapping(googletag.sizeMapping().
+        // serve mrec
+        addSize([1009, 0], [300, 250]).
+        // hide units as side bar is hidden
+        addSize([0, 0], []).
+        build()
+      ).addService(googletag.pubads());
+  
+    googletag.display('pl-div-fanbread-1');
+  
+    googletag.defineSlot('/51698323/FB_RR_HalfPage', [300, 600], 'pl-div-fanbread-2')
+      .defineSizeMapping(googletag.sizeMapping().
+        // serve mrec and halfpage
+        addSize([1009, 0], [[300, 600], [300,250]]).
+        // hide units as side bar is hidden
+        addSize([0, 0], []).
+        build()
+      ).addService(googletag.pubads());
+  
+    googletag.display('pl-div-fanbread-2');
+  
+    googletag.defineSlot('/51698323/FB_OOP', [1, 1], 'pl-div-fanbread-6').addService(googletag.pubads());
+  
+    googletag.display('pl-div-fanbread-6');
+  
+    if(gon.currentSite.id === 159) {
+      // Testing GumGum Ads on GED Section
+      googletag.defineSlot('/51698323/FB_1x1', [1, 1], 'div-gpt-ad-1465596963920-0').addService(googletag.pubads());
+      googletag.display('div-gpt-ad-1465596963920-0');
+    }
+  })
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.pubads()
+      .setTargeting('page_id', '68718')
+      .setTargeting('keywords', 'Betsy-DeVos, politics');
+  })
+</script>
+
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.pubads()
+      .setTargeting('site', '133')
+      .setTargeting('page', 'article')
+      .setTargeting('environment', 'production');
+  
+    googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    googletag.pubads().refresh();
+  })
+</script>
+
+<!-- Testing Admiral Ad Blocker Tracking -->
+<script>
+  (function(a,b,c,d,e){
+    e=a.createElement(b);a=a.getElementsByTagName(b)[0];e.async=1;e.src=c;a.parentNode.insertBefore(e,a)})(document,'script',"//flavordecision.com/48efd14db7bce22f4ab05bcc39540be4b6de2b9e2223e477f8eb79a2f7306a13be4aa28c9d31cd6e7d7beeb3027d9bf60961f951b73600dbdef45c2a48c4");</script>
+</script>
+
+<!-- Testing Google Vignette Ads on Astral & Opal -->
+<meta name="keywords" content="betsy-devos, politics" />
+<meta name="robots" content="noindex" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@RickeySmiley" />
+<meta name="twitter:creator" content="@RickeySmiley" />
+<meta name="twitter:title" content="Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed" />
+<meta name="twitter:description" content="The Senate is scheduled to vote Tuesday on the confirmation of clueless anti-public school billionaire Betsy DeVos as education secretary.
+
+Despite the major backlash DeVos has received, the vote i..." />
+<meta name="twitter:image:src" content="http://a3.fanbread.com/uploads/blog/featured_image/68718/extra_large_cropped_GettyImages-631922086.jpg" />
+<meta property="og:site_name" content="Team Smiley" />
+<meta property="og:type" content="Article" />
+<meta property="og:article:author" content="https://www.facebook.com/
+            171133359591663" />
+<meta property="og:title" content="Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed" />
+<meta property="og:url" content="http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed?utm_campaign=84135&amp;utm_medium=cmsshare&amp;utm_source=twitter&amp;utm_term=rickeysmiley" />
+<meta property="og:image" content="http://a0.fanbread.com/uploads/blog/featured_image/68718/extra_large_cropped_GettyImages-631922086.jpg" />
+<meta property="og:description" content="The Senate is scheduled to vote Tuesday on the confirmation of clueless anti-public school billionaire Betsy DeVos as education secretary.
+
+Despite the major backlash DeVos has received, the vote i..." />
+<meta property="fb:app_id" content="321324484703464" />
+</head>
+<body class='blogs show '>
+<div id='fb-root'></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : "321324484703464",
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+  
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+<header class='header-main' role='banner'>
+<div class='header-main__container'>
+<div class='header-main__nav-toggle'>
+<a class='header-main__nav-toggle-link fb-icon fb-icon--menu' href='#'></a>
+</div>
+<div class='header-main__logo'>
+<a class='header-main__logo-link' href='/'>
+<picture>
+<!--[if IE 9]>
+<video style='display: none'>
+<![endif]-->
+<source class='header-main__logo' media='(min-width: 48em)' srcset='http://a3.fanbread.com/uploads/site/logo/133/medium_cropped_rickeysmiley_rs_logo.png?325bedb53b7aa3e39d2bbb4f7d646e5b, http://a1.fanbread.com/uploads/site/logo/133/large_cropped_rickeysmiley_rs_logo.png?325bedb53b7aa3e39d2bbb4f7d646e5b 2x'>
+<img alt='Team Smiley' class='header-main__logo-image' srcset='http://a3.fanbread.com/uploads/site/logo/133/small_cropped_rickeysmiley_rs_logo.png?325bedb53b7aa3e39d2bbb4f7d646e5b, http://a3.fanbread.com/uploads/site/logo/133/medium_cropped_rickeysmiley_rs_logo.png?325bedb53b7aa3e39d2bbb4f7d646e5b 2x'>
+<!--[if IE 9]>
+</video>
+<![endif]-->
+</picture>
+</a>
+</div>
+<div class='header-main--right'>
+<div class='header-main__search-form'>
+<form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<input class='header-main__search-form-input' name='query' placeholder='Search...' type='text'>
+<button class='header-main__search-form-submit fb-icon fb-icon--search' disabled='disabled' type='submit'></button>
+</form>
+
+</div>
+<ul class='header-main__social-account-list'>
+<li class='header-main__social-account-item'>
+<a class='header-main__social-account-link' href='http://www.twitter.com/RickeySmiley' target='_blank'>
+<i class='fb-icon fb-icon--twitter'></i>
+</a>
+</li>
+<li class='header-main__social-account-item'>
+<a class='header-main__social-account-link' href='http://www.facebook.com/171133359591663' target='_blank'>
+<i class='fb-icon fb-icon--facebook'></i>
+</a>
+</li>
+<li class='header-main__social-account-item'>
+<a class='header-main__social-account-link' href='http://therealrickeysmiley.com/' target='_blank'>
+<i class='fb-icon fb-icon--home'></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='navigation-overlay-backdrop' data-animation-enter='fadeIn' data-animation-leave='fadeOut' data-state-enter='js-enter' data-state-leave='js-leave'>
+<a class='navigation-overlay__close-button' href='#'>
+<span>
+<i class='fb-icon fb-icon--large fb-icon--close'></i>
+</span>
+</a>
+</div>
+<div class='navigation-overlay' data-animation-enter='fadeInDown' data-animation-leave='fadeOut' data-state-enter='js-enter' data-state-leave='js-leave'>
+<div class='navigation-overlay__container'>
+<ul class='navigation-overlay__item-list'>
+<li class='navigation-overlay__item'>
+<a class='navigation-overlay__item-link' href='/posts'>
+<span class='navigation-overlay__item-icon-container'>
+<i class='fb-icon fb-icon--posts navigation-overlay__item-icon'></i>
+</span>
+<span class='navigation-overlay__item-title'>
+Posts
+</span>
+</a>
+</li>
+</ul>
+<ul class='navigation-overlay__item-list navigation-overlay__item-list--policies'>
+<li class='navigation-overlay__item-policy'>
+<a target="_blank" class="navigation-overlay__item-link" href="http://fanbread.com/terms">Terms &amp; Conditions</a>
+</li>
+<li class='navigation-overlay__item-policy'>
+<a target="_blank" class="navigation-overlay__item-link" href="http://fanbread.com/privacy">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</div>
+
+</header>
+
+
+<div class='wrap--outer'>
+<!-- /51698323/FB_ATF_Leaderboard -->
+<div class='ad-block ad-block--atf'>
+<div id='pl-div-fanbread-0'>
+<script>
+  googletag.cmd.push(function () {googletag.display('pl-div-fanbread-0');});
+</script>
+</div>
+</div>
+
+<div class='wrap--inner'>
+<div class='posts-wrapper'>
+<div class='posts-row'>
+<div class='container--main'>
+<div class='post-container'>
+<article class='post'>
+<header>
+<h1 class='post__title'>
+Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed
+</h1>
+<div class='post-thumbnail'>
+<div class='post-thumbnail__image'>
+<img alt='Hide Your Kids, Anti-Public School Billionaire Betsy DeVos To Be Confirmed' sizes='(min-width: 48em) 100vw, 100vw' src='http://a3.fanbread.com/uploads/blog/featured_image/68718/large_cropped_GettyImages-631922086.jpg' srcset='http://a1.fanbread.com/uploads/blog/featured_image/68718/medium_cropped_GettyImages-631922086.jpg 320w, http://a0.fanbread.com/uploads/blog/featured_image/68718/large_cropped_GettyImages-631922086.jpg 640w'>
+<div class='post-thumbnail__source'>
+<a href="http://www.gettyimages.com/detail/news-photo/betsy-devos-president-elect-donald-trumps-pick-to-be-the-news-photo/631922086">Getty Images</a></div>
+</div>
+</div>
+<div class='post-meta'>
+<ul class='post-meta__list'>
+<li class='post-meta__item'>
+By
+<span class='post-meta__item--author'></span>
+<a target="_blank" href="http://www.pinkchanelsuit.com">Maria Elena</a>
+</li>
+<li class='post-meta__item post-meta__item--divider'>
+|
+</li>
+<li class='post-meta__item'>
+<time datetime='February 07, 2017'>
+February 07, 2017
+</time>
+</li>
+</ul>
+<div class='social-icons'>
+<h5>
+Share this article
+</h5>
+<ul>
+<li>
+<a class='social-share__button social-share__button-circle social-share__button-circle--facebook' data-provider='fb' href='https://www.facebook.com/sharer/sharer.php?appId=&amp;layout=link&amp;display=popup&amp;href=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;u=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed' onclick="event.preventDefault(); window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550')" target='_blank'>
+<i class='fb-icon fb-icon--facebook'></i>
+</a>
+</li>
+<li>
+<a class='social-share__button social-share__button-circle social-share__button-circle--twitter' data-provider='tw' href='https://twitter.com/intent/tweet?text=Hide%20Your%20Kids,%20Anti-Public%20School%20Billionaire%20Betsy%20DeVos%20To%20Be%20Confirmed&amp;url=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;via=RickeySmiley' target='_blank'>
+<i class='fb-icon fb-icon--twitter'></i>
+</a>
+</li>
+<li>
+<a class='social-share__button-circle social-share__button-circle--google_plus' href='https://plus.google.com/share?url=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed' onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target='_blank'>
+<i class='fb-icon fb-icon--google-plus'></i>
+</a>
+</li>
+<li>
+<a class='social-share__button-circle social-share__button-circle--mail' href="mailto:?subject=Read%20this:%20Hide%20Your%20Kids,%20Anti-Public%20School%20Billionaire%20Betsy%20DeVos%20To%20Be%20Confirmed&amp;body=I%20think%20you'll%20like%20this:%20http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed">
+<i class='fb-icon fb-icon--mail'></i>
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</header>
+<div class='post__body'>
+<div class='social-share'>
+<a class='social-share__button social-share__button--facebook' data-provider='fb' href='https://www.facebook.com/sharer/sharer.php?appId=&amp;layout=link&amp;display=popup&amp;href=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;u=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed' onclick="event.preventDefault(); window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550')" target='_blank'>
+<i class='fb-icon fb-icon--facebook'></i>
+SHARE
+</a>
+
+<a class='social-share__button social-share__button--twitter' data-provider='tw' href='https://twitter.com/intent/tweet?text=Hide%20Your%20Kids,%20Anti-Public%20School%20Billionaire%20Betsy%20DeVos%20To%20Be%20Confirmed&amp;url=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;via=RickeySmiley' target='_blank'>
+<i class='fb-icon fb-icon--twitter social-share__button-icon'></i>
+TWEET
+</a>
+
+</div>
+<p>The Senate is scheduled to vote Tuesday on the confirmation of clueless anti-public school billionaire&nbsp;Betsy DeVos as education secretary.</p>
+
+<p>Despite the major backlash DeVos has received, the vote is expected to be a 50-50 tie that will be broken with a vote from Vice President Mike Pence, a DeVos supporter.&nbsp;</p>
+
+
+
+
+
+<p>All 48 Democratic senators are expected to vote against DeVos, along with Republicans Lisa Murkowski&nbsp;(Alaska)&nbsp;and&nbsp;Susan&nbsp;Collins&nbsp;(Maine). This leaves us with 50 Republicans who will most likely vote for DeVos.</p>
+
+
+
+
+
+<p>“We’re very confident that Betsy DeVos is going to be the next secretary of education and it’ll be my high honor to cast the deciding vote on the floor of the Senate next week,” Pence said on Fox News Sunday.</p>
+
+
+
+
+
+<figure id="iframe"><iframe id="iframe-window" scrolling="no" frameborder="0" width="100%" src="http://fanbread.com/api/embeds/52997.html" height="353" data-iframeautoheight-currentsrc="http://fanbread.com/api/embeds/52997.html"></iframe></figure>
+
+
+
+
+
+<p>DeVos has ZERO experience in public education or elected office, making both&nbsp;politicians and citizens shake their heads in disapproval.&nbsp;<br></p>
+
+
+
+<p>Her only&nbsp;"qualifications" are that she's a billionaire and a huge republican donor. If you look at her track record, she's used her wealth to advocate for alternatives to public schools and prefers private schooling, which is a nightmare most families cannot afford.</p>
+
+
+
+
+
+<p>If DeVos becomes education secretary, she would most likely give&nbsp;financial help to families&nbsp;so their children can go to religious&nbsp;private school instead of giving financial help to families so their children can go to college.</p>
+
+
+
+
+
+<p>DeVos never took out a student loan for her children because she could afford to pay for their college upfront, so she doesn't even understand what most people&nbsp;have to go through to get an education.&nbsp;</p>
+
+
+
+
+
+<p>We can cross our fingers that another Republican will come around and vote against DeVos, but as of now, public schools are in danger.</p>
+<div class='social-share'>
+<a class='social-share__button social-share__button--facebook' data-provider='fb' href='https://www.facebook.com/sharer/sharer.php?appId=&amp;layout=link&amp;display=popup&amp;href=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;u=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed' onclick="event.preventDefault(); window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550')" target='_blank'>
+<i class='fb-icon fb-icon--facebook'></i>
+SHARE
+</a>
+
+<a class='social-share__button social-share__button--twitter' data-provider='tw' href='https://twitter.com/intent/tweet?text=Hide%20Your%20Kids,%20Anti-Public%20School%20Billionaire%20Betsy%20DeVos%20To%20Be%20Confirmed&amp;url=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed&amp;via=RickeySmiley' target='_blank'>
+<i class='fb-icon fb-icon--twitter social-share__button-icon'></i>
+TWEET
+</a>
+
+</div>
+</div>
+<div class='recommended-posts recommended-posts--revcontent'></div>
+<div class='newsletter-signup--in-post'>
+<div class='newsletter-signup--in-post__container'>
+<h5 class='newsletter-signup__title'>
+Fresh content delivered straight to your inbox
+</h5>
+<form class="newsletter-signup--in-post__form" id="new_fan" action="/fans" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="gnEAnBr+8ArbXt64um7jrOULm/EeYw2tsxE4aMEey75kaXJkwy5jBpe239bN0zR8X2T0c9QeZZXhLIQm1nyGKA==" /><div class='newsletter-signup__response'></div>
+<div class='newsletter-signup__hide-after-success'>
+<input placeholder="Your email address..." class="newsletter-signup__email-field newsletter-signup--in-post__email-field" type="text" name="fan[email]" id="fan_email" />
+<input type="submit" name="commit" value="SIGN UP" class="newsletter-signup__submit newsletter-signup--in-post__submit" />
+</div>
+</form>
+</div>
+<div class='newsletter-signup__social-callout'>
+<h5 class='newsletter-signup__social-callout-title'>
+Like Team Smiley on Facebook!
+</h5>
+<div class='facebook-like fb-like' data-action='like' data-href='https://developers.facebook.com/docs/plugins/' data-layout='button_count' data-share='false' data-show-faces='false' href='https://www.facebook.com/171133359591663'></div>
+</div>
+</div>
+
+<a class='load-comments__btn' href='#'>SEE COMMENTS</a>
+<div class='comments-block'></div>
+</article>
+
+</div>
+</div>
+<aside class='sidebar'>
+<div class='sidebar__section'>
+<!-- /51698323/FB_ATF_MREC -->
+<div class='ad-block'>
+<div id='pl-div-fanbread-1'>
+<script>
+  googletag.cmd.push(function () {googletag.display('pl-div-fanbread-1');});
+</script>
+</div>
+</div>
+
+</div>
+<div class='sidebar__section'>
+<div id='rcjsload_f7c640'></div>
+<script>
+  (function() {
+    var referer="";
+    try{if(referer=document.referrer,"undefined"==typeof referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
+    var rcel = document.createElement("script");
+    rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+    rcel.type = 'text/javascript';
+    rcel.src = "http://trends.revcontent.com/serve.js.php?w=24073&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
+    rcel.async = true;
+    var rcds = document.getElementById("rcjsload_f7c640");
+    rcds.appendChild(rcel);
+  })();
+</script>
+
+</div>
+<div class='sidebar__section'>
+<!-- /51698323/FB_RR_HALFPAGE -->
+<div class='ad-block'>
+<div id='pl-div-fanbread-2'>
+<script>
+  googletag.cmd.push(function () {googletag.display('pl-div-fanbread-2');});
+</script>
+</div>
+</div>
+
+</div>
+</aside>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class='web-push-opt-in'>
+<a class='close-btn' href='#'>
+<i class='fb-icon fb-icon--close'></i>
+</a>
+<a class='action' href='googlechrome://navigate?url=http://blog.therealrickeysmiley.com/blogs/hide-your-kids-anti-public-school-billionaire-betsy-devos-to-be-confirmed?utm_campaign=84135&amp;utm_medium=cmsshare&amp;utm_source=twitter&amp;utm_term=rickeysmiley'>
+Click here to get alerts of the latest stories
+</a>
+</div>
+
+<footer class='footer'>
+<div class='footer-wrap__navigation'></div>
+<div class='footer-wrap__newsletter'>
+<div class='footer__container'>
+<div class='newsletter-signup'>
+<h5 class='newsletter-signup__heading'>
+SIGN UP FOR OUR NEWSLETTER
+</h5>
+<form class="newsletter-signup__form" id="new_fan" action="/fans" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="e6Gkk78wcSx9qIzl/SLvEvi0rzT/uG+ivl0D0WE60T0Z9IXao4gMCwuCTMjwYHyRe9bbG+AyYIhlKIdaVynWuw==" /><div class='newsletter-signup__response'></div>
+<div class='newsletter-signup__hide-after-success'>
+<input placeholder="Your email address..." class="newsletter-signup__email-field" type="text" name="fan[email]" id="fan_email" />
+<input type="submit" name="commit" value="SIGN UP" class="newsletter-signup__submit" />
+</div>
+</form>
+</div>
+
+</div>
+</div>
+<div class='footer-wrap__navigation--bottom'>
+<div class='footer__container'>
+<ul class='navigation__list-container'>
+<li class='navigation__list-item'>
+<a class='dmca-badge' href='http://www.dmca.com/Protection/Status.aspx?ID=ae4e86e1-f647-41f5-abb5-85317f8e2c3f' title='DMCA.com Protection Status'>
+<img alt='DMCA.com Protection Status' src='http://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=ae4e86e1-f647-41f5-abb5-85317f8e2c3f'>
+</a>
+</li>
+<li class='navigation__list-item'>
+<a class='navigation__list-link' href='mailto:ads@fanbread.com?subject=Advertising%20Inquiry%20for%20Team Smiley'>
+Advertise
+</a>
+</li>
+<li class='navigation__list-item'>
+<a target="_blank" class="navigation__list-link" href="http://fanbread.com/privacy">Privacy Policy</a>
+</li>
+<li class='navigation__list-item'>
+<a target="_blank" class="navigation__list-link" href="http://fanbread.com/terms">Terms &amp; Conditions</a>
+</li>
+</ul>
+
+<a class='powered-by navigation__list-link navigation__list-link--powered-by' href='http://fanbread.com' target='_blank'>
+<i class='powered-by__logo fb-icon--fanbread-logo'></i>
+<div class='powered-by__text'>
+Powered By FanBread
+</div>
+</a>
+</div>
+<div class='footer__bottom'>
+<small class='comscore'>
+Interactive One Millennial
+</small>
+</div>
+</div>
+</footer>
+
+<script src="http://a3.fanbread.com/assets/theme_templates/v3/application-7e42d03d792ccedf9c494ce6d1fb8eba.js" async="async"></script>
+<script>
+  (function(w, d, c, t, p, a){
+  w[c] = w[c] || function(){ (w[c].q = w[c].q || [])[p](arguments) };
+  var n = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  n.async = true; n.src = '//lib.vmweb.net/identity.min.js';
+  s.parentNode.insertBefore(n, s);
+  var i = '4f98eb6e-1278-4d0b-5e6c-bf6db3858753';
+  w[c]('init', i, "blog.therealrickeysmiley.com"); w[c]('trackPageview');
+  })(window, document, 'IDENTITY', 'script', 'push');
+</script>
+
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "6035391" });
+  (function() {
+  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+  el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+<img src='http://b.scorecardresearch.com/p?c1=2&amp;c2=6035391&amp;cv=2.0&amp;cj=1'>
+</noscript>
+
+<script src="//s.ntv.io/serve/load.js">
+//<![CDATA[
+
+//]]>
+</script>
+
+<script src="http://labs-cdn.revcontent.com/build/revflicker.min.js">
+//<![CDATA[
+
+//]]>
+</script>
+
+
+<!-- /51698323/FB_OOP -->
+<div id='pl-div-fanbread-6'>
+<script>
+  googletag.cmd.push(function () {googletag.display('pl-div-fanbread-6');});
+</script>
+</div>
+
+<script type='text/javascript'>
+!function(){"use strict";function t(t){l.push(t),1==l.length&&f()}function e(){for(;l.length;)l[0](),l.shift()}function n(t){this.a=u,this.b=void 0,this.f=[];var e=this;try{t(function(t){r(e,t)},function(t){a(e,t)})}catch(n){a(e,n)}}function o(t){return new n(function(e,n){n(t)})}function i(t){return new n(function(e){e(t)})}function r(t,e){if(t.a==u){if(e==t)throw new TypeError;var n=!1;try{var o=e&&e.then;if(null!=e&&"object"==typeof e&&"function"==typeof o)return void o.call(e,function(e){n||r(t,e),n=!0},function(e){n||a(t,e),n=!0})}catch(i){return void(n||a(t,i))}t.a=0,t.b=e,c(t)}}function a(t,e){if(t.a==u){if(e==t)throw new TypeError;t.a=1,t.b=e,c(t)}}function c(e){t(function(){if(e.a!=u)for(;e.f.length;){var t=e.f.shift(),n=t[0],o=t[1],i=t[2],t=t[3];try{0==e.a?i("function"==typeof n?n.call(void 0,e.b):e.b):1==e.a&&("function"==typeof o?i(o.call(void 0,e.b)):t(e.b))}catch(r){t(r)}}})}function s(t){return new n(function(e,n){function o(n){return function(o){a[n]=o,r+=1,r==t.length&&e(a)}}var r=0,a=[];0==t.length&&e(a);for(var c=0;c<t.length;c+=1)i(t[c]).c(o(c),n)})}function d(t){return new n(function(e,n){for(var o=0;o<t.length;o+=1)i(t[o]).c(e,n)})}var f,l=[];f=function(){setTimeout(e)};var u=2;n.prototype.g=function(t){return this.c(void 0,t)},n.prototype.c=function(t,e){var o=this;return new n(function(n,i){o.f.push([t,e,n,i]),c(o)})},window.Promise||(window.Promise=n,window.Promise.resolve=i,window.Promise.reject=o,window.Promise.race=d,window.Promise.all=s,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g)}(),function(){function t(t,e){document.addEventListener?t.addEventListener("scroll",e,!1):t.attachEvent("scroll",e)}function e(t){document.body?t():document.addEventListener?document.addEventListener("DOMContentLoaded",function e(){document.removeEventListener("DOMContentLoaded",e),t()}):document.attachEvent("onreadystatechange",function n(){("interactive"==document.readyState||"complete"==document.readyState)&&(document.detachEvent("onreadystatechange",n),t())})}function n(t){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(t)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function o(t,e){t.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+e+";"}function i(t){var e=t.a.offsetWidth,n=e+100;return t.f.style.width=n+"px",t.c.scrollLeft=n,t.b.scrollLeft=t.b.scrollWidth+100,t.g!==e?(t.g=e,!0):!1}function r(e,n){function o(){var t=r;i(t)&&null!==t.a.parentNode&&n(t.g)}var r=e;t(e.b,o),t(e.c,o),i(e)}function a(t,e){var n=e||{};this.family=t,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function c(){if(null===f){var t=document.createElement("div");try{t.style.font="condensed 100px sans-serif"}catch(e){}f=""!==t.style.font}return f}function s(t,e){return[t.style,t.weight,c()?t.stretch:"","100px",e].join(" ")}var d=null,f=null,l=null;a.prototype.load=function(t,i){var a=this,c=t||"BESbswy",f=i||3e3,u=(new Date).getTime();return new Promise(function(t,i){if(null===l&&(l=!!document.fonts),l){var h=new Promise(function(t,e){function n(){(new Date).getTime()-u>=f?e():document.fonts.load(s(a,'"'+a.family+'"'),c).then(function(e){1<=e.length?t():setTimeout(n,25)},function(){e()})}n()}),p=new Promise(function(t,e){setTimeout(e,f)});Promise.race([p,h]).then(function(){t(a)},function(){i(a)})}else e(function(){function e(){var e;(e=-1!=w&&-1!=v||-1!=w&&-1!=y||-1!=v&&-1!=y)&&((e=w!=v&&w!=y&&v!=y)||(null===d&&(e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),d=!!e&&(536>parseInt(e[1],10)||536===parseInt(e[1],10)&&11>=parseInt(e[2],10))),e=d&&(w==b&&v==b&&y==b||w==g&&v==g&&y==g||w==x&&v==x&&y==x)),e=!e),e&&(null!==E.parentNode&&E.parentNode.removeChild(E),clearTimeout(T),t(a))}function l(){if((new Date).getTime()-u>=f)null!==E.parentNode&&E.parentNode.removeChild(E),i(a);else{var t=document.hidden;(!0===t||void 0===t)&&(w=h.a.offsetWidth,v=p.a.offsetWidth,y=m.a.offsetWidth,e()),T=setTimeout(l,50)}}var h=new n(c),p=new n(c),m=new n(c),w=-1,v=-1,y=-1,b=-1,g=-1,x=-1,E=document.createElement("div"),T=0;E.dir="ltr",o(h,s(a,"sans-serif")),o(p,s(a,"serif")),o(m,s(a,"monospace")),E.appendChild(h.a),E.appendChild(p.a),E.appendChild(m.a),document.body.appendChild(E),b=h.a.offsetWidth,g=p.a.offsetWidth,x=m.a.offsetWidth,l(),r(h,function(t){w=t,e()}),o(h,s(a,'"'+a.family+'",sans-serif')),r(p,function(t){v=t,e()}),o(p,s(a,'"'+a.family+'",serif')),r(m,function(t){y=t,e()}),o(m,s(a,'"'+a.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=a:(window.FontFaceObserver=a,window.FontFaceObserver.prototype.load=a.prototype.load)}();
+</script>
+<script>
+  fontFamily       = new FontFaceObserver("open sans"),
+  titleFontFamily  = new FontFaceObserver("open sans");
+  
+  Promise.all([fontFamily.load(), titleFontFamily.load()]).then(function () {
+    window.document.documentElement.className += " fonts-loaded";
+  }, function () {
+    console.log('Font is not available');
+  });
+</script>
+
+</body>
+</html>

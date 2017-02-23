@@ -1,0 +1,332 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" /><title>Instagram photo by Mike J. Asti • Feb 7, 2017 at 9:30pm UTC - Linkis.com</title>
+    <style>
+        html, body {margin:0;padding:0;height:100%;}
+        body {overflow:hidden;}
+        .show-panel,.social-panel,.slidedown-popup,#big-popup,.modal-popup,.global-modal-popup,.autoposting-bar,.show-visitors-tooltip,.theme-cta2-minimize,.theme19-xmaspic,.reauthorize {display:none;}
+        .iframe-holder,.iframe-box {display: none;}        
+.iframe-holder{position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;}
+            </style>
+
+    <meta property="og:image" content="https://scontent.cdninstagram.com/t51.2885-15/e35/16464144_170269043463231_477226898728943616_n.jpg?ig_cache_key=MTQ0NTIxNDc0OTM1NjYyNDgyMw%3D%3D.2" />
+<meta property="og:description" content="See this Instagram photo by @mikeasti11" />
+<meta property="og:site_name" content="Instagram" />
+<meta property="og:title" content="Instagram photo by Mike J. Asti • Feb 7, 2017 at 9:30pm UTC" />
+<meta property="og:url" content="https://www.instagram.com/p/BQObyhPjou3/" />
+<meta property="og:type" content="instapp:photo" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="See this Instagram photo by @mikeasti11" /><link href="/favicon.ico" rel="icon" type="image/png" />
+<link href="http://linkis.com/instagram.com/photo_by_Mike_J_Asti.html" rel="canonical" />
+<link href="http://instagramstatic-a.akamaihd.net/h1/images/ico/favicon-192.png/b407fa101800.png" rel="icon" type="" />
+<link href="http://instagramstatic-a.akamaihd.net/h1/images/ico/favicon-32.png/b32fa32.png" rel="icon" type="" />
+<link href="/images/apple/apple-touch-icon-144x144.png" rel="apple-touch-icon" size="144x144" />
+<link href="/images/apple/apple-touch-icon-72x72.png" rel="apple-touch-icon" size="72x72" />
+<link href="/images/apple/apple-touch-icon-57x57.png" rel="apple-touch-icon" size="57x57" />
+    <script type="text/javascript">
+        var LNG = {};
+        var customAuthRedirect = null;
+            </script>
+
+    
+    <script type="text/javascript">
+
+
+    function __log(val){}
+
+    function hihit(id) {
+        if (id) {
+            var url = "http://stat.linkis.com/log.php?id=" + id + "&r=" + Math.round(100000 * Math.random());
+            var im = new Image();
+            im.src = url;
+        }
+    }
+
+
+function refreshPage()
+{
+    location.href = location.href.split('#')[0];
+    setTimeout(function(){
+        if (window.hihit) hihit(2580);
+    }, 10000);
+}
+function redirectPage(url)
+{
+    location.href = url;
+}
+function restoreUserAvatar(img, uid)
+{
+    img.onerror = null;
+    img.setAttribute('data-orig-image', img.src);
+    img.src = '/index/restore-avatar/uid/' + uid;
+
+}
+/**
+ *
+ * @param action
+ * @param label
+ * @param category
+ * @param params
+ *     - {int} [theme] - force set theme
+ */
+function lnEvent(action, label, category, params)
+{
+    
+    if($.isArray(action)) {
+        var hash   = lnEventGenerateHash((action[0][0] || '') + (action[0][1] || '') + (action[0][2] || ''));
+            action = JSON.stringify(action);
+    } else {
+        var hash = lnEventGenerateHash((action || '') + (label || '') + (category || ''));
+    }
+
+    var path = ['', 'index', 'ln-event'].join('/');
+    var e = function(str){ return str ? encodeURIComponent(str) : ''; };
+
+    if(typeof(params) != 'undefined' && typeof(params.theme) != 'undefined'){
+        var theme = params.theme;
+    }else{
+        var theme = window.LinkData ? LinkData.curTheme : 0;
+    }
+    var version = window.LinkData ? LinkData.themeVersion : '';
+    var is_author = window.LinkData ? LinkData.is_author : 0;
+
+    params = params || {};
+
+    (new Image()).src = path +
+        '?c=' + e(category) +
+        '&a=' + e(action) +
+        '&l=' + e(label) +
+        '&t=' + e(theme) +
+        '&h='  + hash +
+        '&v='  + e(version) +
+        '&isa='  + e(is_author) +
+        '&p='  + e(JSON.stringify(params)) +
+        '&r=' + Math.random();
+}
+
+function lnEventGenerateHash(str) {
+    var hash = '';
+    var length = str.length;
+    var step = (length < 5) ? 2 : Math.floor(length / 5);
+
+    var codeSumFunction = function(codeSum) {
+        var num = 0;
+        for(var j = 0; j < codeSum.toString().length; j++) {
+            num += parseInt(codeSum.toString().substr(j, 1), 10);
+        }
+
+        return num;
+    };
+
+    var codeSum = 0;
+    for(var i = 0; i < length; i++) {
+        var char = str.substr(i, 1);
+
+        if(i % step == 0 && char != ' ') {
+            var num = codeSumFunction(codeSum);
+            hash += num + '' + char;
+            codeSum = 0;
+        } else {
+            codeSum += str.charCodeAt(i);
+        }
+    }
+
+    if(codeSum) hash += codeSumFunction(codeSum);
+
+    return hash;
+}
+
+</script>
+    
+<script type="text/javascript">
+window.NL_APP_DATA = {
+    user:{
+        isLogged: false,
+        type: 'tw',
+        hasTw: true
+    },
+    redirect_after_auth: '/',
+    controller: 'index',
+    action: 'show',
+    cookies:{
+        notification_enabled: 'notification_enabled'
+    },
+    show_welcome_popup: 0,
+
+        
+    show_comeback_popup: 0,
+    stat_id: null,
+    nopopups: 0,
+    addThisSrc: 'http://s7.addthis.com/js/300/addthis_widget.js#async=1&pubid=',
+    addThisId: 'ra-513082ca32a826c6',
+    referrer_link: '',
+    referrer_name: '',
+    referrer_type: 0,
+    cookie_domain: '.linkis.com',
+	sessCookieName: 'LNSESS',
+    popupsHtml: {},
+    fbAppId: 318962828183539};
+
+window.onerror = function(msg, url, line, col, error_obj)
+{
+    hihit(3282);
+
+    var path  = ['', 'index', 'js-error'].join('/');
+    var page  = 'index/show';
+
+    (new Image()).src = path +
+        '?m=' + encodeURIComponent(msg) +
+        '&u=' + encodeURIComponent(url) +
+        '&l=' + encodeURIComponent(line) +
+        '&c=' + encodeURIComponent(col) +
+        '&o=' + encodeURIComponent(error_obj) +
+        '&p=' + encodeURIComponent(page) +
+        '&r=' + Math.random();
+}
+
+</script>
+
+</head>
+<body
+    data-controller="index"
+    data-action="show"
+    data-fb-app-id="318962828183539"
+    class="show gray-social-page gray-social-page_instagram guest lang-en"    >
+
+
+<script type="text/javascript">
+    var LinkData = {"id":376053188,"shortUrl":"7MHq0","longUrl":"https:\/\/www.instagram.com\/p\/BQObyhPjou3\/","fullShortPath":"\/www.instagram.com\/p\/7MHq0","baseAliasLink":"http:\/\/ln.is\/www.instagram.com\/p\/7MHq0","baseShortAliasLink":"http:\/\/ln.is\/www.instagram.com\/p\/7MHq0","caption":"Just like Lady Gaga dropped the mic on the Super Bowl LI halftime show, I dropped the mic with…","author_id":2774093,"isTwitterLogged":true,"curTheme":13,"parentTheme":13,"originalTitle":"Instagram photo by Mike J. Asti • Feb 7, 2017 at 9:30pm UTC","show_aw_popup":1,"popupTimer":3000,"saveClientStat":true,"showSilentPopup":1,"graylistLabel":"instagram","linkSrcType":2,"srcTypeLabel":"auto wrap","splitCtaThemeVersion":1,"showVtwAw":2,"authorLinkLocale":"en","localeCurrentUser":"en","dgAuthWelcomeVersion":3};
+</script><script type="text/javascript">
+
+    /** @var Themes */
+    var Themes = {
+        THEME_11: 11,
+        THEME_12: 12,
+        THEME_13: 13,
+        THEME_14: 14,
+        THEME_15: 15,
+        THEME_16: 16,
+        THEME_17: 17,
+        THEME_18: 18,
+        THEME_19: 19,
+        THEME_20: 20
+    };
+
+    var LNG = LNG || {};
+    LNG['caption'] = "Caption";
+    LNG['show.empty_caption'] = "Empty caption";
+    LNG['js.tools.blocker'] = "Please disable your pop-up blocker and redo your last action";
+
+
+    var AUTH_PARAMS = {};
+    var THEME_AUTH_PARAMS = {};
+
+
+    var TWITTER_ENABLED = true;
+</script>
+
+    <div class="iframe-box iframe-holder">
+        <div class="social-page">
+    <div class="instagramm graylist-tpl-instagramm">
+        <div class="insta-info">
+            Linkis.com is showing you the most important part of the page. <a href="https://www.instagram.com/p/BQObyhPjou3/" class="">See&nbsp;full&nbsp;version</a>        </div>
+
+        <div class="instagram-media-holder">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="5">
+                <a href="https://www.instagram.com/p/BQObyhPjou3" target="_blank"></a>
+            </blockquote>
+            <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+        </div>
+
+    </div>
+</div>
+    <script type="text/javascript">
+        var Ga = Ga || [];
+        Ga.push(['_trackPageview', '/theme/13']);
+    </script>
+    </div>
+
+
+
+
+<div class="show-panel theme13-panel">
+
+            <a href="/url/go/?url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBQObyhPjou3" rel="nofollow" class="panel-close ico-close js-close-panel js-source-link" data-target="close"></a>
+    
+    
+             <a href="javascript:void(0)" class="panel-promo panel-promo_arrow js-show-author" data-content="author">
+            <img class="promo-avatar " src="http://ec2linkis.s3.amazonaws.com/user_photos/2017-02/2774093/avatar_big?7336" alt="">
+            <div class="promo-label ico-twitter">Shared by</div>
+            <div class="promo-username">Mike J. Asti</div>
+        </a>
+    
+    <div class="panel-content">
+
+        <div class="panel-author" data-content="author" style="display: none;">
+            <p class="author-about">
+                Ayatollah of Asinine. @TribLIVERadio host. Digital Content and Social at RabbleVID. Heel of Pittsburgh Podcast Network. Previously on @WPXI. WVU alum.            </p>
+
+                            <div class="author-socials">
+                    <h3>Find  me here</h3>
+                                                                                                                                    <a href="http://twitter.com/MikeAsti11" target="_blank" class="panel-socLink ico-twitter"></a>
+                                                                                                                                                                                                                    </div>
+
+                <div class="author-links">
+                                                                                                                                                                                                                                                                <a href="https://www.instagram.com/mikeasti11" target="_blank"><span class="icon-link"></span>instagram.com/mikeasti11</a>
+                                                                                        </div>
+                    </div>
+
+        <div class="content-item panel-share" data-content="share" style="display: none;">
+            <a href="#" class="share-item js-share-twitter"><span class="share-icon ico-twitter"></a>
+            <a href="#" class="share-item js-share-facebook"><span class="share-icon ico-fb"></span></a>
+            <a href="#" class="share-item js-share-google"><span class="share-icon ico-google_plus"></span></a>
+            <a href="#" class="share-item js-share-linkedin"><span class="share-icon ico-linkedin"></span></a>
+
+            <span class="share-close ico-close js-share-close"></span>
+        </div>
+
+    </div>
+    <div class="panel-dashboard">
+
+        <a href="javascript:void(0)" class="dashboard-btn ico-share js-show-share" data-target="share">Share link</a>
+        <div class="dashboard-right">
+                            <a href="javascript:void(0)" class="dashboard-btn dashboard-btn_login js-btn-signin-tw js-login-with-theme-panel">Login</a>
+                        <a href="/" class="panel-copyright js-theme-logo"><span class="ico-logo_small"></span></a>
+        </div>
+    </div>
+</div>
+<!--<div class="iframe-holder">-->
+<!--	<iframe id="source_site" src="http://www.smashingmagazine.com/" width="100%" height="100%" border="0" frameborder="0" hspace="0" vspace="0" width="100%" height="100%" marginheight="0" marginwidth="0"></iframe>-->
+<!--</div>-->
+
+    <!-- POPUPS -->
+    
+
+
+    
+<!-- New popups Template -->
+<div class="global-modal-popup js-modal-popup-container">
+    <div class="popup-overlay"></div>
+    <div class="popup-holder">
+        <a href="javascript:void(0);" class="popup-close icon-close js-popup-close-default"></a>
+
+        <div class="js-popups-container popup-container">
+                    </div>
+
+    </div>
+</div>
+    
+    
+
+<link href="/css_prod/production_theme_13.css?v=1f30" media="all" rel="stylesheet" type="text/css" id="theme_css" />
+
+    <script type="text/javascript" src="/js/prod/themes/all.js?v=1f30"></script>
+
+
+
+<div class="advert_block"></div>
+</body>
+</html>

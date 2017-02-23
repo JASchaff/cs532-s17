@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b7820bcdde","applicationID":"402154","transactionName":"dl9ZQERWX1hSQR5KQFpCXlFFFkBcWEQ=","queueTime":0,"applicationTime":101,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <title>Trump sells out retirees to Wall Street and removes protections against economic collapse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0" />
+
+    <script async src="//cdn.optimizely.com/js/10735605.js"></script>
+
+    <script src="http://assets.dailykos.com/assets/mobile-43d1216f2895648f3f086c663dd1e48c.js"></script>
+    <link rel="stylesheet" media="screen" href="http://assets.dailykos.com/assets/mobile-8e3f86b088ef505e711f5cdedfa3a6e8.css" />
+    <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:700" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://assets.dailykos.com/assets/favicon-107e987a32d716a6a9afb2cfe49c8604.ico" />
+    <link rel="apple-touch-icon" type="image/png" href="http://assets.dailykos.com/assets/iphone_icon-8685002fa5c5565ac01e07d57d02d77e.png" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/K3XbdLhOn02oDWRxZ5hHcvRDdMBzkUHP9Lig60gxqVwtvHFUld/39IT1skPBwy/bJCmqVV2tFsSispSEhQAsA==" />
+
+    <script>
+      DailyKos.pageType = 'stories';
+    </script>
+
+    <link rel="canonical" href="http://www.dailykos.com/story/2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse" />
+      <meta property="fb:app_id" content="170357783709" />
+  <meta property="og:site_name" content="Daily Kos" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Trump sells out retirees to Wall Street and removes protections against economic collapse" />
+  <meta property="og:url" content="http://www.dailykos.com/story/2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse" />
+  <meta property="og:image" content="http://images.dailykos.com/images/337093/story_image/GettyImages-626483984.jpg?1481302446" />
+  <meta property="og:description" content="For over a year, Donald Trump repeatedly stated that his vast wealth made him immune to outside influence and warned against the power of a particular Wall Street firm. 
+
+ 
+ During his campaign, Trump sharply criticized Democratic presidential nominee..." />
+
+        <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dailykos" />
+    <meta name="twitter:creator" content="@devilstower" />
+    <meta name="twitter:title" content="Trump sells out retirees to Wall Street and removes protections against economic collapse" />
+    <meta name="twitter:image:src" content="http://images.dailykos.com/images/337093/story_image/GettyImages-626483984.jpg?1481302446" />
+    <meta name="twitter:description" content="For over a year, Donald Trump repeatedly stated that his vast wealth made him immune to outside influence and warned against the power of a particular Wall Street firm.
+
+
+During his campaign, Trump..." />
+
+
+        <script type='text/javascript'>
+          // for chartbeat
+          var _sf_startpt=(new Date()).getTime()
+        </script>
+        <script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+  	var useSSL = 'https:' == document.location.protocol;
+  	var src = (useSSL ? 'https:' : 'http:') +
+  	'//www.googletagservices.com/tag/js/gpt.js';
+  	document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50193-1']);
+  _gaq.push(['_setDomainName', '.dailykos.com']);
+
+  // Prevent self-referral
+  //_gaq.push(['_setAllowLinker',true]);
+  //_gaq.push(['_setAllowHash',false]);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+        <!-- If you want to move this to a js file, you'll need to pre-compile assets with the correct rails env so that these DK::Ads constants are set for the correct environment. -->
+<script>
+  _.namespace('DailyKos.Ads.Google');
+  
+  DailyKos.Ads.Google.defineSlotDesktop = function () {
+    var Google = DK.Ads.Google.init();
+  
+    if (DailyKos.Ads.isBlogsPage()) {
+      Google.defineSlot('/1095769/300x250_DK5_ATF', [[300, 250], [300, 600]], 'div-gpt-ad-1444077860311-7').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_DK5_1-2', [300, 250], 'div-gpt-ad-1444077860311-1').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_DK5_10-11', [300, 250], 'div-gpt-ad-1444077860311-2').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_DK5_4-5', [300, 250], 'div-gpt-ad-1444077860311-5').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_DK5_7-8', [300, 250], 'div-gpt-ad-1444077860311-6').addService(googletag.pubads());
+    }
+    if (DailyKos.Ads.isStoryPage()) {
+      Google.defineSlot('/1095769/300x250_Story_DK5_ATF', [[300, 250], [300, 600]], 'div-gpt-ad-1449600715015-0').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_Story_DK5_ATF', [[300, 250], [300, 600]], 'div-gpt-ad-1449600715016-0').addService(googletag.pubads());
+      Google.defineSlot('/1095769/300x250_DK5_Story_BTF', [[300, 600], [300, 250]], 'div-gpt-ad-1450740708411-0').addService(googletag.pubads());
+    }
+    Google.defineOutOfPageSlot('/1095769/1x1_DK5_Interstitial', 'div-gpt-ad-1446660743951-0').addService(googletag.pubads());
+    Google.defineSlot('/1095769/PROD_Desktop_Stripe', [1, 1], 'div-gpt-ad-1474507278922-0').addService(googletag.pubads());
+    Google.defineSlot('/1095769/970x90_DK_ATF', [[728, 90],[970, 90],[970, 250]], 'div-gpt-ad-1448401047584-0').addService(googletag.pubads());
+  };
+  
+  DailyKos.Ads.Google.defineSlotMobile = function defineSlotMobile () {
+    var Google = DK.Ads.Google.init();
+  
+    Google.defineSlot('/1095769/PROD_Mobile_Petitions', [1, 1], 'div-gpt-ad-1474507097776-0').addService(googletag.pubads());
+  };
+</script>
+
+<script>
+  if (DailyKos.Ads && DailyKos.Ads.isAdsPage()) {
+    googletag.cmd.push(function() {
+      // Define Displayable Ads
+      DailyKos.Ads.Google.defineSlotMobile();
+  
+      // Set Targeting
+      DailyKos.Ads.Google.setTargeting();
+  
+      // Set Options
+      DailyKos.Ads.Google.setOptions();
+    });
+  }
+</script>
+
+        <script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  'http://cdn.taboola.com/libtrc/dailykos/loader.js');
+</script>
+
+    
+  </head>
+
+
+  <body id="stories" class="controller_stories action_show mobile layout_main">
+    <div id='wrapper'>
+      <div class="authorization">
+          <a href="http://m.dailykos.com/login.mobile">Log In</a>
+      </div> <!-- #authorization -->
+
+      <div id="masthead" class="masthead">
+        <img id="flagman" src="http://assets.dailykos.com/assets/donations/background_flag_guy-16b99e45889d300cb42fe76ed1f51da3.png" alt="Background flag guy" />
+        <h1><a href="/">Daily Kos</a></h1>
+      </div> <!-- #masthead -->
+
+      <div class='subheader top_subheader'>
+        News
+      </div>  <!-- .subheader -->
+
+      <div class='mobile-petition-ad' id='div-gpt-ad-1474507097776-0'></div>
+<script>
+  (function () {
+    var iframeContainer, iframe;
+  
+    DailyKos.Ads.push('div-gpt-ad-1474507097776-0', '.mobile-petition-ad');
+  
+    $iframeContainer = $('.mobile-petition-ad')
+    $iframe = $iframeContainer.find('iframe:first')
+  
+    $iframeContainer.addClass('hidden');
+  
+    $iframe.load(function() {
+      App.Ads.Splash.init({
+        $iframeContainer: $iframeContainer,
+        showAd: function () {
+          $('.mobile-petition-ad').removeClass('hidden');
+        },
+        hideAd: function () {
+          $('.mobile-petition-ad').addClass('hidden');
+        },
+        onLoad: function () {
+          DailyKos.Ads.Google.addMobilePetitionEventListeners($iframe);
+        }
+      });
+    });
+  })()
+</script>
+
+
+      <div id='main'>
+        
+
+
+
+
+
+<div id="story">
+
+    <div class='image_container'>
+      <img src="http://images.dailykos.com/images/337093/large/GettyImages-626483984.jpg?1481302446">
+      <div class='dkimg-cap'>Gary Cohn, formerly president and CEO at Goldman Sachs, now director of White House Economic Council</div>
+    </div>
+
+  <div class='title'>Trump sells out retirees to Wall Street and removes protections against economic collapse</div>
+  <div class="story_main clearfix">
+    <div class="story_info">
+            <span class="timestamp " data-localize-time data-epoch-time="1486131244000" data-time-zone="-0800" data-time-format="%b %d, %Y %l:%M%P %Z">Feb 03, 2017  6:14am PST</span>
+
+      by
+      <span class='author_name'>Mark Sumner</span>
+      <div class="story_stats story_recommend_login">
+        <img src="http://assets.dailykos.com/assets/icons/comment_large-5bcb8aa34ad3f3481fd9a7a1d80f7be5.png" alt="Comment large" />257
+        <a class="story_recommend" id="story-1629437" data-remote="true" rel="nofollow" data-method="post" href="#">207</a>
+      </div>
+      <span class='inline_notification story_recommend_login'>Please <a href="/login">log in</a> or <a href="/signup">sign up</a> to continue.</span>
+    </div>
+    <div id="intro" class="intro-text ">
+      <p>For over a year, Donald Trump repeatedly stated that his vast wealth made him immune to outside influence and warned against the power of a particular <a href="http://www.cnbc.com/2016/11/30/wall-street-basher-trump-loving-goldman-guys-for-his-team.html" target="_blank" title="">Wall Street firm.</a></p>
+
+<blockquote>
+<p>During his campaign, Trump sharply criticized Democratic presidential nominee Hillary Clinton for not releasing transcripts of speeches she gave to Goldman Sachs and other Wall Street banks. He also accused Clinton and former Republican presidential candidate Sen. Ted Cruz of being controlled by Goldman Sachs.</p>
+</blockquote>
+
+<div></div>
+
+<div style="text-align:center">
+<div>
+<div>
+<div>
+<div style="text-align:inherit">
+<div style="text-align:inherit">
+<div>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p>But now that Trump has installed Goldman Sachs alumni in every corner of the White House, it’s time for him to show his independence by … <a href="https://www.washingtonpost.com/opinions/sharia-law-may-be-coming-to-america-but-its-christians-who-are-bringing-it/2017/02/02/aa44fbe8-e98c-11e6-bf6f-301b6b443624_story.html" target="_blank" title="">rolling over with his belly to the sky.</a></p>
+
+<blockquote>
+<p>President Donald Trump on Friday plans to sign an executive action to scale back the 2010 Dodd-Frank financial-overhaul law, in a sweeping plan to dismantle much of the regulatory system put in place after the financial crisis. </p>
+</blockquote>
+
+<p>What could be more reassuring than the phrase “<span>dismantle much of the regulatory system put in place after the financial crisis”? After all, it’s not as if those regulations were put there <em>exactly to keep the crisis from happening again.</em> But wait. It <a href="https://www.washingtonpost.com/news/morning-mix/wp/2017/02/03/trump-to-order-rollback-friday-of-regulations-aimed-at-finance-industry-top-aide-says/" target="_blank" title="">gets better.</a></span></p>
+
+<blockquote>
+<p>Gary Cohn, White House Economic Council director, told the Wall Street Journal in an interview published last night that the administration would also move against a regulation designed to force retirement advisers to work in the best interest of their clients, the “fiduciary rule,” set to take effect in April and designed to eliminate conflicts-of-interest among professionals dealing with those enrolled in qualified retirement plans and IRAs.</p>
+</blockquote>
+
+<p>Donald Trump is going to make sure that Wall Street can keep lying to clients and feeding off retirees—because that’s what makes America great.</p>
+
+
+    </div>
+    <script type='text/javascript'>
+      $(function () {
+          DailyKos.displayMobileAds = true;
+
+        if(!DailyKos.displayMobileAds) return false;
+        var $storyAdTarget;
+        var $introElements = $("#intro").children(':visible').not('h3, h4');
+        if($introElements.length > 1) {
+          $storyAdTarget = $($introElements[1]);
+        } else {
+          $storyAdTarget = $introElements.last();
+        }
+
+        $storyAdTarget.after("<div class='mobile-story-ad'><!-- /1095769/300x250_mobile_story --><div id='div-gpt-ad-1465849693465-0' style='height:250px; width:300px;'></div></div>");
+
+        googletag.cmd.push(function() {
+          googletag.pubads().enableSingleRequest();
+          googletag.defineSlot('/1095769/300x250_mobile_story', [300, 250], 'div-gpt-ad-1465849693465-0').addService(googletag.pubads());
+          googletag.enableServices();
+          googletag.display('div-gpt-ad-1465849693465-0');
+        });
+      });
+    </script>
+    <div class="body body-text">
+      
+
+
+<p>The fiduciary rule, which hasn’t yet gone into effect, was intended to make sure that financial advisers were actually giving their best advice. That’s because giving <em>bad </em>advice can be very good for unscrupulous advisers who milk their clients by making hundreds of unnecessary trades and pocketing the fees, or pushing clients into high-cost funds from which the adviser gets a kick back.</p>
+
+<p>The basic idea was to make sure that when people were investing in retirement funds, the experts they paid to advise them and manage those funds were actually working for the people who were supposed to be their clients, rather than fattening themselves at their client’s expense. Naturally, Wall Street hated this rule.</p>
+
+<p>They also hate the way that Dodd-Frank limits the types of investments in which banks can indulge, and the way it limits their risk by the actual amount of funds they have on hand.</p>
+
+<blockquote>
+<p>The Dodd-Frank Act, hated by Wall Street and Republican members of Congress, was enacted in the wake of the financial crisis of 2008 that brought on the Great Recession and during the presidential campaign was described derisively by many Republican leaders as “Obamacare for banks.”</p>
+</blockquote>
+
+<p>Donald Trump is doing absolutely everything in his power to make his administration the second coming of Hoover and W rolled together. </p>
+
+<p>Make it possible for banks to engage in dangerous, unlimited speculation and create new “instruments” such as the Credit Default Swaps that left behind debt that exceeded the global GDP? Check.</p>
+
+<p>Destroy regulations meant to help retirees, leaving them unprotected from predatory “advisers” who funnel retirement savings into their own pockets? Check, check.</p>
+
+<p>Create an uncertain trade environment devoid of stability and filled with shifting, one on one agreements that send the value of the dollar swaying out of control? Check, check, check.</p>
+
+<p>Eight years of growth. It was a pretty good run.</p>
+
+    </div>
+  </div>
+  
+</div>
+
+<div class="load-comments-wrapper">
+  <a href="#" id="load-comments">
+    <div class="load-comments-inner">Display 257 Comments</div>
+  </a>
+</div>
+
+<div class="comments-wrapper hidden">
+  <div class='subheader comment_count'>257 comments</div>
+  <a class="anchor" name="comments"></a>
+  <div id="comments" class="comments">
+    <div id='comments_inner'></div>
+    <div id='spinner'></div>
+    <div class='subheader comment_count bottom'>257 comments</div>
+  </div>
+</div>
+
+<div id="taboola-below-mobile-article-thumbnails"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-mobile-article-thumbnails',
+    placement: 'Below Mobile Article Thumbnails',
+    target_type: 'mix'
+  });
+</script>
+
+<script id='static_comment_form' type='text/x-handlebars-template'>
+  {{#ifCanComment}}
+    <div class="wrap_hack" style="height: 1px; display: none"></div>
+    <form class="new_comment {{staticFormClass}}">
+      <div class="input"><textarea class="text" name="text" placeholder="Leave your comment..."></textarea></div>
+      <div class="buttons clearfix">
+        <div class="countdown hidden">
+          <span class="warning soft-red">Warning!</span>
+          <span class="countdown-message">
+            Comments are closing in:
+            <span class='countdown-timer'></span>
+          </span>
+        </div>
+        <button class="preview">Preview</button>
+        <!-- <button class="cancel">Cancel</button> -->
+      </div>
+    </form>
+  {{/ifCanComment}}
+</script>
+
+<script id="comment-actions-partial" type="text/x-handlebars-template">
+  <span class="recommend_buttons">
+    {{#ifCanComment}}
+      {{#if canReply }}
+        <a href="#" class="reply">Reply</a>
+      {{/if}}
+    {{/ifCanComment}}
+
+    {{#if recommended}}
+      <a href="#" class="unrecommend">
+        <img alt="unrecommend" src="http://assets.dailykos.com/assets/star_gold-608467e6526a11e446f3e9d68e68d744.png">
+        <span class="count">{{n_recrates}}</span>
+      </a>
+    {{else}}
+      {{#ifRecommendable id}}
+        <a href="#" class="recommend inactive">
+          <img alt="recommend" src="http://assets.dailykos.com/assets/star_blue-a33c48d76ae497ad2e9f67cfb23a689f.png">
+          <span class="count">{{n_recrates}}</span>
+        </a>
+      {{else}}
+        <a href="#" class="recommend recommend_disabled">
+          <img alt="unrecommendable" src="http://assets.dailykos.com/assets/star_grey-98146ae648a522c38c1accfb3c92748e.png">
+          <span class="count">{{n_recrates}}</span>
+        </a>
+      {{/ifRecommendable}}
+    {{/if}}
+  </span>
+</script>
+
+<script id="comment_template" type="text/x-handlebars-template">
+  <div class='comment_wrapper'>
+    <a class="anchor" name="comment_{{id}}"></a>
+    <span class="hidden-comment-controls">
+  <a href='#' class="dkons icon-eye toggle-hidden-comments" title='See hidden comments'></a> HIDDEN COMMENT
+</span>
+
+    <div class='comment_body'>
+      <div class='comment_text'><span class='comment_title'>{{{subject}}}</span>{{{textToRender}}}</div>
+    </div>
+    <span class='inline_notification comment_recommend_login'>
+      Please <a href='/login?return_to=/stories/2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse?detail=email&amp;link_id=6&amp;can_id=7ee7372ef97c2456eec0b4f092dac04f&amp;source=email-trump-couldnt-shut-up-about-obamas-vacations-but-hes-headed-to-mar-a-lago-after-just-two-weeks&amp;email_referrer=trump-couldnt-shut-up-about-obamas-vacations-but-hes-headed-to-mar-a-lago-after-just-two-weeks___163020&amp;email_subject=trump-and-bannon-struggle-to-implement-more-chaos&return_anchor=comment_{{id}}'>log in</a> or <a href="/signup?return_to=/stories/2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse?detail=email&amp;link_id=6&amp;can_id=7ee7372ef97c2456eec0b4f092dac04f&amp;source=email-trump-couldnt-shut-up-about-obamas-vacations-but-hes-headed-to-mar-a-lago-after-just-two-weeks&amp;email_referrer=trump-couldnt-shut-up-about-obamas-vacations-but-hes-headed-to-mar-a-lago-after-just-two-weeks___163020&amp;email_subject=trump-and-bannon-struggle-to-implement-more-chaos&return_anchor=comment_{{id}}&return_topic={{truncatedSubject}}">sign up</a> to continue.
+    </span>
+    <div class='meta'>
+      <div class='comment_meta'>
+        <span class='comment_author'>
+           <a href="/user/{{author}}" id="{{author_id}}">{{author}}</a>
+        </span>
+        <a href="#comment_{{id}}" class='comment_time'>{{{created_at}}}</a>
+      </div>
+      {{#unless preview}}
+        <div class="actions comment_recommend_login">
+          {{> commentActions}}
+        </div> <!-- .actions -->
+      {{/unless}}
+     </div> <!-- .meta -->
+     <div class='up_triangle_gray'></div>
+    </div> <!-- .poop comment_wrapper -->
+    {{#ifCanComment}}
+    <form class="new_comment reply">
+      <div class='comment_instructions'>Post your reply</div>
+      <div class="input">
+        <textarea class="text" name="text" placeholder="Leave your comment..."></textarea>
+      </div>
+      <div class="buttons clearfix">
+        <div class="countdown hidden">
+          <span class="warning soft-red">Warning!</span>
+          <span class="countdown-message">
+            Comments are closing in:
+            <span class='countdown-timer'></span>
+          </span>
+        </div>
+        <button class="preview">Preview</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </form>
+    {{/ifCanComment}}
+    {{#if preview}}
+      <div class="comment_post buttons clearfix">
+        <button class="post enabled">Post</button>
+        <span class="post display_text">Posting...</span>
+        <button class="edit">Edit</button>
+      </div>
+    {{/if}}
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var hash = window.location.hash || "",
+        showComments = hash.indexOf("comment") >= 0,
+        commentsLoaded = false;
+
+    function loadComments() {
+      if(commentsLoaded) return;
+
+      commentsLoaded = true;
+
+      $(".load-comments-wrapper").addClass("hidden");
+      $(".comments-wrapper").removeClass("hidden");
+
+      $.getJSON('/stories/1629437/comments', function(comments) {
+        var options = {
+          el:               $("#comments"),
+          storyID:          1629437,
+          commentsCloseAt:  new Date(1486909833000),
+          commentRatings:   null
+        }
+        comments = _.sortBy(comments, function(c){ return c.sort_string; });
+
+        CommentApp.initMobile(comments, options);
+      });
+
+    }
+
+    if(showComments) {
+      loadComments();
+    }
+
+    $("#load-comments").click(function(e) {
+      e.preventDefault();
+      loadComments();
+    });
+
+    $('.intro-text, .body-text').mobileRender();
+
+  })();
+</script>
+
+<div class="modal_box clearfix jqmWindow">
+  <a class="close jqmClose" href="#">x</a>
+  <div class="content"></div>
+</div>
+
+<script type='text/javascript'>
+  $(function(){
+	  DailyKos.Metrics.track('Viewed Story', {  url: "2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse", 
+	  																			  	author: $('.author_name').html(),
+	  																			  	title: $('.title').html() });
+	 });
+</script>
+	  
+
+      </div> <!-- #main -->
+
+      <div class='footer'>
+        <div class='footer_left'>
+          <div id='stories_url' data-url='http://m.dailykos.com/story/2017/2/3/1629437/-Trump-sells-out-retirees-to-Wall-Street-and-removes-protections-against-economic-collapse'></div>
+          <span class='left_item'><a class="mobile_preference" href="#">View Full Site</a></span>
+          |
+          <span class='right_item'><a href="http://m.dailykos.com/helpdesk_redirect">Helpdesk</a></span>
+        </div> <!-- .footer_left -->
+        <div class='footer_right'>&copy;2017 Kos Media</div>
+      </div> <!-- .footer -->
+
+        <script type='text/javascript'>
+          DailyKos.currentStoryID = 1629437;
+          CommentApp.initHiddenCommentsClickListener($('#comments'));
+        </script>
+
+
+      <!-- Taboola -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- end Taboola -->
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+   var elem = document.createElement('script');
+
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+</script>
+<script type="text/javascript">
+_qevents.push( { qacct:"p-94z2SIg8PaHLI"} );
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-94z2SIg8PaHLI.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+      <script type='text/javascript'>
+  // mobile only chartbeat tags
+    var _sf_async_config = {
+      uid:          2709,
+      domain:       'dailykos.com',
+      useCanonical: true
+    };
+    (function() {
+      function loadChartbeat() {
+        window._sf_endpt = (new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+          (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+          "js/chartbeat.js");
+        document.body.appendChild(e);
+      };
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+
+    </div> <!-- #wrapper -->
+    <div class='modal fade' id='modal'>
+      <div class='modal-dialog modal-md'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <button class='close' data-dismiss='modal' type='button'>
+              <span aria-hidden='true'>&times;</span>
+              <span class='sr-only'>Close</span>
+            </button>
+            <h4 class='modal-title'></h4>
+          </div>
+          <div class='modal-body'></div>
+          <div class='modal-footer error-footer'>
+            <button class='btn btn-danger' data-dismiss='modal'>Close</button>
+          </div>
+          <div class='modal-footer message-footer'>
+            <button class='btn btn-default' data-dismiss='modal'>Close</button>
+            <button class='btn btn-primary'>Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='toast'>
+<div class='inner'>
+<div class='title'></div>
+<div class='msg'></div>
+</div>
+</div>
+
+      <div id="fb-root"></div>
+  <script>$(window).load(function() {(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=170357783709";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));})</script>
+
+  </body>
+</html>

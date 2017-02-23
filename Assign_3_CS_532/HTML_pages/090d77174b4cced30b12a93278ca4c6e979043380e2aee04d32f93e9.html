@@ -1,0 +1,1090 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgECUlFTGwoBUFRQAQY="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Rosie O'Donnell Down With Replacing the Grim Reaper as Steve Bannon on 'Saturday Night Live': 'Here to Serve'</title>
+    <meta http-equiv="Content-Language" content="en_US" />
+    <meta name="description" content="The comedian and longtime Trump critic is ready to throw her wig in the ring." />
+    <meta name="keywords" content="Melissa McCarthy,rosie odonnell,saturday night live,SNL,steve bannon" />
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta property="og:title" content="Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/" />
+    <meta property="og:image" content="http://www.etonline.com/media/video/2017/02/24306957/rosie_vidpic_020717_1280Copy.jpg" />
+    <meta property="og:description" content="The comedian and longtime Trump critic is ready to throw her wig in the ring." />
+    <meta property="og:site_name" content="Entertainment Tonight" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="fb:admins" content="3111204" />
+    <meta property="fb:app_id" content="145337045558621" />
+    <link href="https://plus.google.com/105621479350227756827" rel="publisher"/>
+    <meta property="twitter:account_id" content="23603092" />
+    <meta name="twitter:site" content="@etnow" />
+    <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:creator" content="Alex Ungerman">
+        <meta name="twitter:url" content="http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/" />
+    <meta name="twitter:title" content="Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;" />
+    <meta name="twitter:description" content="The comedian and longtime Trump critic is ready to throw her wig in the ring." />
+    <meta name="twitter:image" content="http://www.etonline.com/media/video/2017/02/24306957/rosie_vidpic_020717_1280Copy.jpg" />
+    <link rel="shortcut icon" href="http://www.etonline.com/favicon.ico" />
+            <link rel="amphtml" href="https://amp.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/ampdoc.html">
+        <link rel="image_src" href="http://www.etonline.com/media/video/2017/02/24306957/rosie_vidpic_020717_1280Copy.jpg" />
+    <link rel="canonical" href="http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/" />
+            <link type='text/css' rel='stylesheet' href='/global/public/css/reset.min.css'>
+<link type='text/css' rel='stylesheet' href='/global/public/css/main.min.css'>
+<link type='text/css' rel="stylesheet" href='/global/public/css/bootstrap.min.css'>
+<link type='text/css' rel='stylesheet' href='/global/public/css/livefyre.min.css'>
+				<link rel='stylesheet' href='/global/public/css/story.min.css' type='text/css' >
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script type="text/javascript" src="/global/public/js/site.js"></script>
+<script type="text/javascript">
+	site['pagetype'] = "article";
+</script>
+<script type="text/javascript" src="//js.indexww.com/ht/headertag-cbstv.js"></script>
+<script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    window.Headertag_pretag_queue = window.Headertag_pretag_queue || [];
+    window.Headertag_defer_queue = window.Headertag_defer_queue || [];
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+</script>
+<script type="text/javascript">
+    // Saftey timer just in case our CDN breaks for any reason
+    window.setTimeout(function() {
+        for (var i = 0; i < window.Headertag_defer_queue.length; i++) {
+            var qf = window.Headertag_defer_queue[i];
+            if (typeof qf === 'function') {
+                qf();
+            }
+        }
+        window.Headertag_defer_queue = {};
+        window.Headertag_defer_queue.push = function(foo) {
+            if (typeof foo === 'function') foo();
+        };
+    }, 500);
+</script>
+<script type="text/javascript">
+ /* GPT responsive ad builds
+	*  Determines ad sizes according to breakpoints and defines the correct ad size according to position and breakpoint.
+	*
+	*  Sizes:
+	*  1600,0
+	*  1024, 800
+	*  1024,0
+	*  768,0
+	*  300,0
+	*  0,0
+	*
+	*/
+
+	googletag.cmd.push(function () {
+
+		/////////////
+		// Headers
+
+		// Define above the fold leaderboard sizes
+		// Homepage, hub pages, article pages, gallery landing pages
+		//
+		var a_header_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[970, 90], [728, 90], [970, 250]]).
+			addSize([1100, 800], [[970, 90], [728, 90], [970, 250]]).
+			addSize([1100, 0], [[970, 250], [970, 90], [728,  90]]).
+			addSize([768, 0], [728,  90]).
+			addSize([300, 0], [[300, 50], [320, 50]]).
+			addSize([0, 0], []).
+			build();
+
+		// Define above the fold leaderboard sizes
+		// Gallery slideshow pages
+		//
+		var b_header_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[970, 90], [728, 90]]).
+			addSize([1100, 800], [[970, 90], [728, 90]]).
+			addSize([1100, 0], [[970, 90], [728, 90]]).
+			addSize([768, 0], [728,  90]).
+			addSize([300, 0], [[300, 50], [320, 50]]).
+			addSize([0, 0], []).
+			build();
+
+		/////////////
+		// Anchors
+
+		// Define below the fold leaderboard sizes
+		// Video pages, hub pages, article pages, gallery landing pages, gallery slideshow pages
+		//
+		var a_anchor_btf = googletag.sizeMapping().
+			addSize([1600, 0], [728,  90]).
+			addSize([1100, 800], [728,  90]).
+			addSize([1100, 0], [728,  90]).
+			addSize([768, 0], [728,  90]).
+			addSize([300, 0], [[300, 50], [320, 50]]).
+			addSize([0, 0], []).
+			build();
+
+		// Define below the fold leaderboard sizes
+		// Homepage
+		//
+		var b_anchor_btf = googletag.sizeMapping().
+			addSize([1600, 0], [728, 90]).
+			addSize([1100, 800],[728, 90]).
+			addSize([1100, 0], [728, 90]).
+			addSize([768, 0], [728, 90]).
+			addSize([300, 0], [[300, 50], [320, 50]]).
+			addSize([0, 0], [[300, 50], [320, 50]]).
+			build();
+
+		/////////////
+		// Medium ATF
+
+		// Define above the fold medium rectangle sizes
+		// Video pages
+		//
+		var a_medium_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[300, 600], [300, 250]]).
+			addSize([1100, 800], [[300, 600], [300, 250]]).
+			addSize([1100, 0], [[300, 600], [300, 250]]).
+			addSize([768, 0], [300, 250]).
+			addSize([300, 0], [300, 250]).
+			addSize([0, 0], []).
+			build();
+
+		// Define above the fold medium rectangle sizes
+		// Homepage, hub pages
+		//
+		var b_medium_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[300, 600], [300, 250]]).
+			addSize([1100, 800], [[300, 600], [300, 250]]).
+			addSize([1100, 0], [[300, 600], [300, 250]]).
+			addSize([768, 0], [300, 250]).
+			addSize([300, 0], [300, 250]).
+			addSize([0, 0], []).
+			build();
+
+		// Define above the fold medium rectangle sizes
+		// Article and gallery landing pages
+		//
+		var c_medium_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[300, 1050], [300, 600], [300, 250]]).
+			addSize([1100, 800], [[300, 1050], [300, 600], [300, 250]]).
+			addSize([1100, 0], [300, 250]).
+			addSize([768, 0], [[300, 600], [300, 250]]).
+			addSize([300, 0], [300, 250]).
+			addSize([0, 0], []).
+			build();
+
+		// Define above the fold medium rectangle sizes
+		// Gallery slideshow pages		
+		//
+		var d_medium_atf = googletag.sizeMapping().
+			addSize([1600, 0], [[300, 600], [300, 250]]).
+			addSize([1100, 800], [[300, 600], [300, 250]]).
+			addSize([1100, 0], [300, 250]).
+			addSize([768, 0], [[300, 250], [320, 250]]).
+			addSize([300, 0], [[300, 250], [320, 250]]).
+			addSize([0, 0], []).
+			build();
+
+		/////////////
+		// Medium BTF
+
+		// Define first below the fold medium rectangle sizes
+		// Video pages, hub pages, article pages, gallery landing, gallery slideshow
+		//
+		var a_medium_btf = googletag.sizeMapping().
+			addSize([1600, 0], [300, 250]).
+			addSize([1100, 800], [300, 250]).
+			addSize([1100, 0], [300, 250]).
+			addSize([768, 0], [300, 250]).
+			addSize([300, 0], [300, 250]).
+			addSize([0, 0], []).
+			build();
+
+		// Define first below the fold medium rectangle sizes
+		// Homepage, hub pages, article pages, gallery landing pages, gallery slideshow pages
+		//
+		var b_medium_btf = googletag.sizeMapping().
+			addSize([1600, 0], [300, 250]).
+			addSize([1100, 800], [300, 250]).
+			addSize([1100, 0], [300, 250]).
+			addSize([768, 0], [300, 250]).
+			addSize([300, 0], [[300, 250], [320, 250]]).
+			addSize([0, 0], []).
+			build();
+
+		// Define above the below medium rectangle sizes
+		// Homepage 2nd & 3rd btf
+		//
+		var x_medium_btf = googletag.sizeMapping().
+			addSize([1600, 0], [300, 250]).
+			addSize([1100, 800], [300, 250]).
+			addSize([1100, 0], [300, 250]).
+			addSize([768, 0], [300, 250]).
+			addSize([300, 0], [[300, 250], [320, 250]]).
+			addSize([0, 0], []).
+			build();
+
+		// Define page skin sizes
+		// All pages
+		//
+		var page_skin = googletag.sizeMapping().
+			addSize([1600, 0], [1,1]).
+			addSize([1100, 800], [1,2]).
+			addSize([1100, 0], [1,2]).
+			addSize([768, 0], [1,3]).
+			addSize([300, 0], [1,4]).
+			addSize([0, 0], []).
+			build();
+
+		/* GPT setting ad slots by position
+		* Assigns the ad to slot according to the above build definitions
+		*
+		*  Slots:
+		*  0 - skin - 857262748
+		*  1 - leaderboard atf - 392701254
+		*  2 - medium atf - 620363872
+		*  3 - medium btf - 222786677
+		*  6 - medium btf 2 - 664844754
+		*  8 - medium btf 3 - 870347650
+		*  4 - leaderboard btf - 863797748
+		*
+		*/
+
+
+		/*
+	* skin slot defined
+	*/
+
+    window.slot1 = googletag.defineSlot('/4840/etonline.com/tv/article', [1, 1], 'div-gpt-ad-etonline-857262748-0')
+            .defineSizeMapping(page_skin)
+            .addService(googletag.pubads())
+            .setTargeting("pos",["skin"]);
+        
+		/*
+	* leaderboard atf slot defined
+	*/
+
+    window.slot2 = googletag.defineSlot('/4840/etonline.com/tv/article', [[970, 90], [728, 90],[970, 250]], 'div-gpt-ad-etonline-392701254-1')
+            .defineSizeMapping(a_header_atf)
+            .addService(googletag.pubads())
+            .setTargeting("pos",["atf", "header"]);
+        
+		/*
+	* medrec atf slot defined
+	*/
+
+    window.slot3 = googletag.defineSlot('/4840/etonline.com/tv/article', [[300, 1050], [300, 600], [300, 250]], 'div-gpt-ad-etonline-620363872-2')
+            .defineSizeMapping(c_medium_atf)
+            .addService(googletag.pubads())
+            .setTargeting("pos",["atf", "a"]);
+        
+		/*
+	* medrec btf slot defined
+	*/
+
+    window.slot4 = googletag.defineSlot('/4840/etonline.com/tv/article', [300, 250], 'div-gpt-ad-etonline-222786677-3')
+            .defineSizeMapping(b_medium_btf)
+            .addService(googletag.pubads())
+            .setTargeting("pos",["btf", "b"]);
+        
+		/*
+	* leaderboard btf slot defined
+	*/
+
+    window.slot5 = googletag.defineSlot('/4840/etonline.com/tv/article', [728, 90], 'div-gpt-ad-etonline-863797748-4')
+            .defineSizeMapping(a_anchor_btf)
+            .addService(googletag.pubads())
+            .setTargeting("pos",["btf","anchor"]);
+        
+    googletag.defineOutOfPageSlot('/4840/etonline.com', 'div-gpt-ad-1476376122792-oop')
+            .addService(googletag.pubads());
+
+	// Start ad fetching
+	googletag.pubads().set("page_url", "http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/");
+	googletag.pubads().collapseEmptyDivs(true,true); // Collapses the div if empty
+	googletag.pubads().setTargeting("node","209686");
+	googletag.pubads().setTargeting("tag",["Melissa McCarthy","rosie odonnell","saturday night live","SNL","steve bannon"]); // Custom targeting by tags
+	googletag.pubads().setTargeting("kw",["Melissa McCarthy","rosie odonnell","saturday night live","SNL","steve bannon"]); // Custom targeting by kw (duplicate of above??)
+	googletag.pubads().setTargeting("category",["TV","News"]); // Custom targeting by category
+	googletag.pubads().setTargeting("page_type","Article"); // Custom targeting by page type
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+	Headertag_pretag_queue.push(function() { headertag.retrieve_demand() });
+});
+</script>
+
+<!-- Chartbeat Head script -->
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+<!-- Chartbeat Head script -->
+
+<!-- Comscore Head script -->
+<script src="/global/public/js/comscore.min.js" async></script>
+<noscript>
+	<img src="http://b.scorecardresearch.com/p?c1=2&c2=8628780&c4=http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/&cv=2.0&cj=1"/>
+</noscript>
+<!-- Comscore Head script -->
+
+<!-- Google Analytics Head script -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1072526-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+<!-- End Google Analytics Head script -->
+
+<!-- Adobe Dynamic Tag Management (Head) -->
+<script src="//assets.adobedtm.com/398c7586c180f65472202cc7e5d30952000089f5/satelliteLib-7c29f61b5dc80ef0480869c142589fcdeb24aa0a.js"></script>
+<!-- End: Adobe Dynamic Tag Management (Head) -->
+
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()
+	{n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+	;if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','//connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '510317429135895');
+	fbq('track', "PageView");
+	fbq('track', 'ViewContent');
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=510317429135895&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Sharethis footer script -->
+	<script type="text/javascript">
+		var switchTo5x=true;
+		(function() {
+			var stscr = document.createElement('script'); stscr.type = 'text/javascript'; stscr.async = true;
+			stscr.src ="http://w.sharethis.com/button/buttons.js";
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(stscr, s);
+			stscr.onload=stCB;
+			stscr.onreadystatechange=function(){if(stscr.readyState=='loaded'){stCB();}};})();
+		function stCB(){
+			stLight.options({
+				publisher: "ab4e7516-48e4-4103-93e0-88d13f006887",
+				popup:true,
+				servicePopup: true,
+				doNotHash: true,
+				doNotCopy: false,
+				shorten:false,
+				hashAddressBar: false
+			});
+		}
+	</script>
+<!-- Sharethis footer script -->
+
+        <script type="application/ld+json">
+{"@context":"http:\/\/schema.org","datePublished":"2017-02-07 11:12:00","dateModified":"2017-02-07 11:48:57","headline":"Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;","alternativeHeadline":"Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;","description":"The comedian and longtime Trump critic is ready to throw her wig in the ring.","publisher":{"@type":"Organization","name":"ETOnline","logo":{"@type":"ImageObject","url":"http:\/\/www.etonline.com\/global\/public\/images\/etlogo.png","width":60,"height":60}},"mainEntityOfPage":{"@type":"WebPage"},"keywords":["Melissa McCarthy","rosie odonnell","saturday night live","SNL","steve bannon"],"@type":"NewsArticle","author":{"@type":"Person","name":"Alex Ungerman"},"image":{"@type":"ImageObject","url":"http:\/\/www.etonline.com\/media\/video\/2017\/02\/24306957\/rosie_vidpic_020717_1280Copy.jpg","height":720,"width":1280},"articleSection":"TV","url":"http:\/\/www.etonline.com\/tv\/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl\/","articleBody":"Rosie O'Donnell is ready to channel Steve Bannon. After Melissa McCarthy's impressive take on White House press secretary Sean Spicer on last week's Saturday Night Live, the longtime Donald Trump critic told fans on Twitter that she's up for playing chief strategist Steve Bannon -- should she get the call. WATCH: Melissa McCarthy Nails Amazing Sean Spicer Impression in Explosive, Hilarious 'SNL' Sketch\r\n \"I am here to serve - Alec has Trump - Melissa has Spice - I would need a few days to prepare - so if called - I will be ready,\" the 54-year-old comedian tweeted on Monday night. O'Donnell reiterated the sentiment, responding to another follower's tweet, \"Available - if called i will serve!\" O'Donnell also praised McCarthy as a \"comedy god\" after her turn as Spicer over the weekend. WATCH: Rosie O'Donnell Calls Donald Trump a 'Criminal,' 'Mentally Unstable' in Twitter Rant\r\n O'Donnell would certainly be quite a casting change for SNL, which currently has Bannon portrayed as the Grim Reaper. Watch the video below to see more of McCarthy's take on Spicer. "}</script></head><body class="story-page">
+<div class="ad_oop">
+    <div id="div-gpt-ad-etonline-857262748-0">
+    </div>
+    <div id='div-gpt-ad-1476376122792-oop'>
+    </div></div>
+<div id="fb-root"></div>
+
+    <script>
+        window.MegaNav = window.MegaNav || {};
+        var json = '{"latestStories":{"category":{"GALLERY":{"story":[{"imgSrc":"\/photo\/2017\/02\/24311586\/ellie_goulding_300_6437736.jpg","post_url":"\/gallery\/209156_star_sightings_february_2017\/","type":"g","headline":"Star Sightings: February 2017"},{"imgSrc":"\/photo\/2017\/01\/24304034\/300_kim_kardashian_kourtney_kardashian_spl1421661_003.jpg","post_url":"\/gallery\/206351_celebs_winter_vacations_ski_beach_getaways_bikini\/","type":"g","headline":"Celebs&apos; Epic Winter Getaways"},{"imgSrc":"\/photo\/2017\/02\/24311440\/300_charlotte_mckinney_021917_spl1446527_011.jpg","post_url":"\/gallery\/195316_sexiest_celeb_bikini_bods_2016\/","type":"g","headline":"Sexiest Celeb Bikini Bods"},{"imgSrc":"\/photo\/2017\/02\/24311469\/300_liv_tyler_sailor_Lula_instagram.jpg","post_url":"\/fashion\/144741_Stars_Without_Makeup\/","type":"g","headline":"Stars Without Makeup"},{"imgSrc":"\/photo\/2016\/10\/24280119\/300_thisisus_selfie_twitter.jpg","post_url":"\/gallery\/201257_cutest_this_is_us_cast_photos\/","type":"g","headline":"Cutest &apos;This Is Us&apos; Cast Photos"}]},"AWARDS":{"story":[{"imgSrc":"\/awards\/2017\/02\/24311495\/300_mandy_moore_cdga2017_643594068.jpg","post_url":"\/awards\/211001_costume_designers_guild_awards_2017_full_winners_list\/","type":"a","headline":"Costume Designers Guild Awards 2017: The Complete Winner&apos;s List!"},{"imgSrc":"\/awards\/emmys\/2016\/09\/24270817\/300_damon_kimmel.jpg","post_url":"\/awards\/211038_jimmy_kimmel_says_he_going_do_everything_he_can_to_stop_matt_damon_from_winning_an_oscar_this_year\/","type":"a","headline":"Jimmy Kimmel Says He&apos;s Going Do &apos;Everything&apos; He Can to Stop Matt Damon From Winning an Oscar This Year"},{"imgSrc":"\/photo\/2017\/02\/24311329\/300_bestoscardresses_getty.jpg","post_url":"\/awards\/130882_The_Best_Oscar_Dresses_of_All_Time\/","type":"g","headline":"Best Oscar Dresses of All Time"},{"imgSrc":"\/music\/2017\/02\/24310636\/300_iheart.jpg","post_url":"\/music\/210775_best_new_artist_at_iheartradio\/","type":"a","headline":"iHeartRadio Awards&apos; Final Best New Artist Nominees Revealed -- Chance the Rapper, The Chainsmokers and More"},{"imgSrc":"\/awards\/2017\/02\/24310973\/300_wga_GettyImages-643011786.jpg","post_url":"\/awards\/210891_writers_guild_awards_2017_complete_winners_list\/","type":"a","headline":"Writers Guild Awards 2017: Complete Winners List!"}]},"MUSIC":{"story":[{"imgSrc":"\/media\/video\/2017\/02\/24311464\/BLAKEVOICECLIP_300.jpg","post_url":"\/news\/211096_exclusive_the_voice_blake_shelton_tells_gwen_stefani_to_quit_dropping_my_name_during_blind_auditions\/","type":"v","headline":"EXCLUSIVE: &apos;The Voice&apos;: Blake Shelton Tells Gwen Stefani to &apos;Quit Dropping My Name&apos; During Blind Auditions"},{"imgSrc":"\/photo\/2016\/06\/24244311\/300_luke_bryan_GettyImages538428550.jpg","post_url":"\/news\/211092_luke_bryan_mourns_the_death_of_his_infant_niece_thanks_fans_for_their_support\/","type":"a","headline":"Luke Bryan Mourns the Death of His Infant Niece, Thanks Fans for Their Support"},{"imgSrc":"\/media\/video\/2017\/02\/24311523\/et_gwenceline_022117_300.jpg","post_url":"\/news\/211067_gwen_stefani_gushes_over_blake_shelton_and_voice_mentor_celine_dion_she_speaks_to_the_world\/","type":"v","headline":"Gwen Stefani Gushes Over Blake Shelton and &apos;Voice&apos; Mentor Celine Dion: &apos;She Speaks to the World&apos;"},{"imgSrc":"\/media\/video\/2017\/02\/24311462\/et_022117_CelineDion2_300.png","post_url":"\/news\/211050_exclusive_celine_dion_opens_up_about_singing_new_song_for_beauty_and_the_beast\/","type":"v","headline":"EXCLUSIVE: Celine Dion Opens Up About Singing New Song for &apos;Beauty and the Beast&apos; 26 Years After the Original"},{"imgSrc":"\/media\/video\/2017\/02\/24311053\/et_022017_MariahCarey300.png","post_url":"\/music\/211032_mariah_carey_reflects_on_disastrous_new_year_eve_performance_i_blame_everybody\/","type":"v","headline":"Mariah Carey Reflects on Disastrous New Year&apos;s Eve Performance: &apos;I Blame Everybody&apos;"}]},"TV":{"story":[{"imgSrc":"\/photo\/2017\/02\/24311560\/300_javier_munoz_aol_getty.jpg","post_url":"\/tv\/211083_exclusive_blindspot_gets_a_hamilton_boost_with_javier_munoz\/","type":"a","headline":"EXCLUSIVE: \u2018Blindspot\u2019 Gets a \u2018Hamilton\u2019 Boost With Javier Mu\u00f1oz -- Watch the Clip!"},{"imgSrc":"\/media\/photo\/2017\/02\/24306100\/300_rita_ora_628642850_020317.jpg","post_url":"\/fashion\/211077_america_s_next_top_model_acting_challenge_is_here_exclusive\/","type":"a","headline":"EXCLUSIVE: It\u2019s Time for the Acting Challenge on \u2018America\u2019s Next Top Model\u2019"},{"imgSrc":"\/media\/video\/2017\/02\/24311523\/et_gwenceline_022117_300.jpg","post_url":"\/news\/211067_gwen_stefani_gushes_over_blake_shelton_and_voice_mentor_celine_dion_she_speaks_to_the_world\/","type":"v","headline":"Gwen Stefani Gushes Over Blake Shelton and &apos;Voice&apos; Mentor Celine Dion: &apos;She Speaks to the World&apos;"},{"imgSrc":"\/media\/video\/2017\/02\/24311488\/et_thisisus_3_022117_300.jpg","post_url":"\/tv\/211052_sterling_k_brown_gets_emotional_over_this_is_us_tomorrow_is_not_promised\/","type":"v","headline":"Sterling K. Brown Gets Emotional Over Gut-Wrenching &apos;This Is Us&apos;: &apos;Tomorrow Is Not Promised&apos;"},{"imgSrc":"\/media\/video\/2017\/02\/24307240\/et_chrissymetz_020717_300.jpg","post_url":"\/tv\/211046_chrissy_metz_talks_body_shaming_so_many_people_are_afraid_of_fat_people\/","type":"v","headline":"\u2018This Is Us\u2019 Star Chrissy Metz Talks Body Shaming: \u2018So Many People Are Afraid of Fat People\u2019"}]},"VIDEO":{"story":[{"imgSrc":"\/media\/video\/2017\/02\/24311603\/300_et_nicolekidman_012217.png","post_url":"\/media\/video\/nicole_kidman_rocks_curly_hair_and_sneakers_while_visiting_mickey_mouse-211093\/","type":"v","headline":"Nicole Kidman Rocks Curly Hair and Sneakers While Visiting Mickey Mouse"},{"imgSrc":"\/media\/video\/2017\/02\/24311571\/300_britney_spears_clive_davis_grammys_wireimage2_022217.jpg","post_url":"\/media\/video\/britney_spears_goofs_off_with_son_jayden_new_instagram_video-211087\/","type":"v","headline":"Britney Spears Goofs Off With Son Jayden in New Instagram Video"},{"imgSrc":"\/media\/video\/2017\/02\/24311575\/300_ss_kim_022217.jpg","post_url":"\/media\/video\/kim_kardashian_rocks_a_sweat_suit_to_help_her_lose_7_pounds-211088\/","type":"v","headline":"Kim Kardashian Rocks a Sweat Suit to Help Her Lose 7 Pounds"},{"imgSrc":"\/media\/video\/2017\/02\/24311579\/300_ss_lea_022217.jpg","post_url":"\/media\/video\/lea_michele_shares_a_series_of_swimsuit_pics_from_girls_trip_to_hawaii-211089\/","type":"v","headline":"Lea Michele Shares a Series of Swimsuit Pics From Girls Trip to Hawaii "},{"imgSrc":"\/media\/video\/2017\/02\/24311587\/300_ss_mariah_022217.jpg","post_url":"\/media\/video\/mariah_carey_enjoys_dubai_trip_with_boyfriend_bryan_tanaka_see_her_sexy_vacation_style-211090\/","type":"v","headline":"Mariah Carey Enjoys Dubai Trip With Boyfriend Bryan Tanaka: See Her Sexy Vacation Style!"}]},"MOVIES":{"story":[{"imgSrc":"\/photo\/2017\/02\/24311476\/300_Peter_Mayhew_Joonas_Suotamo_chewbacca_star_wars_instagram.jpg","post_url":"\/movies\/211055_new_chewy_alert_meet_the_actor_taking_over_for_star_wars_legend_peter_mayhew_han_solo_prequel\/","type":"a","headline":"New Chewy Alert! Meet the Basketball Star Taking Over for &apos;Star Wars&apos; Legend Peter Mayhew in Han Solo Prequel"},{"imgSrc":"\/media\/video\/2017\/02\/24311462\/et_022117_CelineDion2_300.png","post_url":"\/news\/211050_exclusive_celine_dion_opens_up_about_singing_new_song_for_beauty_and_the_beast\/","type":"v","headline":"EXCLUSIVE: Celine Dion Opens Up About Singing New Song for &apos;Beauty and the Beast&apos; 26 Years After the Original"},{"imgSrc":"\/media\/video\/2017\/02\/24311490\/umalotr_300.jpg","post_url":"\/movies\/211045_uma_thurman_opens_up_about_the_worst_decision_she_made_turning_down_a_role\/","type":"v","headline":"Uma Thurman Opens Up About the &apos;Worst Decision&apos; She&apos;s Made in Turning Down a Role"},{"imgSrc":"\/media\/video\/2017\/02\/24311040\/et_022017_EmmaClip300.png","post_url":"\/movies\/211034_emma_watson_compares_belle_to_hermione\/","type":"v","headline":"Emma Watson Compares Playing Belle in &apos;Beauty and the Beast&apos; to Hermione in &apos;Harry Potter&apos;"},{"imgSrc":"\/media\/video\/2017\/02\/24311352\/wahlberg_vidpic_022117_300.jpg","post_url":"\/movies\/211028_exclusive_transformers_star_mark_wahlberg_talks_fifty_shades_darker_valentine_day_date_with_his_wife\/","type":"v","headline":"EXCLUSIVE: &apos;Transformers&apos; Star Mark Wahlberg Talks &apos;Fifty Shades Darker&apos; Valentine&apos;s Day Date With His Wife"}]},"FEATURES":{"story":[{"imgSrc":"\/features\/2017\/02\/24310984\/300_jasonjones_samanthabee_tbs_getty.jpg","post_url":"\/features\/210893_samantha_bee_and_jason_jones_are_tbs_royalty\/","type":"a","headline":"Samantha Bee and Jason Jones: The Queen and King of TBS"},{"imgSrc":"\/features\/2017\/02\/24310967\/300_thebreaks_vh1.jpg","post_url":"\/features\/210889_vh1_the_breaks_brings_90s_hip_hop_to_life\/","type":"a","headline":"EXCLUSIVE: \u2018The Breaks\u2019 Cast Brings \u201990s-Era Hip-Hop to Life on VH1"},{"imgSrc":"\/features\/2017\/02\/24310575\/300_planetearthII_bbcamerica.jpg","post_url":"\/features\/210763_planet_earth_ii_producer_talks_emotional_second_series\/","type":"a","headline":"From Snow Leopards to Turtle Hatchlings, \u2018Planet Earth II\u2019 Is About Revelation"},{"imgSrc":"\/features\/2017\/02\/24310561\/300_chefstable_food_netflix.jpg","post_url":"\/features\/210759_chefs_table_creator_talks_season_3_and_food_porn\/","type":"a","headline":"\u2018Chef\u2019s Table\u2019 Is Not Food Porn, It Is Food Romance"},{"imgSrc":"\/news\/2017\/02\/24309969\/300_xx_premiere_sundance_roxanne_benjamin_annie_clark.jpg","post_url":"\/news\/210589_exclusive_oral_history_of_xx_annie_clark_st_vincent_karyn_kusama\/","type":"a","headline":"EXCLUSIVE: An Oral History of &apos;XX,&apos; the Horror Anthology With a Killer Feminist Agenda"}]},"NEWS":{"story":[{"imgSrc":"\/photo\/2016\/06\/24244311\/300_luke_bryan_GettyImages538428550.jpg","post_url":"\/news\/211092_luke_bryan_mourns_the_death_of_his_infant_niece_thanks_fans_for_their_support\/","type":"a","headline":"Luke Bryan Mourns the Death of His Infant Niece, Thanks Fans for Their Support"},{"imgSrc":"\/photo\/2017\/02\/24311563\/milo_cast_300.jpg","post_url":"\/news\/211085_milo_ventimiglia_reveals_why_his_arm_is_a_sling\/","type":"a","headline":"Milo Ventimiglia Reveals Why His Arm Is in a Sling, Poses Mind-Blowing \u2018Gilmore Girls\u2019 Question"},{"imgSrc":"\/photo\/2017\/02\/24311566\/300_mandy_moore_getty_643589336.jpg","post_url":"\/news\/211086_mandy_moore_channels_kate_middleton_jokes_she_happily_takes_credit_for_choreographing_la_la_land\/","type":"a","headline":"Mandy Moore Channels Kate Middleton in Sheer Red Dress, Jokes She Takes Credit for Choreographing &apos;La La Land&apos;"},{"imgSrc":"\/photo\/2017\/02\/24311586\/ellie_goulding_300_6437736.jpg","post_url":"\/gallery\/209156_star_sightings_february_2017\/","type":"g","headline":"Star Sightings: February 2017"},{"imgSrc":"\/media\/photo\/2017\/02\/24311559\/300_savannah_guthrie_instagram_022217.jpg","post_url":"\/news\/211084_savannah_guthrie_shares_priceless_makeup_free_snap_with_newborn_son\/","type":"a","headline":"Savannah Guthrie Shares Priceless Makeup-Free Snap With Newborn Son, Teases Return to the &apos;Today&apos; Show"}]},"FASHION":{"story":[{"imgSrc":"\/photo\/2017\/02\/24311566\/300_mandy_moore_getty_643589336.jpg","post_url":"\/news\/211086_mandy_moore_channels_kate_middleton_jokes_she_happily_takes_credit_for_choreographing_la_la_land\/","type":"a","headline":"Mandy Moore Channels Kate Middleton in Sheer Red Dress, Jokes She Takes Credit for Choreographing &apos;La La Land&apos;"},{"imgSrc":"\/media\/photo\/2017\/02\/24311552\/300_nicole_kidman_4d35b186335_022217.jpg","post_url":"\/news\/211081_nicole_kidman_rocks_curly_hair_and_sneakers_while_hanging_with_mickey_mouse\/","type":"a","headline":"Nicole Kidman Rocks Curly Hair and Sneakers While Hanging With Mickey Mouse: See the Cute Pics!"},{"imgSrc":"\/media\/photo\/2017\/02\/24306100\/300_rita_ora_628642850_020317.jpg","post_url":"\/fashion\/211077_america_s_next_top_model_acting_challenge_is_here_exclusive\/","type":"a","headline":"EXCLUSIVE: It\u2019s Time for the Acting Challenge on \u2018America\u2019s Next Top Model\u2019"},{"imgSrc":"\/awards\/2017\/02\/24311495\/300_mandy_moore_cdga2017_643594068.jpg","post_url":"\/awards\/211001_costume_designers_guild_awards_2017_full_winners_list\/","type":"a","headline":"Costume Designers Guild Awards 2017: The Complete Winner&apos;s List!"},{"imgSrc":"\/photo\/2017\/02\/24311469\/300_liv_tyler_sailor_Lula_instagram.jpg","post_url":"\/fashion\/144741_Stars_Without_Makeup\/","type":"g","headline":"Stars Without Makeup"}]}}}}';
+        window.MegaNav.json = json;
+    </script>
+    <nav id="nav">
+        <div class="container-fluid no-padding">
+            <div class="navbar-wrapper">
+                <div class="navbar-header">
+                    <button type="button" id="mobile-menu" class="navbar-toggle collapsed pull-left" data-target=".navHeaderCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span id="toggle-menu" class="icon-menu-light"></span>
+                    </button>
+                    <a href="#" id="close-btn" class="icon-close-X"></a>
+                    <a class="brand" href="/">
+                        <img src="/global/public/images/ETLogo.svg" alt="logo">
+                    </a>
+                    <ul class="mobile-nav social-links slide-in-fade">
+                        <li>
+                            <span class="st_facebook_large icon-facebook social-img" displaytext="Facebook"></span>
+                        </li>
+                        <li> 
+                            <span class="st_twitter_large icon-twitter social-img" st_via="etnow" displaytext="Twitter"></span>
+                        </li>
+                        <li>
+                            <span class="st_whatsapp_large icon-whatsapp social-img" displaytext="WhatsApp"></span>
+                        </li>
+                        <li>
+                            <span class="st_email_large icon-email20 social-img" displaytext="Email"></span>
+                        </li>
+                    </ul>
+                    <div id="collapsed-search-nav" class="navbar-toggle collapsed pull-right search-trigger">
+                        <div class="search-slide" style="width: initial;">
+                            <div id="search-collapsed" class="search">
+                                <form action="/search/" method="GET" id="cse-search-box" class="navbar-form navbar-left" role="search">
+                                    <input class="search-input" placeholder="Search" type="text" value="" name="q" id="search" maxlength="50">
+                                    <input class="search-submit" type="submit" value="">
+                                    <span class="icon-search"> 
+                                        <span id="collapsed-search" class="icon-magnifying-glass2"></span>
+                                    </span>
+                                </form>
+                            </div>
+                        </div><!-- /search-slide -->
+                    </div><!--/collapsed-search-nav -->
+                </div><!-- /navbar header -->
+                <div id="nav-content" class="navbar-collapse collapse navHeaderCollapse no-transition">
+                    <ul id="mobile-dropdown" class="nav navbar-nav navbar-left visible-nav-xs">
+						<li class="mobile-dd"><a href="/" class="mobile-dd-link">HOME</a></li>
+                        <li class="mobile-dd"><a href="/news" class="mobile-dd-link">NEWS</a></li>
+                        <li class="mobile-dd"><a href="/video" class="mobile-dd-link">VIDEO</a></li>
+						<li class="mobile-dd"><a href="/gallery" class="mobile-dd-link">PHOTOS</a></li>
+						<li class="mobile-dd"><a href="/tv" class="mobile-dd-link">TV</a></li>
+						<li class="mobile-dd"><a href="/movies" class="mobile-dd-link">MOVIES</a></li>
+						<li class="mobile-dd"><a href="/music" class="mobile-dd-link">MUSIC</a></li>
+						<li class="mobile-dd"><a href="/fashion" class="mobile-dd-link">FASHION</a></li>                        
+                        <li class="mobile-dd"><a href="/awards" class="mobile-dd-link">AWARDS</a></li>
+                        <li class="mobile-dd"><a href="/tag/celebs/" class="mobile-dd-link">CELEBS</a></li>                        					
+						<li class="watch-et">
+                            <a href="/showfinder" class="watch-et-link">
+                                <span class="icon-tv"></span>
+                                <span id="watch-rach-txt">WATCH ET</span>
+                            </a>
+									<div class="mobile-dd social-icon socialnavdisp tumblr">
+										<a href="http://entertainmenttonight.tumblr.com/" class="social-icon-link" title="Tumble" target="_blank"><span class="icon-tumblr18"></span></a>
+									</div>
+									<div class="mobile-dd social-icon socialnavdisp twitter">
+										<a href="https://twitter.com/etnow" class="social-icon-link" title="Twitter" target="_blank"><span class="icon-twitter"></span></a>
+									</div>									
+									<div class="mobile-dd social-icon socialnavdisp">
+										<a href="http://instagram.com/entertainmenttonight" class="social-icon-link" title="Instagram" target="_blank"><span class="icon-instagram"></span></a>
+									</div>
+									<div class="mobile-dd social-icon socialnavdisp">
+										<a href="http://www.facebook.com/EntertainmentTonight" class="social-icon-link" title="Facebook" target="_blank"><span class="icon-facebook"></span></a>
+									</div>									
+                            </li>
+							<li class="mobile-dd social-icon fb hidden-xs">
+								<a href="http://www.facebook.com/EntertainmentTonight" class="social-icon-link" title="Facebook" target="_blank"><span class="icon-facebook"></span></a>
+							</li>
+							<li class="mobile-dd social-icon hidden-xs">
+								<a href="http://instagram.com/etonline" class="social-icon-link" title="Instagram" target="_blank"><span class="icon-instagram"></span></a>
+							</li>
+							<li class="mobile-dd social-icon hidden-xs">
+								<a href="https://twitter.com/etnow" class="social-icon-link" title="Twitter" target="_blank"><span class="icon-twitter"></span></a>
+							</li>
+							<li class="mobile-dd social-icon hidden-xs">
+								<a href="http://entertainmenttonight.tumblr.com/" class="social-icon-link" title="Tumble" target="_blank"><span class="icon-tumblr18"></span></a>
+							</li>
+                    </ul>
+                    <div id="nav-skinny" class="clearfix hidden-nav-xs">
+                        <ul id="skinny-list" class="nav navbar-nav hidden-nav-xs">
+                            <li id="sections-menu" class="dropdown br">
+                                <a href="#" id="mega-nav-open" class="dropdown-toggle link">
+                                    SECTIONS
+                                </a>
+                                <nav id="mega-nav" class="dropdown-menu mega">
+                                    <div id="mega-nav-wrapper">
+                                        <a href="#" class="mega-nav-close"><span class="icon-Desktop-close-button"></span></a>
+                                        <ul id="mega-list">
+                                            <li class="mega-item"><a href="/news" class="mega-link" data-category="NEWS">NEWS</a></li>
+                                            <li class="mega-item"><a href="/video" class="mega-link" data-category="VIDEO">VIDEO</a></li>
+                                            <li class="mega-item"><a href="/gallery" class="mega-link" data-category="GALLERY">PHOTOS</a></li>
+                                            <li class="mega-item"><a href="/tv" class="mega-link" data-category="TV">TV</a></li>
+                                            <li class="mega-item"><a href="/movies" class="mega-link" data-category="MOVIES">MOVIES</a></li>
+                                            <li class="mega-item"><a href="/music" class="mega-link" data-category="MUSIC">MUSIC</a></li>
+                                            <li class="mega-item"><a href="/fashion" class="mega-link" data-category="FASHION">FASHION</a></li>
+                                            <li class="mega-item"><a href="/awards" class="mega-link" data-category="AWARDS">AWARDS</a></li>
+                                            <li class="mega-item"><a href="/tag/celebs/" class="mega-link" data-category="CELEBS">CELEBS</a></li>
+                                        </ul>
+                                        <div id="story-feed" class="hidden-sm">
+                                            <!-- Handlebars template:-->
+                                            <script id="latestNews-template" type="text/x-handlebars-template"></script>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </li>
+                            <li class="skinny-item showlink"><a href="/news" class="link">NEWS</a></li>
+                            <li class="skinny-item showlink"><a href="/video" class="link">VIDEO</a></li>
+                            <li class="skinny-item showlink"><a href="/gallery" class="link">PHOTOS</a></li>
+                            <li class="skinny-item showlinkmore"><a href="/tv" class="link">TV</a></li>
+                            <li class="skinny-item showlinkmore"><a href="/movies" class="link">MOVIES</a></li>
+                            <li class="skinny-item showlinkmore"><a href="/music" class="link">MUSIC</a></li>
+                        </ul>
+                        <ul id="skinny-list-aux" class="nav navbar-nav pull-right hidden-xs">
+                            <li id="skinny-search" class="skinny-item-aux">
+                               <div class="search-slide" style="width: initial;">
+                                <div id="search-full" class="search">
+                                    <form action="/search/" id="cse-search-box" method="GET" class="navbar-form navbar-left" role="search">
+                                        <input class="search-input" placeholder="Search" type="text" value="" name="q" id="search" maxlength="49">
+                                        <input class="search-submit" type="submit" value="SUBMIT">
+                                        <span class="icon-search"> 
+                                            <span id="collapsed-search" class="icon-magnifying-glass2"></span>
+                                        </span>
+                                    </form>
+                                </div><!-- /search-full -->
+                            </div><!-- /search-slide -->
+                            </li>
+                            <li id="watch-et" class="skinny-item-aux br bl">
+                                <a href="/showfinder" class="link">
+                                    <span class="icon-tv"></span><span id="watch-et-txt"> WATCH ET</span>
+                                </a>
+                            </li>
+                            <li class="social-icon skinny-item-aux fb">
+                                <a href="http://www.facebook.com/EntertainmentTonight" class="social-icon-link facebook" title="Facebook" target="_blank"><span class="icon-facebook"></span></a>
+                            </li>
+                            <li class="social-icon skinny-item-aux">
+                                <a href="http://instagram.com/entertainmenttonight" class="social-icon-link instagram" title="Instagram" target="_blank"><span class="icon-instagram"></span></a>
+                            </li>
+                            <li class="social-icon skinny-item-aux">
+                                <a href="https://twitter.com/etnow" class="social-icon-link twitter" title="Twitter" target="_blank"><span class="icon-twitter"></span></a>
+                            </li>
+                            <li class="social-icon skinny-item-aux">
+                                <a href="http://entertainmenttonight.tumblr.com/" class="social-icon-link tumblr" title="Tumblr" target="_blank"><span class="icon-tumblr18"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="trending" class="hidden-nav-xs">
+                       <li class="trending-item heading fade-in">
+                            <span class="icon-trending-flag"></span>
+                            <span class="txt">TRENDING</span>
+                        </li>
+                  
+                        <li class="trending-item fade-in fade0">
+                            <a href="http://www.etonline.com/tv/211031_this_is_us_william_and_randall_wrecked_us_most_gut_wrenching_episode/" class="link">
+                                &apos;This Is Us&apos;                            </a>
+                        </li>
+                  
+                        <li class="trending-item fade-in fade1">
+                            <a href="http://www.etonline.com/news/211024_george_clooney_says_he_and_amal_will_avoid_traveling_to_dangerous_countries_while_she_pregnant/" class="link">
+                                George & Amal                            </a>
+                        </li>
+                  
+                        <li class="trending-item fade-in fade2">
+                            <a href="http://www.etonline.com/tv/210944_andi_dorfman_returns_to_the_bachelor_to_confront_nick_viall_but_what_does_she_want/" class="link">
+                                &apos;The Bachelor&apos;                            </a>
+                        </li>
+                  
+                        <li class="trending-item fade-in fade3">
+                            <a href="http://www.etonline.com/news/210926_david_cassidy_reveals_dementia_diagnosis_says_he_was_in_denial_yet_always_knew_this_was_coming/" class="link">
+                                David Cassidy                            </a>
+                        </li>
+                  
+                        <li class="trending-item fade-in fade4">
+                            <a href="http://www.etonline.com/news/210843_angelina_jolie_promotes_first_they_killed_my_father_film_cambodia_with_all_six_children/" class="link">
+                                Angelina Jolie & Kids                            </a>
+                        </li>
+                    </ul>
+                </div><!-- nav-content -->
+            </div><!-- /navbar-wrapper -->
+        </div><!-- /container-fluid -->
+            </nav>
+        <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '145337045558621',
+            xfbml      : true,
+            version    : 'v2.4'
+          });
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script><div id="container" class="type-Article">
+                <div class="container-fluid leaderboardAd">
+            <div class="row">
+                <div class="col-xs-12 no-padding">
+                    <div class="ad-wrapper leaderboard top">
+                        <div id="div-gpt-ad-etonline-392701254-1" class="ad top leaderboard">
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="">
+        <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 no-padding">
+            <header>
+                                <a href="/tv/">
+                    <span class="page-category">TV</span>
+                </a>
+                                <h1 class="heading">Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;</h1>
+                <div class="date" datetime="2017-02-07">
+                    by <span class="author">Alex Ungerman</span>
+                    11:12 AM PST, February 07, 2017                </div>
+            </header>
+        </div>
+    </div>
+    <!-- /row -->
+</div>
+<!-- /container-fluid-->
+<div class="container-fluid">
+    <div class="article-aside row">
+        <article>
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="content-wrapper">
+                        <div class="side-social-links-wrapper sticky">
+                            <ul class="side-social-links">
+                                <li>
+                                    <span class="st_facebook_large icon-facebook social-img" displaytext="Facebook"></span>
+                                </li>
+                                <li>
+                                    <span class="st_tumblr_large icon-tumblr18 social-img" displaytext="Tumblr"></span>
+                                </li>
+                                <li>
+                                    <span class="st_twitter_large icon-twitter social-img" st_url="http://et.tv/2jZrrwC" st_via="etnow" displaytext="Twitter"></span>
+                                </li>
+                                <li>
+                                    <span class="st_googleplus_large icon-googleplus social-img" displaytext="Google+"></span>
+                                </li>
+                                <li>
+                                    <span class="st_pinterest_large icon-pinterest social-img" displaytext="Pintrest"></span>
+                                </li>
+                                <li>
+                                    <span class="st_email_large icon-email20 social-img" displaytext="Email"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sticky-gutter">
+                                                            <div id="main_vid_wrapper">
+                                    <div class="main_vid_box stickyOff">
+                                        <div id="vid_box">
+                                            <div class="outer-container">
+                                                <div id="hero_video" data-video-target="hero_video">
+                                                    <script>
+                                                        site.brightcove("hero_video", "title_209696", "title_Article", "hero", true);
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="videoTitle"> <span class="playing">Playing</span>
+                                            Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;                                        </div>
+                                    </div>
+                                </div>
+                                                        <div id='Story_Content'>
+                                                                                                                                <p class="story-txt">
+                                            Rosie O'Donnell is ready to channel Steve Bannon.                                        </p>
+                                                                                                <!-- Ad Medium Rectangle Above the Fold-->
+                                                <div id="medrec_atf1" class='ad-wrapper sidebar medrec_atf'>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 no-padding">
+                                                            <div id="div-gpt-ad-etonline-620363872-2" class="ad medium rectangle">
+    </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                                                                                                                            <p class="story-txt">
+                                            After Melissa McCarthy's impressive take on White House press secretary Sean Spicer on last week's Saturday Night Live, the longtime Donald Trump critic told fans on Twitter that she's up for playing chief strategist Steve Bannon -- should she get the call.                                        </p>
+                                                                                                                                                                                            <p class="story-txt">
+                                            <a href="http://www.etonline.com/tv/209485_melissa_mccarthy_nails_amazing_sean_spicer_impression_explosive_hilarious_snl_sketch/" target="_blank"><strong>WATCH: Melissa McCarthy Nails Amazing Sean Spicer Impression in Explosive, Hilarious 'SNL' Sketch
+</strong></a>                                        </p>
+                                                                                                                                                                                            <p class="story-txt">
+                                            "I am here to serve - Alec has Trump - Melissa has Spice - I would need a few days to prepare - so if called - I will be ready," the 54-year-old comedian tweeted on Monday night.                                        </p>
+                                                                                                                                                                                            <div class="twtr">
+                                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/calvininsf">@calvininsf</a> - i am here to serve - alec has trump - melissa has spice - i would need a few days to prepare - so if called - i will be ready</p>&mdash; ROSIE (@Rosie) <a href="https://twitter.com/Rosie/status/828792995591888896">February 7, 2017</a></blockquote>
+                                        </div>
+                                                                                                                                                <p class="story-txt">
+                                            O'Donnell reiterated the sentiment, responding to another follower's tweet, "Available - if called i will serve!"                                        </p>
+                                                                                                                                                                                            <div class="twtr">
+                                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">available - if called i will serve !!! <a href="https://t.co/LT84EJjfsw">https://t.co/LT84EJjfsw</a></p>&mdash; ROSIE (@Rosie) <a href="https://twitter.com/Rosie/status/828820454647427073">February 7, 2017</a></blockquote>
+                                        </div>
+                                                                                                                                                <p class="story-txt">
+                                            O'Donnell also praised McCarthy as a "comedy god" after her turn as Spicer over the weekend.                                        </p>
+                                                                                                                                                                                            <div class="twtr">
+                                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">MELISSA M - COMEDY GOD - <a href="https://t.co/UXAU8CjR5b">https://t.co/UXAU8CjR5b</a> <a href="https://twitter.com/hashtag/PresidentBannon?src=hash">#PresidentBannon</a></p>&mdash; ROSIE (@Rosie) <a href="https://twitter.com/Rosie/status/828258310361116672">February 5, 2017</a></blockquote>
+                                        </div>
+                                                                                                                                                <p class="story-txt">
+                                            <a href="http://www.etonline.com/news/206254_rosie_o_donnell_calls_donald_trump_a_criminal_mentally_unstable_twitter_rant/" target="_blank"><strong>WATCH: Rosie O'Donnell Calls Donald Trump a 'Criminal,' 'Mentally Unstable' in Twitter Rant
+</strong></a>                                        </p>
+                                                                                                                                                                                            <p class="story-txt">
+                                            O'Donnell would certainly be quite a casting change for <em>SNL</em>, which currently has Bannon portrayed as the Grim Reaper.                                        </p>
+                                                                                                                                                                                            <div class="twtr">
+                                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">SNL&#39;s Steve Bannon is a little too handsome. <a href="https://t.co/8q3ac5S2ts">pic.twitter.com/8q3ac5S2ts</a></p>&mdash; Steven Hyden (@Steven_Hyden) <a href="https://twitter.com/Steven_Hyden/status/828100265098280961">February 5, 2017</a></blockquote>
+                                        </div>
+                                                                                                                                                <p class="story-txt">
+                                            Watch the video below to see more of McCarthy's take on Spicer.                                        </p>
+                                                                                                                                                                                            <div class="related legacy enlarge" id="video_209491">
+                                            <div id="vid_box">
+                                                <div class="outer-container">
+                                                    <div id="legacy_video_209491" data-video-target="legacy_video_209491">
+                                                        <script>
+                                                            site.brightcove("legacy_video_209491", "title_209491", "Article", "related", true);
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                                <div class="related slideshow">
+                                            <span class="heading">RELATED SLIDESHOW</span>
+                                            <a href="/gallery/150186_kristen_wiig_best_wigs/index.html" class="url-wrap">
+                                                <div class="media-container landscape">
+                                                                                                        <picture class="media landscape">
+                                                        <source media="print" srcset="/photo/2014/08/24098463/gilly_640.jpg">
+                                                        <source media="(max-width: 360px)" srcset="/photo/2014/08/24098463/gilly_640.jpg">
+                                                        <source media="(max-width: 768px)" srcset="/photo/2014/08/24098463/gilly_640.jpg">
+                                                        <source media="(max-width: 1023px)" srcset="/photo/2014/08/24098463/gilly_640.jpg">
+                                                        <source media="(max-width:  1599px)" srcset="/photo/2014/08/24098463/gilly_640.jpg">
+                                                        <img src="/photo/2014/08/24098463/gilly_640.jpg">
+                                                    </picture>
+                                                    <div class="info">
+                                                        Kristen Wiig's Best Wigs <i class="icon icon-arrow"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                                                                                        <ul id="topic-tag-holder">
+                                                                                                                    <li class="tag-list">
+                                            <a href="/tv/show/snl/index.html" class="topic-tag">
+                                                SNL                                            </a>
+                                        </li>
+                                                                                <li class="tag-list">
+                                            <a href="/celebs/melissa_mccarthy/index.html" class="topic-tag">
+                                                Melissa Mccarthy                                            </a>
+                                        </li>
+                                                                                <li class="tag-list">
+                                            <a href="/tv/show/saturday_night_live/index.html" class="topic-tag">
+                                                Saturday Night Live                                            </a>
+                                        </li>
+                                                                                                            </ul>
+                                <div class="medrec_btf_marker_mobile"></div>
+
+                                <div id="medrec_btf1" class="livefyre-ad medrec_btf">
+                                    <div id="div-gpt-ad-etonline-222786677-3" class="ad medium rectangle">
+    </div>                                </div>
+                                <div id="social-share">
+                                    <span class="st_facebook_large">
+                                      <span class='socLg'>SHARE ON FACEBOOK</span>
+                                    <span class='socSm'>SHARE</span>
+                                    </span>
+                                    <span class="st_twitter_large">
+                                      <span class='socLg'>SHARE ON TWITTER</span>
+                                    <span class='socSm'>TWEET</span>
+                                    </span>
+                                    <div class="comment-jump">
+                                        <a class="link" href="#">JUMP TO COMMENTS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- content wrapper -->
+                        </div>
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- /container-->
+        </article>
+        <!-- /article -->
+        <aside class="col-md-4 col-lg-2" id="sidebar">
+    <div id="sticky_aside">
+                    
+<div id="feed-stories" class="latestNews widget hidden-xs">
+    <div class="heading">LATEST <span>TV</span> NEWS </div>
+        <a class="entry-link " href="/tv/211083_exclusive_blindspot_gets_a_hamilton_boost_with_javier_munoz/" >
+        <div class="entry-thumb">
+            <img src="http://www.etonline.com/photo/2017/02/24311560/300_javier_munoz_aol_getty.jpg">
+            </div>
+        <p class="sub-title">EXCLUSIVE: ‘Blindspot’ Gets a ‘Hamilton’ Boost With Javier Muñoz --...</p>
+    </a>
+        <a class="entry-link last" href="/fashion/211077_america_s_next_top_model_acting_challenge_is_here_exclusive/" >
+        <div class="entry-thumb">
+            <img src="http://www.etonline.com/media/photo/2017/02/24306100/300_rita_ora_628642850_020317.jpg">
+            </div>
+        <p class="sub-title">EXCLUSIVE: It’s Time for the Acting Challenge on ‘America’s Next Top...</p>
+    </a>
+</div>
+                <div id="newsletter" class="sidebar hidden-xs">
+    <span class="header">GET THE <b>LATEST</b> NEWS</span>
+    <div class="email-holder">
+        <i class="icon-email21 icon"></i>
+        <input id="email_input1" name="email_input1" class="email-input" type="email" placeholder="Your E-Mail Address">
+    </div>
+    <input type="submit" value="SUBMIT" class="btn" onclick="processEmailOptin('sidebar')">
+    <p class="terms">By signing up, you agree to our <a href="https://legalterms.cbsinteractive.com/terms-of-use" class="link" target="_blank">Terms of Use</a> and <a href="https://legalterms.cbsinteractive.com/privacy" class="link" target="_blank">Privacy Policy</a></p>
+    <div id="signup_form1" style="display: none;"></div>
+    <div id="df_thanks1" style="display:none;" class="nlwarning">
+        <p>THANK YOU</p>
+    </div>
+    <div id="df_error1" style="display:none;" class="nlwarning"></div>
+    <div id="email_results1" style="display:none;" class="nlwarning"></div>
+</div>    </div>
+</aside>        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container-fluid -->
+    
+<div class="container-fluid" id="middle-column">
+  <div class="revcontent" data-revcontent-target="revcontent_middle"></div>
+  <div id="comments" class="article-detail">
+    <div class="livefyre-comment-col">
+        <div id="livefyre"></div>
+        <div id="powered_by_livefyre_new"><a href="http://livefyre.com" target="_blank" sl-processed="1">Powered by Livefyre</a></div>
+    </div>
+    <div class="livefyre-ad-col">
+                            <div class="medrec_btf_marker_desktop"></div>
+                </div>
+</div><!-- /comments -->
+</div>
+    </div><!-- #main -->
+    <div class="container-fluid leaderboardAd footer">
+        <div class="row">
+            <div class="col-xs-12 no-padding">
+                <div class="ad-wrapper leaderboard">
+                    <div id="div-gpt-ad-etonline-863797748-4" class="ad bottom leaderboard">
+    </div>                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- container -->
+  <footer id="footer">
+            <div class="footer-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-lg-3 footer-list-container">
+                            <ul class="footer-list">
+                                <li class="footer-item header"><span class="footer-link">BROWSE ETONLINE</span></li>
+                                <li class="footer-item"><a href="/news" class="footer-link">News</a></li>
+                                <li class="footer-item"><a href="/tv" class="footer-link">TV</a></li>
+                                <li class="footer-item"><a href="/movies" class="footer-link">Movies</a></li>
+                                <li class="footer-item"><a href="/awards" class="footer-link">Awards</a></li>
+                                <li class="footer-item"><a href="/fashion" class="footer-link">Fashion</a></li>
+                                <li class="footer-item"><a href="/music" class="footer-link">Music</a></li>
+                                <li class="footer-item"><a href="/gallery" class="footer-link">Photos</a></li>
+                                <li class="footer-item"><a href="/video/index.html" class="footer-link">Video</a></li>
+                                <li class="footer-item"><a href="/giveaways" class="footer-link">Giveaways</a></li>
+								<li class="footer-item"><a href="/newsletters" class="footer-link">Newsletters</a></li>
+                            </ul>
+                        </div><!-- /col-->
+                        <div class="col-xs-12 col-sm-4 col-lg-3 footer-list-container">
+                            <ul class="footer-list">
+                                <li class="footer-item header"><span class="footer-link">CONNECT WITH ET</span></li>
+                                <li class="footer-item"><a href="http://www.facebook.com/EntertainmentTonight" target="_blank" class="footer-link">Facebook</a></li>
+                                <li class="footer-item"><a href="https://twitter.com/#!/etnow" target="_blank" class="footer-link">Twitter</a></li>
+                                <li class="footer-item"><a href="http://instagram.com/entertainmenttonight" target="_blank" class="footer-link">Instagram</a></li>
+                                <li class="footer-item"><a href="http://entertainmenttonight.tumblr.com/" target="_blank" class="footer-link">Tumblr</a></li>
+                                <li class="footer-item"><a href="https://plus.google.com/+entertainmenttonight/posts" target="_blank" class="footer-link">Google+</a></li>
+                                <li class="footer-item"><a href="http://www.youtube.com/entertainmenttonight" target="_blank" class="footer-link">YouTube</a></li>
+                                <li class="footer-item"><a href="/rss" class="footer-link">RSS</a></li>
+                                <li class="footer-item"><a href="/etmobile" class="footer-link">Mobile</a></li>
+                                <li class="footer-item"><a href="/showfinder" class="footer-link">ET on TV</a></li>
+                                <li class="footer-item"><a href="http://www.cbsbrandstudio.com/advertising/" target="_blank" class="footer-link">Advertise with Us</a></li>
+                                <li class="footer-item"><a href="http://www.etonline.com/contact/" target="_blank" class="footer-link">Contact Us</a></li>
+								<li class="footer-item"><a href="https://cbs.avature.net/cbstvdcareers" target="_blank" class="footer-link">Careers</a></li>
+                            </ul>
+                        </div><!-- /col-->
+                        <div class="col-xs-12 col-sm-4 col-lg-3 footer-list-container">
+                            <ul class="footer-list">
+                                <li class="footer-item header"><span class="footer-link">SITES WE LOVE</span></li>
+                                <li class="footer-item"><a href="http://www.cbsnews.com/" target="_blank" class="footer-link">CBS News</a></li>
+                                <li class="footer-item"><a href="http://www.tvguide.com/" target="_blank" class="footer-link">TV Guide</a></li>
+                                <li class="footer-item"><a href="http://www.rachaelrayshow.com/" target="_blank" class="footer-link">Rachael Ray Show</a></li>
+                                <li class="footer-item"><a href="http://www.insideedition.com/" target="_blank" class="footer-link">Inside Edition</a></li>
+                                <li class="footer-item"><a href="http://www.chow.com/" target="_blank" class="footer-link">Chow</a></li>
+                                <li class="footer-item"><a href="http://www.last.fm/" target="_blank" class="footer-link">last.fm</a></li>
+                                <li class="footer-item"><a href="http://www.metacritic.com/" target="_blank" class="footer-link">Metacritic</a></li>
+                                <li class="footer-item"><a href="http://www.metrolyrics.com/" target="_blank" class="footer-link">Metrolyrics</a></li>
+                                <li class="footer-item"><a href="http://www.tv.com/" target="_blank" class="footer-link">TV.com</a></li>
+                                <li class="footer-item"><a href="http://www.startswithyou.com/" target="_blank" class="footer-link">Starts With You</a></li>
+                            </ul>
+                        </div><!-- /col-->
+                        <div class="col-xs-12 col-sm-12 col-lg-3 footer-list-container">
+    <div id="newsletter" class="footer">
+    <span class="header">NEWSLETTER SIGN UP</span>
+    <div class="email-holder">
+        <i class="icon-email21 icon"></i>
+        <input id="footer_newsletter" name="footer_newsletter" type="email" class="email-input" placeholder="Your E-Mail Address">
+    </div>
+<button type="submit" class="btn newsletter" onclick="processEmailOptin('footer')">Sign Up</button>
+<p class="terms">By signing up, you agree to our <a href="https://legalterms.cbsinteractive.com/terms-of-use" target="_blank" class="link">Terms of Use</a> and <a href="https://legalterms.cbsinteractive.com/privacy" target="_blank" class="link">Privacy Policy</a></p>
+</div>
+<div id="signup_form2" style="display: none;"></div>
+<div id="df_thanks2" style="display:none;"  class="nlwarning1">
+    <p>THANK YOU</p>
+</div>
+<!-- <div id="df_error2" style="display:none;"  class="nlwarning1"></div> -->
+<div id="footer_newsletter_msg" class="nlwarning"></div>
+</div>
+                    </div><!-- /row -->
+                </div><!-- /container-fluid -->
+            </div><!-- /footer-wrapper -->
+
+            <div class="footer bottom">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul id="footer-social">
+                                <li class="footer-social-item first"><a href="http://www.facebook.com/EntertainmentTonight" target="_blank" class="footer-social-icon icon-facebook"></a></li>
+                                <li class="footer-social-item"><a href="http://instagram.com/entertainmenttonight" target="_blank" class="footer-social-icon icon-instagram"></a></li>
+                                <li class="footer-social-item"><a href="https://twitter.com/etnow" target="_blank" class="footer-social-icon icon-twitter"></a></li>
+                                <li class="footer-social-item"><a href="http://www.youtube.com/entertainmenttonight" target="_blank" class="footer-social-icon icon-youtube"></a></li>
+                                <li class="footer-social-item"><a href="http://www.pinterest.com/etonline" target="_blank" class="footer-social-icon icon-pinterest"></a></li>
+                                <li class="footer-social-item"><a href="http://www.etonline.com/rss/" target="_blank" class="footer-social-icon icon-feed2"></a></li>
+                                <li class="footer-social-item"><a href="http://www.stumbleupon.com/channel/ETonline" target="_blank" class="footer-social-icon icon-stumbleupon2"></a></li>
+                            </ul>
+                            <div class="legal-print">
+                                <p class="legal-txt">CBS Television Distribution &copy; 2017 CBS Studios Inc. All Rights Reserved</p>
+                                <ul class="legal-list">
+                                    <li class="legal-item"><a href="https://legalterms.cbsinteractive.com/terms-of-use" target="_blank" class="link">Terms of Use</a></li>
+                                    <li class="legal-item"><a href="https://legalterms.cbsinteractive.com/privacy" target="_blank" class="link">Privacy Policy</a></li>
+                                    <li class="legal-item"><a href="https://legalterms.cbsinteractive.com/eula" target="_blank" class="link">Mobile User Agreement</a></li>
+                                    <li class="legal-item"><a href="/newsdesk/tips2013.php" target="_blank" class="link">Submit a Tip</a></li>
+                                    <li class="legal-item"><a href="http://www.cbsbrandstudio.com/advertising/" target="_blank" class="link">Advertise with Us</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- /col-->
+                    </div><!-- /row -->
+                </div><!-- /container-fluid -->
+            </div><!-- footer-wrapper bottom-->
+        </footer><script src="/global/public/js/bootstrap-3.3.5.js"></script>
+<script type="text/javascript">
+	var global = global || {};
+	global['output_channel'] = "HTML";
+	global['story_type'] = "Article";
+	global['userplatform'] = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "mobile" : "desktop";
+</script>
+<script type="text/javascript" src="/global/public/js/revContent.min.js"></script>
+	<script src="/global/public/js/handlebars.min.js"></script>
+				<script src="/global/public/js/article.min.js" async></script>
+			<script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs");</script>
+			<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+			<script async src="//platform.vine.co/static/scripts/embed.js"></script>
+				<script src='//cdn.livefyre.com/Livefyre.js'></script>
+	<script type='text/JavaScript' src='http://etonline.ep.livefyre.com/media/ZXRvbmxpbmUuZXAubGl2ZWZ5cmUuY29t/javascripts/customprofiles.js'></script>
+
+	<script type="text/javascript">
+	livefyre(209686);
+	function livefyre(id){
+		var networkConfig = {
+			network: 'cbstvdistribution.fyre.co'
+		};
+
+		var convConfig = {
+			siteId: 372080,
+			intialNumVisibile: 10,
+			articleId: id,
+			el: 'livefyre',
+			checksum: '9899c746c0a919c2d306a240bae842fc',
+			collectionMeta: 'eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IlJvc2llIE8mIzM5O0Rvbm5lbGwgRG93biBXaXRoIFJlcGxhY2luZyB0aGUgR3JpbSBSZWFwZXIgYXMgU3RldmUgQmFubm9uIG9uICYjMzk7U2F0dXJkYXkgTmlnaHQgTGl2ZSYjMzk7OiAmIzM5O0hlcmUgdG8gU2VydmUmIzM5OyIsInVybCI6Imh0dHA6XC9cL3d3dy5ldG9ubGluZS5jb21cL3R2XC8yMDk2ODZfcm9zaWVfb19kb25uZWxsX2Rvd25fdG9fcGxheV9zdGV2ZV9iYW5ub25fb25fc25sXC8iLCJhcnRpY2xlSWQiOiIyMDk2ODYiLCJ0eXBlIjoibGl2ZWNvbW1lbnRzIn0.7rsVbP94LJMVGHsXITWr_dP9R9ra8Glp_-jb4bxom74'
+		};
+
+			// Legacy configuration
+		Livefyre.require(['fyre.conv#3', 'auth', 'lfep-auth-delegate#0'], function (Conv, auth, LFEPAuthDelegate) {
+			new Conv(networkConfig, [convConfig], function (commentsWidget) {}());
+			var authDelegate = new LFEPAuthDelegate({
+					engageOpts: {
+							app: 'cbstv.auth.fyre.co'
+					}
+			});
+			auth.delegate(authDelegate);
+		});
+		};
+	</script>
+				<script src="/global/public/js/global-nav.min.js" async></script>
+	<script src="/global/public/js/search.min.js" async></script>
+	<script src="/global/public/js/search-slide.min.js" async></script>
+	<script src="/global/public/js/helpers.min.js" async></script>
+	<script src="/global/public/js/newsletter.min.js" async></script>
+<script src="/global/public/js/bootstrap-hover-dropdown.min.js"></script>
+<!-- Adobe Dynamic Tag Management (Footer) -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+<!-- End: Adobe Dynamic Tag Management (Footer) -->
+
+<!-- Omniture footer script -->
+<script id='myscript' type='text/javascript' src='/global/public/js/s_code.js'></script>
+<script language="JavaScript" type="text/javascript">
+    s.channel= 'tv:article';
+    s.pageName = 'Rosie O&#39;Donnell Down With Replacing the Grim Reaper as Steve Bannon on &#39;Saturday Night Live&#39;: &#39;Here to Serve&#39;';
+    s.server = 'www.etonline.com';
+    s.referrer = document.referer;
+    s.prop1 = 'TV';
+    s.pageURL = 'http://www.etonline.com/tv/209686_rosie_o_donnell_down_to_play_steve_bannon_on_snl/';
+    var s_code = s.t();
+    if (s_code)
+        document.write(s_code);
+    console.log();
+</script>
+<script language="JavaScript" type="text/javascript"> if (navigator.appVersion.indexOf('MSIE') >= 0)
+        document.write(unescape('%3C') + '\!-' + '-');
+</script>
+<noscript>
+    <img src="http://cbs.112.2o7.net/b/ss/cbset/1/H.25.5--NS/0" height="1" width="1" border="0" alt="" />
+</noscript>
+<!-- Omniture footer script -->
+
+<!-- Chartbeat footer script -->
+<script type="text/javascript">
+	var _sf_async_config={};
+
+	/** CONFIGURATION **/
+	_sf_async_config.uid = 20200;
+	_sf_async_config.domain = "etonline.com";
+	_sf_async_config.sections = "TV";
+	_sf_async_config.authors = "Alex Ungerman";
+	_sf_async_config.useCanonical = true;
+	(function(){
+		function loadChartbeat()
+		{
+			window._sf_endpt=(new Date()).getTime();
+			var e=document.createElement('script');
+			e.setAttribute('language','javascript');
+			e.setAttribute('type','text/javascript');
+			e.setAttribute('src',(("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat.js");
+			document.body.appendChild(e)
+		}
+		var oldonload=window.onload;
+		window.onload=(typeof window.onload!='function')?loadChartbeat:function(){oldonload();loadChartbeat()}
+	})();
+</script>
+<!-- Chartbeat footer script -->
+
+<!-- Apple iTunes auto link maker -->
+<!-- makes all apple links into affiliate link -->
+<script type='text/javascript'>
+  var _merchantSettings=_merchantSettings||[];_merchantSettings.push(["AT","1010l3go"]);
+  (function(){
+      var autolink=document.createElement("script");
+      autolink.type="text/javascript";
+      autolink.async=true;
+      autolink.src=("https:"==document.location.protocol)?"https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js":"http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js";
+      var s=document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(autolink,s);
+  })();
+   </script>
+<!-- Apple iTunes auto link maker -->
+
+<!-- Nielsen Online Sitecensus footer script -->
+<script type="text/javascript" src="//secure-au.imrworldwide.com/v60.js"></script>
+<script type="text/javascript">
+    var pvar = {cid: "inceptiondigital", content: "0", server: "secure-au"};
+    var trac = nol_t(pvar);
+    trac.record().post();
+</script>
+<noscript>
+    <div>
+        <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=inceptiondigital&amp;cg=0&amp;cc=1&amp;ts=noscript"width="1"height="1"alt=""/>
+    </div>
+</noscript>
+<!-- Nielsen Online Sitecensus footer script -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7925dc8d76","applicationID":"9145267","transactionName":"bwMAYhdUXUJSVUxZV1ZJN0QMGkdHHAQICQ4AUD1ECkZaVGxZZ1RXVggHWglqV15EWGdEV2cWDlccakBFVkBdb1pZCAxZC2pcX2xFVlwXUQgGUx0bW0VeWg==","queueTime":0,"applicationTime":14,"atts":"Q0QDFF9OTkw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

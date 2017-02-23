@@ -1,0 +1,4577 @@
+
+
+
+
+
+
+Whoa there!
+
+
+Looks like you're already verified.
+
+
+If you still have trouble signing in, you probably need a new confirmation link email.
+
+
+{* resendLink *} Please resend verification.
+
+
+
+
+
+
+
+
+Thanks for verifying your email address
+
+
+You're now logged in.
+
+
+LINK YOUR ACCOUNT FOR PREMIUM ACCESS
+
+
+Are you already a home delivery subscriber for ajc.com?
+
+
+Yes, Link My Account
+No, I'm good
+
+
+
+
+
+
+
+
+
+
+Change password
+
+		        {* newPasswordForm *}
+		            {* newPassword *}
+		            {* newPasswordConfirm *}
+		            {* submitButton *}
+		        {* /newPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Your password has been changed
+
+
+Password has been successfully updated.
+
+
+Sign in
+
+
+
+
+
+
+
+
+
+
+Email sent
+
+
+
+
+We have sent you an email with a link to change your password.
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We didn't recognize that password reset code. Enter your email address to get a new one.
+
+		        {* #forgotPasswordForm *}
+		        {* forgotPassword_emailAddress *}
+		        {* forgotPassword_sendButton *}
+		        {* /forgotPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're Almost Done!
+
+
+Please confirm the information below before signing in.
+
+
+*Required
+
+		        {* #socialRegistrationForm *}
+		            {* socialRegistration_displayName *}
+		            {* socialRegistration_emailAddress *}
+		
+		            
+By submitting your registration information, you agree to our
+		              
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		            {* socialRegistration_signInButton *}
+		        {* /socialRegistrationForm *}
+		    
+
+
+
+
+
+
+
+
+Register
+
+
+*Required
+
+		        {* #registrationForm *}
+		
+		            {* traditionalRegistration_emailAddress *}
+		            {* traditionalRegistration_password *}
+		            {* traditionalRegistration_passwordConfirm *}
+		
+		            {* traditionalRegistration_displayName *}
+		            
+By submitting your registration information, you agree to our
+		              
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		
+		            {* createAccountButton *}
+		        {* /registrationForm *}
+		    
+
+
+
+
+
+
+
+
+Create a New Account
+
+
+*Required
+
+		        {* #registrationFormBlank *}
+		
+		            {* traditionalRegistration_emailAddressBlank *}
+		            {* traditionalRegistration_passwordBlank *}
+		            {* traditionalRegistration_passwordConfirmBlank *}
+		            {* traditionalRegistration_displayName *}
+		            
+By submitting your registration information, you agree to our
+		                
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		
+		            {* createAccountButton *}
+		        {* /registrationForm *}
+		    
+
+
+
+
+
+
+
+
+Just One More Thing...
+
+
+We have sent you a verification email. Please check your email and click on the link to activate your AJC.com profile.
+
+
+If you do not receive the verification message within a few minutes of signing up, please check your Spam or Junk folder.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+Thank you for registering!
+
+
+We look forward to seeing you on AJC.com frequently. Visit us and sign in to update your profile, receive the latest news and keep up to date with mobile alerts.
+
+
+
+		        Click 
+here
+ to return to the page you were visiting.
+		        
+
+
+
+
+
+
+
+
+
+
+Create a new password
+
+
+Don't worry, it happens. We'll send you a link to create a new password.
+
+		        {* #forgotPasswordForm *}
+		        {* forgotPassword_emailAddress *}
+		        {* forgotPassword_sendButton *}
+		        {* /forgotPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Email sent
+
+
+We have sent you an email with a link to change your password.
+
+
+Close
+
+
+
+
+
+
+
+		    {* mergeAccounts *}
+		
+
+
+
+
+
+
+Sign in to complete account merge
+
+		        {* #tradAuthenticateMergeForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            {* mergePassword *}
+		            {* backButton *}
+		            {* traditionalSignIn_signInButton *}
+		        {* /tradAuthenticateMergeForm *}
+		    
+
+
+
+
+
+
+
+
+
+
+Resend Email Verification
+
+
+
+
+Click submit to receive another verification email
+
+		        {* #resendVerificationForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            
+
+
+
+
+
+		         {* /resendVerificationForm *}
+		     
+
+
+
+
+
+
+
+
+
+
+Your Verification Email Has Been Sent
+
+
+
+
+
+
+Check your email for a verification link
+
+
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for verifying your email address.
+
+
+You're now logged in.
+
+
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+It looks like you are already verified. If you still have trouble signing in, you probably need a 
+new confirmation link email.
+
+		          {* #userInformationForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            {* traditionalSignIn_password *}
+		            {* traditionalSignIn_signInButton *}
+		            
+
+
+
+		                Use another account
+		              
+
+
+
+		          {* /userInformationForm *}
+		        
+
+
+
+
+
+
+
+
+
+
+Change password
+
+        {* newPasswordForm *}
+            {* newPassword *}
+            {* newPasswordConfirm *}
+            {* submitButton *}
+        {* /newPasswordForm *}
+    
+
+
+
+
+
+
+
+
+Your password has been changed
+
+
+Password has been successfully updated.
+
+
+Sign in
+
+
+
+
+
+
+
+
+
+
+Email sent
+
+
+
+
+We have sent you an email with a link to change your password.
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We didn't recognize that password reset code. Enter your email address to get a new one.
+
+        {* #forgotPasswordForm *}
+        {* forgotPassword_emailAddress *}
+        {* forgotPassword_sendButton *}
+        {* /forgotPasswordForm *}
+    
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+Thanks for verifying your email address.
+
+
+You're now logged in.
+
+
+
+            {# Show dss link in NP sites that have subscriptions_url set #}
+            {% if subscriptions_url %}
+                
+
+
+* LINK YOUR ACCOUNT FOR PREMIUM ACCESS -
+
+
+Are you already a home delivery subscriber for {% site_setting friendly_name %}?
+
+
+Yes, Link My Account
+
+
+No, I'm good
+
+
+
+            {% else %}
+                
+Close
+
+            {% endif %}
+        
+
+
+
+
+
+
+
+
+
+        {% include "includes/auth/janrain/signIn_traditional.html"  with message='It looks like you are already verified. If you still have trouble signing in, you probably need a 
+new confirmation link email.
+' %}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                            Our Products
+	                        
+
+
+
+
+ 
+Your AJC, your way. Explore these products from The Atlanta Journal-Constitution.
+ 
+ 
+ 
+AJC.com Get Atlanta's News Now
+ 
+ 
+ 
+AJC access ATL Find Fun Things to Do
+ 
+ 
+ 
+myAJC Explore Exclusive Digital Extras and More
+ 
+ 
+ 
+AJC ePaper Read Today's Paper
+ 
+
+
+
+
+
+
+AJC Jobs
+ 
+Contact Us
+ 
+
+
+
+
+
+
+
+			64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+
+
+
+
+
+
+
+
+
+
+open search
+
+
+clear
+
+
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+open search
+
+
+clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+			64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+close menu
+
+
+
+
+Subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+close subnav
+
+
+open subnav
+
+
+
+
+
+
+
+
+Log Out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+NEWS
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All News
+
+
+
+
+
+
+
+
+
+    					News Video
+
+
+
+
+
+
+
+
+
+    					Local News
+
+
+
+
+
+
+
+
+
+    					Education
+
+
+
+
+
+
+
+
+
+    					Business
+
+
+
+
+
+
+
+
+
+    					Politics
+
+
+
+
+
+
+
+
+
+    					Technology
+
+
+
+
+
+
+
+
+
+    					Nation & World
+
+
+
+
+
+
+
+
+
+    					Crime & Safety
+
+
+
+
+
+
+
+
+
+    					Offbeat
+
+
+
+
+
+
+
+
+
+    					Atlanta Weather
+
+
+
+
+
+
+
+
+
+										NEWS BLOGS				
+
+
+
+
+
+
+
+
+AJC Investigations
+
+
+
+
+
+
+
+
+Political								Insider
+
+
+
+
+
+
+
+
+Get Schooled
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Atlanta Watering Restrictions
+
+
+
+
+
+
+
+
+Traffic: Construction Alert
+
+
+
+
+
+
+
+
+Ga. Public School Ratings
+
+
+
+
+
+
+
+
+Atlanta Gas								Prices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SPORTS
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Sports
+
+
+
+
+
+
+
+
+
+    					Braves
+
+
+
+
+
+
+
+
+
+    					Falcons
+
+
+
+
+
+
+
+
+
+    					Hawks
+
+
+
+
+
+
+
+
+
+    					Atlanta United
+
+
+
+
+
+
+
+
+
+    					High Schools
+
+
+
+
+
+
+
+
+
+    					Georgia Tech
+
+
+
+
+
+
+
+
+
+    					Georgia Colleges
+
+
+
+
+
+
+
+
+
+    					UGA / DawgNation
+
+
+
+
+
+
+
+
+
+    					SEC Country
+
+
+
+
+
+
+
+
+
+    					Sports Video
+
+
+
+
+
+
+
+
+
+    					AJC Store
+
+
+
+
+
+
+
+
+
+					BUY STUFF
+
+
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+
+					SPORTS BLOGS
+
+
+
+
+
+
+
+
+Recruiting
+
+
+
+
+
+
+
+
+Falcons
+
+
+
+
+
+
+
+
+Hawks
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Sports Scores
+
+
+
+
+
+
+
+
+Golf
+
+
+
+
+
+
+
+
+NASCAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NEIGHBORHOOD
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Neighborhood
+
+
+
+
+
+
+
+
+
+    					Newcomer's Guide
+
+
+
+
+
+
+
+
+
+    					Buckhead
+
+
+
+
+
+
+
+
+
+    					Decatur
+
+
+
+
+
+
+
+
+
+    					Buford
+
+
+
+
+
+
+
+
+
+    					Peachtree City
+
+
+
+
+
+
+
+
+
+    					Gwinnett County
+
+
+
+
+
+
+
+
+
+    					Intown Atlanta
+
+
+
+
+
+
+
+
+
+    					Marietta
+
+
+
+
+
+
+
+
+
+    					Roswell
+
+
+
+
+
+
+
+
+
+    					Sandy Springs
+
+
+
+
+
+
+
+
+
+    					Smyrna
+
+
+
+
+
+
+
+
+
+										COUNTY NEWS
+
+
+
+
+
+
+
+
+Clayton								County
+
+
+
+
+
+
+
+
+Cobb								County
+
+
+
+
+
+
+
+
+DeKalb								County
+
+
+
+
+
+
+
+
+Gwinnett								County
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Living Northside
+
+
+
+
+
+
+
+
+Living Intown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIFE
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Life
+
+
+
+
+
+
+
+
+
+    					Celebrities
+
+
+
+
+
+
+
+
+
+    					Home & Garden
+
+
+
+
+
+
+
+
+
+    					Weddings & Celebrations
+
+
+
+
+
+
+
+
+
+    					Health
+
+
+
+
+
+
+
+
+
+    					Travel
+
+
+
+
+
+
+
+
+
+    					Parenting
+
+
+
+
+
+
+
+
+
+    					Movies & TV
+
+
+
+
+
+
+
+
+
+    					Home Design Ideas
+
+
+
+
+
+
+
+
+
+    					Arts & Culture
+
+
+
+
+
+
+
+
+
+    					Food & Drink
+
+
+
+
+
+
+
+
+
+    					Music
+
+
+
+
+
+
+
+
+
+										LIFE BLOGS
+
+
+
+
+
+
+
+
+Best of Atlanta
+
+
+
+
+
+
+
+
+Atlanta								Restaurants
+
+
+
+
+
+
+
+
+Atlanta								Shopping
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Black History
+
+
+
+
+
+
+
+
+Games
+
+
+
+
+
+
+
+
+AJC Peachtree								Road Race
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THINGS TO DO
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Things to Do
+
+
+
+
+
+
+
+
+
+    					Spring in Atlanta
+
+
+
+
+
+
+
+
+
+    					Events in Atlanta
+
+
+
+
+
+
+
+
+
+    					Best of Atlanta
+
+
+
+
+
+
+
+
+
+    					Black History
+
+
+
+
+
+
+
+
+
+    					Arts & Culture
+
+
+
+
+
+
+
+
+
+    					Movie Showtimes
+
+
+
+
+
+
+
+
+
+    					Radio & TV
+
+
+
+
+
+
+
+
+
+    					Food & Drink
+
+
+
+
+
+
+
+
+
+    					Music
+
+
+
+
+
+
+
+
+
+    					Shopping
+
+
+
+
+
+
+
+
+
+    					Latest Video
+
+
+
+
+
+
+
+
+
+    					Games
+
+
+
+
+
+
+
+
+
+										Blogs					
+
+
+
+
+
+
+
+
+Atlanta								Restaurants
+
+
+
+
+
+
+
+
+Music Scene
+
+
+
+
+
+
+
+
+Arts &								Culture
+
+
+
+
+
+
+
+										In the News					
+
+
+
+
+
+
+
+
+Upcoming								Movies
+
+
+
+
+
+
+
+
+Living Intown: BeltLine
+
+
+
+
+
+
+
+
+Horoscopes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MORE
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					Newsletters
+
+
+
+
+
+
+
+
+
+    					Customer Care
+
+
+
+
+
+
+
+
+
+    					Contact the AJC
+
+
+
+
+
+
+
+
+
+    					Shopping
+
+
+
+
+
+
+
+
+
+    					Games
+
+
+
+
+
+
+
+
+
+    					Obituaries
+
+
+
+
+
+
+
+
+
+    					Homefinder
+
+
+
+
+
+
+
+
+
+    					AJC Jobs
+
+
+
+
+
+
+
+
+
+    					AJC Cars
+
+
+
+
+
+
+
+
+
+    					Kudzu
+
+
+
+
+
+
+
+
+
+    					Celebrating Nurses
+
+
+
+
+
+
+
+
+
+    					AJC Cup
+
+
+
+
+
+
+
+
+
+    					AJC ePaper 
+
+
+
+
+
+
+
+
+
+										Today's Buzz					
+
+
+
+
+
+
+
+
+Buzz Blog
+
+
+
+
+
+
+
+
+Radio &								TV Talk
+
+
+
+
+
+
+
+
+News to Me
+
+
+
+
+
+
+
+										Inside AJC					
+
+
+
+
+
+
+
+
+Movie Theaters
+
+
+
+
+
+
+
+
+Atlanta's								Top Workplaces
+
+
+
+
+
+
+
+
+Find a								Garage Sale
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					Storefront
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			64
+
+
+
+
+
+
+ 
+Atlanta, GA 
+				30303
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+
+
+
+
+Traffic Conditions
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow us:
+
+
+
+
+Facebook
+
+
+
+
+
+
+Twitter
+
+
+
+
+ Top
+
+
+
+
+
+
+ 
+Full Site Index
+ |
+ 
+Visitor Agreement
+ |           
+Privacy Policy
+ |            
+Contact Us
+ 
+ 
+©2017 Cox Media Group
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Shortcuts
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+Homefinder
+
+
+
+
+
+
+Atlanta Jobs
+
+
+
+
+
+
+Find A Car
+
+
+
+
+
+
+Classifieds
+
+
+
+
+
+
+Obituaries
+
+
+
+
+
+
+Family-placed Notices
+
+
+
+
+
+
+Contact Us/Subscribe
+
+
+
+
+
+
+Customer Care
+
+
+
+
+
+
+Advertise With Us
+
+
+
+
+
+
+Digital Products
+
+
+
+
+
+
+
+
+EM-dummyText Insert Code Block here
+
+
+
+
+ 
+ 
+Your AJC, your way. Explore these products from The Atlanta Journal-Constitution.
+ 
+ 
+AJC
+ 
+Access Atlanta
+ 
+myAJC
+ 
+my account
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DeKalb schools to Secretary DeVos: collaboration key to student success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				DeKalb schools to Secretary DeVos: collaboration key to student success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marlon A. Walker
+
+
+
+
+
+
+
+
+
+
+
+
+2:39 p.m Tuesday, Feb. 7, 2017
+
+
+
+
+AJC Homepage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AJC Homepage
+
+
+
+
+
+
+View Caption
+Hide Caption
+
+
+
+
+The Atlanta Journal-Constitution
+
+
+
+
+DeKalb Superintendent Steve Green says socioeconomic improvements will benefit inner-city school districts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DeKalb County School District officials said immediately after Betsy DeVos was confirmed as the next U.S. Secretary of Education that she should join school districts in providing “foundational elements” needed for students to succeed.
+
+
+
+
+
+
+
+
+
+
+
+
+DeVos, 
+a school choice advocate
+, was confirmed Tuesday after Vice President Mike Pence broke a 50-50 tie, the first time a vice president has had to break a tie on a cabinet nomination. 
+
+
+
+
+“We ask Secretary DeVos to lead a transformation in solving the most serious problem facing public schools today, a real and growing need for dedicated services and programs that help address the consequences of poverty,” Superintendent Steve Green said in the statement, mentioning nutrition, health and family instability.
+
+
+
+
+Other metro Atlanta school districts said they had no comment or never responded to requests for comment on DeVos’ confirmation.
+
+
+
+
+As poverty rates continue to climb, the needs become greater, Green has said previously. 
+
+
+
+
+A 2011 survey by Adopt A Classroom, which helps provide resources to teachers across the country, found 91 percent of teachers it surveyed reported buying food and clothing for their students. Various studies point to hungry children being unable to learn. 
+
+
+
+
+According to the National Center for Education Statistics, more than half the country’s public school children are on 
+free or reduced lunch
+.
+
+
+
+
+
+
+
+
+
+
+
+
+“It’s time to bring together resources … and resourceful collaboration,” Green said, “to support socioeconomic improvements that boost schools and students.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Senate confirmation process typically includes all cabinet-level officials and hundreds of other senior positions. (Erica A. Hernandez/AJC)
+
+
+
+
+
+
+
+
+
+
+
+Related
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DeVos confirmed after vice president makes history and casts vote 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Senate set to consider, vote on Betsy DeVos as education secretary 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trump White House makes final push for Betsy DeVos, warns Democrats one vote short of blocking her 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DeVos, Trump’s choice for education secretary, defends herself 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DeKalb School officials: Human resources director still works here 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Where is DeKalb County schools’ director of human resources? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			            View Comments		
+			            
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		        Sign up for e-newsletters 
+
+
+Want more news?
+
+
+
+
+Sign up
+ for free e-newsletters to get more of AJC delivered to your inbox.
+
+
+
+
+EM-dummyText Insert Code Block here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Most Read
+
+
+
+
+
+
+
+
+Atlanta Sports City will be a 190-acre sports complex in DeKalb
+
+
+
+
+
+
+Georgia school official suspended after incident with estranged wife
+
+
+
+
+
+
+Fight over "religious liberty" bill spills onto Senate floor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Things To Do
+
+
+
+
+
+
+
+
+
+
+Add Event +
+
+
+See More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Weather and Traffic
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                        64
+
+
+30303
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Most Read
+
+
+
+
+
+
+
+
+Atlanta Sports City will be a 190-acre sports complex in DeKalb
+
+
+
+
+
+
+Georgia school official suspended after incident with estranged wife
+
+
+
+
+
+
+Fight over "religious liberty" bill spills onto Senate floor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Things To Do
+
+
+
+
+
+
+
+
+
+
+Add Event +
+
+
+See More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+More from ajc.com
+
+
+
+
+
+
+Topics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			                    News
+
+
+
+
+
+
+
+
+
+			                    Sports
+
+
+
+
+
+
+
+
+
+			                    Neighborhoods
+
+
+
+
+
+
+
+
+
+			                    Life
+
+
+
+
+
+
+
+
+
+			                    Things to do
+
+
+
+
+
+
+
+
+
+			                    Blogs
+
+
+
+
+
+
+
+
+
+			                    More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News
+
+
+
+
+
+
+
+                                Smyrna Council approves townhome development 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News
+
+
+
+
+
+
+
+                                Clayton decision to stop airing public comments angers citizens 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News
+
+
+
+
+
+
+
+                                Cobb sends contracts to teachers 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News
+
+
+
+
+
+
+
+                                College Park developing new bill paying, account review processes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gwinnett Co.
+
+
+
+
+
+
+
+                                ‘Eyesore’ Museum Houseboat will be removed from Lake Lanier 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News
+
+
+
+
+
+
+
+                                Atlanta tagging $3 million in TSPLOST revenue for greenway 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow us:
+
+
+
+
+Facebook
+
+
+
+
+
+
+Twitter
+
+
+
+
+ Top
+
+
+
+
+ 
+Full Site Index
+ |
+ 
+Visitor Agreement
+ |           
+Privacy Policy
+ |            
+Contact Us
+ 
+ 
+©2017 Cox Media Group
+ 
+ 
+
+
+
+
+
+
+Close 
+
+
+
+
+Sections
+news
+sports
+life
+neighborhoods
+shop
+things to do
+Shortcuts
+ajc obituaries
+family-placed notices
+classifieds
+homefinder
+atlanta jobs
+find your car
+manage your profile
+contact us
+customer care
+advertise with us
+digital products
+Partners
+find & save coupons
+kudzu
+savings.com
+valpak
+myajc
+Fun
+game center
+Member Center
+sign in
+manage your profile
+Utilities
+archives
+weather
+traffic
+sitemap
+Follow Us
+facebook
+twitter
+instagram
+youtube
+pinterest
+
+
+
+
+ 
+PRODUCTS 
+From The Atlanta Journal-Constitution
+ 
+ 
+AJC.com - Get Atlanta's News Now
+ 
+AJC Access Atlanta - Find Fun Things to Do
+ 
+myAJC - Explore Exclusive Digital Extras and More
+ 
+AJC ePaper - Read Today's Paper
+ 
+ 
+ 
+Subscribe
+ 
+ 
+
+
+
+
+ 
+Follow Us
+ 
+Facebook
+ 
+Twitter
+ 
+ 
+                                                © 2017 
+Cox Media Group
+.                                                By using this website, you accept the terms of our                         
+Visitor Agreement
+ and                         
+Privacy Policy
+, and understand your options regarding                         
+Ad Choices
+.                                                Learn about 
+careers at Cox Media Group
+.                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

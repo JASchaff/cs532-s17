@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--SL-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <title>WAYNE MADSEN REPORT - Wayne Madsen Report</title>
+    <meta name="generator" content="Subhub - http://www.subhub.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="Wayne Madsen Report" name="DC.creator" />
+    <meta content="0000-00-00 00:00:00" name="DC.date.created" />
+    <meta content="0000-00-00 00:00:00" name="DC.date.modified" />
+    <meta content="SubHub Site" name="DC.type" />
+    <meta content="text/html" name="DC.format" />
+    <meta content="In the tradition of Drew Pearson&#039;s and Jack Anderson&#039;s famous &quot;Washington Merry-Go-Round&quot; syndicated column and I.F. Stone, this online publication tackles the &quot;politically incorrect&quot; and &quot;politically embarrassing&quot; stories and holds government officials accountable for their actions. This web site extends a warm open invitation to whistleblowers and leakers. Business as usual for the crooks and liars in Washington, DC, is over.
+" name="description" />
+    <meta content=",Washington, Inside the Beltway, Wayne Madsen Report, Intelligence, Scandals, Corruption, Investigative journalism" name="keywords" />
+    <link rel="alternate" type="application/rss+xml" href="feed://www.waynemadsenreport.com/feed.rdf" title=" - recently updated articles" />
+
+    <style type="text/css" media="all">@import url(/css/ploneColumns.css);</style>
+    <style type="text/css" media="screen">@import url(/css/plone.css);</style>
+  <style type="text/css" media="screen">@import url(/css/cookie.min.css?1487787298);</style>
+    <style type="text/css" media="all">@import url(/css/subHub.css?1487787298);</style>
+    
+    <style type="text/css" media="all"></style>
+
+    <style type="text/css" media="all">@import url(/design/custom.css?1487787298);</style>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <script language="javascript" type="text/javascript" src="/js/jquery.js"></script>
+    
+
+    <meta http-equiv="imagetoolbar" content="no" />
+    
+  </head>
+
+<body id="content_homepage_public" class="www_waynemadsenreport_com">
+                       <div id="outer_wrap">
+  <div id="wrap">
+  <div id="visual-portal-wrapper">
+      <h1 id="portal-logo">
+		<div id="sh_logo">
+			<a href="/" id="headerhomelink"></a>
+			<span href="/" id="template_header_text">
+			<span></span>
+
+				
+			</span>
+                        <span href="/" id="template_tagline_text">
+                        <span></span>
+                                
+                        </span>
+
+		</div>
+		<div id="header_html">
+			<a href="/" style="width: 795px; height: 105px; left: 0px; top: 0px"></a>
+		</div>
+    </h1>
+	<div id="topnav">
+		<ul id="portal-nav-1">
+		
+	<li class="plain" id="category_257">
+                <a href="/categories/20130101_1">Free Content: NEWS AND PITHY COMMENTS</a>
+	</li>
+	<li class="plain" id="category_195">
+                <a href="/categories/20130327">WMR Basement</a>
+	</li>
+	<li class="plain" id="category_192">
+                <a href="/categories/20130203">WMR SPECIAL STUDIES STORE</a>
+	</li>
+	<li class="plain" id="category_190">
+                <a href="/categories/20130104">WMR en espaÃ±ol</a>
+	</li>
+	<li class="plain" id="category_199">
+                <a href="/categories/20130503">WMR en franÃ§ais</a>
+	</li>
+	<li class="plain" id="category_207">
+                <a href="/categories/20131104">TÃ¼rkÃ§e olarak WMR</a>
+	</li>
+	<li class="plain" id="category_208">
+                <a href="/categories/20131104_1">WMR auf Deutsch</a>
+	</li>
+	<li class="plain" id="category_209">
+                <a href="/categories/20131106"> WMR in italiano</a>
+	</li>
+	<li class="plain" id="category_210">
+                <a href="/categories/20131109">WMR Ã®n limba romÃ¢nÄ</a>
+	</li>
+	<li class="plain" id="category_211">
+                <a href="/categories/20131112">WMR di Malaysia</a>
+	</li>
+	<li class="plain" id="category_214">
+                <a href="/categories/20131213">WMR tiáº¿ng Viá»t</a>
+	</li>
+	<li class="plain" id="category_215">
+                <a href="/categories/20131226">WMR v slovenÄine</a>
+	</li>
+	<li class="plain" id="category_219">
+                <a href="/categories/20140108">WMR v ÄeÅ¡tinÄ</a>
+	</li>
+	<li class="plain" id="category_220">
+                <a href="/categories/20140115">WMR Ø¨Ø§ÙÙØºØ© Ø§ÙØ¹Ø±Ø¨ÙØ©</a>
+	</li>
+	<li class="plain" id="category_221">
+                <a href="/categories/20140117"> WMR em PortuguÃªs</a>
+	</li>
+	<li class="plain" id="category_222">
+                <a href="/categories/20140117_1"> WMR in Suomi</a>
+	</li>
+	<li class="plain" id="category_223">
+                <a href="/categories/20140123"> WMR latvieÅ¡u valodÄ</a>
+	</li>
+	<li class="plain" id="category_224">
+                <a href="/categories/20140124">WMR nÃ« shqip</a>
+	</li>
+	<li class="plain" id="category_225">
+                <a href="/categories/20140124_1">WMR na hrvatskom jeziku</a>
+	</li>
+	<li class="plain" id="category_226">
+                <a href="/categories/20140124_2"> WMR magyar</a>
+	</li>
+	<li class="plain" id="category_227">
+                <a href="/categories/20140127">WMR i dansk</a>
+	</li>
+	<li class="plain" id="category_228">
+                <a href="/categories/20140127_1">WMR pÃ¥ svenska</a>
+	</li>
+	<li class="plain" id="category_230">
+                <a href="/categories/20140128">WMR Ã¡ Ã­slensku</a>
+	</li>
+	<li class="plain" id="category_231">
+                <a href="/categories/20140128_1">WMR w jÄzyku polskim</a>
+	</li>
+	<li class="plain" id="category_232">
+                <a href="/categories/20140130"> WMR ÏÏÎ± ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬</a>
+	</li>
+	<li class="plain" id="category_238">
+                <a href="/categories/20140426">WMR Ð½Ð° Ð¼Ð°ÐºÐµÐ´Ð¾Ð½ÑÐºÐ¸</a>
+	</li>
+	<li class="plain" id="category_276">
+                <a href="/categories/20131210">WMR Ð½Ð° ÑÑÑÑÐºÐ¾Ð¼</a>
+	</li>
+	<li class="plain" id="category_240">
+                <a href="/categories/20140504">WMR Ð½Ð° ÑÑÐ¿ÑÐºÐ¾Ð¼</a>
+	</li>
+	<li class="plain" id="category_244">
+                <a href="/categories/20140602"> æ¥æ¬èªã§WMR</a>
+	</li>
+	<li class="plain" id="category_248">
+                <a href="/categories/20140702">WMR di Indonesia</a>
+	</li>
+	<li class="plain" id="category_245">
+                <a href="/categories/20140617">WMR i norsk</a>
+	</li>
+	<li class="plain" id="category_260">
+                <a href="/categories/20141015">  WMR Ø¨Ù Ø²Ø¨Ø§Ù ÙØ§Ø±Ø³Û</a>
+	</li>
+	<li class="plain" id="category_267">
+                <a href="/categories/20150216">WMRå¨ä¸­å</a>
+	</li>
+	<li class="plain" id="category_268">
+                <a href="/categories/20150216_1">íêµ­ì´ WMR</a>
+	</li>
+	<li class="plain" id="category_270">
+                <a href="/categories/20150316">WMR lietuviÅ³</a>
+	</li>
+	<li class="plain" id="category_280">
+                <a href="/categories/20150828" class="last">WMR Eesti</a>
+	</li>
+
+	</ul>
+		</div>
+    <div id="columnswrapper">
+	  <table id="portal-columns" cellspacing="0" cellpadding="0">
+	  	<tr>
+		  <td id="portal-column-one" valign="top">
+		    <div class="portlet html_block" id="portlet_20070509_1">
+<div class="portletBodyHTML">
+<div align="left"><a href="/subscribe"><img width="145" height="40" alt="" src="/custom/subscribe(1).gif" /></a><br />
+</div>
+</div>
+</div><div class="portlet menu_block" id="portlet_20070329">
+  <h5>
+    About Us
+  </h5>
+
+  <div class="portletBody">
+	                <div class="nav-category" id="category_1">
+               <a href="/categories/20070329" >Who We Are</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_7">
+               <a href="/categories/20070331_1" >Contact Us</a>
+        </div>
+          </div>
+</div><div class="portlet menu_block" id="portlet_20071023">
+  <h5>
+    Subscription Rates
+  </h5>
+
+  <div class="portletBody">
+	                <div class="nav-category" id="category_85">
+               <a href="/categories/20071023" >Subscription Rates</a>
+        </div>
+          </div>
+</div><div class="portlet menu_block" id="portlet_20080901">
+  <h5>
+    Free Content
+  </h5>
+
+  <div class="portletBody">
+	                <div class="nav-category" id="category_262">
+               <a href="/categories/20130101" >WMR BOOKSTORE</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_86">
+               <a href="/categories/20070403_1" >Our Favorite Links</a>
+        </div>
+                <div class="nav-category" id="category_87">
+               <a href="/categories/20070403" >U.S. National Links</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_88">
+               <a href="/categories/20070331" >International Links</a>
+        </div>
+                <div class="nav-category" id="category_89">
+               <a href="/categories/20070623" >What our subscribers say about WMR</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_90">
+               <a href="/categories/20070929" >Frequently Asked Questions</a>
+        </div>
+                <div class="nav-category" id="category_91">
+               <a href="/categories/20070529" >Wayne Madsen OP ED Links</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_304">
+               <a href="/categories/20170126" >The Misadventures of FLORIDA MAN</a>
+        </div>
+                <div class="nav-category" id="category_124">
+               <a href="/categories/20100217" >Featured stories</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_235">
+               <a href="/categories/20140326" >Pay-per-View Articles</a>
+        </div>
+                <div class="nav-category" id="category_242">
+               <a href="/categories/20140526" >Obama/CIA vs. Latin America</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_302">
+               <a href="/categories/20161226" >NEWS & PITHY COMMENTS - 2017</a>
+        </div>
+                <div class="nav-category" id="category_254">
+               <a href="/categories/20130101_1" >Free Content: NEWS AND PITHY COMMENTS</a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_293">
+               <a href="/categories/20151227" >NEWS & PITHY COMMENTS ARCHIVES 2016</a>
+        </div>
+                <div class="nav-category" id="category_301">
+               <a href="/categories/20160612" >NEWS & PITHY COMMENTS - 2016</a>
+        </div>
+          </div>
+</div>
+		  </td>
+		  <td id="midcol" valign="top">
+		    <div id="portal-column-content" class="">
+								
+				
+				<div class="documentContent" id="region-content">
+			    <a name="documentContent"></a>
+				<!--Message:   -->
+				                                                                                          				<div>
+		      					<h2 id="main-title">WAYNE MADSEN REPORT</h2>
+						  <div class="subhubDocumentActions" align="right">
+		                    <div id="actions-container" style="display:inline"> 
+		                    		         
+				
+						                      
+
+		                      <a target="_blank" href="/homepages/public/print"><img src="/images/print_icon.gif" alt="Print" title="View a Printer Friendly version of this page, allowing you to print the page." /></a>
+		          							
+		                    </div>
+
+						   </div>
+<div id="documentContentInner">
+					   
+<iframe src="http://free.timeanddate.com/clock/i2ypc9wt/n263/fn17/fs13/ahl/ftb/tt0/tw1/tm1/th2/ta1/tb4" scrolling="auto" width="140" height="34" frameborder="0"></iframe><br /><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><span style="font-size: medium;"><span style="color: #008000;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><span style="font-size: medium;"><span style="color: #008000;"></span></span></strong></span></span></span></span></span></span></span></span></strong></span></span></span></span></span></span><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><span style="font-size: medium;"><span style="color: #008000;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><span style="font-size: medium;"><span style="color: #008000;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><span style="font-size: medium;"><span style="color: #008000;"></span></span></strong></span></span></span></span></span></span></span></span></strong></span></span></span></span></span></span></span></span></strong></span></span></span></span></span></span><br /><span style="color: #ff0000;"><strong><span style="font-size: medium;"><span style="font-size: large;">TWITTER:</span> </span></strong></span><strong><span style="color: #800080; font-size: medium;">wmrdc</span></strong><strong><span style="color: #800080; font-size: medium;"><strong><br /><br /><a href="http://www.lulu.com/shop/wayne-madsen/the-almost-classified-guide-to-cia-front-companies-proprietaries-contractors/paperback/product-22884159.html"><img src="http://www.waynemadsenreport.com/custom/THE%20ALMOST%20CLASSIFIED%20GUIDE%20TO%20CIA%20FRONT%20COMPANIES.jpg" border="0" width="416" height="233" /></a></strong><br /><br /></span></strong><span style="color: #333399;"><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;"><a href="https://www.facebook.com/WayneMadsenReport"><span style="color: #333399;">Facebook</span> page</a><a href="https://www.facebook.com/WayneMadsenReport"><br /></a></span></strong></strong></span></span></span></span></span></span></span></strong></span><a href="http://www.lulu.com/shop/wayne-madsen/soros-quantum-of-chaos/paperback/product-22453538.html"><span style="color: #333399;"><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;"><br /></span></strong></strong></span></span></span></span></span></span></span></strong></span></a><span style="color: #333399;"><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;">New Book:<br /></span></strong></strong></span></span></span></span></span></span></span></strong></span>
+<div class="a-section a-spacing-none">
+<h1 id="title" class="a-size-large a-spacing-none"><a href="http://www.amazon.com/dp/B019RXBP7M/ref=rdr_kindle_ext_tmb"><span style="color: #000000; font-size: medium;"> <span class="a-size-extra-large" id="productTitle">ISIS IS US: The Shocking Truth Behind the Army of Terror</span> <span class="a-size-large a-color-secondary a-text-normal"> <br /><em><span style="font-size: small;">Kindle Edition</span> </em></span> </span></a></h1>
+</div>
+<a href="http://www.amazon.com/dp/1615771646/ref=rdr_ext_tmb"><img class="image-stretch-vertical" src="http://ecx.images-amazon.com/images/I/51CLauR%2BZzL.jpg" border="0" width="210" height="314" style="max-width: 333px; max-height: 500px;" /></a><br /><br /><span style="color: #333399;"><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;">New book:<br /><br /></span></strong></strong></span></span></span></span></span></span></span></strong></span><span style="color: #333399;"><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;"><a href="http://www.lulu.com/shop/wayne-madsen/soros-quantum-of-chaos/paperback/product-22453538.html"><img src="http://static.lulu.com/browse/product_thumbnail.php?productId=22453538&amp;resolution=320" border="0" alt="Soros: Quantum of Chaos" /></a><br /><br /></span></strong></strong></span></span></span></span></span></span></span></strong><strong><span style="font-size: medium;"><span class="yshortcuts"><a href="http://www.lulu.com/commerce/index.php?fBuyContent=15721727"><img src="http://static.lulu.com/images/services/buy_now_buttons/en/gray.gif?20141120080341" border="0" alt="Support independent publishing: Buy this book on Lulu." /></a><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;"> </span></strong></strong></span></span></span></span></span></span></span></strong><strong><span style="font-size: medium;"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><span class="yshortcuts"><strong><strong><span style="color: #800080; font-size: medium;"></span></strong></strong></span></span></span></span></span></span></span></strong></span><a href="http://www.waynemadsenreport.com/store/products/27"><br /><br /></a><a href="http://www.waynemadsenreport.com/store/products/27"><br /></a><span style="color: #333399;"><strong><span style="font-size: medium;"><a href="http://www.waynemadsenreport.com/store/products/27">August 2014: New WMR Special Report: SUSPICIOUS DEATHS: COINCIDENCES OR CONSPIRACIES? Washington Investigative Reporter Wayne Madsen on the Trail of the Bushes and their Murderous Accomplices&nbsp;</a>&nbsp;&nbsp;&nbsp; <br /><br /><a href="http://www.waynemadsenreport.com/store/products/26">A WMR Special Identification Guide</a><a href="http://www.waynemadsenreport.com/store/products/25"><br /><br />New WMR Special Studies Report: Europe's New Political Landscape.</a> Free to WMR members.<br /><br />Watch <em>Unthinkable: An Airline Captain's Story</em></span><span style="font-size: medium;"><em>, </em>largely based on WMR's reports on the "suicide" of 9/11 author and retired commercial airline pilot Phil Marshall.</span></strong></span> <span style="color: #ff0000;"><strong><span style="font-size: medium;"><br />You will not be disappoin</span></strong></span><strong><span style="font-size: medium; color: #ff0000;">ted!</span></strong><br /><br /><a href="https://www.indiereign.com/video/unthinkable-an-airline-captain-s-story"><img src="http://d30mnu0o9l0n8y.cloudfront.net/poster/untitled-video-4131400129004.jpg" border="0" alt="Unthinkable: An Airline Captain's Story" width="190" height="270" /></a><br /><br /><br /><em><span style="font-size: small;">". . . there are certainly enough oddities in the incident it ['Unthinkable'] tries to dramatize to have made for a decent conspiracy theory film.Randall Paul portrays the main character, who for the film is renamed Marshall Philips. Dennis Fitzpatrick is the investigative journalist who is suspicious of official explanations (Wayne Madsen, also renamed). The film is subtitled 'An Airline Captain&rsquo;s Story' because Mr. Marshall was once a pilot, an experience that made him skeptical of the accepted version of the Sept. 11 attacks . . .&nbsp;</span></em><span style="font-size: small;"> - Neil Genzlinger, Movie Critic, <em>New York Times</em>, April 10, 2014.<br /><br /> <iframe src="https://www.youtube.com/embed/XGdialRMdjU" width="280" height="180" frameborder="0"></iframe> =================</span><br /><br /><a href="http://www.lulu.com/shop/wayne-madsen/the-betrayal-of-the-scorpion-and-poet/paperback/product-21614899.html"><strong><span style="font-size: small; color: #000080;">New book: <em>The Betrayal of the Scorpion and Poet</em>. Discover the cover-up of the sinking of two U.S. ships during the Cold War: the <em>USS Scorpion</em>, a nuclear-powered submarine. and the <em>SS Poet</em>. a U.S.-flagged Merchant Marine vessel. This is a tale of plausible deniability, expendable U.S. servicemen, and, in the case of the <em>Poet</em>, treason and murder. Make this a "must read" for the upcoming Memorial Day &amp; Independence Day observances. And remember Father's Day.</span></strong></a><br /><br /><a href="http://www.lulu.com/shop/wayne-madsen/the-betrayal-of-the-scorpion-and-poet/paperback/product-21616056.html"><img src="http://static.lulu.com/browse/product_thumbnail.php?productId=21614899&amp;resolution=320" border="0" alt="The Betrayal of the Scorpion and Poet" /></a><br /><br /><strong><span style="font-size: medium; color: #ff6600;">Also available at Am</span><span style="font-family: verdana,geneva; font-size: medium; color: #ff6600;">azo</span><span style="font-family: verdana,geneva; font-size: medium; color: #ff6600;">n:</span></strong><br /><br /><a href="https://www.createspace.com/4379502"><img src="https://zme-caps.amazon.com/asset/SSE/content/4379502/THUMBNAIL_IMAGE?versionId=2&amp;awsClient=416214191754%3Auser%2FMainsite&amp;urlMethod=GET&amp;expires=32911197863033&amp;requestId=1cb5a6a9-f92c-11e2-b5df-67cca7bff2f1&amp;sig=e059c565d1a5cfc70497b1e372755dbb7b1ee6fe11ed9854229091ed8c6a35e5&amp;serial=1" border="0" alt="National Security Agency Surveillance" /></a><br /><br /><iframe src="//www.youtube.com/embed/aGmiw_rrNxk" width="420" height="315" frameborder="0"></iframe><br /><br /><br /><br /><span class="yshortcuts" style="color: #008000;"><span style="font-family: verdana,geneva;"><span style="font-size: small;"><span style="font-size: medium;"><span style="font-size: small;"><span style="font-family: verdana,geneva;"><strong><a href="http://www.waynemadsenreport.com/categories/20130101_1"><span style="font-size: medium; color: #008000;">Click here for access to WMR News and Pithy Comments: people the world over cannot start their day without their first cup of coffee and the pithy comments about the day's news.</span></a></strong></span></span></span></span></span></span><br />
+<div id="previewblock"><strong><span style="font-size: large; color: #800000;"><a href="http://www.timeanddate.com/worldclock/city.html?n=263" target="_blank" title="clock provided by timeanddate.com" id="t1c"><span id="t1a"></span></a><br /><a href="http://www.waynemadsenreport.com/categories/20130101">WMR BOOKSTORE</a></span><br /><br /></strong><span style="text-decoration: underline;"><a href="http://www.waynemadsenreport.com/categories/20130203"><span style="color: #000080; text-decoration: underline;"><strong><span style="font-size: large;">And don't forget to visit the new WMR Special Studies Store</span></strong></span></a></span>.<span style="color: #ff0000;"><strong>==&gt;</strong></span> <span style="font-size: medium;"><a href="http://www.waynemadsenreport.com/categories/20130203">New Comprehensive NSA slideshow in a single .PDF presentation. Free to WMR members.</a></span></div>
+<div id="previewblock"><!-- Feedzilla Widget END --> <!-- Feedzilla Widget END --> <!-- Begin Motigo Webstats counter code --> <a href="http://webstats.motigo.com/" id="mws4904996"></a></div>
+</div>
+
+
+
+						   <div class="featurepanel">
+						   	<h2>WMR Exclusive News & Views</h2>
+						   	<form name="searchresults" action="" method="post">
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170222_2">February 22-23, 2017 -- DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 22, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170222_1">February 22-23, 2017 -- Enforcing U.S. immigration laws: revoke the visa of Milo Yiannopoulos</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 22, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Milo Yiannopoulos's continued presence in the U.S. is a violation of U.S. law. Why won't Trump enforce U.S. immigration laws?</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170222">February 22-23, 2017 -- Note on WMR outage</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 22, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>WMR taken offline by sophisticated bot attack.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170221_1">February 21-22, 2017 -- DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 21, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170221">February 21-22, 2017 -- Trump pal Larry Silverstein wants to build new FBI HQ</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 21, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Forget about Trump exposing any secrets about 9/11 with Silverstein vying for major construction project.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170220_1">February 20-21, 2017 -- DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 20, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170220">February 20-21, 2017 -- CIA: From Extraordinary Rendition to Expedited Removal</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 20, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Is the CIA involved with the expedited removal of undocumented immigrants?</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170217_2">February 17-20, 2017 -- Russian prankster, posing as Ukraine PM, warns McCain of Russian release of POW brainwashing evidence</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 17, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>McCain interested in what fake Ukrainian PM knows about McCain's KGB collaboration.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170217_1">February 17-20, 2017 -- EXTENDED WEEKEND FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 17, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170217">February 17-20, 2017 -- Labor pick Acosta part of Epstein-Trump underage sex crime cover-up</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 17, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Senate Labor Committee has chance to probe Epstein-Trump ties during confirmation hearing.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170216_1">February 17-20, 2017 -- EXTENDED DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 16, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170216">February 17-20, 2017 -- Neo-Nazis creating power base in Alexandria</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 16, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>The city where George Washington and Thomas Jefferson once walked the streets is now home to Hitler-worshiping neo-Nazis.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170215_1">February 15-17, 2017 -- EXTENDED DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 15, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170215">February 15-17, 2017 -- Breitbart, neocons consolidating control in Trump administration</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 15, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Africa; Palestine are certain to suffer under Trump.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170214_1">February 14-16, 2017 -- DAILY EXTENDED FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 14, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170214">February 14-16, 2017 -- Washington, DC -- SPECIAL REPORT -- Trump's "Pink Nazis" hearken back to the days of Ernst Rohm</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 14, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Trump's "Rainbow-Swastika" coalition.</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170212">February 12-14, 2017 -- EXTENDED DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb 12, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170208_1">February 8-12, 2017 -- EXTENDED DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb  8, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170208">February 8-9, 2017 -- Trump's "Jane, Tiffany, and Joan Doe" problem</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb  8, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span>Was Trump involved in the disappearance of a 12-year old girl he sexually assaulted?</span>
+		                			</dd>
+						   		</dl>
+						   								   		<dl class="category-390234  category-0">
+						   			<dt>
+										<span class="documenticon2">&nbsp;</span>
+						   				<a class="recent-articles-title" href="/articles/20170207">February 7-8, 2017 -- DAILY FORUM</a>
+																   				<span class="cat-also">
+		              						(in: GENERAL ARCHIVES February 2017)
+		            					</span>
+												            					<br/>
+		            						<span 
+class="cat-view-article-date"> Feb  7, 2017</span>          
+						   			</dt>
+						   			<dd class="link cat-teaser">
+		                    			<span></span>
+		                			</dd>
+						   		</dl>
+						   								   		<div class="spacer">
+		        					&nbsp;
+		        				</div>
+		        						        				<div class="listingBar">
+									<a 
+href="/search?category=0&amp;searchfrom=20">more articles &gt;&gt;
+                       </a>
+		        				</div>
+		        										   	</form>
+						   </div>
+
+				</div>
+			  </div>
+			</div>
+		  </td>
+		  		  <td id="portal-column-two" valign="top">
+		    <div class="portlet login_block" id="portlet_20070329_4">
+          <h5>
+             Login Here
+          </h5>
+
+        <div class="portletBody">
+            <div class="portletInnerBody">
+                <form action="//www.waynemadsenreport.com?action=login"
+                  id="loginform"
+                  name="loginform"
+                  method="post">
+                    <div class="field">
+                        <label>Email
+                       </label>
+                        <br /> 
+                        <input size="15" type="text" name="username" value=""/>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <br />
+                        <input size="15" type="password" name="password" value=""/>
+                    </div>
+                    <span id="rememberme">
+                    <div class="field">
+                        <input type="checkbox" name="rememberme"/><label>Remember Me</label>
+                    </div>
+                    </span>
+                    <span class="formControls">
+                        <input class="login" type="submit" name="submit" value="Log in" alt="Log in"/>
+                    </span>
+		    <span id="subscribe-renew-buttons">
+                   <span class="nav-category">
+                    <a href="/subscribe">Join Now </a><br/>
+                   </span>
+		  <div id="forgotton"> <a href="/password_reminder">Forgotten Password</a></div>
+                </span>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="portlet search_block" id="portlet_20070329_1">
+  <h5>
+    Search the site
+  </h5>
+  <div class="portletBody" style="">
+    
+   <div class="portletInnerBody">
+
+    <form id="portlet-search" action="/search" method="get">
+      <input type="text" class="searchtext" name="searchtext" size="15" />
+      <br /><br />
+      <input class="searchsubmit" type="submit" value="Search" />
+    </form>
+
+   </div>
+  
+    
+  </div>
+</div><div class="portlet menu_block" id="portlet_20140325">
+  <h5>
+    In Memoriam
+  </h5>
+
+  <div class="portletBody">
+	                <div class="nav-category" id="category_234">
+               <a href="/categories/20140325" >In Memoriam</a>
+        </div>
+          </div>
+</div><div class="portlet eventsportlet" id="portlet_20130821">
+
+  <h5>
+    Calendar
+  </h5>
+  <div class="portletBody" style="">
+   
+<table align="center" class="calendar">
+<caption class="calendar-month"><span class="calendar-prev"><a href="?month=1&amp;year=2017#calendar">&laquo;</a></span>&nbsp;<div class="cal-month"><a href="/calendar/?month=02&amp;year=2017">February&nbsp;2017</a></div>&nbsp;<span class="calendar-next"><a href="?month=3&amp;year=2017#calendar">&raquo</a></span></caption>
+<tr><th abbr="Sunday">S</th><th abbr="Monday">M</th><th abbr="Tuesday">T</th><th abbr="Wednesday">W</th><th abbr="Thursday">T</th><th abbr="Friday">F</th><th abbr="Saturday">S</th></tr>
+<tr><td colspan="3">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+<tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+<tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+<tr><td>26</td><td>27</td><td>28</td><td colspan="4">&nbsp;</td></tr>
+</table>
+
+
+  </div>
+</div><div class="portlet menu_block" id="portlet_20170202">
+  <h5>
+    BOOK STORE
+  </h5>
+
+  <div class="portletBody">
+	                <div class="nav-category" id="blank_306">
+               <a href="https://www.waynemadsenreport.com/categories/20130101" target="_blank"></a>
+        </div>
+                <div class="nav-category nav-category-odd" id="category_307">
+               <a href="/categories/20170202" >WMR BOOK STORE</a>
+        </div>
+                <div class="nav-category" id="category_308">
+               <a href="/categories/20170202_1" >WEB STATS</a>
+        </div>
+          </div>
+</div>
+		  </td>
+		  		</tr>
+	  </table>
+	</div>
+	<div id="bottomnav">
+        	</div>
+	<div id="portal-footer">
+          <div id="footerlinks">
+          <span id="footer-contact"><a href="/contact">Contact</a></span>
+          <span id="footer-sitemap"><a href="/sitemap">Sitemap</a></span>
+                    <span id="footer-login"><a href="/static/login">Login</a></span>
+                              <span id="footer-subscribe"> <a href="/subscribe">Join Now
+                       </a></span>
+                    <span id="footer-rss"><a href="http://www.waynemadsenreport.com/feed.rdf">RSS</a></span>
+          <span id="footer-termsandconditions"><a href="/static/termsandconditions">Terms &amp; Conditions</a></span>
+          <span id="footer-privacypolicy"><a href="/static/privacypolicy">Privacy Policy</a></span>
+          </div>
+          <div id="copyrightmessage">Copyright 2005-2017 WayneMadsenReport.com  <span id="powered"> - Powered by <a href="http://www.subhub.com" target="_blank">SubHub - Membership Site Software</a></span></div>
+        </div>
+  </div>
+  </div>
+  </div>
+	 
+       <script type="text/javascript" src="/js/tooltips/wz_tooltip.js"></script>
+       
+       <script type="text/javascript" src="/js/touchscreen.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8db933bc84","applicationID":"36940275","transactionName":"NVYDN0tSWxdXB00ICwwcNBFQHFwKUgFBTxQKQw==","queueTime":0,"applicationTime":631,"atts":"GREAQQNISBk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

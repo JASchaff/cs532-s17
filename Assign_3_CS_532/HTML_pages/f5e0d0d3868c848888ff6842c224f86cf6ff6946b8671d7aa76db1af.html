@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"  xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+  <script>
+    var RN = new String (Math.random());
+    var mobile_ad_RNS = RN.substring (2, 11);
+  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+  <title>Betsy DeVos Wants to Use America&#039;s Schools to Build &quot;God&#039;s Kingdom&quot; | Mother Jones</title>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <script type="text/javascript" src="/sites/all/modules/contrib/jquery_update/replace/jquery.min.js?i"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/all/assets/mj.ico" type="image/x-icon" />
+<meta property="keywords" content="m,Donald+Trump,Education,Investigations,Religion,Top+Stories"/>
+<link type="text/css" rel="stylesheet" media="all" href="http://m.motherjones.com/files/css/css_83fa8be60eb2fa5735550670e86e0945.css" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/sites/all/assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sites/all/assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sites/all/assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/sites/all/assets/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/sites/all/assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/sites/all/assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sites/all/assets/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/sites/all/assets/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/sites/all/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/sites/all/assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/sites/all/assets/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="Mother Jones Magazine"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/sites/all/assets/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/sites/all/assets/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/sites/all/assets/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/sites/all/assets/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/sites/all/assets/mstile-310x310.png" />
+
+
+
+  <link rel="canonical" href="http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary"/>
+  <script type='text/javascript' src='http://mj-tech.motherjones.net/ansible2.js'></script>
+<script type="text/javascript">
+function DisplayInlineAd(ad_locations, position) {
+  // do nothing, this is a dummy
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2458520-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript" src="/sites/all/themes/mobile/includes/validemail.js"></script>
+<script type="text/javascript" src="/sites/all/assets/nav.js"></script>
+<link href="/sites/all/assets/font-awesome-more/css/font-awesome.min.css" rel="stylesheet">
+<link href="/sites/all/assets/font-awesome-more/css/font-awesome-social.css" rel="stylesheet">
+<link href="/sites/all/assets/font-awesome-more/css/font-awesome-ext.css" rel="stylesheet">
+<link href="/sites/all/assets/font-awesome-more/css/font-awesome-corp.css" rel="stylesheet">
+</head>
+
+
+<body class="
+  not-front not-logged-in node-type-full-width-article page-politics-2017-01-betsy-devos-christian-schools-vouchers-charter-education-secretary section-politics  node">
+    <div id="body_wrapper">
+    <div id="navbar">
+      <ul>
+              <li class="logo">
+          <a href="/">
+            <img src="/sites/all/assets/MJ_comp.png" 
+            alt="MotherJones" />
+          </a>
+        </li>
+        <li class="share-button facebook">
+          <a class="facebook-button-wrapper" href="http://www.facebook.com/sharer.php?u=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary"><span class="facebook-button"><i class="icon-facebook"></i></span></a>        </li>
+        <li class="share-button twitter">
+          <a class="tweet-button-wrapper" href="http://twitter.com/intent/tweet?original_referer=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary&related=davidcorndc%3AWashington%20editor%20of%20Mother%20Jones%20magazine%20and%20blogger%20at%20www.davidcorn.com%2Ckdrum%3APolitical%20blogger%20and%20writer%20for%20Mother%20Jones%20magazine.%2Ctomphilpott%3AThe%20cofounder%20of%20Maverick%20Farms%20and%20food%20%26%20agriculture%20correspondent%20for%20Mother%20Jones.%2Cclarajeffery%3ACo-editor%20of%20Mother%20Jones.%20Mom.%20One%20very%20tired%20lady.&source=tweetbutton&text=Betsy+DeVos+Wants+to+Use+America%26%23039%3Bs+Schools+to+Build+%26quot%3BGod%26%23039%3Bs+Kingdom%26quot%3B&url=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary&via=motherjones"><span class="tweet-button"><i class="icon-twitter"></i></span></a>        </li>
+        <li class="menu-button">
+          <a onclick="expandMenu();">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 125 125" enable-background="new 0 0 125 125" xml:space="preserve">
+              <path d="M0,100.869"></path>
+              <rect y="30" width="125" height="15"></rect>
+              <rect y="70" width="125" height="15"></rect>
+              <rect y="110" width="125" height="15"></rect>
+            </svg>
+          </a>
+        </li>
+        <li class="donate-link">
+          <a href="https://secure.motherjones.com/fnp/?action=SUBSCRIPTION&list_source=8HEGPA08&extra_don=1&abver=A">
+            Donate
+          </a>
+        </li>
+        <li class="subscribe-link">
+          <a href="https://secure.motherjones.com/fnx/?action=SUBSCRIPTION&pub_code=MJM&term_pub=MJM&list_source=SEGYN5&base_country=US">
+            Subscribe
+          </a>
+        </li>
+              </ul>
+      <div id="mj_menu_select" class="">
+          <ul id="mj_menu_options">
+              <li id="menu_search_select"><a href="/search/apachesolr_search">Search</a></li>
+              <li id="menu_newsletter"><a href="/about/interact-engage/free-email-newsletter">Newsletter</a></li>
+              <li id="menu_magazine"><a href="/magazine">Magazine</a></li>
+              <li id="menu_politics_select"><a href="/politics">Politics</a></li>
+              <li id="menu_environment_select"><a href="/environment">Environment</a></li>
+              <li id="menu_culture_select"><a href="/media">Media</a></li>
+              <li id="menu_justice_select"><a href="/topics/crime-and-justice">Crime and Justice</a></li>
+              <li id="menu_food_select"><a href="/topics/food">Food</a></li>
+              <li id="menu_guns_select"><a href="/topics/guns">Guns</a></li>
+              <li id="menu_dark_money_select"><a href="/topics/dark-money">Dark Money</a></li>
+              <li id="menu_photo_select"><a href="/photoessays">Photos</a></li>
+              <li id="menu_investigations_select"><a href="/topics/investigations">Investigations</a></li>
+              <li id="menu_podcast_select"><a href="/podcasts">Podcasts</a></li>
+              <li id="menu_drum_select"><a href="/m/kevin-drum">Kevin Drum</a></li>
+              <li id="menu_about_select"><a href="/about">About</a></li>
+              <li id="menu_subscribe_select"><a href="https://secure.motherjones.com/fnp/?action=SUBSCRIPTION&list_source=TMOBLMN&a_edition_code=P">Subscribe</a></li>
+              <li id="menu_donate_select"><a href="https://secure.motherjones.com/fnp/?action=SUBSCRIPTION&list_source=8HMOBNAV&extra_don=1&abver=A">Donate</a></li>
+          </ul>
+      </div>
+    </div>
+  <div id="page-top-region">
+    <div class="block block-block" id="block-block-886">
+  <div class="content"><script type="text/javascript">
+function MJ_check_email (form) {
+  form.signup_url.value = document.URL;
+
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var address = form.cons_email.value;
+	var input_check = document.getElementById("email_field").value;
+
+  if(reg.test(address) !== false) {
+		if (input_check === "") {
+      return true;
+    }
+		else {
+			return false;
+		}
+  } else {
+    alert("Please enter a valid email address.");
+    form.cons_email.focus();
+    return false;
+  }
+}
+</script>
+</div>
+</div>
+  </div>
+<div id="page">
+  <div id="pager-inner" class="clear-block">
+        <div id="header">
+              <div id="primary">
+          <!-- ?php print $primary; ?-->
+        </div>
+                </div> <!-- /#header -->
+    
+        
+        
+        
+        
+        
+        
+    <div id="content">
+              <div id="content-region">
+                  </div>
+            <div class="node ntype-full_width_article clear-block">
+
+
+        <h2 class="title node-title">Betsy DeVos Wants to Use America&#039;s Schools to Build &quot;God&#039;s Kingdom&quot;</h2>
+  
+  
+  <p class="dateline-byline">
+          <span class="byline node-top-byline"><span class="byline byline-byline"><a href="/authors/kristina-rizga" rel="author">Kristina Rizga</a></span></span>
+    
+          <span class="dateline"><a href="http://www.motherjones.com/toc/2017/03">Mar/Apr 2017 Issue</a></span>
+      </p>
+
+<div class="node-content clear-block">
+  <div class="master-image"><img src="http://m.motherjones.com/files/imagecache/master-image-632x355/devos_0.jpg" alt="" title=""  class="imagecache imagecache-master-image-632x355" width="632" height="355" /><p class="master-image-data"> <span class="byline photo-byline">Tom Williams/Congressional Quarterly/ZUMA</span></p></div><p><span class="section-lead">It's Christmastime in </span>Holland, Michigan, and the northerly winds off Lake Macatawa bring a merciless chill to the small city covered in deep snow. The sparkling lights hanging on trees in downtown storefronts illuminate seasonal delicacies from the Netherlands, as well as photos and paintings of windmills and tulips, wooden shoes, and signs that read &quot;Welkom Vrienden&quot; (<em>Welcome, Friends</em>).</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><a href="http://www.motherjones.com/politics/2014/01/devos-michigan-labor-politics-gop" target="_blank"><img alt="" class="image" src="/files/devos_a_illo_290.jpg" /></a>
+
+	<div class="caption"><a href="http://www.motherjones.com/politics/2014/01/devos-michigan-labor-politics-gop" target="_blank"><strong>Meet the New Kochs: The DeVos Clan's Plan to Defund the Left </strong></a></div>
+</div>
+
+<p>More than 150 years ago, Dutch immigrants from a conservative Protestant sect chose western Michigan as the setting for this idealized replica of Holland, in part because of its isolation. They wanted to keep American influences away from their orthodox community. <a href="http://www.hollandsentinel.com/x687824094/Some-profit-some-suffer-one-year-after-Sunday-alcohol-ban-lifted" target="_blank">Until recently</a>, Holland restaurants couldn't sell alcohol on Sundays. Residents are still not allowed to yell or whistle between 11 p.m. and 7 a.m. If city officials decide that a fence or a shed signals decay, they can tear it down and mail the owner a bill. Grass clippings longer than eight inches have to be removed and composted, and snow must be shoveled soon after it lands on the streets. Most locals say rules like these help keep Holland prosperous, with low unemployment, little crime, good city services, and Republicans at almost every government post. It's also where President Donald Trump's pick for education secretary, billionaire philanthropist Betsy DeVos, grew up.</p>
+
+<p>Sitting in his spacious downtown office suite, Arlyn Lanting is eager to talk about his longtime friend, who entered her Senate committee vote Tuesday on track to become the nation's top-ranking education official&mdash;despite a contentious hearing marked by her stiff, underwhelming responses to pointed questions from Senate Democrats. DeVos, who is married to Amway scion Dick DeVos (<em>Forbes</em> <a href="http://www.forbes.com/profile/richard-devos/" target="_blank">says</a> his father, Richard, is worth more than $5 billion), was seen as a controversial choice because of the<a href="https://www.nytimes.com/2016/11/23/us/politics/betsy-devos-trumps-education-pick-has-steered-money-from-public-schools.html?rref=collection%2Fbyline%2Fkate-zernike&amp;action=click&amp;contentCollection=undefined&amp;region=stream&amp;module=stream_unit&amp;version=latest&amp;contentPlacement=4&amp;pgtype=collection" target="_blank"> </a>family's history of heavy spending on right-wing causes&mdash;at least $200 million since the 1970s to think tanks, media outlets, political committees, and advocacy groups. And then there's the DeVoses'<a href="https://www.nytimes.com/2016/11/23/us/politics/betsy-devos-trumps-education-pick-has-steered-money-from-public-schools.html?rref=collection%2Fbyline%2Fkate-zernike&amp;action=click&amp;contentCollection=undefined&amp;region=stream&amp;module=stream_unit&amp;version=latest&amp;contentPlacement=4&amp;pgtype=collection" target="_blank"> long support of vouchers</a> for private, religious schools; conservative Christian groups like the <a href="http://www.gsnt.org/index.shtml" target="_blank">Foundation for Traditional Values</a>, which has pushed to soften the separation of church and state; and organizations like Michigan's <a href="https://www.mackinac.org/" target="_blank">Mackinac Center for Public Policy</a>, which has championed the privatization of the education system.</p>
+
+<div class="inline inline-left" style="display: table; width: 1%"><img alt="" class="image" src="/files/422_Devos_A_630.jpg" />
+	<div class="caption">Tim O'Brien</div>
+</div>
+
+<p>But Lanting, a tall, 75-year-old businessman, investor, and local philanthropist, is quick to wave off the notion that DeVos has it in for traditional public schools. &quot;Betsy is not against public schools,&quot; he says. &quot;She does believe that teachers in charter and private schools are much more likely to lead the way toward better education&mdash;the kind that will actually prepare students for our current times and move us away from standardization and testing. But Dick and Betsy have given money to public schools, too.&quot;</p>
+
+<p>Lanting is a warm and generous host who's eager to point out his favorite Bible verse, painted right there on his wall: &quot;'I have no greater joy than to hear that my children are walking in the Truth' (3 John 4).&quot; He and Betsy DeVos were both raised in the tradition of the Christian Reformed Church&mdash;a little-known, conservative Dutch Calvinist denomination whose roots reach back to the city's founders. They went to the same grade school in the city's private school system, the Holland Christian Schools, which was established by members of the church. Like many people I met in Holland, Lanting wasn't a Trump supporter initially&mdash;he voted for Ben Carson in the primaries&mdash;but he couldn't bring himself to cast a ballot for Hillary Clinton, whom he calls &quot;a professional spin doctor.&quot; &quot;Trump is much more likely,&quot; Lanting says, &quot;to bring Christ into the world.&quot;</p>
+
+<div class="pullquote-left">&quot;Our desire is to confront the culture in ways that will continue to advance God's kingdom.&quot;</div>
+
+<p>For deeply devout people like Lanting and DeVos, education plays a key role in that mission. Since her nomination, DeVos hasn't had much to say about her faith&mdash;or whether she plans to defend the separation of church and state in public schools. (DeVos declined <em>Mother Jones</em>' request for an interview, but a Trump transition team spokeswoman replied in an email, &quot;Mrs. DeVos believes in the legal doctrine of the separation of church and state.&quot;) However, in a <a href="https://www.youtube.com/watch?v=qJYFPMLuVRE" target="_blank">2001 interview</a> for The Gathering, a group focused on advancing Christian faith through philanthropy, she and her husband offered a rare public glimpse of their views. Asked whether Christian schools should continue to rely on giving&mdash;rather than pushing for taxpayer money through vouchers&mdash;Betsy DeVos replied, &quot;There are not enough philanthropic dollars in America to fund what is currently the need in education...Our desire is to confront the culture in ways that will continue to advance God's kingdom.&quot;</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><a href="http://www.motherjones.com/politics/2017/01/betsy-devos-confirmation-hearing-bernie-sanders-al-franken-real-bad" target="_blank"><img alt="" class="image" src="/files/Senate%20hearing.png" /></a></div>
+
+<p>Added Dick DeVos: &quot;As we look at many communities in our country, the church has been displaced by the public school as the center for activity...[I]t is certainly our hope that more and more churches will get more and more active and engaged in education.&quot;</p>
+
+<p>Indeed, critics argue the DeVoses are attempting to expand the definition of &quot;school choice&quot;&mdash;typically understood as giving parents the ability to pick any traditional public school or charter school in a district&mdash;to allow taxpayer money to follow students to any private school via vouchers. Some critics of school choice argue that charters, which are publicly funded but governed by appointed boards and often run by private companies with varying degrees of state oversight, can skim high-performing students from traditional public schools, leaving them with more high-needs kids and less money. But the push for so-called &quot;universal school choice&quot; could take that a step further by eventually leading to a radical redirection of funds from traditional public schools to private schools, many of which are Christian: Trump's signature <a href="http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary" target="_blank">education proposal</a> calls for dedicating $20 billion in federal money to help families move away from what he has called our &quot;failing government schools&quot; and instead choose charter, private, or religious schools.</p>
+
+<p>Although the DeVoses have rarely commented on how their religious views affect their philanthropy and political activism, their spending speaks volumes. <em>Mother Jones</em> has analyzed the Dick and Betsy DeVos Family Foundation's tax filings from 2000 to 2014, as well as the 2001 to 2014 filings from her parents' charitable organization, the Edgar and Elsa Prince Foundation. (Betsy DeVos was listed as a vice president of the Prince Foundation during those years, though she claimed at her confirmation hearing that this was &quot;a clerical error.&quot;) During that period, the DeVoses spent nearly $100 million in philanthropic giving, and the Princes spent $70 million. While Dick and Betsy DeVos have donated large amounts to hospitals, health research, and arts organizations, these records show an overwhelming emphasis on funding Christian schools, evangelical missions, and conservative, free-market think tanks like the Acton Institute and the Mackinac Center that want to shrink the public sector in every sphere, including education.</p>
+
+<p>The couple's philanthropic record makes clear that they view choice and competition as the best mechanisms to improve America's education system. Overall, their foundation gave $5.2 million from 1999 to 2014 to charter schools. Some $4.8 million went to a small charter high school they founded, the <a href="http://www.westmichiganaviation.org/" target="_blank">West Michigan Aviation Academy</a>. (Flying is one of Dick's passions.) Their next biggest beneficiary, New Urban Learning&mdash;an operator that dropped its charter school after teachers began to unionize&mdash;received $350,000.</p>
+
+<p>But the DeVoses' foundation giving shows the couple's clearest preference is for Christian private schools. In a 2013<a href="http://www.philanthropyroundtable.org/topic/excellence_in_philanthropy/interview_with_betsy_devos" target="_blank"> interview</a> with <em>Philanthropy</em> magazine, Betsy DeVos said that while charters are &quot;a very valid choice,&quot; they &quot;take a while to start up and get operating. Meanwhile, there are very good non-public schools, hanging on by a shoestring, that can begin taking students today.&quot; From 1999 to 2014, the Dick and Betsy DeVos Family Foundation gave out $2.39 million to the Grand Rapids Christian High School Association, $652,000 to the Ada Christian School, and $458,000 to Holland Christian Schools. All told, their foundation contributed $8.6 million to private religious schools&mdash;a reflection of the DeVoses' lifelong dedication to building &quot;God's kingdom&quot; through education.</p>
+
+<div class="inline inline-left" style="display: table; width: 1%"><img alt="" class="image" src="/files/Devos_cards_v5.gif" /></div>
+
+<p><span class="section-lead">Most people I</span> meet in Holland tell me that it's hard to understand the DeVos and Prince families without learning about the history of Dutch Americans in western Michigan. In the mid-1800s, a group of mostly poor farmers known as the &quot;Seceders&quot; rebelled against the Dutch government when it tried to modernize the state Calvinist church, including by changing the songbooks used during worship and ending discriminatory laws against Catholics and Jews. In 1846, an intensely devout Calvinist clergyman named A.C. van Raalte led several hundred settlers from the Netherlands to the United States.</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><a href="http://www.motherjones.com/politics/2017/01/teachers-unions-challenge-betsy-devos-pick-education-secretary" target="_blank"><img alt="" class="image" src="/files/betsy-devos-rally-trump_0.jpg" /></a>
+
+	<div class="caption"><a href="http://www.motherjones.com/politics/2017/01/teachers-unions-challenge-betsy-devos-pick-education-secretary" target="_blank"><strong>Teachers Are &quot;Shocked and Worried&quot; About the Future for Kids and Schools </strong></a></div>
+</div>
+
+<p>While the Seceders accounted for just 2 percent of the Dutch population at the time, they made up nearly half the country's immigrants to the United States before 1850. Those who ended up in western Michigan overcame hunger and disease to clear thickly wooded, swampy land and endured much colder winters and deeper snow than in their native Netherlands. In the city of Holland, they re-created their Dutch villages. And just like back home, their church was essentially their government, influencing almost every part of farmers' lives.</p>
+
+<p>Eleven years after the first Seceders came to Holland, one-third of the Dutch community broke off from the Reformed Church in America and created the Christian Reformed Church. What really solidified this split were disagreements over education, according to James D. Bratt, a professor emeritus at Calvin College and the author of <a href="https://www.amazon.com/Dutch-Calvinism-Modern-America-Conservative/dp/159244122X" target="_blank"><em>Dutch Calvinism in Modern America</em></a>. Members who stayed in the Reformed Church in America supported public schools; Christian Reformed Church members believed education was solely the responsibility of families&mdash;and explicitly not the government&mdash;&shy;and sent their kids to religious schools. Many church members became staunch opponents of unions by the time New Deal-era legislation protected the right to strike and allowed for collective bargaining, which they viewed as socialist intrusions that diminished the authority of the church and contributed to bigger government.</p>
+
+<div class="pullquote-left">Betsy and Dick DeVos have contributed hundreds of thousands of dollars to organizations seeking to privatize education and blur the separation of church and state.</div>
+
+<p>Along with opening <a href="https://www.hollandchristian.org/" target="_blank">Holland Christian Schools</a>, the church and its faithful established <a href="http://calvin.edu/" target="_blank">Calvin College</a> in nearby Grand Rapids. Betsy DeVos, 59, is an alum of both and was raised during the 1960s and 1970s in the Christian Reformed tradition. (Her brother, <a href="http://www.motherjones.com/politics/2014/01/devos-family-foundations-heritage-americans-prosperity-blackwater" target="_blank">Erik Prince</a>, is the founder of Blackwater, the private security contractor accused of overbilling and human rights abuses during the Iraq War, and he now advises Trump on intelligence and defense, according to the Intercept.) During those years, that often meant growing up in a home that forbade dancing, movies, drinking, working on Sundays, or even participating in the city's May tulip festival. Holland Christian Schools' ban on teaching evolution wasn't lifted until 1991, according to Larry ten Harmsel, the author of<a href="http://scholarworks.wmich.edu/books/466/" target="_blank"> <em>Dutch in Michigan</em></a><em>.</em></p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><a href="http://www.motherjones.com/politics/2016/09/black-teachers-public-schools-education-system-philadelphia" target="_blank"><img alt="" class="image" src="/files/teachers_a-master_2.jpg" /></a>
+
+	<div class="caption"><a href="http://www.motherjones.com/politics/2016/09/black-teachers-public-schools-education-system-philadelphia" target="_blank"><strong>America's Schools Desperately Need Black Teachers. Why Are We Driving Them Away? </strong></a></div>
+</div>
+
+<p>When the 1960s cultural revolution rocked the nation, many members of the Christian Reformed Church&mdash;including Betsy DeVos' parents, who would become one of the richest couples in Michigan thanks to Edgar Prince's automotive parts company&mdash;allied themselves with the evangelical movement. The Princes would go on to contribute to some of the country's most powerful far-right religious groups, like the Family Research Council. Betsy and Dick DeVos, who are now members of the Mars Hill Bible Church, a well-known mega-church outside Grand Rapids, eventually focused on funding education reform groups and think tanks that push for vouchers, contributing hundreds of thousands of dollars to organizations seeking to privatize education and blur the separation of church and state. These include:</p>
+
+<p><strong>&bull; <a href="http://acton.org/about/mission" target="_blank">Acton Institute</a> for the Study of Religion &amp; Liberty:</strong> Betsy DeVos once served on the board of this Grand Rapids-based think tank, which endorses a blend of religious conservatism and unrestrained capitalism. It is headed by a Catholic priest, Robert Sirico, who <a href="http://www.robertsirico.com/2015/08/the-tragedy-of-american-compassion.html" target="_blank">has argued</a> that welfare programs should be replaced by religious charities. In a <a href="http://acton.org/public-policy/educational-choice/americas-public-schools-crisis-and-cure-5" target="_blank">paper</a> titled &quot;America's Public Schools: Crisis and Cure,&quot; a former Acton advisory board member named Ronald Nash <a href="http://acton.org/public-policy/educational-choice/school-choice-con/americas-public-schools-crisis-and-cure-chapter-1" target="_blank">wrote</a>, &quot;No real progress towards improving American education can occur as long as 90 percent of American children are being taught in government schools that ignore moral and religious beliefs.&quot; In November, Acton came under fire for an essay on its website whose original title was &quot;Bring Back Child Labor.&quot; (The title was quickly changed.) The Dick and Betsy DeVos Family Foundation contributed $1.28 million from 2000 to 2014, and the Prince Foundation donated at least $550,000.</p>
+
+<p><strong>&bull; The Foundation for Traditional Values:</strong> Led by James Muffett, the organization is the education arm of <a href="http://ctvmichigan.org/" target="_blank">Citizens for Traditional Values</a>, a political action group whose mission is to preserve &quot;the influence of faith and family as the great foundation of American freedom embodied in our Judeo-Christian heritage.&quot; On the <a href="http://www.gsnt.org/speaking.shtml" target="_blank">website</a> dedicated to Muffett's seminars, a page devoted to a lecture titled &quot;The Greatest Story Never Told&quot; <a href="http://www.gsnt.org/index.shtml" target="_blank">states</a>, &quot;There was a time when schoolchildren were taught the truth about the Christian influence in our foundations&mdash;but no longer.&quot; The Dick and Betsy DeVos Family Foundation contributed $232,390 from 1999 to 2010.</p>
+
+<p><strong>&bull; Focus on the Family:</strong> Both the DeVoses and the Princes have been key supporters of Focus on the Family, which was founded by the influential evangelical leader <a href="http://drjamesdobson.org/about-us/James-Dobson" target="_blank">James Dobson</a>. In a 2002 radio broadcast, Dobson <a href="http://www.christianitytoday.com/ct/2002/julyweb-only/22.0a.html" target="_blank">suggested</a> that parents in some states pull their kids out of public schools, calling the curriculum &quot;godless and immoral&quot; and arguing that Christian teachers should also leave public schools: &quot;I couldn't be in an organization that's supporting that kind of anti-Christian nonsense.&quot; Dobson has also<a href="http://www.washingtonpost.com/wp-srv/style/longterm/books/chap1/godlessconstitution.htm" target="_blank"> distributed</a> a set of history lessons claiming that &quot;separating Christianity from government is virtually impossible and would result in unthinkable damage to the nation and its people.&quot; The Dick and Betsy DeVos Family Foundation gave $275,000 to Focus on the Family from 1999 to 2001 but hasn't donated since; it gave an additional $30,760 to related groups in Michigan from 1999 to 2010. The Prince Foundation donated $5.2 million to Focus on the Family and $275,000 to its Michigan affiliate from 2001 to 2013. (It also gave $6.2 million to the Dobson-founded Family Research Council, a former division of Focus on the Family that became an independent nonprofit in 1992. The FRC has fought against same-sex marriage and anti-bullying programs&mdash;and is listed as an &quot;<a href="https://www.splcenter.org/fighting-hate/extremist-files/individual/tony-perkins" target="_blank">anti-LGBT hate group</a>&quot; by the Southern Poverty Law Center.)</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><img alt="" class="image" src="/files/DeVos_online.png" /></div>
+
+<p>Additionally, the DeVoses have given millions of dollars to the <a href="http://www.willowcreek.com/index.asp" target="_blank">Willow Creek Association</a>, a group for church leaders &quot;who hold to a historic, orthodox understanding of biblical Christianity&quot; in more than 90 countries. WCA made headlines in 2011 when Starbucks CEO Howard Schultz canceled an appearance at an event sponsored by the association after a Change.org petition called it anti-gay (a claim WCA vehemently denied). And both the DeVoses and the Princes have been major benefactors of the <a href="https://www.haggai-institute.com/" target="_blank">Haggai Institute</a>, an Atlanta-area organization that trains professionals abroad to become Christian missionaries in their home countries because, as the director of its Brazilian bureau <a href="http://www.christianitytoday.com/edstetzer/2013/september/training-leaders-for-kingdom-look-inside-haggai-institute-i.html" target="_blank">explained</a> to <em>Christianity Today</em> in 2013, foreign governments don't mind &quot;allowing their people to be part of leadership training, whereas they would never allow their people to be in an evangelistic seminar.&quot;</p>
+
+<p>Meanwhile, the DeVos clan is perhaps best known for hard-nosed political activism against organized labor. In 2007, coming off Dick DeVos' unsuccessful gubernatorial bid in their home state of Michigan, the DeVoses focused their advocacy and philanthropy on controversial right-to-work legislation that would outlaw contracts requiring all employees in unionized workplaces to pay dues for union representation. Back in 2007, such a proposal in a union-heavy state like Michigan was considered a <a href="http://www.motherjones.com/politics/2014/01/devos-michigan-labor-politics-gop" target="_blank">&quot;right-wing fantasy</a>,&quot; but thanks to the DeVoses' funding and insider knowledge&mdash;Betsy was once the state GOP chair&mdash;the bill became law by 2012.</p>
+
+<p>Right-to-work laws, now on the books in 27 states, have been a major blow to the labor movement&mdash;including teachers' unions, the most powerful lobby for traditional public schools and against charter schools (whose instructors often aren't unionized). But that hasn't kept Betsy DeVos from trying to further weaken unions. In January 2016, when Detroit educators demanded a forensic audit of their district's murky finances and protested classrooms plagued by mold, roaches, and rodents, they used sick days to make their point&mdash;Michigan's public-sector workers have long been barred from striking. A month later, DeVos wrote a Detroit News op-ed arguing that teachers shouldn't be allowed to stage sick-outs, either.</p>
+
+<div class="inline inline-left" style="display: table; width: 1%"><img alt="" class="image" src="/files/Devos1.jpg" />
+	<div class="caption"><strong>President-elect Donald Trump and Betsy DeVos at a January rally in Grand Rapids. </strong>Michigan Paul Sancya/AP</div>
+</div>
+
+<p><span class="section-lead">Which brings us</span> back to the blurring lines among &quot;school choice,&quot; charter schools, and vouchers. Betsy DeVos has spent at least two decades pushing taxpayer-funded vouchers for private schools to the center of the Republican Party's education agenda, thanks in large part to Michigan's Mackinac Center for Public Policy.</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><img alt="" class="image" src="/files/overton-window290.jpg" />
+	<div class="caption">Mackinac Center for Public Policy</div>
+</div>
+
+<p>In the mid-'90s, Mackinac leadership suggested a long-term strategy on how to make unpopular voucher policies more palatable for mainstream America. Its then-senior vice president, <a href="http://www.mackinac.org/bio.aspx?ID=12" target="_blank">Joseph Overton</a>, developed what became known as the <a href="http://www.mackinac.org/overtonwindow#overton_window_container" target="_blank">Overton Window</a>, a theory of how a policy that's initially considered extreme might over time be normalized through gradual shifts in public opinion. Education policies were placed on a liberal-conservative<a href="http://www.mackinac.org/overtonwindow#overton_window_container" target="_blank"> continuum</a>, with the far left representing &quot;Compulsory indoctrination in government schools&quot; and the far right representing &quot;No government schools.&quot;</p>
+
+<p>Charter schools, then, became a Trojan horse for voucher advocates: Once public school supporters got used to the idea of charters, activists would attempt to nudge public opinion closer to supporting tax credits to pay for private schools. In Michigan, Detroit has been at the heart of the charter push, which began when Gov. John Engler signed charter schools into law in 1993. Three years later, then-<em>Detroit Metro Times</em> reporter Curt Guyette <a href="http://www.metrotimes.com/news-hits/archives/2016/06/08/detroit-school-legislation-backed-by-charter-advocates-was-years-in-the-making" target="_blank">showed</a> how the Prince Foundation, as well as the foundation run by Dick DeVos' parents, funded a carefully orchestrated campaign to label Detroit's public schools as failing&mdash;and pushed for charters and &quot;universal educational choice&quot; as a better alternative. Betsy DeVos has since written about the need to &quot;retire&quot; and &quot;replace&quot; Detroit's public school system and pressed for expanding charter schools and vouchers.</p>
+
+<div class="pullquote-left">Trump's education proposal calls for $20 billion to help families leave &quot;failing government schools&quot; for charter, private, or religious schools.</div>
+
+<p>In 2000, she and her husband helped underwrite a ballot initiative to introduce vouchers in Michigan. Though the couple poured millions of dollars into the effort, 69 percent of voters rejected it. The following year, Betsy DeVos focused on a new strategy: Instead of appealing directly to voters, she created a political action committee, the <a href="http://www.glep.org/" target="_blank">Great Lakes Education Project</a> (GLEP), to channel funding toward nonprofits and legislators pushing school reform policies. By 2002, GLEP had more money than Michigan's biggest teachers' union, the United Auto Workers, or any Democratic-affiliated PAC in the state, <a href="http://www.politico.com/magazine/story/2017/01/betsy-dick-devos-family-amway-michigan-politics-religion-214631" target="_blank">according</a> to <em>Politico</em>.</p>
+
+<p>Michigan now serves as one of the most prominent examples of what aggressive, DeVos-style school choice policies look like on the ground, especially when it comes to expanding charters. About <a href="http://midwest.edtrust.org/wp-content/uploads/sites/2/2013/10/The-Education-Trust-Midwest_Accountability-for-All-2016_February-11-2016.pdf" target="_blank">80 percent</a> of the state's charter schools are run by for-profit companies&mdash;a much higher share than anywhere else in the country&mdash;with little oversight from the state. In 2011, DeVos <a href="https://www.nytimes.com/2016/12/12/us/politics/betsy-devos-how-trumps-education-nominee-bent-detroit-to-her-will-on-charter-schools.html" target="_blank">fought </a>against legislation to stop low-performing charter schools from expanding, and later she and her husband funded legislators who opposed a proposal to add new oversight for Detroit's charters.</p>
+
+<div class="inline inline-right" style="display: table; width: 1%"><img alt="" class="image" src="/files/DeVos_Giving_Circles-290.gif" /></div>
+
+<p>Detroit, in particular, provides a cautionary tale of what happens when the ideology of market-driven &quot;school choice&quot; trumps the focus on student outcomes. The city's schools&mdash;where 83 percent of students are black and 74 percent are poor&mdash;have been in steady decline since charter schools started proliferating: Public school test scores in math and reading on the National Assessment of Educational Progress have remained the <a href="http://www.detroitnews.com/story/news/local/detroit-city/2015/10/28/national-assessment-educational-progress-detroit-math-reading-results/74718372/" target="_blank">worst</a> among large cities since 2009. In June, the <em>New York Times</em> published a scathing <a href="https://www.nytimes.com/2016/06/29/us/for-detroits-children-more-school-choice-but-not-better-schools.html" target="_blank">investigation </a>of the city's school district, which has the second-biggest share of students in charters in America. (New Orleans is No. 1.) Reporter Kate Zernike concluded that lax oversight by the state and insufficiently regulated growth&mdash;including too many agencies that are allowed to open new charter schools&mdash;contributed to a chaotic system marked by &quot;lots of choice, with no good choice.&quot;</p>
+
+<p>A 2015 <a href="http://www.education.msu.edu/epc/library/papers/documents/WP51-Which-Districts-Get-Into-Financial-Trouble-Arsen.pdf" target="_blank">study</a> from <a href="https://www.educ.msu.edu/epc/" target="_blank">Michigan State University's Education Policy Center</a> found that a high percentage of charter schools also had a devastating impact on the finances of poor Michigan school districts like Detroit. Researchers reported that, under the state's school choice and finance laws, it was hard for districts to keep traditional public schools afloat when charters reached 20 percent or more of enrollment. While per-student public funding follows kids to charters or other districts, traditional public schools still have fixed costs to cover, like building expenses and faculty salaries. Charter growth also increased the share of special-needs students left behind in traditional public schools, and the extra costs for educating such students weren't adequately reimbursed by the state.</p>
+
+<p>Charter schools and school choice are now<a href="http://pdkpoll2015.pdkintl.org/wp-content/uploads/2015/10/pdkpoll47_2015.pdf" target="_blank"> accepted</a> by nearly two-thirds of Americans, but almost 70 percent still <a href="http://pdkpoll2015.pdkintl.org/wp-content/uploads/2015/10/pdkpoll47_2015.pdf" target="_blank">oppose</a> using public funding for private schools. With most states under wholly Republican leadership, though, and big-name charter advocates like former DC Public Schools Chancellor Michelle Rhee now in support of sending public dollars to religious schools, the stage is set for a new effort to both lift state caps on charter schools (22 states have some kind of cap limiting the number of charters) and expand vouchers (14 states and the District of Columbia have active programs).</p>
+
+<p>It's hard to tell how many more charter advocates will support (or simply overlook) the inclusion of vouchers for private schools in choice policies, but one thing is clear: The prospects for an aggressive policy push for &quot;universal choice&quot;&mdash;including funding more religious schools with taxpayer money&mdash;have never been better.</p>
+
+<div class="inline inline-left" style="display: table; width: 1%"><img alt="" class="image" src="/files/DeVos_Map_630.gif" /></div>
+
+<p><span class="section-lead">On my last</span> day in Holland, a retired public school teacher named Cathy Boote gives me a tour of the city she has called home for 37 years. Dressed in a black cashmere sweater and a white winter jacket, Boote is a self-described moderate Republican who was raised a Calvinist and went to public schools before later teaching art in a nearby district. In her close to four decades of working in public schools, she saw how the decline of the automotive industry and the hollowing out of the middle class affected poor and working-class kids she taught. &quot;When parents have to work longer hours and more jobs and get paid less, there is more stress at home,&quot; Boote reflected. &quot;That means less time to read and do homework, and more time spent watching TV and online rather than learning.&quot;</p>
+
+<p>&quot;Betsy's father, Edgar Prince, is considered the patron saint of Holland,&quot; Boote says as our truck rolls over <a href="http://www.mlive.com/business/west-michigan/index.ssf/2016/02/why_holland_spends_millions_to.html" target="_blank">heated asphalt</a>&mdash;a unique underground grid of tubes that circulates hot water beneath a small section of the city's downtown and melts snowflakes just as they touch down. It was Prince who helped bring this innovative system here, suggesting the heated streets in 1988 and forking over $250,000 to cover nearly a quarter of the cost. Like Boote, most Hollanders I talked to credit Prince's vision for the city's transformation into a tourist destination.</p>
+
+<div class="pullquote-left">&quot;Most people here feel that you build your own family. You don't need a union to build a competing family.&quot;</div>
+
+<p>Prince's mix of business acumen and his desire to protect &quot;our people&quot; put him on the trajectory that made him one of the wealthiest men in Michigan. In 1965, he left his job as chief engineer at Buss Machine Works after workers decided to unionize. He opened his own company that eventually specialized in auto-parts manufacturing and became one of the biggest employers in Holland. When Prince Corp. was sold for $1.35 billion in 1997, two years after his death, some 4,500 former employees received a combined $80 million in bonuses. &quot;Most people here feel that you build your own family. You don't need a union to build a competing family,&quot; Boote explains, adjusting her glasses. &quot;You treat your employees well and they don't need to complain. Complaining, protesting, is bad. You work hard and you don't complain.&quot;</p>
+
+<p>Boote's truck takes a sharp turn into the predominantly Latino section of town, with large Victorian cottages, fenceless yards, and mature trees. Most kids in this neighborhood go to public schools. In the two decades since school choice was implemented in Michigan, white student enrollment in Holland's public schools has plummeted 60 percent, with a nearby charter school becoming their top destination, according to an <a href="http://www.bridgemi.com/talent-education/betsy-devos-and-segregation-school-choice" target="_blank">investigation</a> by the Ann Arbor-based <em>Bridge Magazine</em>. Latino students are now the face of the system, and 70 percent of all its students are poor, more than double the district's poverty rate when school choice began. Bridge Magazine found a similar pattern across Michigan: White parents tended to use the choice system to move their kids into even whiter districts, while black parents gravitated to charter schools made up mostly of students of color. Meanwhile, the Holland Christian Schools are predominantly white.</p>
+
+<p>We leave downtown and drive along Lake Macatawa for about three miles before parking in front of a huge, castlelike mansion. This is Betsy and Dick DeVos' summer home&mdash;a three-story, 22,000-square-foot estate that has eight dishwashers, 10 bathrooms, and 13 porches.</p>
+
+<p>As we look out at the stone-and-shingle house, Boote reflects on how most people around here&mdash;her family, Betsy DeVos' family&mdash;grew up hearing about their proud Dutch immigrant ancestors who overcame deep poverty. DeVos went on to attend a small, elite, mostly white private religious school and a college with similar demographics. She married into a rich dynasty.</p>
+
+<p>&quot;'Look at us. God has given to us. I can fix this. All you have to do is be like me.' You can understand how you might think that way, if you grew up here,&quot; Boote says later, as we take one final glance at the mansion over its tall, iron gate. &quot;If you come from the small, sheltered, privileged environment of Holland, you are most likely going to have a very limited worldview&mdash;including how to fix education.&quot;</p>
+
+<div class="inline inline-left" style="display: table; width: 1%"><img alt="" class="image" src="/files/holland2_930_0_0.jpg" />
+	<div class="caption"><strong>Holland, Michigan, in summer </strong>Craig Sterken/iStock</div>
+</div>
+
+<p><em>This article has been updated and expanded since it was first published. Research contributed by Jennifer V&eacute;lez and Matt Tinoco.</em></p>
+<script>
+  (function() {
+    if (typeof MJ_HideInContentAds === "undefined") {
+      var subhed_selector = 'h3.subhed';
+      var section_lead_selector = 'span.section-lead';
+      var pgs = $('.node .node-content > p, .node .node-content > p,'
+                + '.node .node-content > h3, .node .node-content > h3');
+      var wordcount = 0;
+      var words_before_ad_can_be_placed = 650;
+      var ads_placed = 0;
+      var ads_desired = 10;
+      var make_ad_element = function () {
+        var placement = 'InContentMob300x250_BB' + (ads_placed + 1);
+        var height = 250;
+        var curDateTime = new Date(); 
+        var offset = -(curDateTime.getTimezoneOffset()); 
+        if (offset > 0) { offset = "+" + offset; }
+        var uri = escape(window.location.pathname.replace('<SCRIPT>','').replace('<script>','').replace('-->', '').replace('<\/SCRIPT>','').replace('<\/script>',''));
+        var loc = 100; //example code said it's 300
+
+        return $('<div class="advertise-top">'
+              + '<IFRAME WIDTH="300" HEIGHT="250" SCROLLING="No" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" SRC="http://adserver.adtechus.com/adiframe/3.0/5443.1/4003031/0/170/ADTECH;target=_blank;'
+  //            + 'key=' + escape(window.key_param) 
+  /* begin adding more stuff */
+              + 'alias=' + escape(placement)+';key='+escape(window.key_param)+';grp='+escape(window.groupid)
+              +';kvuri='+uri+';misc='+new Date().getTime()+';aduho='+offset
+  /* end adding more stuff */
+              + '">'
+              + '<scr' + 'ipt language="javascript" src="http://adserver.adtechus.com/addyn/3.0/5443.1/4003031/0/170/ADTECH;'
+              + 'loc=700;target=_blank;'
+  /* begin adding more stuff */
+              + 'alias=' + escape(placement)+';key='+escape(window.key_param)+';grp='+escape(window.groupid)
+              +';kvuri='+uri+';misc='+new Date().getTime()+';aduho='+offset
+  /* end adding more stuff */
+              //+ 'key=' + escape(window.key_param) 
+              + '"></scr' + 'ipt><noscript><a href="http://adserver.adtechus.com/adlink/3.0/5443.1/4003031/0/170/ADTECH;'
+              + 'loc=300;'
+              + 'key=' + escape(window.key_param) + '" target="_blank">'
+              + '<img src="http://adserver.adtechus.com/adserv/3.0/5443.1/4003031/0/170/ADTECH;'
+              + 'loc=300;'
+              + 'key=' + escape(window.key_param) + '" border="0" width="300" height="250">'
+              + '</a></noscript></IFRAME>'
+
+              + '</div>'
+  /*
+          + '<scr'+'ipt language="javascript1.1" src="http://adserver.adtechus.com/addyn/3.0/5443.1/0/0/'
+              +escape(height)+'/ADTECH;loc=100;target=_blank;alias='
+              +escape(placement)+';key='+escape(window.key_param)+';grp='+escape(window.groupid)
+              +';kvuri='+uri+';misc='+new Date().getTime()+';aduho='+offset
+              +'"></scri'+'pt>' 
+  */
+          );
+      }
+
+      for (var i = 0; i < pgs.length; i++) {
+        if (wordcount > words_before_ad_can_be_placed
+          &&   ($(pgs[i]).is(subhed_selector) 
+             || $(pgs[i]).find(section_lead_selector).length)) {
+            $(pgs[i]).before(make_ad_element());
+            ads_placed++;
+            if (ads_placed >= ads_desired) {
+              break;
+            }
+          } else {
+            var words = $(pgs[i]).text().split(' ').length;
+            wordcount += words;
+          }
+      }
+    }
+  })();
+</script></div>
+
+
+  <ul class="end-of-article-share-buttons">
+  <li onclick="ga('send', 'event', 'EndOfArticle', 'Facebook|Click', window.location.href);" class="share-button facebook">
+    <a class="facebook-button-wrapper" href="http://www.facebook.com/sharer.php?u=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary"><span class="facebook-button"><i class="icon-facebook"></i></span></a>  </li>
+  <li onclick="ga('send', 'event', 'EndOfArticle', 'Twitter|Click', window.location.href);" class="share-button twitter">
+  <a class="tweet-button-wrapper" href="http://twitter.com/intent/tweet?original_referer=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary&related=davidcorndc%3AWashington%20editor%20of%20Mother%20Jones%20magazine%20and%20blogger%20at%20www.davidcorn.com%2Ckdrum%3APolitical%20blogger%20and%20writer%20for%20Mother%20Jones%20magazine.%2Ctomphilpott%3AThe%20cofounder%20of%20Maverick%20Farms%20and%20food%20%26%20agriculture%20correspondent%20for%20Mother%20Jones.%2Cclarajeffery%3ACo-editor%20of%20Mother%20Jones.%20Mom.%20One%20very%20tired%20lady.&source=tweetbutton&text=Betsy+DeVos+wants+to+use+America%27s+schools+to+build+%22God%27s+kingdom.%22+She%27s+about+to+get+her+chance.&url=http://www.motherjones.com/politics/2017/01/betsy-devos-christian-schools-vouchers-charter-education-secretary&via=motherjones"><span class="tweet-button"><i class="icon-twitter"></i></span></a></li>
+    <li onclick="ga('send', 'event', 'EndOfArticle', 'Email|Click', window.location.href);" class="sharebutton email-sharebutton"><a class="email-forward-link" href="/forward?path=node/322461">Email</a></li>
+    </ul>
+
+  <noscript id="old_share_links">
+       <div class="share"><p>Share this:</p><span><div class="item-list"><ul class="service-links"><li class="first last"><a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fm.motherjones.com%2Fpolitics%2F2017%2F01%2Fbetsy-devos-christian-schools-vouchers-charter-education-secretary&amp;t=Betsy+DeVos+Wants+to+Use+America%27s+Schools+to+Build+%22God%27s+Kingdom%22"><img src="/sites/all/modules/patched/service_links/images/facebook.png" alt="Share on Facebook." title="" width="16" height="16" /></a></li>
+</ul></div></span></div>
+  
+      <div class="post"><ul class="links">
+    <li><a href="/forward?path=node/322461">Email this page</a></li></ul></div>
+    </noscript>
+  
+    </div>
+
+  <div id="content-bottom-region">
+    <div class="block block-block" id="block-block-50">
+  <div class="content">  <div><h5>Get the scoop, straight from Mother Jones.</h5>
+  <form action="https://api.maropost.com/accounts/585/forms/3289/subscribe/177d8ba3b7fe7d39e28dcba73123eeffbd01878b" method="post" style="margin: 0 auto;"  onsubmit="return MJ_check_email(this);">
+    <table summary="Mother Jones Newsletter Sign Up Form" style="margin: 0 auto;" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+            <input include_blank="true" start_year="1950" type="hidden" name="custom_fields[outreach_affiliate_code]" id="custom_fields_outreach_affiliate_code" value="Mobile_Article_Bottom" />
+            <input include_blank="true" start_year="1950" type="hidden" name="custom_fields[signup_url]" id="signup_url" />
+            <input type="hidden" value="" id="email_field" name="email_const_mp" />
+<input type="hidden" value="true" name="cons_email_format_requested" id="cons_email_format_requested">
+                                                <i class="icon-envelope"></i>
+            <input include_blank="true" start_year="1950" name="contact_fields[email]" id="cons_email" placeholder="ENTER YOUR EMAIL" type="text" />
+          </td>
+          <td>
+            <input id="newsletter-signup" type="submit" name="commit" id="submit" value="Submit" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div></div>
+</div>
+<div class="block block-block" id="block-block-701">
+  <div class="content"><div id="ym_869408951086292841" class="ym"></div><script type="text/javascript">(function(e,t){if(t._ym===void 0){t._ym="";var m=e.createElement("script");m.type="text/javascript",m.async=!0,m.src="//static.yieldmo.com/ym.m5.js",(e.getElementsByTagName("head")[0]||e.getElementsByTagName("body")[0]).appendChild(m)}else t._ym instanceof String||void 0===t._ym.chkPls||t._ym.chkPls()})(document,window);</script>
+
+<div style="border-bottom: 1px solid #B5B5B5; margin-bottom: 0.8em; padding-bottom: 0.5em;"></div></div>
+</div>
+<div class="block block-disqus" id="block-disqus-disqus_comments">
+  <div class="content"><div id="disqus_thread"></div><div class="disqus-noscript display-disqus" onclick="displayDisqus(); $(this).addClass('hidden'); return false;"><a href="http://motherjones.disqus.com/?url=http%3A%2F%2Fwww.motherjones.com%2Fnode%2F322461"><i class="icon-plus"></i>view comments</a></div></div>
+</div>
+  </div>
+  <div id="related-articles">
+    <div class="related-articles"><h3 class="title">Related</h3><a href="/node/322566"><img src="http://m.motherjones.com/files/imagecache/mobile-top-of-content/betsy-devos-rally-trump.jpg" alt="" title=""  class="imagecache imagecache-mobile-top-of-content" width="300" height="168" /></a><a href="/politics/2017/01/teachers-unions-challenge-betsy-devos-pick-education-secretary">Donald Trump Is &quot;an Existential Threat to Public Schools&quot;</a><span class="byline"><span class="byline byline-byline"><a href="/authors/edwin-rios" rel="author">Edwin Rios</a></span></span></div>  </div>
+    </div>
+    
+            <div class="action-links clear-block">
+                            </div>
+                
+     
+  </div>
+</div>
+
+      <!-- start footer -->
+      <div id="footer">
+                
+         <div id="footer-post-content">
+            <a href="/m" id="footer-logo">
+                <img src="/sites/all/assets/MJ_comp_grey.png" alt="Mother Jones" />
+            </a>
+            <ul id="footer-social">
+                <li class="circled-icon">
+                    <a href="https://www.facebook.com/motherjones">
+                        <i class="icon-facebook"></i>
+                    </a>
+                </li>
+                <li class="circled-icon">
+                    <a href="https://twitter.com/motherjones">
+                        <i class="icon-twitter"></i>
+                    </a>
+                </li>
+                <li class="newsletter">
+                    <a href="/about/interact-engage/free-email-newsletter" class="hover-newsletter">
+                </li>
+            </ul>
+            <ul id="footer-list">
+                <li>
+                    <a href="/about">
+                        About Us
+                    </a> |
+                    <a href="http://store.motherjones.com/?utm_source=motherjones&utm_medium=footer&utm_content=orangefooterlink&utm_campaign=evergreen">
+                        Store
+                    </a>
+
+                </li>
+                <li>
+                    <a href="https://secure.motherjones.com/fnp/?action=SUBSCRIPTION&list_source=8HEGP009&extra_don=1&abver=A">
+                        Donate</a>
+|                    <a href="https://secure.motherjones.com/fnx/?action=SUBSCRIPTION&pub_code=MJM&term_pub=MJM&list_source=SEGYN5&base_country=US ">Subscribe</a>
+                </li>
+                <li>
+                     <a href="/about/subscriptions/customer-service">
+                          Customer Service
+                    </a>
+                </li>
+                <li>
+                    <a href="/about/advertising/contact-form">
+                        Advertise
+                    </a>
+                </li>
+            </ul>
+
+            <div id="copyright">
+              <p>
+                Copyright &copy;2016 Mother Jones and the Foundation for National Progress. All Rights Reserved.
+              </p>
+              <p>
+                <a href="/about/terms">Terms of Service</a>
+                <a href="/about/privacy-policy">Privacy Policy</a>
+                <a href="http://www.motherjones.com/about/contact">Contact Us</a>
+              </p>
+            </div>
+
+
+      </div>
+    <!-- end footer -->
+
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+    var _qevents = _qevents || [];
+
+    (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    })();
+
+    _qevents.push({
+    qacct:"p-Be0QSW1bbb6Qv"
+    });
+    </script>
+
+    <noscript>
+    <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-Be0QSW1bbb6Qv.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+
+    <script language="javascript">
+    <!--
+    ad_code("overlaymob",3055);
+    //-->
+    </script>
+    <!-- End of JavaScript Tag -->
+    
+    <script type="text/javascript">var disqus_url = "http:\/\/www.motherjones.com\/node\/322461"; var disqus_title = "Betsy DeVos Wants to Use America\u0026#039;s Schools to Build \u0026quot;God\u0026#039;s Kingdom\u0026quot;"; var disqus_message = ""; var disqus_identifier = "node\/322461"; var disqus_shortname = "motherjones"; function checkIfDisqusIsVisible(){   var $elem = $('#block-disqus-disqus_comments');   var $window = $(window);   var docViewTop = $window.scrollTop();   var docViewBottom = docViewTop + $window.height();   var elemTop = $elem.offset().top;   var elemBottom = elemTop + $elem.height();   if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {      ga('send', 'event', 'CommentsSection', 'ScrolledToComments', window.location.href);      return   };   window.setTimeout(checkIfDisqusIsVisible, 10000)}function disqus_config() {    this.callbacks.onNewComment = [function() { ga('send', 'event', 'CommentsSection', 'NewComment', window.location.href); }];    this.callbacks.afterRender = [function() { checkIfDisqsIsVisible(); }];}var displayDisqus = function(callback) {   callback = typeof callback === "function" ? callback : function() {$(".display-disqus").addClass("hidden");};  $.ajax({    type: "GET",    url: 'http://disqus.com/forums/' + disqus_shortname + '/embed.js',    dataType: "script",    success: callback,    cache: true  });};if (window.location.hash &&    (window.location.hash.match(/^\#comment/) || window.location.hash.match(/^\#disqus_thread/) ) ) {  displayDisqus(function() {$(".display-disqus").addClass("hidden");})}var disqus_remote_auth_s2 = "({})";</script><script type="text/javascript" src="/sites/all/themes/mobile/fix_embedded_video.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/mobile/validemail.js"></script>
+<script type='text/javascript'>
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 10683;
+    _sf_async_config.domain = 'motherjones.com';
+    _sf_async_config.useCanonical = true;
+    _sf_async_config.sections = '';  //CHANGE THIS
+    _sf_async_config.authors = '';    //CHANGE THIS
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+<!-- Begin comScore Tag -->
+          <script>
+           var _comscore = _comscore || [];
+       _comscore.push({ c1: "2", c2: "8027488" });
+       (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+               s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+               el.parentNode.insertBefore(s, el);
+                })();
+       </script>
+<noscript>
+ <img src="http://b.scorecardresearch.com/p?c1=2&c2=8027488&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+
+<script>
+      ansible_iframe('ads', 'http://mj-tech.motherjones.net/ad_w_intersitial.html');
+</script>
+
+
+</div>
+<script src="http://mj-tech.motherjones.net/adtracking.js"></script>
+<script>
+  if (typeof noadblocking === "undefined") {
+      ga('send', 'event', 'AdblockDetected', 'MobileNoDonateDisplayed', window.location.href);
+  }
+ga('send', 'event', 'Author', 'Kristina Rizga', window.location.href);</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"177009cc6a","applicationID":"788901","transactionName":"Y1EAbURRChdVVEFQCVobI1pCWQsKG1laXQNrRANeU28SDVFA","queueTime":0,"applicationTime":430,"atts":"TxYDGwxLGRk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+

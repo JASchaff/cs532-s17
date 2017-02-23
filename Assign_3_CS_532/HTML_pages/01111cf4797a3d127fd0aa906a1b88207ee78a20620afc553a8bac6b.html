@@ -1,0 +1,1067 @@
+<style>
+.box {
+	width: 40%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.2);
+	padding: 35px;
+	/*border: 2px solid #fff;
+	border-radius: 20px/50px;
+	background-clip: padding-box;*/
+	text-align: center;
+	z-index: 9999;
+}
+.button {
+	font-size: 2em;
+	padding: 10px;
+	color: #fff;
+	border: 2px solid #06D85F;
+	border-radius: 20px/50px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+.button:hover {
+	background: #06D85F;
+}
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	transition: all 0.2s;
+	font-size: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffc20e;
+}
+.popup .close:hover {
+	color: #FD9019;
+}
+.popup .content {
+	max-height: 30%;
+	overflow: auto;
+}
+/*Let's make it appear when the page loads*/
+.overlay:target:before {
+	display: none;
+}
+.overlay:before {
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	z-index: 9;
+}
+.overlay .popup {
+	/*background: #fff;*/
+	border-radius: 5px;
+	width: 370px;
+	position: fixed;
+	top: 100px;
+	left: 32%;
+	padding: 25px;
+	margin: 70px auto;
+	z-index: 99999999999999;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+.overlay:target .popup {
+	top: -100%;
+	left: -100%;
+}
+ @media screen and (max-width: 768px) {
+.box {
+	width: 70%;
+}
+.overlay .popup {
+	width: 70%;
+	left: 15%;
+}
+</style>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" >
+<head>
+	
+	  <base href="http://therealnews.com/t2/index.php" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="the real news, real news, trnn, the real news network, independent television news, independent video news, daily blogs, breaking news,non-profit news, best of the web, headline news, canadian news, us news, political news, international news, aggregated news, afghanistan news, africa news, asia news, economy news, health care news, latin america news, middle east news, honduras news, greek news, libya news, israel news, palestine news, iran news, japan news, alternative news, non-profit news, independent television news, independent video news, television news, Paul Jay,Gore Vidal, Naomi Klein, David Suzuki, Phil Donahue, Eric Margolis, news television us presidential debates, union protests, wisconsin unions, doha debates, living wage debate, arab spring, zelaya honduras, wikileaks debate, netanyahu congress, furkan dogan murder, greece protests, war in afghanistan, kabul war, g20 toronto, g20 toronto protest, g20 toronto lawsuit, g20 toronto aftermath, AIPAC protests, Bob McChesney collapse of journalism, robert pollen economics, leo panitch economics, lawrence wilkerson us foreign policy, paul jay interview, paul jay editorial, 'syed saleem shahzad interview', orville schell capitalism chinese style, Hamid Dabashi, Libya, Jesse Freeston Honduras, Syria protests, Egypt protests, Lawrence Wilkerson Military, Dick Cheney, George Bush, Robert Pollin Economics Political Economy Research Institute PERI, Greece economy, Canada postal strike, Israel Palestine Occupied Territories, Middle East, Austerity Speculation Mortgage crisis, Economic news, Sarah Palin 2012 elections, GOP elections downhill, Barak Obama 2012, Military Industrial Complex, Unions Labor movement, Pakistan, Afghanistan, Wisconsin, Venezuela, Mark Weisbrot Center for Economic Policy Research CEPR Latin America economics capitalism, Dean Baker Center for Economic Policy Research CEPR economy recession employment unemployment, United States financial finance, 'economic news', roundtable debate, town halls, investigative journalism, frontline journalism, collaborative news, community news, participatory journalism, verifiable journalism, fact-based journalism, donor-supported news, member supported news, global news, local news, internship opportunity, first nation news, aboriginal news, labour news, union news, austerity measures, union busting, libya, Egyptian workers, 'japan tsunami aftermath', nuclear power, Baltimore schools and prisons, slut walks, first nations schools, Osama Bin Laden death, isreal flotilla, female protesters, green activism, 'Ha-Joon Chang 23 Things', Jeff Madrick Age of Greed, Antero Pietilla Baltimore,'Rob Ford Toronto news, PERI, PERI TRNN, McClatchy TRNN, McClatchy The Real News Network, David Harvey economist, Sharmini Peries TRNN, Sharmini Peries The Real News Network, Aine McGlynn, Danya Nadar, David Dougherty, Jesse Freeston, Hezvo Mpunga, Lia Tarachansky, Ziggy Jeffery, Ania Smolenskaia, Lynn Fries, Bob Pollin, Leo Panitch, William Engdahl, Tom Ferguson, Robert Johnson, Gerald Epstien, Kevin Hall, Gerard Dumenil, William Black, Doug Henwood, Yves Smith, Danny Schecter, James Gallbraith, Noam Chomsky, Jim Stanford, Justin Fox, Sam Gindin, Robert Kuttner, Richard Wolff, Sony Kapoor, Jomo KS, Greg Gordon, Andrew Cockburn, James Heintz, Glen Ford, James Crotty, James Boyce, Middle East bureau" />
+  <meta name="custome_page_title" content="Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos" />
+  <meta name="thumbnail" content="http://therealnews.com/media/trn_2017-02-01/dravitch0202devos.jpg" />
+  <meta name="title" content="Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos" />
+  <meta name="author" content="The Real News Network" />
+  <meta name="description" content="Former Assistant Secretary of Education Diane Ravitch calls for mass resistance against Betsy DeVos, who will implement failed policies that ignore root issues of poverty and under-funding" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos</title>
+  <link href="/t2/templates/gk_twn/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/t2/plugins/system/jcemediabox/css/jcemediabox.css?v=108" type="text/css" />
+  <link rel="stylesheet" href="/t2/plugins/system/jcemediabox/themes/light/css/style.css?version=108" type="text/css" />
+  <script type="text/javascript" src="/t2/plugins/system/jcemediabox/js/mediaobject.js?v=108"></script>
+  <script type="text/javascript" src="/t2/plugins/system/jcemediabox/js/jcemediabox.js?v=108"></script>
+  <script type="text/javascript" src="/t2/plugins/system/jcemediabox/addons/default.js?v=108"></script>
+  <script type="text/javascript" src="/t2/plugins/system/jcemediabox/addons/twitter.js?v=108"></script>
+  <script type="text/javascript" src="/t2/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/t2/media/system/js/caption.js"></script>
+  <script type="text/javascript">
+	JCEMediaObject.init('/t2/', {flash:"10,0,22,87",windowmedia:"5,1,52,701",quicktime:"6,0,2,0",realmedia:"7,0,0,0",shockwave:"8,5,1,0"});JCEMediaBox.init({popup:{width:1000,height:"",legacy:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",labels:{'close':'Close','next':'Next','previous':'Previous','cancel':'Cancel','numbers':'{$current} of {$total}'}},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/t2/",imgpath:"plugins/system/jcemediabox/img",theme:"light",themecustom:"",themepath:"plugins/system/jcemediabox/themes"});
+  </script>
+  <link rel="image_src" href="http://therealnews.com/media/trn_2017-02-01/dravitch0202devos.jpg"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:image" content="http://therealnews.com/media/trn_2017-02-01/dravitch0202devos.jpg"/>
+  <meta property="og:title" content="Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos"/>
+  <meta property="og:description" content="Former Assistant Secretary of Education Diane Ravitch calls for mass resistance against Betsy DeVos, who will implement failed policies that ignore root issues of poverty and under-funding"/>
+  <meta property="og:site_name" content=" The Real News Network"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@therealnews">
+  <meta name="twitter:creator" content="@therealnews">
+  <meta name="twitter:title" content="Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos">
+  <meta name="twitter:description" content="Former Assistant Secretary of Education Diane Ravitch calls for mass resistance against Betsy DeVos, who will implement failed policies that ignore root issues of poverty and under-funding">
+  <meta name="twitter:image" content="http://therealnews.com/media/trn_2017-02-01/dravitch0202devos.jpg">
+  <meta property="article:published_time" content="2017-02-03T15:39:52+00:00"/>
+  <meta property="og:url" content="http://therealnews.com/t2/index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291"/>
+  <link rel="canonical" href="http://therealnews.com/t2/index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291"/>
+
+
+	
+<link rel="shortcut icon" href="/t2/images/favicon.ico" />
+<link rel="stylesheet" href="/t2/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="/t2/templates/system/css/general.css" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/layouts/css/layout.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/addons.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/modules.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/template.css" rel="stylesheet" media="all"  type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/menu/suckerfish.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/joomla.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/typography.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/gk_stuff.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/css3.css" rel="stylesheet" media="all" type="text/css" />
+<link href="http://therealnews.com/t2/templates/gk_twn/css/style1.css" rel="stylesheet" media="all" type="text/css" />
+<!--[if IE 6]><link href="http://therealnews.com/t2/templates/gk_twn/css/ie6_css.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="http://therealnews.com/t2/templates/gk_twn/css/ie7_css.css" rel="stylesheet" type="text/css" /><![endif]-->
+<script type="text/javascript">$template_path = 'http://therealnews.com/t2/templates/gk_twn';</script>
+<script type="text/javascript" src="http://therealnews.com/t2/templates/gk_twn/lib/scripts/template_scripts.js"></script>
+
+<style type="text/css">
+	.template_width { width:1000px; }
+	#gk_wrapper     { width:1000px; }
+	#gk_mainbody    { margin: 18px 0px 0px 0px;padding:0;border-width:0;}
+	#gk_left        { width:0px;margin: 0px 18px 0px 0px;padding: 0px 18px 0px 0px;border-width:0; }
+	#gk_right       { width:0px;margin: 0px 0px 0px 18px;padding: 0px 0px 0px 18px;border-width:0; }
+	#left_one       { width:0px;margin:0;padding:0;border-width:0; }
+	#left_two       { width:100%;margin:0;padding:0;border-width:0; }
+	#right_one      { width:0px;margin:0;padding:0;border-width:0; }
+	#right_two      { width:100%;margin: 0px 0px 0px 18px;padding: 0px 0px 0px 18px;border-width:0; }
+	#inset_left     { width:0px;margin:0;padding:0;border-width:0; }
+	#inset_right    { width:0px;margin:0;padding:0;border-width:0; }
+	#gk_content     { width:1000px;margin:0;padding:0;border-width:0; }
+	#gk_current     { width:1000px;margin:0;padding:0;border-width:0; }
+	#gk_bottom      { margin: 18px 0px 0px 0px;padding:0;border-width:0; }
+	#gk_bottom1     { margin:0;padding:0;border-width:0; }
+	#gk_bottom2     { margin:0;padding:0;border-width:0; }
+	#gk_footer     { margin: 18px 0px 18px 0px;padding: 6px 0px 6px 0px;border-width: 1px 0px 4px 0px; }
+	
+	
+	body {
+		font-size: 70%;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+
+	div.moduletable h3, 
+	div.moduletable_menu h3, 
+	div.moduletable_text h3, 
+	div.moduletable_ver1 h3, 
+	div.moduletable_ver2 h3,
+	div.moduletable_ver2a h3, 
+	div.moduletable_ver2b h3, 
+	div.moduletable_ver3 h3,
+	div.moduletable_ver3a h3, 
+	div.moduletable_ver3b h3, 
+	div.moduletable_ver4 h3,
+	div.moduletable_ver4a h3,
+	div.moduletable_ver4b h3,
+	div.gk_news_section h2
+	{
+		font-size: 105%;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+	h4.gk_news_intro_title, 
+	h4.gk_npro_header,
+	div.joomla h1.title, 
+	div.joomla div.multicolumns h1.title, 
+	#jc h4, h1.pagetitle, 
+	div.joomla div.morearticles h3, 
+	.gk_is_text_block h4, 
+	div.joomla div.contact h1
+	{
+		font-size: 105%;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+	
+				</style>	
+	
+</head>
+<body>	
+
+	<div id="gk_wrapper">
+	
+		
+	
+			
+		
+<div id="top_wrap" class="clearfix">
+
+				<a href="/t2/./" id="logo">
+				<img src="http://therealnews.com/t2/templates/gk_twn/images/logo3.png" alt="logo"  height="91" width="122"/>
+				</a>
+												<div id="top_b">
+								<table border="0" width="850">
+<tbody>
+<tr>
+<td rowspan="2" valign="top" width="650" align="center">
+
+
+<table cellpadding="2px"><tr>
+<td align="center"><a href="http://facebook.com/therealnews" target="_blank"><img src="http://therealnews.com/permalinkedgraphics/fblikefp.png" border="0" width="140"/></a></td>
+<td align="center"><a href="http://twitter.com/therealnews" target="_blank"><img src="http://therealnews.com/permalinkedgraphics/twfollowfp.png" border="0" width="108"/></a></td>
+<td align="center"><a href="http://therealnews.com/t2/index.php?option=com_content&task=view&id=321"><img src="http://therealnews.com/permalinkedgraphics/subfp.png" border="0"  width="130"/></a>
+</td>
+<td>
+<!--<a href="http://therealnews.com/t2/about-us/mission/740"><img src="http://therealnews.com/permalinkedgraphics/hiring.png" border="0" width="110" /></a>-->
+</td>
+
+
+</tr>
+<tr>
+<td height="60px" align="center" colspan="4">
+
+
+
+<center><h6>NO ADVERTISING, GOVERNMENT OR CORPORATE FUNDING</h6></center>
+</td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top">
+
+
+<table><tr><td colspan="3" bgcolor="#ffc20e" align="center" height="45">
+<a href="http://therealnews.com/donate" style="text-decoration: none; color:#000; font-family:Arial Black;">DONATE TODAY</a>
+</td></tr><tr><td height="5"></td></tr><tr><td valign="top">
+<form action="index.php?option=com_content&task=view&id=851" method="get">
+	<div class="search">
+		<input type="hidden" name="option" value="com_content" />
+	<input type="hidden" name="task" value="view" />
+	<input type="hidden" name="id" value="851" />	
+	<input type="hidden" name="Itemid" value="74" />	
+
+	<input name="jumival" id="mod_search_searchword" maxlength="20" alt="search" class="inputbox" type="text" size="10" value=""  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />
+	<input name="search" type="submit" value="search" />
+  <br/>	</div>
+</form>
+
+
+<!--<form action="index.php?option=com_content&task=view&id=850" method="get">
+	
+		<input type="hidden" name="option" value="com_content" />
+	<input type="hidden" name="task" value="view" />
+	<input type="hidden" name="id" value="850" />	
+
+	<input name="q" id="mod_search_searchword" maxlength="40" alt="search" class="inputbox" type="text" size="22" value=""  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />
+	</td><td width="5"></td><td valign="top"><input name="search" type="image" src="http://www1.therealnews.com/images/buttons/search_btn.png" /></td></tr></table>
+ 
+</form>-->	
+
+</td></tr></table>
+
+
+</td>
+</tr>
+ 
+</tr>
+ </table>
+ 
+
+
+</td></tr></table></td>
+</tbody>
+</table>
+				</div>
+				</div>
+<div id="menu_wrap">
+				<div class="addons">
+																																				</div>
+				<div class="clearfix">
+
+
+
+
+
+
+
+
+
+<p>
+
+				</div>
+</div>
+
+
+
+
+<div id="gk_banner" class="clearfix">
+				<script type="text/javascript" src="http://therealnews.com/web4/jcarousel/lib/jquery-1.2.3.pack.js"></script>
+
+<script type="text/javascript" src="http://therealnews.com/web4/video_box/js/mootools.js"></script>
+
+<script type="text/javascript" src="http://therealnews.com/web4/video_box/js/swfobject.js"></script>
+
+<script type="text/javascript" src="http://therealnews.com/web4/video_box/js/videobox.js"></script>
+
+<link rel="stylesheet" href="http://therealnews.com/web4/video_box/css/videobox.css" type="text/css" media="screen" />
+  <style>
+
+nav {
+  text-align:left;
+  width: 100%;
+  background: #bebebe;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  position:relative;
+  z-index:999999;
+ 
+}
+
+nav ul {
+  background: #414141;
+  list-style:none;
+  padding:0 0px;
+  margin: 0;
+  height: 60px;
+
+}
+
+
+nav ul li {
+  display: inline-block;
+  
+}
+
+
+nav ul li a {
+  color:#ffc20e!important;
+  display:block;
+  padding:0px 20px 0px 0px;
+  text-decoration:none;
+  float: left;
+  height: 60px;
+   line-height: 60px;
+}
+
+nav ul li:hover {
+  background: #333333;
+}
+
+
+nav ul li:hover > a{
+    color:#FFFFFF;
+}
+
+nav ul li:hover > ul {
+  display:block;
+  color:#FFFFFF;
+}
+
+nav ul ul {
+  background: #333;
+  color:#FFFFFF;
+  padding:0;
+  text-align: left;
+  display:none;
+    width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+
+
+
+hr {
+    border: none;
+    height: 1px;
+    color:#414141;
+    background-color: #414141; 
+	margin-bottom:-16px;
+}
+h2{
+	font-family:Arial;
+	font-variant:small-caps!important;
+	font-size:18px!important;
+	color:#ffc20e;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.h2_background { 
+background-color: #414141;
+padding:5px 10px 5px 10px;
+border-top:thin;
+ }
+
+.donatebutton {
+	font-size:18px;
+	font-weight:bold;
+	color:#000!important;
+	padding:20px 40px;
+background: #FFC20E;
+float:left;
+margin-right:10px;
+margin-top:0px;
+text-decoration: none;
+}
+.donatebtn {
+	font-size:18px;
+	font-weight:bold;
+	color:#000!important;
+	padding:10px 50px;
+background: #FFC20E;
+float:right;
+margin-top:0px;
+margin-bottom:5px;
+text-decoration: none;
+}
+
+.small_text{
+	color:#999!important;
+	font-variant:small-caps;
+
+}
+
+.lightbox {
+  /** Hide the lightbox */
+  display: none;
+
+  /** Apply basic lightbox styling */
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: black;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  /** Show lightbox when it is target */
+  display: block;
+
+  /** Remove default browser outline style */
+  outline: none;
+}
+
+
+
+.grayscale{ 
+  border: 0px solid black;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+    filter: gray;  /* For IE 6 - 9 */
+    -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
+}
+
+.grayscale:hover { 
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+}
+CSS selector {
+  font-family: 'Montserrat', sans-serif;
+}
+</style>
+
+
+  <nav>
+	<ul>
+		<li><a href="#">Home</a>
+			<ul>
+				<li><a href="/t2/index.php">Home</a></li>
+				<li><a href="http://therealnews.com/t2/latest-news">Latest Stories</a></li>
+				<li><a href="/t2/../t2#beats">Themes</a>
+               <!-- <ul>
+				<li><a href="#">Topic</a>
+                <ul><li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li></ul></li>
+				<li><a href="#">Region</a>
+                <ul><li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li></ul></li>
+				</ul>-->
+            </li>
+				<li><a href="http://therealnews.com/t2/continuous-players">Continuous Players</a></li>
+				<li><a href="http://therealnews.com/t2/my-real-news">My Real News</a></li>
+			</ul>
+            
+            
+            
+		</li>
+        <li><a href="http://therealnews.com/t2/index.php?option=com_content&task=view&id=2360&showid=56">The Real Baltimore</a></li>
+        <li><a href="http://therealnews.com/t2/index.php?option=com_content&task=view&id=2815">Special Programs</a></li>
+		<li><a href="http://therealnews.com/t2/member-benefits">Member Benefits</a>
+			<!--<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">User Experience</a></li>
+			</ul>-->
+		</li>
+<!--		<li><a href="http://therealnews.com/t2/component/hwdvideoshare/frontpage">Best of the Web</a></li>
+-->		<li><a href="#">About Us</a>
+        <ul>
+				<li><a href="http://therealnews.com/t2/about-us/mission">Mission</a></li>
+				<li><a href="http://therealnews.com/t2/about-us/board-of-directors">Board of Directors</a></li>
+				<li><a href="http://therealnews.com/t2/about-us/staff">Staff</a></li>
+				<li><a href="http://www.therealnews.com/t2/index.php?option=com_content&task=view&id=383">Press</a></li>
+				<li><a href="http://therealnews.com/t2/about-us/volunteer-opportunities">Volunteer Opportunities</a></li>
+			</ul>
+            </li>
+		<!--<li><a href="http://therealnews.com/shop/index.php?route=common/home">Shop</a></li>-->
+		<li><a href="http://therealnews.com/t2/contact-us">Contact Us</a>
+		
+        <ul>
+						<li><a href="http://therealnews.com/t2/contact-us">General Inquiries</a></li>
+						<li><a href="http://therealnews.com/t2/contact-us/1966?task=view">Tech Support</a></li>
+						<li><a href="http://therealnews.com/t2/site-help">site Help</a></li>
+					</ul></li>
+		<li><a href="http://therealnews.com/t2/about-us/mission/740">Jobs</a></li>
+        <li>
+<a href='http://therealnews.com/t2/index.php?option=com_content&task=view&id=822'>Log In</a></li>
+	</ul>
+    
+</nav>
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3258091-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+	var $mcGoal = {'settings':{'uuid':'156b1ee6f1','dc':'us6'}};
+	(function() {
+		 var sp = document.createElement('script'); sp.type = 'text/javascript'; sp.async = true; sp.defer = true;
+		sp.src = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/downloads.mailchimp.com' : 'http://downloads.mailchimp.com') + '/js/goal.min.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sp, s);
+	})(); 
+</script>
+
+		
+		
+<div id="gk_mainbody" class="both_columns">
+				
+				<div id="gk_mainbody_wrap">
+								<div id="gk_mainbody_wrap2" class="clearfix">
+												
+												
+
+<div id="gk_content" >
+	
+		
+	
+<div id="content_wrap" class="clear">
+												<div id="gk_current" >
+								<div id="gk_current_wrap">
+																																				<div id="component_wrap" class="clear">
+																																																<div id="component">
+																				
+
+
+<div class="joomla ">
+	
+	<div class="article">
+	
+			
+			
+				
+			
+			
+				
+				
+		<p><meta http-equiv="X-UA-Compatible" content="IE=8" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<link rel="stylesheet" type="text/css" href="/t2/scroller/css/style.css" />
+	
+	<script type="text/javascript" src="/t2/scroller/js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="/t2/scroller/js/jScrollPane.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.scroll-pane').jScrollPane({
+				scrollbarWidth: 12
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+body,td,th {
+}
+h1 {
+}
+.box
+{
+  margin-top:5px;
+  width:200px;
+  height:35px;
+  border-style:solid;
+  border-color:lightgray; border-width:1px;
+  width:auto;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+}
+.seeepisode {
+float: left;
+font:  16px Georgia;
+color: white;
+text-decoration: none;
+padding: 2px 5px;
+}
+/*.h3 {
+	text-transform: capitalize;
+}
+*/
+
+p {
+    padding: 0 0 0 10px;
+}
+
+#wrapper {
+    width: 1000px;
+	background-color:#FFF;
+}
+
+/*#heading {
+    float: left;
+     width: 1000px;
+    background: #ffc20e;
+	padding-left:10px;
+	padding-top:10px;
+}*/
+
+#vidplayer {
+	margin: 0 auto!important;
+    float: left;
+     width: 990px;
+    background: #fff;
+	padding-left:0px;
+	padding-top:0px;
+}
+
+#main {
+    float: left;
+    background: #FFFFFF;
+    width: 760px;
+}
+
+#rightcolumn {
+    background: #d5d5d;
+    width: 230px;
+    float: right;
+}
+/*h3{
+	background-color:#d5d5d5;
+	color:#000;
+	padding: 5px;
+}*/
+</style>
+ 
+ 
+ 
+ 
+  
+	
+	 <td colspan="2" align="left"> </td></tr></table>	    
+   
+  
+  
+	
+
+    <div id="wrapper">
+        <div id="heading">
+        
+      
+<hr><h2><span class='h2_background'>&nbsp; <nobr><font style='color: #ffc20e;'>February 2, 2017</font></nobr></span></h2><tr><td><h1 class="h1" style='line-height: 120%;'> Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos </h1><br></td>
+ </tr><tr><td colspan="2">
+
+
+Former Assistant Secretary of Education Diane Ravitch calls for mass resistance against Betsy DeVos, who will implement failed policies that ignore root issues of poverty and under-funding  </td></tr></table>
+
+
+	        </div>
+<div id="vidplayer">
+
+
+<table width="1000px"><tr><td valign="top" width="760px">
+
+<div id='VIDEO_PLAYER' style='margin-top: 10px;'><div id=advplayer></div></div>
+
+<div id="advinfo">
+ Members don't see ads. If you are a member, and you're seeing this appeal, <a href="http://therealnews.com/t2/index.php?option=com_content&task=view&id=343">click here</a></b><div id=advplayer> 
+</div>  
+
+
+
+<script type="text/javascript" src="/web4/swfobject_2_1.js"></script>    
+
+<script language="JavaScript">
+<!--
+function FIND(item) {
+   if( window.mmIsOpera ) return(document.getElementById(item));
+   if (document.all) return(document.all[item]);
+   if (document.getElementById) return(document.getElementById(item));
+   return(false);
+};
+
+function PlayStory() {
+FIND("advinfo").innerHTML="";
+var strDisp = "<iframe width=\"760\" height=\"500\" src=\"http://www.youtube.com/embed/cQGW2MrxEXI?rel=0&autoplay=0&showinfo=0\" frameborder=\"0\" allowfullscreen></iframe>";
+FIND("VIDEO_PLAYER").innerHTML=strDisp;
+};
+
+function PlayAdv() {
+
+var params = { allowScriptAccess: "always" };
+var atts = { id: "advytplayer" };
+swfobject.embedSWF("http://www.youtube.com/apiplayer?enablejsapi=1&playerapiid=ytplayer&autoplay=1&fs=1&rel=0&showsearch=0&showinfo=0", 
+                       "advplayer", "760", "500", "8", null, null, params, atts);
+
+};
+
+function onYouTubePlayerReady(playerId) {
+  ytplayer = document.getElementById("advytplayer");
+  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+  ytplayer.loadVideoById("kavEuY_KO6E", 0);
+  ytplayer.play();
+
+}
+
+function onytplayerStateChange(newState) {
+//   alert("Player's new state: " + newState);
+  if ( newState == 0 )
+  {
+	swfobject.removeSWF("advytplayer");
+	PlayStory();
+  }
+}
+
+function showMessage() {
+//  FIND("VIDEO_PLAYER").innerHTML="<div style='width:890px;height:500'>Videos older than 14 days are only availible to donor members.</div>";
+  FIND("VIDEO_PLAYER").innerHTML="<div style=\"width:760px;height:500\"> <table bgcolor=\"#2d2d2d\"><tr><td><div style=\"padding: 3em;color:#ffffff\"><h4><center>You are trying to view an archived video.</center><p>Archived videos are older than 15 days and are only available to members who have a current monthly donation or who have donated within the past year.  <p> If you are a current member, <a href=\"http://therealnews.com/t2/index.php?option=com_content&c=paywall&task=view&id=822\">log in</a> to watch this video.  <p> If you are having trouble logging in, please <a href=\"http://therealnews.com/t2/about-us/contact-us\">email</a> us, and we will fix the problem quickly.  <p> <center><a href=\"http://therealnews.com/donate/?c=paywall\"><img src=\"http://therealnews.com/images/buttons/donate.png\" border=\"0\"></a><p> Donate today and help us make Real News.</center> <p> <center>Not ready to donate yet? Watch our most recent stories for free <a href=\"http://therealnews.com/t2/\">here</a>.<p></h4></div> </td></tr></table> </div>";
+}
+
+// ||||<br>
+PlayAdv();
+//-->
+</script>
+
+
+</td><td width="20px">&nbsp;&nbsp;&nbsp;</td><td valign="top"><style>
+*					{ margin: 0; padding: 0; }
+ 
+
+#page-wrap			{ width: 250px; margin: 10px auto; position: relative; background:#fff;   font-size:10px; }
+
+.scroll-pane 		{ width: 234px; overflow: auto; padding-right: 10px; height: 500px; }
+
+.bottomshadow 		{ position: absolute; top: 375px; left: -47px; z-index: 9999; }
+
+.jScrollPaneContainer 	{ position: relative; overflow: hidden; z-index: 1; }
+
+.jScrollPaneTrack 		{ position: absolute; cursor: pointer; right: 0; top: 0; height: 100%;
+						  background: url(scroller/images/bar.jpg) top center repeat-y; padding: 3px; }
+
+.jScrollPaneDrag	{ position: absolute; background: url(scroller/images/ball.png) center center no-repeat;
+					  cursor: pointer; overflow: hidden; }
+					  .relatedhead {
+						  /*color:#ccc!important;*/
+						  font-size:12px;
+					  }
+					  
+					  </style>
+                      	
+	<script type="text/javascript" src="/t2/scroller/js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="/t2/scroller/js/jScrollPane.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.scroll-pane').jScrollPane({
+				scrollbarWidth: 12
+			});
+		});
+	</script>
+    
+    <div id="page-wrap">
+    <div class="scroll-pane"> 
+<hr><h2><span class='h2_background'>Full Episode</span></h2><h5><a href='http://therealnews.com/t2/index.php?option=com_content&task=view&id=832&Itemid=74&jumival=1182'>Education</a></h5><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18319'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2017-02-01/kdolan0207devos-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18319'><span class='relatedhead'>Opponent of Public Schools Now Leads Federal Education Policy</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2017-02-01/dravitch0202devos-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291'><span class='relatedhead'>Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=17804'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-11-01/gford1128education-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=17804'><span class='relatedhead'>Trumps Taps Billionaire School Privatizer for Education Secretary</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=17426'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-10-01/jnoor1011chicago-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=17426'><span class='relatedhead'>Chicago Teachers Win More School Funding Without a Strike</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=16968'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-08-01/jheilig0815schools-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=16968'><span class='relatedhead'>Why the NAACP is Calling for a Moratorium on Private Charters</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15782'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-03-01/ngoyal0229sotpt2-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15782'><span class='relatedhead'>Schools on Trial: How to Fix America's Broken Public School System</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15733'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-03-01/tjameson0224brewer-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15733'><span class='relatedhead'>Alum: Teach for America Covertly Privatizing Public Education</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15449'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2016-01-01/sbeal0113detroitschool-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15449'><span class='relatedhead'>Detroit Teachers Shutdown Public Schools in Protest of Deplorable 
+Conditions</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15306'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2015-12-01/lweiner1215education-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=15306'><span class='relatedhead'>New Education Bill: Downloading and Its Impact on Schools</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14961'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2015-10-01/lweiner1022education-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14961'><span class='relatedhead'>Are Teachers Unions Fighting for Social Justice? (1/2)</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14979'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2015-10-01/gford1026bar-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14979'><span class='relatedhead'>Is Obama's Education Reversal Political "Theater"?</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14291'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2015-07-01/mschneider0717nclbpt2-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14291'><span class='relatedhead'>The Good, the Bad, and the Hypocrisy of the Every Child Achieves Act (2/2)</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14286'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2015-07-01/mschneider0717nclbpt1-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=14286'><span class='relatedhead'>The Good, the Bad, and the Hypocrisy of the Every Child Achieves Act (1/2)</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=12849'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2014-12-01/lweiner1217education-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=12849'><span class='relatedhead'>Should the Teachers Union Play a Bigger Role in the Fight for Racial Justice?</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=12081'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2014-07-01/gford0709report-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=12081'><span class='relatedhead'>$32 Billion For-Profit College Industry Becomes Pass-Through for Wall 
+Street</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><table cellpadding='0' cellspacing='0' border='0'><tbody><tr><td valign='top'><a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=11800'><img style='padding:0; padding: 5px 5px 0px 0px; float:left;' src='../media/trn_2014-04-01/akenneypanelbpeterson0430education-thumb.jpg'></a></td><td valign='top'> <a href='index.php?option=com_content&task=view&id=31&Itemid=74&jumival=11800'><span class='relatedhead'>Netflix CEO Reed Hastings: Abolish Elected School Boards</span></a></td></tr><tr><td height='10'></td></tr></tbody></table><br> </div> </div></td></tr><tr> 
+
+<td colspan="3" bgcolor="#fff" align="center">
+<!--<h4><font color="#FF0000">If the video has no sound, check the volume slider in the bottom left of the video player and drag it to the right</font></h4>-->
+
+</td></tr>
+
+
+
+        
+        
+        
+</table>
+        </div>
+        <div id="main">
+           
+<table width="760"><tr><td valign="top" colspan="5">
+<br />
+
+
+ 
+
+<a href="http://therealnews.com/donate"><img src="http://therealnews.com/permalinkedgraphics/video_page_banner.png"></a><p><hr><h2><span class='h2_background'>audio</span></h2>
+<script type="text/javascript" src="http://therealnews.com/web_scripts/audio_player/audio-player.js"></script>  
+            <script type="text/javascript">  
+                AudioPlayer.setup("http://therealnews.com/web_scripts/audio_player/player.swf", {  
+                    width: 760  
+                });  
+            </script>  
+      
+      
+            <p id="audioplayer_">  
+            <script type="text/javascript">  
+            AudioPlayer.embed("audioplayer_", {soundFile: "../media/trn_2017-02-01/dravitch0202devos.mp3"});  
+            </script>  <p>
+
+
+
+</td>
+</tr><tr>
+
+
+<td valign="top" colspan="5">
+<!-- AddThis Button BEGIN -->
+<table><tr><td valign="top">
+<a class="addthis_button_facebook"><img src="http://therealnews.com/permalinkedgraphics/fb_share.png" border="0" alt="Share to Facebook" /></a>
+</td><td valign="top">
+<a class="addthis_button_twitter"><img src="http://therealnews.com/permalinkedgraphics/twtr_share.png" border="0" alt="Share to Twitter" /></a>
+
+</td><td valign="top">
+
+<table><tr><td valign="top">
+<form action="mailto:" method="get">
+<input name="subject" type="hidden" value="Ravitch:&nbsp;Democrats&nbsp;Helped&nbsp;Pave&nbsp;the&nbsp;Way&nbsp;for&nbsp;Privatization&nbsp;Crusader&nbsp;Betsy&nbsp;DeVos">
+<input name=body type="hidden" value="Watch&nbsp;this&nbsp;video&nbsp;from&nbsp;The&nbsp;Real&nbsp;News&nbsp;Network,&nbsp;I&nbsp;think&nbsp;you'll&nbsp;find&nbsp;it&nbsp;interesting&nbsp;
+
+http://therealnews.com/t2/index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291">
+
+<input type="image" style=" border-color:#FFF" src="http://therealnews.com/permalinkedgraphics/eml_share2.png"   ALT="Email Story">
+</form>
+</td><td valign="top">
+<a class="addthis_button_email"><img src="http://therealnews.com/permalinkedgraphics/webml_share.png" /></a>
+<script src="http://s7.addthis.com/js/250/addthis_widget.js" type="text/javascript"></script>
+</td></tr></table>
+
+</td><td valign="top"><a href="http://therealnews.com/donate"><img src="http://therealnews.com/t2/images/donate_btn.png"  border="0" /></a>
+</td></tr></table>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e81f13d06354a7d"></script>
+<script>
+var addthis_share = {
+     // ... other options
+     url_transforms : {
+          shorten: {
+               twitter: 'bitly'
+          }
+     }, 
+     shorteners : {
+          bitly : {} 
+     }
+}
+</script>
+<!-- AddThis Button END -->
+
+
+
+</td>
+
+</tr><tr><td valign="top">
+<a rel='lightbox' class='jcepopup' href="http://therealnews.com/web4/members_only.html" ><input class='btn btn-primary' type='submit' name='type' id='type' value='Download Video &nbsp; &darr;' /></a><br>		<a rel='lightbox' class='jcepopup' href="http://therealnews.com/web4/members_only.html" ><input class='btn btn-primary' type='submit' name='type' id='embed' value='Download Audio &nbsp; &darr;' /></a><br><a rel='lightbox' class='jcepopup' href="http://therealnews.com/web4/members_only.html" ><input class='btn btn-primary' type='submit' name='type' id='save' value='Save to Favorites &#10025';/></a><br>
+
+<td valign="top" align="center">
+
+<table><tr><td><blockquote><div class="blockquote4"><div>I support the real news because they deal with real issues, not meaningless articles and sound bites - <em>Gary</em></div></div></blockquote>
+</td></tr><tr><td valign="top" height="20" align="center">
+
+Log in and tell us why you support TRNN            
+            
+            </td></tr></table>
+
+
+</td>
+</tr></table>
+<p>
+
+<p>   </p><div>
+ 
+    
+   
+     
+        
+        
+    <hr><h2><span class='h2_background'>transcript</span></h2><img src="http://therealnews.com/media/trn_2017-02-01/dravitch0202devos-240.jpg" alt="Ravitch: Democrats Helped Pave the Way for Privatization Crusader Betsy DeVos" style="border:10px double #ffffff; float:left; "><font style='font-size: 130%; line-height: 130%;'>JAISAL NOOR:&#8203;Welcome to The Real News Network. I'm Jaisal Noor in Baltimore.<p></p> <p></p>Public refusals on Wednesday by two U.S. Senate Republicans to support Betsy DeVos, the billionaire school choice crusader and Republican donor that President Donald Trump picked to be Education Secretary, raised the possibility of a rare Congressional rejection of a Cabinet nominee. In an ominous sign for Trump, Republican Senators Susan Collins and Lisa Murkowski said they would not vote for DeVos, an heiress who has poured millions into promoting so-called school choice and vouchers but has no practical experience working with or managing public schools.<p></p> <p></p>SUSAN COLLINS:&#8203;In keeping with my past practice, I will vote today to proceed to debate on Mrs. DeVos's nomination. But Madam President, I will not, I cannot, vote to confirm her as our nation's next Secretary of Education.<p></p> <p></p>LISA MURKOWSKI:&#8203;I do not intend to vote on final passage to support Mrs. DeVos to be Secretary of Education.<p></p> <p></p>JAISAL NOOR:&#8203;They would be the first Republicans to break party ranks and vote against one of Trump's Cabinet selections.<p></p> <p></p>Well, now joining us to discuss this is Diane Ravitch. She's the former Undersecretary of Education to George H.W. Bush. More recently, she's turned into an influential whistle-blower against the school privatization movement. Her recent best sellers, including "The Death and Life of the Great American School System" and most recently, "Reign of Error" are considered necessary reading for those wanting to understand the grave threats facing our public education system today and what we can do about it. Thank you so much for joining us.<p></p> <p></p>DIANE RAVITCH:&#8203;Glad to be with you.<p></p> <p></p>JAISAL NOOR:&#8203;So, there's pretty big news coming out of the education world from Capitol Hill because Betsy DeVos is one vote shy of becoming blocked from becoming Education Secretary. You have come out strongly against her. You've called her an education extremist, Said she would gut public education. What is your message to those remaining Republican Senators that might be on the fence right now? Why is she such a bad pick to be Education Secretary?<p></p> <p></p>DIANE RAVITCH:&#8203;Well, she does not understand anything about education except for escaping from public schools. She's never taught. She's never supervised. She's never attended public schools. Her children did not attend public schools. She thinks that public schools everywhere are just awful and she has spent millions... She's a billionaire and she has spent many millions of dollars advocating for vouchers and choice and charters and home schooling and cyber charters for every other alternative but not for public education. She's spent millions on political campaigns to advocate for choice and also to fund the campaigns of very extremist right-wing Republicans who are opposed to public education.<p></p> <p></p>So, when she went before the Senate to be interviewed before the Senate Committee, she showed absolute ignorance of federal law and federal policy and federal programs. She was asked about the law that protects the rights of children with disabilities and she said, "Well that would be up to the States." And one of the Democratic Senators pointed out that it's not up to States to decide whether to obey a Federal law. She had no idea that IDEA, the Individuals with Disabilities Education Act, is a Federal law. It's not something that States can choose to abide by. So, she knows nothing, other than to be a lobbyist for choice. And, being a billionaire, she's lived in a bubble all her life and knows nothing about public education. Does not understand the history of it, the importance of public education in a democracy, and she plays fast and loose with the truth and the facts.<p></p> <p></p>JAISAL NOOR:&#8203;And she's been accused of lying and misleading the Senate panel where she testified on for several different issues.<p></p> <p></p>But I wanted to raise another point, you know, some would argue that it was the often failed bipartisan policies under previous administrations, including Democrats, that created the conditions for the likes of DeVos to be put forth. I mean, the public faith in public education seems to be low and there are a lot children in struggling schools around the country, and DeVos is, I guess, to her supporters, is seen as someone that, you know, will provide an alternative and will give people that choice, give parents that choice. How do you respond to that? Do Democrats also share some of the responsibility here?<p></p> <p></p>DIANE RAVITCH:&#8203;Well, definitely Democrats do share some of that responsibility for misleading the public and also for stabbing public education in the back, if public education in fact has a back. They have followed along with the narrative that public education is failing and that narrative itself is a lie.<p></p> <p></p>Public education is not failing. Our society is failing. Our society is failing to fairly fund its public schools. Our society is failing to address the root cause of school failure, which is poverty and racial segregation. And because our society is failing, it's very easy and cheap to blame it on the schools.<p></p> <p></p>But the schools are often the most stable institution in the lives of very hard-pressed communities. And this effort to deflect blame onto the schools, and onto teachers, is really shameful. And DeVos is part of it but so was Arne Duncan, so was President Obama. He also bought the myth that charter schools were the answer. Charter schools are not the answer and the best way to respond to this claim of choice advocates is simply say, let's look at the evidence.<p></p> <p></p>We've now had 25 years of charter schools. We've now had 25 years of vouchers, and there's not a single district that you can turn to and say there is a district where all children are getting a great education and there's a district where charter schools are truly out-performing public schools. The ones that have high test scores -- which may or may not be good indicators of performance -- but the ones that have had test scores are those that push out the kids with disabilities; those who exclude the kids who are English language learners.<p></p> <p></p>If we look at the cities that have vouchers, and Milwaukee has had vouchers and charters now for 25 years. Detroit has charters. The only reason it doesn't have vouchers is because it says in the Michigan State Constitution that public funds can't go to religious schools. And Betsy DeVos and her husband in the year 2000 launched a State referendum to remove that from the Constitution of Michigan and it was turned down by 69 to 31.<p></p> <p></p>So, the public, wherever vouchers have been put to a vote, the public has said overwhelmingly, "No." But let's look at the results.<p></p> <p></p>In Detroit, in the State of Michigan, it's overrun with charters and there are more bad charters than there are bad public schools. Charters haven't lifted Detroit at all. Detroit continues to be the lowest performing school district in the nation. And Michigan, under DeVos's choice policies, has been sliding steadily among the States. It went from the middle of the pack to the very bottom. It's now, in fourth-grade reading and math, listed in the low 40s among the 50 that take the National Assessment of Educational Progress.<p></p> <p></p>So, we don't have a single story about vouchers where researchers or anyone else can say, "Here's the miracle they perform." They perform no miracles. They failed everywhere.<p></p> <p></p>JAISAL NOOR:&#8203;And so, I wanted to ask you about Eli Broad from the Broad Foundation -- he's another school privatization advocate, a wealthy philanthropist, and even he has come out against Betsy DeVos. What do you make of that?<p></p> <p></p>DIANE RAVITCH:&#8203;Well, I make of it that he is trying to separate his brand and his claims from that of Trump. Trump is terribly unpopular in California. The State voted overwhelmingly against Trump and Eli Broad is trying to spread charters across Los Angeles. So, it's very important for him to separate his brand of charter from Betsy DeVos and Trump.<p></p> <p></p>And as the saying goes, it's a day late and a dollar short. If he really was opposed to her, he could have said so two months ago when she was first nominated. He could have weighed in then and... Not that he would have had any influence in terms of California, because both the Senators there are Democrats and will vote against her anyway. But he might have used some of his immense -- being a billionaire, he too makes a lot of campaign contributions -- he could have weighed in and cancelled out a few of her Republican votes.<p></p> <p></p>But, at the moment, every single Republican seems to be set to vote for her, for Murkowski and Collins, both of whom voted to approve her in the Committee. Either one of them could have stopped her in the Senate Committee because she was approved by a vote of 12 to 11. It would have been a disapproval of 12 to 11 if one of them had stood up and said, "She's not qualified."<p></p> <p></p>They know she's not qualified and they voted to approve her in Committee. And now that the vote is going to the Senate floor, where Republicans hold the majority of 52 to 48, the two of them bring it to a tie. And, if not a single other Republican breaks ranks, Mike Pence will cast the deciding vote. And Betsy DeVos will become one of the first Cabinet members in history to be approved by a tie-breaking vote by the Vice President. That's how intense the opposition to her is amongst the teachers and parents and people of this country who love their public schools.<p></p> <p></p>JAISAL NOOR:&#8203;So, if DeVos is confirmed or if not -- we've been getting questions from viewers, many of them who are teachers, or professors of education -- they want to know your advice on fighting back against these policies, whether it's DeVos or someone else. Here in Baltimore, one of my close friends is a public school teacher, some of my family members are school teachers, in fact. And, you know, here we're facing... People aren't even worrying about DeVos right now because we're facing $130 million budget school deficit, 1,000 teachers and staff are being laid off this year. Can you talk about that? What is the route forward?<p></p> <p></p>DIANE RAVITCH:&#8203;Sure. What Baltimore is experiencing is what Philadelphia, for example, has experienced now for years, what Detroit has experienced for years -- which is the deliberate defunding of urban schools in order to create a demand for school choice. The Republican leadership in Pennsylvania did this and starved the Philadelphia school district to the point where they didn't even have the bare essentials. And charter operators moved in very quickly to scoop up their schools and bring in lots of private funding so that the charters could be more attractive, have smaller class sizes, have the arts, have everything the public schools can't offer. This is... what's happening to Baltimore, what has happened in Philadelphia, what's happened in Detroit and what is happening in more and more urban districts, is part of this effort to privatize public education. And the only way to stop it literally is by protesting, by demonstrating, by going to the people in power.<p></p> <p></p>I mean, I think that Maryland has a particular problem because it elected a Republican governor and he has appointed a Republican State Board of Education. So, the centers of power are perfectly willing to starve the City of Baltimore public schools because it will advance the Republican goal of destroying public education. It's really terrible because public education is an essential foundation of our democracy. And we know from what's happened over the last 25 years, vouchers and charters are highly segregated. They increase segregation in society as well as in the schools, and they don't produce better results.<p></p> <p></p>So, we will be offered substitutes for public education that literally destroy communities and they will claim that they empower parents, but the great secret behind privatization is the schools that choose the students, the students do not choose the schools. You may apply to a voucher school. You may apply to a charter school and the school will decide whether they want your child or not. That's not school choice as it is being sold. It's being sold as propaganda.<p></p> <p></p>It's a deception and the only countries that have tried this route, this kind of free market route that Betsy DeVos espouses and that so many of the Republican Party have fallen for, are Sweden and Chile. And Chile did it under the leadership of the dictator Pinochet, and it has seen disastrous results. And Sweden did it and they're now trying to backtrack because they have seen their test scores on the international tests plummet since the privatization of so many of their schools.<p></p> <p></p>JAISAL NOOR:&#8203;All right, Diane Ravitch, thank you so much for joining us. And, again, I strongly recommend reading Diane Ravitch's books. They are really important for anyone trying to understand and grasp the crisis in public education and how we can fight back. Thank you so much for joining us.<p></p> <p></p>DIANE RAVITCH:&#8203;Thank you.<p></p> <p></p>JAISAL NOOR:&#8203;And thank you for joining us at The Real News Network.<p></p> <p></p>-------------------------<p></p>END</font><p><hr width="80%"/><p><p>    
+        
+<p>
+
+ <hr><h2><span class='h2_background'>Comments</span></h2>
+    Our automatic spam filter blocks comments with multiple links and multiple users using the same IP address.  
+
+Please make thoughtful comments with minimal links using only one user name.  
+
+If you think your comment has been mistakenly removed please email us at contact@therealnews.com<br />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    //var disqus_shortname = 'example'; // required: replace example with your forum shortname
+
+    //var disqus_developer = 1; // developer mode is on
+
+    var disqus_shortname = 'therealnewsnetwork'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+     var disqus_identifier = 'therealnews_uid_18291';
+     var disqus_url = 'http://therealnews.com/t2/index.php?option=com_content&task=view&id=31&Itemid=74&jumival=18291';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  
+    
+    
+</div></div>
+<div id="rightcolumn">
+<hr><h2><span class='h2_background'>latest stories</span></h2>
+<table cellpadding="5"><tr>
+<a href="http://therealnews.com/t2/story:18456:Trump%27s-Job-Promises-are-Fiction---Free-Trade-is-Fiction%2C-Too"><td valign="top"><a href="http://therealnews.com/t2/story:18456:Trump%27s-Job-Promises-are-Fiction---Free-Trade-is-Fiction%2C-Too"><img src="/t2/../media/trn_2017-02-01/hflassbeck0221trade-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18456:Trump%27s-Job-Promises-are-Fiction---Free-Trade-is-Fiction%2C-Too">Trump's Job Promises are Fiction - Free Trade is Fiction, Too</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18463:In-Sharp-Contrast-with-Flynn%2C-Trump-Appoints-Establishment-Figure-to-%0D%0ANSC"><td valign="top"><a href="http://therealnews.com/t2/story:18463:In-Sharp-Contrast-with-Flynn%2C-Trump-Appoints-Establishment-Figure-to-%0D%0ANSC"><img src="/t2/../media/trn_2017-02-01/smiles0221mcmaster-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18463:In-Sharp-Contrast-with-Flynn%2C-Trump-Appoints-Establishment-Figure-to-%0D%0ANSC">In Sharp Contrast with Flynn, Trump Appoints Establishment Figure to 
+NSC</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18458:Trump-Wants-to-Defeat-ISIS-By-Using-Policies-that-Gave-Rise-to-It"><td valign="top"><a href="http://therealnews.com/t2/story:18458:Trump-Wants-to-Defeat-ISIS-By-Using-Policies-that-Gave-Rise-to-It"><img src="/t2/../media/trn_2017-02-01/salnasseri0221iraq-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18458:Trump-Wants-to-Defeat-ISIS-By-Using-Policies-that-Gave-Rise-to-It">Trump Wants to Defeat ISIS By Using Policies that Gave Rise to It</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18455:Whistleblower-Teacher-Says-Defunded-Public-Schools-Vulnerable-to-Mass-Privatization"><td valign="top"><a href="http://therealnews.com/t2/story:18455:Whistleblower-Teacher-Says-Defunded-Public-Schools-Vulnerable-to-Mass-Privatization"><img src="/t2/../media/trn_2017-02-01/sjanis0221teach3-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18455:Whistleblower-Teacher-Says-Defunded-Public-Schools-Vulnerable-to-Mass-Privatization">Whistleblower Teacher Says Defunded Public Schools Vulnerable to Mass Privatization</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18461:Sentencing-of-Israeli-Soldier-for-Killing-of-Palestinian-Exposes-Contradictions-%0D%0Aof-Occupation"><td valign="top"><a href="http://therealnews.com/t2/story:18461:Sentencing-of-Israeli-Soldier-for-Killing-of-Palestinian-Exposes-Contradictions-%0D%0Aof-Occupation"><img src="/t2/../media/trn_2017-02-01/shever0221azaria-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18461:Sentencing-of-Israeli-Soldier-for-Killing-of-Palestinian-Exposes-Contradictions-%0D%0Aof-Occupation">Sentencing of Israeli Soldier for Killing of Palestinian Exposes Contradictions 
+of Occupation</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18114:The-Bizarre-Far-Right-Billionaire-Behind-Bannon-and-Trump%27s-Presidency"><td valign="top"><a href="http://therealnews.com/t2/story:18114:The-Bizarre-Far-Right-Billionaire-Behind-Bannon-and-Trump%27s-Presidency"><img src="/t2/../media/trn_2017-01-01/thedges0112mercer-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18114:The-Bizarre-Far-Right-Billionaire-Behind-Bannon-and-Trump%27s-Presidency">The Bizarre Far-Right Billionaire Behind Bannon and Trump's Presidency</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18439:Trump%27s-Turn-from-Two-State-Solution-Sows-Crisis-for-Fatah%2C-Hamas"><td valign="top"><a href="http://therealnews.com/t2/story:18439:Trump%27s-Turn-from-Two-State-Solution-Sows-Crisis-for-Fatah%2C-Hamas"><img src="/t2/../media/trn_2017-02-01/shever0220trump-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18439:Trump%27s-Turn-from-Two-State-Solution-Sows-Crisis-for-Fatah%2C-Hamas">Trump's Turn from Two-State Solution Sows Crisis for Fatah, Hamas</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18440:Ecuador-Elections-Appear-Headed-Towards-Run-off"><td valign="top"><a href="http://therealnews.com/t2/story:18440:Ecuador-Elections-Appear-Headed-Towards-Run-off"><img src="/t2/../media/trn_2017-02-01/gwilpert0220ecuador-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18440:Ecuador-Elections-Appear-Headed-Towards-Run-off">Ecuador Elections Appear Headed Towards Run-off</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18464:Cultivating-Social-Justice-Work-in-West-Baltimore"><td valign="top"><a href="http://therealnews.com/t2/story:18464:Cultivating-Social-Justice-Work-in-West-Baltimore"><img src="/t2/../media/trn_2017-02-01/econway0221tubman-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18464:Cultivating-Social-Justice-Work-in-West-Baltimore">Cultivating Social Justice Work in West Baltimore</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18453:Empire-Files%3A-President-Correa-on-His-Legacy-%26-Critics"><td valign="top"><a href="http://therealnews.com/t2/story:18453:Empire-Files%3A-President-Correa-on-His-Legacy-%26-Critics"><img src="/t2/../media/trn_2017-02-01/empirefiles0220-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18453:Empire-Files%3A-President-Correa-on-His-Legacy-%26-Critics">Empire Files: President Correa on His Legacy & Critics</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18454:Baltimore-Students-Push-For-Statewide-Styrofoam-Ban"><td valign="top"><a href="http://therealnews.com/t2/story:18454:Baltimore-Students-Push-For-Statewide-Styrofoam-Ban"><img src="/t2/../media/trn_2017-02-01/econway0218styrofoam-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18454:Baltimore-Students-Push-For-Statewide-Styrofoam-Ban">Baltimore Students Push For Statewide Styrofoam Ban</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18441:Survey-Shows-Support-Growing-For-Palestinians-Among-Canadians"><td valign="top"><a href="http://therealnews.com/t2/story:18441:Survey-Shows-Support-Growing-For-Palestinians-Among-Canadians"><img src="/t2/../media/trn_2017-02-01/panel02127ekos-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18441:Survey-Shows-Support-Growing-For-Palestinians-Among-Canadians">Survey Shows Support Growing For Palestinians Among Canadians</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18460:X%3A-Malcolm%27s-Final-Years"><td valign="top"><a href="http://therealnews.com/t2/story:18460:X%3A-Malcolm%27s-Final-Years"><img src="/t2/../media/trn_2015-02-01/malcolmx-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18460:X%3A-Malcolm%27s-Final-Years">X: Malcolm's Final Years</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18437:Steve-Bannon-Allies-with-Catholic-Theo-Fascism-Against-Pope-Francis-%2822%29"><td valign="top"><a href="http://therealnews.com/t2/story:18437:Steve-Bannon-Allies-with-Catholic-Theo-Fascism-Against-Pope-Francis-%2822%29"><img src="/t2/../media/trn_2017-02-01/mfox0217popept2-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18437:Steve-Bannon-Allies-with-Catholic-Theo-Fascism-Against-Pope-Francis-%2822%29">Steve Bannon Allies with Catholic Theo-Fascism Against Pope Francis (2/2)</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18432:Would-Keith-Ellison-Pursue-Reconciliation-or-Lead-Insurgency-Within-DNC%3F"><td valign="top"><a href="http://therealnews.com/t2/story:18432:Would-Keith-Ellison-Pursue-Reconciliation-or-Lead-Insurgency-Within-DNC%3F"><img src="/t2/../media/trn_2017-02-01/bsunkara0217dnc-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18432:Would-Keith-Ellison-Pursue-Reconciliation-or-Lead-Insurgency-Within-DNC%3F">Would Keith Ellison Pursue Reconciliation or Lead Insurgency Within DNC?</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18434:Ecuador%27s-Presidential-Election-is-the-%22Stalingrad%22-of-Latin-America%27s-Left"><td valign="top"><a href="http://therealnews.com/t2/story:18434:Ecuador%27s-Presidential-Election-is-the-%22Stalingrad%22-of-Latin-America%27s-Left"><img src="/t2/../media/trn_2017-02-01/aboron0217ecuador-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18434:Ecuador%27s-Presidential-Election-is-the-%22Stalingrad%22-of-Latin-America%27s-Left">Ecuador's Presidential Election is the "Stalingrad" of Latin America's Left</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18426:How-E.U.%27s-Migration-Policy-Enables-Migrant-Smuggling"><td valign="top"><a href="http://therealnews.com/t2/story:18426:How-E.U.%27s-Migration-Policy-Enables-Migrant-Smuggling"><img src="/t2/../media/trn_2017-02-01/cjones0217migrants-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18426:How-E.U.%27s-Migration-Policy-Enables-Migrant-Smuggling">How E.U.'s Migration Policy Enables Migrant Smuggling</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18419:Trumponomics%3A-Empowering-Proto-Fascists"><td valign="top"><a href="http://therealnews.com/t2/story:18419:Trumponomics%3A-Empowering-Proto-Fascists"><img src="/t2/../media/trn_2017-02-01/gepstein0216peri-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18419:Trumponomics%3A-Empowering-Proto-Fascists">Trumponomics: Empowering Proto-Fascists</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18296:Pope-Francis-Calls-for-Broad-Front-Against-Tyranny-and-Savage-Capitalism-%2812%29"><td valign="top"><a href="http://therealnews.com/t2/story:18296:Pope-Francis-Calls-for-Broad-Front-Against-Tyranny-and-Savage-Capitalism-%2812%29"><img src="/t2/../media/trn_2017-02-01/mfox0217popept1-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18296:Pope-Francis-Calls-for-Broad-Front-Against-Tyranny-and-Savage-Capitalism-%2812%29">Pope Francis Calls for Broad Front Against Tyranny and Savage Capitalism (1/2)</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18435:The-Real-Baltimore%3A-Maryland-Democrats-Consider-Blocking-Cities-From-%0D%0ARaising-Their-Minimum-Wage"><td valign="top"><a href="http://therealnews.com/t2/story:18435:The-Real-Baltimore%3A-Maryland-Democrats-Consider-Blocking-Cities-From-%0D%0ARaising-Their-Minimum-Wage"><img src="/t2/../media/trn_2017-02-01/bmore0210minwagept2-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18435:The-Real-Baltimore%3A-Maryland-Democrats-Consider-Blocking-Cities-From-%0D%0ARaising-Their-Minimum-Wage">The Real Baltimore: Maryland Democrats Consider Blocking Cities From 
+Raising Their Minimum Wage</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18436:TRNN-Replay%3A-Confronting-Financialization-on-Steroids---Costas-Lapavitsas-on-Reality-Asserts-Itself-"><td valign="top"><a href="http://therealnews.com/t2/story:18436:TRNN-Replay%3A-Confronting-Financialization-on-Steroids---Costas-Lapavitsas-on-Reality-Asserts-Itself-"><img src="/t2/../media/trn_2014-05-01/clapavitsas140500raipt8-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18436:TRNN-Replay%3A-Confronting-Financialization-on-Steroids---Costas-Lapavitsas-on-Reality-Asserts-Itself-">TRNN Replay: Confronting Financialization on Steroids - Costas Lapavitsas on Reality Asserts Itself (8/8)</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18427:Court-Rules-Newly-Confirmed-EPA-Head-Must-Release-Thousands-of-Emails"><td valign="top"><a href="http://therealnews.com/t2/story:18427:Court-Rules-Newly-Confirmed-EPA-Head-Must-Release-Thousands-of-Emails"><img src="/t2/../media/trn_2017-02-01/nsurgey0217pruitt-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18427:Court-Rules-Newly-Confirmed-EPA-Head-Must-Release-Thousands-of-Emails">Court Rules Newly Confirmed EPA Head Must Release Thousands of Emails</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18425:A-Day-Without-Immigrants%3A-Thousands-Hold-Boycotts-and-Demonstrations-%0D%0AAgainst-Trump"><td valign="top"><a href="http://therealnews.com/t2/story:18425:A-Day-Without-Immigrants%3A-Thousands-Hold-Boycotts-and-Demonstrations-%0D%0AAgainst-Trump"><img src="/t2/../media/trn_2017-02-01/daywithout0216-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18425:A-Day-Without-Immigrants%3A-Thousands-Hold-Boycotts-and-Demonstrations-%0D%0AAgainst-Trump">A Day Without Immigrants: Thousands Hold Boycotts and Demonstrations 
+Against Trump</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18422:Trump-and-Netanyahu-Acknowledge-the-Death-of-the-Two-State-Solution"><td valign="top"><a href="http://therealnews.com/t2/story:18422:Trump-and-Netanyahu-Acknowledge-the-Death-of-the-Two-State-Solution"><img src="/t2/../media/trn_2017-02-01/aabunimah0216netanyahu-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18422:Trump-and-Netanyahu-Acknowledge-the-Death-of-the-Two-State-Solution">Trump and Netanyahu Acknowledge the Death of the Two-State Solution</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18431:The-Real-Baltimore%3A-Should-Baltimore-Raise-its-Minimum-Wage-to-%2415HR-by-2022%3F"><td valign="top"><a href="http://therealnews.com/t2/story:18431:The-Real-Baltimore%3A-Should-Baltimore-Raise-its-Minimum-Wage-to-%2415HR-by-2022%3F"><img src="/t2/../media/trn_2017-02-01/bmore0210minwagept1-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18431:The-Real-Baltimore%3A-Should-Baltimore-Raise-its-Minimum-Wage-to-%2415HR-by-2022%3F">The Real Baltimore: Should Baltimore Raise its Minimum Wage to $15/HR by 2022?</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18420:IMF-Lent-to-Greece-Knowing-It-Could-Never-Pay-Back-Debt"><td valign="top"><a href="http://therealnews.com/t2/story:18420:IMF-Lent-to-Greece-Knowing-It-Could-Never-Pay-Back-Debt"><img src="/t2/../media/trn_2017-02-01/mhudson0216greece-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18420:IMF-Lent-to-Greece-Knowing-It-Could-Never-Pay-Back-Debt">IMF Lent to Greece Knowing It Could Never Pay Back Debt</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18424:Trump%27s-Tax-Returns-Key-to-Clarifying-Russian-Connections"><td valign="top"><a href="http://therealnews.com/t2/story:18424:Trump%27s-Tax-Returns-Key-to-Clarifying-Russian-Connections"><img src="/t2/../media/trn_2017-02-01/jhenry0216bank-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18424:Trump%27s-Tax-Returns-Key-to-Clarifying-Russian-Connections">Trump's Tax Returns Key to Clarifying Russian Connections</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18429:TRNN-Replay%3A-Financialization-and-the-Collapse-of-European-Social-Democracy---Costas-Lapavitsas-on-R"><td valign="top"><a href="http://therealnews.com/t2/story:18429:TRNN-Replay%3A-Financialization-and-the-Collapse-of-European-Social-Democracy---Costas-Lapavitsas-on-R"><img src="/t2/../media/trn_2014-05-01/clapavitsas140500raipt7-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18429:TRNN-Replay%3A-Financialization-and-the-Collapse-of-European-Social-Democracy---Costas-Lapavitsas-on-R">TRNN Replay: Financialization and the Collapse of European Social Democracy - Costas Lapavitsas on Reality Asserts Itself (7/8)</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18412:Did-the-Deep-State-Facilitate-Flynn%27s-Resignation%3F"><td valign="top"><a href="http://therealnews.com/t2/story:18412:Did-the-Deep-State-Facilitate-Flynn%27s-Resignation%3F"><img src="/t2/../media/trn_2017-02-01/crowley0215trump-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18412:Did-the-Deep-State-Facilitate-Flynn%27s-Resignation%3F">Did the Deep State Facilitate Flynn's Resignation?</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+<a href="http://therealnews.com/t2/story:18407:Upward-Distribution-of-Wage-Income-Behind-Social-Security%27s-Shortfall"><td valign="top"><a href="http://therealnews.com/t2/story:18407:Upward-Distribution-of-Wage-Income-Behind-Social-Security%27s-Shortfall"><img src="/t2/../media/trn_2017-02-01/dbaker0215social-thumb.jpg" width="80px" /></a></td><td width="10"></td><td valign="top"><b><a href="http://therealnews.com/t2/story:18407:Upward-Distribution-of-Wage-Income-Behind-Social-Security%27s-Shortfall">Upward Distribution of Wage Income Behind Social Security's Shortfall</a></b></td></tr><tr><td height="10" colspan="3"></td></tr><tr>
+</tr></table>
+<br />
+</div>
+</div>
+
+
+</p>		
+		
+	</div>
+	
+</div>
+																</div>
+																																												</div>
+																																</div>
+				</div>
+								</div>
+	
+		
+</div>
+
+												
+								</div>
+				</div>
+</div>
+	
+			
+		
+<div id="gk_footer" class="clearfix">
+								
+								
+				<!-- Copyright Information -->
+				
+</div><div id="gk_banner3" class="clearfix">
+				<center>TheRealNewsNetwork.com, RealNewsNetwork.com, The Real News Network, Real News Network, The Real News, Real News, Real News For Real People, IWT are trademarks and service marks of Independent World Television inc. "The Real News" is the flagship show of IWT and The Real News Network.<p>
+All original content on this site is copyright of The Real News Network. <a href="http://therealnews.com/t2/component/content/881?task=view">Click here for more</a><p>
+
+Problems with this site? <a href="http://therealnews.com/t2/contact-us">Please let us know</a><p>
+
+<a href="https://www.stackstar.com/" target="_blank"><img src="http://therealnews.com/t2/images/stories/hostedbystackstar.png" alt="Managed Wordpress Hosting"></a></center>
+</div>
+
+
+
+		
+	</div>
+	
+	
+	
+	</body>
+</html>

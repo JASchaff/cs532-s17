@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"5934090525689350799c702a1d210e88",petok:"273273f49c43990b6ef2d8c2d5b789fbc0dda8d7-1487786888-1800",zone:"freethoughtblogs.com",rocket:"0",apps:{"ga_key":{"ua":"UA-24758379-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vw8OUFZWGwABXFBWAQk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(14)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(14)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(14)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(w=-w,b.data=w)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(14)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,g),g.prototype=p.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var w=1,b=document.createTextNode(w);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[g[n]];return f&&f.push([w,n,r,i]),i}}function p(t,e){y[t]=h(t).concat(e)}function h(t){return y[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},w={on:p,emit:n,get:m,listeners:h,context:e,buffer:v,abort:a,aborted:!1};return w}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(12),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=w.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(12),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(9);var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},g=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),w=e.exports={offset:a(),origin:v,features:{},xhrWrappable:g};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,7]);</script>
+<title>Deplorable DeVos is in</title>
+<meta property="og:image" content="http://freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/images/logo.png">
+<meta name="robots" content="noodp,noydir"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="alternate" type="application/rss+xml" title="Pharyngula &raquo; Feed" href="//freethoughtblogs.com/pharyngula/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Pharyngula &raquo; Comments Feed" href="//freethoughtblogs.com/pharyngula/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Pharyngula &raquo; Deplorable DeVos is in Comments Feed" href="//freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/feed/"/>
+<link rel="canonical" href="//freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/freethoughtblogs.com\/pharyngula\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.7"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}</style>
+<link rel='stylesheet' id='bootstrap-css' href='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/bootstrap-3.2.0/css/bootstrap.min.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='bootstrap-theme-css' href='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/bootstrap-3.2.0/css/bootstrap-theme.min.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='fontawesome-css' href='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/font-awesome-4.1.0/css/font-awesome.min.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='lato-font-css' href='//fonts.googleapis.com/css?family=Lato%3A300%2C700&#038;ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='child-theme-css' href='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/style.css?ver=2.3.6' type='text/css' media='all'/>
+<link rel='stylesheet' id='taxonomy-image-plugin-public-css' href='//freethoughtblogs.com/pharyngula/wp-content/plugins/taxonomy-images/css/style.css?ver=0.9.1' type='text/css' media='screen'/>
+<link rel='stylesheet' id='genericons-css' href='//freethoughtblogs.com/pharyngula/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all'/>
+<link rel='stylesheet' id='jetpack_css-css' href='//freethoughtblogs.com/pharyngula/wp-content/plugins/jetpack/css/jetpack.css?ver=3.8.3' type='text/css' media='all'/>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/plugins/jetpack/modules/related-posts/related-posts.js?ver=20150408'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/bootstrap-3.2.0/js/bootstrap.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/js/global.js?ver=0.0.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var social_connect_data = {"wordpress_enabled":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/plugins/social-connect/media/js/connect.js?ver=4.4.7'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var AJAXCommentPreview = {"loading":"Loading\u2026","error":"Preview error","emptyString":"Click the \"Preview\" button to preview your comment here.","url":"http:\/\/freethoughtblogs.com\/pharyngula\/wp-admin\/admin-ajax.php?action=ajax_comment_preview"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/plugins/ajax-comment-preview/ajax-comment-preview.js?ver=2.4'></script>
+<link rel='https://api.w.org/' href='//freethoughtblogs.com/pharyngula/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="//freethoughtblogs.com/pharyngula/xmlrpc.php?rsd"/>
+<link rel="alternate" type="application/json+oembed" href="//freethoughtblogs.com/pharyngula/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreethoughtblogs.com%2Fpharyngula%2F2017%2F02%2F07%2Fdeplorable-devos-is-in%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="//freethoughtblogs.com/pharyngula/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreethoughtblogs.com%2Fpharyngula%2F2017%2F02%2F07%2Fdeplorable-devos-is-in%2F&#038;format=xml"/>
+<script type="text/javascript">/* CloudFlare analytics upgrade */
+</script>
+<script type="text/javascript">
+            var _statcounter = _statcounter || [];
+            _statcounter.push({"tags": {"author": "pharyngula"}});
+        </script>
+<link rel='stylesheet' id='social_connect-css' href='//freethoughtblogs.com/pharyngula/wp-content/plugins/social-connect/media/css/style.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='dashicons-css' href='//freethoughtblogs.com/pharyngula/wp-includes/css/dashicons.min.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='wp-jquery-ui-dialog-css' href='//freethoughtblogs.com/pharyngula/wp-includes/css/jquery-ui-dialog.min.css?ver=4.4.7' type='text/css' media='all'/>
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon"/>
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important;}</style>
+<style type="text/css" id="custom-background-css">body.custom-background{background-image:url('http://freethoughtblogs.com/pharyngula/files/2015/12/white16x16.png');background-repeat:repeat;background-position:top left;background-attachment:fixed;}</style>
+ 
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Deplorable DeVos is in"/>
+<meta property="og:url" content="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/"/>
+<meta property="og:description" content="Betsy DeVos is unfit and incompetent; worse, the policies she champions destroy children&#8217;s opportunities. She&#8217;s a political hack who basically bought her position by donating $200 milli…"/>
+<meta property="article:published_time" content="2017-02-07T18:31:18+00:00"/>
+<meta property="article:modified_time" content="2017-02-07T18:31:18+00:00"/>
+<meta property="og:site_name" content="Pharyngula"/>
+<meta property="og:image" content="http://freethoughtblogs.com/pharyngula/wp-content/blogs.dir/3/files/2015/12/cropped-cuttle8-32x32.png"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:site" content="@pzmyers"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="//freethoughtblogs.com/pharyngula/wp-content/blogs.dir/3/files/2015/12/cropped-cuttle8-32x32.png" sizes="32x32"/>
+<link rel="icon" href="//freethoughtblogs.com/pharyngula/wp-content/blogs.dir/3/files/2015/12/cropped-cuttle8-192x192.png" sizes="192x192"/>
+<link rel="apple-touch-icon-precomposed" href="//freethoughtblogs.com/pharyngula/wp-content/blogs.dir/3/files/2015/12/cropped-cuttle8-180x180.png"/>
+<meta name="msapplication-TileImage" content="http://freethoughtblogs.com/pharyngula/wp-content/blogs.dir/3/files/2015/12/cropped-cuttle8-270x270.png"/>
+ 
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script><script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/IN_FTB1_728x90_Cont', [728, 90], 'div-gpt-ad-1421869288950-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script><script data-cfasync="false" type="text/javascript">(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//cdn.engine.4dsply.com/Scripts/infinity.js.aspx?guid=742d95b9-13db-4c8a-ba79-443dfd16d7d7";s.id="infinity";s.setAttribute("data-guid","742d95b9-13db-4c8a-ba79-443dfd16d7d7");s.setAttribute("data-version","async");var e=document.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e)})();</script><script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/B_FTB1_728x90_Footer', [728, 90], 'div-gpt-ad-1410469553543-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script><script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/Z_FTB1_1x1_Slider', [1, 1], 'div-gpt-ad-1410470472975-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script><script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/A_FTB1_300x250_Pos1', [300, 250], 'div-gpt-ad-1410468605859-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/B_FTB1_300x250_Pos2', [300, 250], 'div-gpt-ad-1410469430816-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/B_FTB1_300x250_Pos3', [300, 250], 'div-gpt-ad-1410469513075-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script><script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/A_FTB1_728x90_Header', [728, 90], 'div-gpt-ad-1410468754987-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script><script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/250552379/Z_FTB1_1x1_Popunder', [1, 1], 'div-gpt-ad-1410470433473-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script> 
+<script type="text/javascript">                                                 
+var _qevents = _qevents || [];                                                  
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({
+qacct:"p-a7F83MsOMeSXw"
+});
+</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-a7F83MsOMeSXw.gif" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+  <link rel="stylesheet" id="custom-css-css" type="text/css" href="//freethoughtblogs.com/pharyngula/?custom-css=1&#038;csblog=3&#038;cscache=6&#038;csrev=113"/>
+<!--[if lt IE 9]>
+<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=yes">
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-24758379-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body class="single single-post postid-33516 single-format-standard custom-background custom-header header-image sidebar-content" itemscope="itemscope" itemtype="http://schema.org/WebPage"><div class="site-container"><nav class="navbar navbar-default" id="header-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="btn" data-toggle="collapse" data-target="#header-top .navbar-collapse">
+<i class="fa fa-bars"></i> Top menu
+</button>
+</div>
+<div class="collapse navbar-collapse">
+ 
+<ul id="menu-main" class="menu nav navbar-nav"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://freethoughtblogs.com/advertise-on-freethoughtblogs/">About FtB</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://freethoughtblogs.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-123958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123958"><a href="http://freethoughtblogs.com/technical-support/">Tech Issues</a></li>
+<li id="menu-item-153333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153333"><a href="http://freethoughtblogs.com/shop/">FTB Shop</a></li>
+<li id="menu-item-186377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186377"><a href="http://freethoughtblogs.com/recent-posts/">Recent Posts</a></li>
+</ul> 
+ 
+</div>
+</div>
+</nav>
+<header class="site-header">
+<div id="title-area">
+<h1 class="site-title" itemprop="headline"><a href="http://freethoughtblogs.com/pharyngula/" title="Pharyngula">Pharyngula</a></h1><h2 class="site-description" itemprop="description">Evolution, development, and random biological ejaculations from a godless liberal</h2> </div>
+<div class="header-inner">
+<div id="site-logo">
+<a href="/"><img src="//freethoughtblogs.com/pharyngula/wp-content/themes/ftb2-theme/images/logo.png"></a>
+</div>
+<aside class="widget-area header-widget-area" class="widget-area header-widget-area"> <a href="http://freethoughtblogs.com/pharyngula"><img class="header-image" src="//freethoughtblogs.com/pharyngula/files/2012/12/pharyngula.jpg"></a>
+</aside> <div style="clear: both"></div>
+</div>
+</header>
+</div></header><div class="site-inner"><div class="content-sidebar-wrap"><div class="google-ad-widget">
+<div id='div-gpt-ad-1410468754987-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410468754987-0'); });
+</script>
+</div>
+</div><div class="col-md-4">
+<div id="main-left-menu">
+<button href="#" data-toggle="collapse" data-target="#main-left-menu .menu" id="menu-button" class="btn"><i class="fa fa-bars"></i> Sidebar Menu</button>
+<div class="menu collapse">
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="advertise" class="widget widget_ads">
+<div class="widget-wrap">
+<div class="textwidget">
+<div class="adv_on_ftb">
+<h2><a href="/wp-admin/admin.php?page=noadsub" class="adfreelink">Get FTB ad-free</a></h2>
+<div id='div-gpt-ad-1410468605859-0' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410468605859-0'); });
+</script>
+</div> </div>
+</div>
+</div>
+</section>
+</aside>
+ 
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="blogroll" class="widget widget_text">
+<h2><i class="fa fa-th-large"></i> Freethought Blogs</h2>
+<ul>
+<li><a href="http://freethoughtblogs.com/resist/">&#8192;FREETHOUGHT RESISTANCE</a></li>
+<li><a href="http://freethoughtblogs.com/atrivialknot/">A Trivial Knot</a></li>
+<li><a href="http://freethoughtblogs.com/affinity/">Affinity</a></li>
+<li><a href="http://freethoughtblogs.com/atg/">Against the Grain</a></li>
+<li><a href="http://freethoughtblogs.com/reasoner/">Aged Reasoner: Common Sense for Now People</a></li>
+<li><a href="http://freethoughtblogs.com/alethianworldview/">Alethian Worldview</a></li>
+<li><a href="http://freethoughtblogs.com/anjuli/">Anjuli Pandavar</a></li>
+<li><a href="http://freethoughtblogs.com/natehevens/">Atheism, Music, and More...</a></li>
+<li><a href="http://freethoughtblogs.com/bianymeans/">Bi Any Means</a></li>
+<li><a href="http://freethoughtblogs.com/cobsweb/">COBS Web</a></li>
+<li><a href="http://freethoughtblogs.com/physioprof/">Comradde PhysioProffe</a></li>
+<li><a href="http://freethoughtblogs.com/iris/">Death to Squirrels</a></li>
+<li><a href="http://freethoughtblogs.com/druthers/">Druthers</a></li>
+<li><a href="http://freethoughtblogs.com/fierceroller/">Fierce Roller</a></li>
+<li><a href="http://freethoughtblogs.com/freethinkingahead/">Freethinking Ahead</a></li>
+<li><a href="http://freethoughtblogs.com/ftbnews/">FtB News</a></li>
+<li><a href="http://freethoughtblogs.com/geekyhumanist/">Geeky Humanist</a></li>
+<li><a href="http://freethoughtblogs.com/gas/">Great American Satan</a></li>
+<li><a href="http://freethoughtblogs.com/hetpat/">Heteronormative Patriarchy for Men</a></li>
+<li><a href="http://freethoughtblogs.com/forgiven/">I Have Forgiven Jesus</a></li>
+<li><a href="http://freethoughtblogs.com/inspection/">Incongruous Circumspection</a></li>
+<li><a href="http://freethoughtblogs.com/intransitive/">Intransitive</a></li>
+<li><a href="http://freethoughtblogs.com/musings/">Jonathan&#039;s Musings</a></li>
+<li><a href="http://freethoughtblogs.com/kittywhumpus/">Kittywhumpus</a></li>
+<li><a href="http://freethoughtblogs.com/singham/">Mano Singham</a></li>
+<li><a href="http://freethoughtblogs.com/arun/">Nastik Deliberations</a></li>
+<li><a href="http://freethoughtblogs.com/frontier/">New Frontier</a></li>
+<li><a href="http://freethoughtblogs.com/nirmukta/">Nirmukta on FTB</a></li>
+<li><a href="http://freethoughtblogs.com/oceanoxia/">Oceanoxia</a></li>
+<li><a href="http://freethoughtblogs.com/odgraphix/">Odgraphix</a></li>
+<li><a href="http://freethoughtblogs.com/pervertjustice/">Pervert Justice</a></li>
+<li><a href="http://freethoughtblogs.com/pharyngula/">Pharyngula</a></li>
+<li><a href="http://freethoughtblogs.com/primatechess/">Primate Chess</a></li>
+<li><a href="http://freethoughtblogs.com/kriswager/">Pro-Science</a></li>
+<li><a href="http://freethoughtblogs.com/reasonabledoubts/">Reasonable Doubts</a></li>
+<li><a href="http://freethoughtblogs.com/recursivity/">Recursivity</a></li>
+<li><a href="http://freethoughtblogs.com/reprobate/">Reprobate Spreadsheet</a></li>
+<li><a href="http://freethoughtblogs.com/deviant/">Small Town Deviant</a></li>
+<li><a href="http://freethoughtblogs.com/stderr/">Stderr</a></li>
+<li><a href="http://freethoughtblogs.com/taslima/">Taslima Nasreen</a></li>
+<li><a href="http://freethoughtblogs.com/axp/">The Atheist Experience</a></li>
+<li><a href="http://freethoughtblogs.com/babbler/">The Bolingbrook Babbler</a></li>
+<li><a href="http://freethoughtblogs.com/cuttlefish/">The Digital Cuttlefish</a></li>
+<li><a href="http://freethoughtblogs.com/thathispanicatheist/">The Hispanic Atheist</a></li>
+<li><a href="http://freethoughtblogs.com/thoughtsofcrys/">Thoughts of Crys</a></li>
+<li><a href="http://freethoughtblogs.com/yemmynisting/">YEMMYnisting</a></li>
+</ul>
+<form class="dropdown" style="display: none">
+<select id="blogroll-dropdown">
+<option value="">Choose blog...</option>
+<option value="http://freethoughtblogs.com/resist/">&#8192;FREETHOUGHT RESISTANCE</a></li>
+<option value="http://freethoughtblogs.com/atrivialknot/">A Trivial Knot</a></li>
+<option value="http://freethoughtblogs.com/affinity/">Affinity</a></li>
+<option value="http://freethoughtblogs.com/atg/">Against the Grain</a></li>
+<option value="http://freethoughtblogs.com/reasoner/">Aged Reasoner: Common Sense for Now People</a></li>
+<option value="http://freethoughtblogs.com/alethianworldview/">Alethian Worldview</a></li>
+<option value="http://freethoughtblogs.com/anjuli/">Anjuli Pandavar</a></li>
+<option value="http://freethoughtblogs.com/natehevens/">Atheism, Music, and More...</a></li>
+<option value="http://freethoughtblogs.com/bianymeans/">Bi Any Means</a></li>
+<option value="http://freethoughtblogs.com/cobsweb/">COBS Web</a></li>
+<option value="http://freethoughtblogs.com/physioprof/">Comradde PhysioProffe</a></li>
+<option value="http://freethoughtblogs.com/iris/">Death to Squirrels</a></li>
+<option value="http://freethoughtblogs.com/druthers/">Druthers</a></li>
+<option value="http://freethoughtblogs.com/fierceroller/">Fierce Roller</a></li>
+<option value="http://freethoughtblogs.com/freethinkingahead/">Freethinking Ahead</a></li>
+<option value="http://freethoughtblogs.com/">Freethought Blogs</a></li>
+<option value="http://freethoughtblogs.com/ftbnews/">FtB News</a></li>
+<option value="http://freethoughtblogs.com/geekyhumanist/">Geeky Humanist</a></li>
+<option value="http://freethoughtblogs.com/gas/">Great American Satan</a></li>
+<option value="http://freethoughtblogs.com/hetpat/">Heteronormative Patriarchy for Men</a></li>
+<option value="http://freethoughtblogs.com/forgiven/">I Have Forgiven Jesus</a></li>
+<option value="http://freethoughtblogs.com/inspection/">Incongruous Circumspection</a></li>
+<option value="http://freethoughtblogs.com/intransitive/">Intransitive</a></li>
+<option value="http://freethoughtblogs.com/musings/">Jonathan&#039;s Musings</a></li>
+<option value="http://freethoughtblogs.com/kittywhumpus/">Kittywhumpus</a></li>
+<option value="http://freethoughtblogs.com/singham/">Mano Singham</a></li>
+<option value="http://freethoughtblogs.com/arun/">Nastik Deliberations</a></li>
+<option value="http://freethoughtblogs.com/frontier/">New Frontier</a></li>
+<option value="http://freethoughtblogs.com/nirmukta/">Nirmukta on FTB</a></li>
+<option value="http://freethoughtblogs.com/oceanoxia/">Oceanoxia</a></li>
+<option value="http://freethoughtblogs.com/odgraphix/">Odgraphix</a></li>
+<option value="http://freethoughtblogs.com/pervertjustice/">Pervert Justice</a></li>
+<option value="http://freethoughtblogs.com/pharyngula/">Pharyngula</a></li>
+<option value="http://freethoughtblogs.com/primatechess/">Primate Chess</a></li>
+<option value="http://freethoughtblogs.com/kriswager/">Pro-Science</a></li>
+<option value="http://freethoughtblogs.com/reasonabledoubts/">Reasonable Doubts</a></li>
+<option value="http://freethoughtblogs.com/recursivity/">Recursivity</a></li>
+<option value="http://freethoughtblogs.com/reprobate/">Reprobate Spreadsheet</a></li>
+<option value="http://freethoughtblogs.com/deviant/">Small Town Deviant</a></li>
+<option value="http://freethoughtblogs.com/stderr/">Stderr</a></li>
+<option value="http://freethoughtblogs.com/taslima/">Taslima Nasreen</a></li>
+<option value="http://freethoughtblogs.com/axp/">The Atheist Experience</a></li>
+<option value="http://freethoughtblogs.com/babbler/">The Bolingbrook Babbler</a></li>
+<option value="http://freethoughtblogs.com/cuttlefish/">The Digital Cuttlefish</a></li>
+<option value="http://freethoughtblogs.com/thathispanicatheist/">The Hispanic Atheist</a></li>
+<option value="http://freethoughtblogs.com/thoughtsofcrys/">Thoughts of Crys</a></li>
+<option value="http://freethoughtblogs.com/yemmynisting/">YEMMYnisting</a></li>
+</select>
+</form>
+<div class="clear: left"></div>
+</section>
+<div class="clear: left"></div>
+</aside>
+ 
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="recent_network_posts" class="widget widget_recent_network_posts">
+<div class="widget-wrap">
+<h4 class="widget-title widgettitle">Recent Posts on FtB</h4>
+<font size=-3><a href="http://freethoughtblogs.com/recent-posts/">[Last 50 Recent Posts]</a><br/>
+<div class='nlposts-container nlposts-ulist-container nlp-instance-default-1967854461'><ul class='nlposts-wrapper nlposts-ulist nav nav-tabs nav-stacked'><li class='nlposts-ulist-litem nlposts-siteid-71'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/natehevens/2017/02/22/self-care-astronomy-picture-of-the-week-look-its-the-death-star/'>Self Care - Astronomy Picture of the Week: Look! It's the Death Star!</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/natehevens">Atheism, Music, and More...</a> - Published by <a href="http://freethoughtblogs.com/natehevens/author/natehevens">Nathan</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-74'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/affinity/2017/02/22/go-fuck-yourself-maher/'>Go Fuck Yourself, Maher.</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/affinity">Affinity</a> - Published by <a href="http://freethoughtblogs.com/affinity/author/caine">Caine</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-3'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/'>Can Maher be the next guy knocked off his pedestal? Please?</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/pharyngula">Pharyngula</a> - Published by <a href="http://freethoughtblogs.com/pharyngula/author/pharyngula">PZ Myers</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-78'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/thoughtsofcrys/2017/02/22/bad-science-now-thats-a-double-whammy/'>Bad Science: Now That's a Double Whammy!</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/thoughtsofcrys">Thoughts of Crys</a> - Published by <a href="http://freethoughtblogs.com/thoughtsofcrys/author/thoughtsofcrys">thoughtsofcrys</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-88'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/atg/2017/02/22/including-chronic-illness-in-your-healthcare-activism/'>Including chronic illness in your healthcare activism</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/atg">Against the Grain</a> - Published by <a href="http://freethoughtblogs.com/atg/author/echamilton">Siobhan</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-98'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/freethinkingahead/2017/02/21/some-thoughts-on-the-venue-for-the-next-big-dystopian-novel/'>Some Thoughts on the Venue for "The Next Big Dystopian Novel"</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/freethinkingahead">Freethinking Ahead</a> - Published by <a href="http://freethoughtblogs.com/freethinkingahead/author/freethinkingahead">freethinkingahead</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-77'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/bianymeans/2017/02/21/bye-milo/'>Bye, Milo!</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/bianymeans">Bi Any Means</a> - Published by <a href="http://freethoughtblogs.com/bianymeans/author/tmamone">Trav Mamone</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-36'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/singham/2017/02/21/is-the-bar-for-conservative-acceptance-really-this-low/'>Is the bar for conservative acceptance really this low?</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/singham">Mano Singham</a> - Published by <a href="http://freethoughtblogs.com/singham/author/singham">Mano Singham</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-105'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/reprobate/2017/02/21/proof-from-logical-necessity-or-the-ontological-proof_2/'>Proof from Logical Necessity, or the Ontological Proof (2)</a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/reprobate">Reprobate Spreadsheet</a> - Published by <a href="http://freethoughtblogs.com/reprobate/author/hjhornbeck_76635710">hjhornbeck</a></span></div></li><li class='nlposts-ulist-litem nlposts-siteid-82'><div class='nlposts-caption'><h3 class='nlposts-ulist-title'><a href='http://freethoughtblogs.com/fierceroller/?p=2412'>J. S. Huxley part 1: <i>Gonium</i></a></h3><span class='nlposts-ulist-meta'><a href="http://freethoughtblogs.com/fierceroller">Fierce Roller</a> - Published by <a href="http://freethoughtblogs.com/fierceroller/author/matthewherron">Matthew Herron</a></span></div></li></ul></div> </font>
+</div>
+</section>
+</aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="widget-search" class="widget widget-search">
+<form method="get" class="form-inline form-search" action="" role="form">
+<div class="form-group input-group">
+<input type="text" name="s" placeholder="Search this website…" class="form-control">
+<span class="input-group-btn">
+<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</div>
+</form>
+<ul>
+<li><li><a href="http://freethoughtblogs.com/pharyngula/wp-login.php?action=register">Register</a></li> <li>
+<a href="/wp-login.php?redirect_to=http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/">Log in</a>
+</ul>
+</section>
+</aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="advertise2" class="widget widget_ads">
+<div class="widget-wrap">
+<div class="textwidget">
+<div class="adv_on_ftb">
+<div id='div-gpt-ad-1410469430816-0' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410469430816-0'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</section>
+</aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="activity" class="widget">
+<div class="widget-wrap">
+<ul class="nav nav-pills" role="tablist">
+<li class="active"><a href="#activity-recent-posts" role="tab" data-toggle="tab">Recent Posts</a></li>
+<li><a href="#activity-recent-comments" role="tab" data-toggle="tab">Recent Comments</a></li>
+<li><a href="#activity-archives" role="tab" data-toggle="tab">Archives</a></li>
+</ul>
+<div class="tab-content">
+ 
+<div id="activity-recent-posts" class="tab-pane active">
+<ul>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/" title="Can Maher be the next guy knocked off his pedestal? Please?">
+Can Maher be the next guy knocked off his pedestal? Please? </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/22/laurie-penny-uses-words-real-good/" title="Laurie Penny uses words real good">
+Laurie Penny uses words real good </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/22/so-much-for-the-myth-of-the-liberal-professor/" title="So much for the myth of the liberal professor">
+So much for the myth of the liberal professor </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/21/2005-just-called-i-think-it-was-a-wrong-number/" title="2005 just called. I think it was a wrong number.">
+2005 just called. I think it was a wrong number. </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/21/theres-one-thing-that-will-get-me-to-turn-on-fox-news/" title="There&#039;s one thing that will get me to turn on Fox News">
+There's one thing that will get me to turn on Fox News </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/21/your-purge-is-clumsy-and-obvious/" title="Your purge is clumsy and obvious">
+Your purge is clumsy and obvious </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/21/what-the-heckity-gosh-darn-is-epigenetics/" title="What the heckity-gosh-darn is epigenetics?">
+What the heckity-gosh-darn is epigenetics? </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/20/marys-monday-metazoan-aerial-kaiju-vs-jaeger/" title="Mary&#039;s Monday Metazoan: Aerial Kaiju vs. Jaeger!">
+Mary's Monday Metazoan: Aerial Kaiju vs. Jaeger! </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/20/why-havent-women-already-realized-what-you-can-do-with-super-glue/" title="Why haven&#039;t women already realized what you can do with super-glue?">
+Why haven't women already realized what you can do with super-glue? </a>
+</li>
+<li>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/20/ecological-development-getting-critical/" title="Ecological Development: Getting critical">
+Ecological Development: Getting critical </a>
+</li>
+</ul>
+</div>
+ 
+<div id="activity-recent-comments" class="tab-pane">
+<ul>
+<li>
+Caine on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/#comment-1064210">
+Can Maher be the next guy knocked off his pedestal? Please? </a>
+</li>
+<li>
+essexgreen on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/#comment-1064209">
+Can Maher be the next guy knocked off his pedestal? Please? </a>
+</li>
+<li>
+SC (Salty Current) on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/#comment-1064208">
+Discuss: Political Madness All the Time </a>
+</li>
+<li>
+microraptor on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/21/2005-just-called-i-think-it-was-a-wrong-number/#comment-1064207">
+2005 just called. I think it was a wrong number. </a>
+</li>
+<li>
+Sven on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/#comment-1064206">
+Can Maher be the next guy knocked off his pedestal? Please? </a>
+</li>
+<li>
+unclefrogy on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/22/so-much-for-the-myth-of-the-liberal-professor/#comment-1064205">
+So much for the myth of the liberal professor </a>
+</li>
+<li>
+blf on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/#comment-1064204">
+Discuss: Political Madness All the Time </a>
+</li>
+<li>
+Lynna, OM on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/#comment-1064203">
+Discuss: Political Madness All the Time </a>
+</li>
+<li>
+blf on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/#comment-1064202">
+Discuss: Political Madness All the Time </a>
+</li>
+<li>
+Lynna, OM on
+<a class="author" href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/#comment-1064201">
+Discuss: Political Madness All the Time </a>
+</li>
+</ul>
+</div>
+<div id="activity-archives" class="tab-pane">
+ 
+<li><a href='http://freethoughtblogs.com/pharyngula/2017/02/'>February 2017</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2017/01/'>January 2017</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/12/'>December 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/11/'>November 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/10/'>October 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/09/'>September 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/08/'>August 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/07/'>July 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/06/'>June 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/05/'>May 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/04/'>April 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/03/'>March 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/02/'>February 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2016/01/'>January 2016</a></li>
+<li><a href='http://freethoughtblogs.com/pharyngula/2015/12/'>December 2015</a></li>
+</div>
+</div>
+</div>
+</section>
+</aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="text-4" class="widget widget_text"><div></div><h4 class="widget-title widgettitle">Profile<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content"> <div class="textwidget"><b><a href="http://freethoughtblogs.com/wp-admin/admin.php?page=noadsub">HATE ADS? Subscribe to FTB Ad Free</a>.</b>
+<br/><br/>
+<div style="font-size: 24px; border: thick solid red; padding: 4px">Please <a href="https://www.gofundme.com/defense-vs-carrier-slapp">donate to our legal defense fund!</a></div>
+<br/><br/>
+<div style="border: none; padding-left: 4px">
+<p class="profile" style="margin-bottom: 0em; font-size: 14px;">
+<a href="http://freethoughtblogs.com/pharyngula/rules/">Commenting Rules</a><br/>
+<a href="mailto:guardians-of-pharyngula@googlegroups.com">Report a problem</a><br/><br/>
+<strong><span style="font-size: 16px"><a href="http://freethoughtblogs.com/pharyngula/2016/07/27/discuss-racism-in-america-3/">Discuss: Racism in America</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2016/05/01/discuss-art-4/">Discuss: Art</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2016/07/27/discuss-through-a-feminist-lens-4/">Discuss: Through a feminist lens</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/">Discuss: Political Madness All the Time</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2015/08/12/discuss-music/">Discuss: Music</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2015/08/25/discuss-world-politics/">Discuss: World Politics</a><br/>
+<a href="http://freethoughtblogs.com/pharyngula/2016/11/16/discuss-interesting-stuff-5/">Discuss: Interesting Stuff</a><br/><br/>
+</span></strong>
+</p><p class="profile" style="margin-bottom: 0em"><a href="http://pharyngula.wikia.com/wiki/Pharyngula_Wiki">The Pharyngula Wiki</a></p>
+<p class="profile" style="margin-left: 15px; margin-top: 0em"><a href="http://pharyngula.wikia.com/wiki/Economics#Social_justice_and_economics">Social Justice and Economics</a><br/>
+<a href="http://pharyngula.wikia.com/wiki/Feminist_link_roundup">Social Justice Llink Roundup</a></p>
+</div>
+<br/>
+<div style="border: none; padding-left: 4px">
+<p class="profile">
+<a href="http://freethoughtblogs.com/pharyngula/files/2011/07/PZMyersByJerryRauser.jpg"><img src="//freethoughtblogs.com/pharyngula/files/2011/07/PZMyersByJerryRauser-107x150.jpg" alt="PZMyersByJerryRauser" width="107" height="150" class="aligncenter size-thumbnail wp-image-17226"/></a><br/>
+<a href="mailto:pzmyers@gmail.com">PZ Myers</a> is a biologist and associate professor at the <a href="http://www.morris.umn.edu/">University of Minnesota, Morris</a>. <b>This is a personal weblog. The opinions expressed here represent my own and not those of my employer.</b>
+<br/>
+<div style="text-align: center"><a href="http://www.powells.com/biblio/1-9780307379344-2"><img src="//freethoughtblogs.com/pharyngula/files/2013/02/cover-199x300.png" alt="cover" width="199" height="300"/></a></div>
+&bull; <a href="http://www.citypages.com/2005-11-23/news/the-mad-scientist/">a longer profile of yours truly</a><br/>
+&bull; <a href="https://www.google.com/calendar/embed?src=pzmyers%40gmail.com&ctz=America/Chicago">my calendar (actually updated!)</a><br/>
+&bull; <a href="http://network.nature.com/profile/pzmyers">Nature Network</a><br/>
+&bull; <a href="http://minnesota.facebook.com/p/PZ_Myers/13937490">facebook</a><br/>
+&bull; <a href="http://www.myspace.com/pharyngula">MySpace</a><br/>
+&bull; <a href="http://twitter.com/pzmyers">Twitter</a><br/>
+&bull; <a href="http://www.atheistnexus.org/profile/PZMyers">Atheist Nexus</a><br/>
+&bull; <a href="http://wbe001.mibbit.com/?server=irc.synirc.net&channel=%23pharyngula">the Pharyngula chat room</a><br/>(#pharyngula on irc.synirc.net)<br/>
+&bull; <a href="https://plus.google.com/117447138737788378765/?prsrc=3" style="text-decoration: none;"><img src="//ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="border: 0;"/></a><br/>
+<a href="https://twitter.com/pzmyers" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pzmyers</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
+<div style="text-align: center"><form action="//www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick"/>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHLwYJKoZIhvcNAQcEoIIHIDCCBxwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAnqBQwZYBucY0fzkvSlY7nYhWrcz4mQ8jFinQBZKVI0aZsAjXk5nVCmohRLRabu4F9YJX+sn2XkvDNqkXvBWCgNW0NJ4Go1Enn2ey8AwbqnbDmSbrV7qCF/DE6SDMq/o+LpGvYyqDb7czYW8AG8EeD3OPJMzpOIkZ+/47ebYfrbzELMAkGBSsOAwIaBQAwgawGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIN09sS6ads02AgYj9z8JojERuO07mPzvexEi8DDmG2vqaA0SiPoZOvAh8Gna9ApClEGYaI8XJVXG+iTiKIgZPnjMqeTC2jy/YAIK/tv48CcaeKICJW5PooXnVpGcBqje09vHq1cYIJchkPYHWGFebluftEIgMp1HxeolX7onLmJ0ekZ/kNm8BkppS+jBWdsZfsYm9oIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTEwOTE4MDA0MTM3WjAjBgkqhkiG9w0BCQQxFgQU0LpqvzFtS8y+6xDlyb8GBcjxA9YwDQYJKoZIhvcNAQEBBQAEgYBiO9g3gWKIwpw6i7h31Bo2ezQVhewwvDRIKYThtP9FC38BFQy3tvjC8Qg0Hwm0MyMsZ0WrrhJMANxBXC+fvBjpoaCCex7yMN1u+j3m1RMBChWMRPSj9dyuC95yewIVaidD8Dh/NEK39t8r/h0jtjLlWypb1iHRwwx6KzgCvkKWkA==-----END PKCS7-----
+"/>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<img alt="" border="0" src="//www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+</form></div>
+</div><br/>
+<div style="border: none; padding-left: 4px">
+</div>
+<br/>
+<div style="background: #eee;border: thin solid #aaa;padding: 4px;font-size:10px;text-align: center">I reserve the right to publicly post, with full identifying information about the source, any email sent to me that contains threats of violence.</div><br/>
+<div style="border:none; padding-left: 4px">
+<div style="text-align: center; font-size: 14px"><a href="http://atheism.about.com/od/ReadersChoiceAwards/ss/Readers-Choice-Awards-2012.htm"><img src="//clk.about.com/?zi=1/1s6" alt="About.com 2012 Readers' Choice Awards"/></a></div>
+<div style="text-align: center"><a href="http://outcampaign.org/"><img src="//freethoughtblogs.com/pharyngula/files/2012/08/Aplus.png" alt="" title="Aplus" width="216" height="170" class="aligncenter size-full wp-image-6494"/></a></div>
+<div style="text-align: center"><a href="http://www.au.org">I support Americans United for Separation of Church and State.</a></div>
+</div>
+</div>
+</div></section></aside><aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="recent-comments-3" class="widget widget_recent_comments"><div></div><h4 class="widget-title widgettitle">Recent Comments<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content"><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://freethoughtblogs.com/affinity/' rel='external nofollow' class='url'>Caine</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/comment-page-1/#comment-1064210">Can Maher be the next guy knocked off his pedestal? Please?</a></li><li class="recentcomments"><span class="comment-author-link">essexgreen</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/comment-page-1/#comment-1064209">Can Maher be the next guy knocked off his pedestal? Please?</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://saltycurrent.blogspot.com' rel='external nofollow' class='url'>SC (Salty Current)</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064208">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link">microraptor</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/21/2005-just-called-i-think-it-was-a-wrong-number/comment-page-1/#comment-1064207">2005 just called. I think it was a wrong number.</a></li><li class="recentcomments"><span class="comment-author-link">Sven</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/comment-page-1/#comment-1064206">Can Maher be the next guy knocked off his pedestal? Please?</a></li><li class="recentcomments"><span class="comment-author-link">unclefrogy</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/so-much-for-the-myth-of-the-liberal-professor/comment-page-1/#comment-1064205">So much for the myth of the liberal professor</a></li><li class="recentcomments"><span class="comment-author-link">blf</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064204">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.artmeetsadventure.com' rel='external nofollow' class='url'>Lynna, OM</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064203">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link">blf</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064202">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.artmeetsadventure.com' rel='external nofollow' class='url'>Lynna, OM</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064201">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link">throwaway, butcher of tongues, mauler of metaphor</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/can-maher-be-the-next-guy-knocked-off-his-pedestal-please/comment-page-1/#comment-1064200">Can Maher be the next guy knocked off his pedestal? Please?</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.artmeetsadventure.com' rel='external nofollow' class='url'>Lynna, OM</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064199">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link">jrkrideau</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/22/laurie-penny-uses-words-real-good/comment-page-1/#comment-1064198">Laurie Penny uses words real good</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.artmeetsadventure.com' rel='external nofollow' class='url'>Lynna, OM</a></span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064197">Discuss: Political Madness All the Time</a></li><li class="recentcomments"><span class="comment-author-link">tomh</span> on <a href="http://freethoughtblogs.com/pharyngula/2017/02/03/discuss-political-madness-all-the-time/comment-page-3/#comment-1064196">Discuss: Political Madness All the Time</a></li></ul></div></section></aside><aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="linkcat-29" class="widget widget_links"><div></div><h4 class="widget-title widgettitle">Atheism<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content">
+<ul class='xoxo blogroll'>
+<li><a href="http://www.atheists.org/" target="_blank">American Atheists</a></li>
+<li><a href="http://www.americanhumanist.org/" target="_blank">American Humanist Association</a></li>
+<li><a href="http://www.atheistalliance.org/" target="_blank">Atheist Alliance International</a></li>
+<li><a href="http://canadianatheist.com/">Canadian Atheist</a></li>
+<li><a href="http://www.patheos.com/blogs/daylightatheism/" target="_blank">Daylight Atheism</a></li>
+<li><a href="http://www.exmna.org/" target="_blank">Ex-Muslims of North America</a></li>
+<li><a href="http://www.centerforinquiry.net/blogs" target="_blank">Free Thinking</a></li>
+<li><a href="http://www.jesusandmo.net/">Jesus and Mo</a></li>
+<li><a href="http://mnatheists.org/" target="_blank">Minnesota Atheists</a></li>
+<li><a href="http://rosarubicondior.blogspot.com" target="_blank">Rosa Rubicondior</a></li>
+<li><a href="http://sandwalk.blogspot.com/">Sandwalk</a></li>
+<li><a href="https://www.secularstudents.org/" target="_blank">SSA</a></li>
+<li><a href="http://www.centerforinquiry.net/blogs/pfidalgo">The Morning Heresy</a></li>
+</ul>
+</div></section></aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="linkcat-407" class="widget widget_links"><div></div><h4 class="widget-title widgettitle">Culture<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content">
+<ul class='xoxo blogroll'>
+<li><a href="http://www.amptoons.com/blog/" target="_blank">Alas! A blog</a></li>
+<li><a href="http://www.salon.com/writer/amanda_marcotte/" target="_blank">Amanda Marcotte</a></li>
+<li><a href="http://au.org/" target="_blank">Americans United</a></li>
+<li><a href="http://bgalrstate.blogspot.com/">Blue Gal</a></li>
+<li><a href="http://www.butterfliesandwheels.org/" rel="friend met" target="_blank">Butterflies &amp; Wheels</a></li>
+<li><a href="http://www.esquire.com/blogs/politics/">Charles P. Pierce</a></li>
+<li><a href="http://driftglass.blogspot.com/">Driftglass</a></li>
+<li><a href="http://digbysblog.blogspot.com/" target="_blank">Hullabaloo</a></li>
+<li><a href="http://blog.iblamethepatriarchy.com/">I Blame the Patriarchy</a></li>
+<li><a href="http://www.joemygod.com/" target="_blank">Joe. My. God.</a></li>
+<li><a href="http://lancemannion.typepad.com/">Lance Mannion</a></li>
+<li><a href="http://nielsenhayden.com/makinglight/" target="_blank">Making Light</a></li>
+<li><a href="https://rewire.news/" title="Reproductive health news" target="_blank">Rewire</a></li>
+<li><a href="http://www.sadlyno.com/" target="_blank">Sadly, No!</a></li>
+<li><a href="http://www.secularwoman.org/" target="_blank">Secular Woman</a></li>
+<li><a href="http://skepticalhumanities.com/" target="_blank">Skeptical Humanities</a></li>
+<li><a href="http://wehuntedthemammoth.com/" target="_blank">We Hunted the Mammoth</a></li>
+<li><a href="http://whatever.scalzi.com/" target="_blank">Whatever</a></li>
+</ul>
+</div></section></aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="linkcat-406" class="widget widget_links"><div></div><h4 class="widget-title widgettitle">Science<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content">
+<ul class='xoxo blogroll'>
+<li><a href="http://coyot.es" title="Biodiversity-based network of eco-bloggers">Coyot.es Network</a></li>
+<li><a href="http://coyot.es/crossing" target="_blank">Coyote Crossing</a></li>
+<li><a href="http://blogs.discovermagazine.com/" target="_blank">Discover blogs</a></li>
+<li><a href="http://www.genomicron.evolverzone.com/" target="_blank">Genomicron</a></li>
+<li><a href="http://judgestarling.tumblr.com/" target="_blank">Judge Starling (Dan Graur)</a></li>
+<li><a href="http://ncse.com/" target="_blank">NCSE</a></li>
+<li><a href="http://www.pandasthumb.org/" target="_blank">Panda&#039;s Thumb</a></li>
+<li><a href="http://www.preposterousuniverse.com/blog/" target="_blank">Preposterous Universe</a></li>
+<li><a href="http://sandwalk.blogspot.com/">Sandwalk</a></li>
+<li><a href="http://blogs.scientificamerican.com/" target="_blank">SciAm blogs</a></li>
+<li><a href="https://www.sciencenews.org/blog/scicurious" target="_blank">Scicurious</a></li>
+<li><a href="http://www.sunclipse.org/" target="_blank">Science after Sunclipse</a></li>
+<li><a href="http://scienceblogs.com/" target="_blank">ScienceBlogs</a></li>
+<li><a href="http://scientopia.org/blogs/" target="_blank">Scientopia</a></li>
+<li><a href="http://skullsinthestars.com/" target="_blank">Skulls in the Stars</a></li>
+<li><a href="http://telliamedrevisited.wordpress.com/" target="_blank">Telliamed Revisited</a></li>
+<li><a href="http://thewelltimedperiod.blogspot.com/" target="_blank">The Well-Timed Period</a></li>
+<li><a href="http://whatsinjohnsfreezer.com/">What&#039;s in John&#039;s Freezer?</a></li>
+</ul>
+</div></section></aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="linkcat-25" class="widget widget_links"><div></div><h4 class="widget-title widgettitle">Skepticism<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content">
+<ul class='xoxo blogroll'>
+<li><a href="http://skepchick.org/" target="_blank">Skepchick</a></li>
+<li><a href="http://skepticalhumanities.com/" target="_blank">Skeptical Humanities</a></li>
+</ul>
+</div></section></aside>
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><section id="tag_cloud-3" class="widget widget_tag_cloud"><div></div><h4 class="widget-title widgettitle">Tags<a class="widget-title-expander" href="#" data-toggle="collapse" data-target=".widget-content" data-parent=".widget"><i class="fa fa-bars"></i></a></h4><div class="widget-content"><div class="tagcloud"><a href='http://freethoughtblogs.com/pharyngula/tag/aliens/' class='tag-link-412' title='2 topics' style='font-size: 10.625pt;'>aliens</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/anti-asshole/' class='tag-link-78' title='12 topics' style='font-size: 19.8125pt;'>anti-asshole</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/anti-sexism/' class='tag-link-77' title='12 topics' style='font-size: 19.8125pt;'>anti-sexism</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/apophenia/' class='tag-link-222' title='2 topics' style='font-size: 10.625pt;'>apophenia</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/back-in-the-gutter/' class='tag-link-252' title='1 topic' style='font-size: 8pt;'>back in the gutter</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/big-guns/' class='tag-link-254' title='1 topic' style='font-size: 8pt;'>big guns</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/bloody-mindedness/' class='tag-link-255' title='1 topic' style='font-size: 8pt;'>bloody-mindedness</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/blue-tongued-lizard/' class='tag-link-7' title='1 topic' style='font-size: 8pt;'>blue tongued lizard</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/brexit/' class='tag-link-440' title='2 topics' style='font-size: 10.625pt;'>Brexit</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/comic-book-movies/' class='tag-link-261' title='1 topic' style='font-size: 8pt;'>comic book movies</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/courage/' class='tag-link-265' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/creationism-2/' class='tag-link-14' title='5 topics' style='font-size: 15pt;'>creationism</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/critiquing-feminism/' class='tag-link-396' title='3 topics' style='font-size: 12.375pt;'>critiquing feminism</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/cuddly/' class='tag-link-258' title='1 topic' style='font-size: 8pt;'>cuddly</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/cute/' class='tag-link-257' title='1 topic' style='font-size: 8pt;'>cute</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/dont-ask-me-about-mine/' class='tag-link-132' title='2 topics' style='font-size: 10.625pt;'>don&#039;t ask me about mine</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/envy/' class='tag-link-130' title='2 topics' style='font-size: 10.625pt;'>envy</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/games/' class='tag-link-444' title='2 topics' style='font-size: 10.625pt;'>games</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/gender-workshop/' class='tag-link-371' title='13 topics' style='font-size: 20.395833333333pt;'>Gender workshop</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/gods-weird-dicktates/' class='tag-link-91' title='2 topics' style='font-size: 10.625pt;'>god&#039;s weird dicktates</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/jealousy/' class='tag-link-131' title='2 topics' style='font-size: 10.625pt;'>jealousy</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/just-plain-viciousness/' class='tag-link-256' title='1 topic' style='font-size: 8pt;'>just plain viciousness</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/language/' class='tag-link-394' title='11 topics' style='font-size: 19.375pt;'>language</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/learning-stuff/' class='tag-link-98' title='14 topics' style='font-size: 20.833333333333pt;'>learning stuff</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/movies/' class='tag-link-402' title='2 topics' style='font-size: 10.625pt;'>movies</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/needed-more-bats/' class='tag-link-263' title='1 topic' style='font-size: 8pt;'>needed more bats</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/no/' class='tag-link-264' title='1 topic' style='font-size: 8pt;'>NO</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/oblivious-to-global-impact/' class='tag-link-262' title='1 topic' style='font-size: 8pt;'>oblivious to global impact</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/outreach/' class='tag-link-99' title='2 topics' style='font-size: 10.625pt;'>outreach</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/paradigm-symposium/' class='tag-link-413' title='5 topics' style='font-size: 15pt;'>paradigm symposium</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/principles/' class='tag-link-266' title='1 topic' style='font-size: 8pt;'>principles</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/ray-comfort/' class='tag-link-434' title='2 topics' style='font-size: 10.625pt;'>Ray Comfort</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/reptile/' class='tag-link-8' title='1 topic' style='font-size: 8pt;'>reptile</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/sarcasm/' class='tag-link-71' title='3 topics' style='font-size: 12.375pt;'>sarcasm</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/slimy/' class='tag-link-259' title='1 topic' style='font-size: 8pt;'>slimy</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/tea/' class='tag-link-22' title='2 topics' style='font-size: 10.625pt;'>tea</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/the-goddamn-batman/' class='tag-link-247' title='2 topics' style='font-size: 10.625pt;'>the goddamn batman</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/transfeminism/' class='tag-link-397' title='4 topics' style='font-size: 13.833333333333pt;'>transfeminism</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/trump/' class='tag-link-445' title='2 topics' style='font-size: 10.625pt;'>Trump</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/ufo/' class='tag-link-414' title='2 topics' style='font-size: 10.625pt;'>ufo</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/vox-day/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>Vox Day</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/with-nematocysts/' class='tag-link-260' title='1 topic' style='font-size: 8pt;'>with nematocysts</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/world-conquest/' class='tag-link-72' title='17 topics' style='font-size: 22pt;'>world conquest</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/xiaotingia/' class='tag-link-12' title='1 topic' style='font-size: 8pt;'>Xiaotingia</a>
+<a href='http://freethoughtblogs.com/pharyngula/tag/zoiz/' class='tag-link-253' title='1 topic' style='font-size: 8pt;'>ZOIZ?</a></div>
+</div></section></aside><aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="advertise3" class="widget widget_ads">
+<div class="widget-wrap">
+<div class="textwidget">
+<div class="adv_on_ftb">
+<div id='div-gpt-ad-1410469513075-0' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410469513075-0'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</section>
+</aside>
+ 
+<aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<section id="event_ads" class="widget widget_event_ads">
+<div class="widget-wrap">
+<div class="textwidget">
+<div class="left_ads">
+<h2>EVENTS</h2>
+</div>
+</div>
+</div>
+</section>
+</aside>
+</div>
+</div>
+</div>
+<main class="col-md-8" class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog"> <article class="post-33516 post type-post status-publish format-standard category-politics topic-politics-history-and-law entry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost"><header class="entry-header"> <div class="prev-next">
+<span class="next-link"><a href="http://freethoughtblogs.com/pharyngula/2017/02/08/now-i-know-what-to-do-for-darwin-day/">Now I know what to do for Darwin Day</a> &raquo;</span>
+<span class="previous-link">&laquo; <a href="http://freethoughtblogs.com/pharyngula/2017/02/07/science-is-done-by-and-for-people/">Science is done by and for <em>people</em></a></span>
+<div style="clear: both"></div>
+</div>
+<h1 class="entry-title" itemprop="headline">Deplorable DeVos is in</h1>
+</header><hr><div class="entry-content" itemprop="text"><p class="lead">Betsy DeVos is <a href="http://www.civilrights.org/advocacy/letters/2017/oppose-confirmation-of-betsy.html?referrer=https://t.co/DFd6IxdyPj">unfit and incompetent</a>; worse, the policies she champions <a href="https://news.vice.com/story/school-choice-detroit-betsy-devos">destroy children&#8217;s opportunities</a>. She&#8217;s a political hack who basically bought her position by <a href="http://www.forbes.com/sites/danalexander/2017/01/17/devos-says-its-possible-her-family-has-donated-200m-to-republicans/#65f0fe6d4268">donating $200 million to the Republicans</a>.</p>
+<p>She was just confirmed by a <a href="https://www.nytimes.com/2017/02/07/us/politics/betsy-devos-education-secretary-confirmed.html?_r=0">50-50 vote in the Senate, with Pence as the tie-breaker</a>. She is the new Secretary of Education.</p>
+<p>Remember this: it was a straight party split, with only two Republicans voting against her nomination. Trump&#8217;s other nominees for other positions are just as, if not more, odious than DeVos, and aren&#8217;t getting as much protest &#8212; they&#8217;ll sail through, too. The Republicans will bear full responsibility for the nightmare scenario we&#8217;re locked into. We must resist even more, and tear them down.</p><div id='div-gpt-ad-1421869288950-0' style='width: 100%; max-width:728px; height:90px; margin: 0 auto; clear: both;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421869288950-0'); });
+</script>
+</div>
+<div style="clear: both"></div>
+<p>They&#8217;re <a href="https://mikethemadbiologist.com/2017/02/07/this-is-what-were-up-against/">going to fight back</a>, too, and we can already see what they&#8217;re up to. Someone infiltrated a pro-Trump meeting, and got a snapshot of their plans.</p>
+<blockquote><p>They have a team that monitors the public blogs and event postings of the Liberal groups (specifically mentioned Indivisible and MoveOn.) They laughed at the Indivisible Guide when one leader said “the Liberals will never get organized and carry any of this out, the snowflakes give up too easily, “a little heat and they melt.” They talked about the “visit your representatives office event” that was planned for earlier in the day which was posted on MoveOn and all over FB. They also were at their reps offices, and a handful admitted to going to the Democratic representatives office in their own district to have their voice counted.
+</p>
+<p>
+They have a team who spies on FB posts. When the man who was with us asked how to do it, he was told that if he was a member of Pantsuit Nation it’s almost an automatic in into most closed groups, and then once you are in one, you can get invited to others. Someone on their team joins all the public and open groups. Their report included reading a few actual posts, in a mimic whining voice, where the members were posting their concerns and frustrations and why bother. They actually cheered this. One leader applauded the report and said, “we don’t care if they like what we have to say, we don’t need them to agree with us. We just need them to give up, shut up and stay out of our way.”</p>
+</blockquote>
+<p>They&#8217;re organized and fanatical, and willing to engage in dirty tricks. We can&#8217;t just sit back and let it happen.</p>
+<p>The Morris Indivisible group is meeting at the public library at 7pm tonight. If you&#8217;re local and you care, I expect you to be there.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button" href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button" href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-facebook"><div class="fb-share-button" data-href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/" data-layout="button_count"></div></li><li class="share-tumblr"><a target="_blank" href="http://www.tumblr.com/share/link/?url=http%3A%2F%2Ffreethoughtblogs.com%2Fpharyngula%2F2017%2F02%2F07%2Fdeplorable-devos-is-in%2F&name=Deplorable%20DeVos%20is%20in" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:62px; height:20px; background:url('//platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/" data-text="Deplorable DeVos is in" data-via="pzmyers">Tweet</a></li><li class="share-google-plus-1"><div class="googleplus1_button"><div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/"></div></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="http://www.reddit.com/static/button/button1.html?newwindow=true&width=120&amp;url=http%3A%2F%2Ffreethoughtblogs.com%2Fpharyngula%2F2017%2F02%2F07%2Fdeplorable-devos-is-in%2F&amp;title=Deplorable%20DeVos%20is%20in" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li class="share-pinterest"><div class="pinterest_button"><a href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Ffreethoughtblogs.com%2Fpharyngula%2F2017%2F02%2F07%2Fdeplorable-devos-is-in%2F&#038;media=http%3A%2F%2F1.gravatar.com%2Favatar%2F700a584924f4f6c16fd6fd578d59b65b%3Fs%3D96%26d%3Didenticon%26r%3Dr&#038;description=Deplorable%20DeVos%20is%20in" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png"/></a></div></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/" data-counter="right"></script></div></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts'>
+<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div> </div> <div class="prev-next">
+<span class="next-link"><a href="http://freethoughtblogs.com/pharyngula/2017/02/08/now-i-know-what-to-do-for-darwin-day/">Now I know what to do for Darwin Day</a> &raquo;</span>
+<span class="previous-link">&laquo; <a href="http://freethoughtblogs.com/pharyngula/2017/02/07/science-is-done-by-and-for-people/">Science is done by and for <em>people</em></a></span>
+<div style="clear: both"></div>
+</div>
+<footer class="entry-footer"><ul>
+<li><i class='fa fa-user'></i> <span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><a href="http://freethoughtblogs.com/pharyngula/author/pharyngula/" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name">PZ Myers</span></a></span></li>
+<li><i class="fa fa-calendar"></i> <time class="entry-time" itemprop="datePublished" datetime="2017-02-07T13:31:18+00:00">7 February 2017</time></li>
+<li><i class="fa fa-folder"></i> <span class="entry-categories"><a href="http://freethoughtblogs.com/pharyngula/category/politics/" rel="category tag">Politics, History, and Law</a></span></li>
+<li><i class="fa fa-comments"></i>
+<a href="/wp-login.php?redirect_to=http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/">Log in to comment</a>
+</li>
+</ul>
+</footer></article><div id="contentad44605"></div>
+<script type="text/javascript">
+    (function() {
+        var params =
+        {
+            id: "c4d3383d-9eef-471b-8e72-fcab4729c6fd",
+            d:  "cGF0aGVvcy5mcmVldGhvdWdodGJsb2dzLmNvbQ==",
+            wid: "44605",
+            cb: (new Date()).getTime(),
+            url: "http://patheos.freethoughtblogs.com"
+        };
+
+        var qs="";
+        for(var key in params){qs+=key+"="+params[key]+"&"}
+        qs=qs.substring(0,qs.length-1);
+        var s = document.createElement("script");
+        s.type= 'text/javascript';
+        s.src = "http://api.content.ad/Scripts/widget.aspx?" + qs;
+        s.async = true;
+        document.getElementById("contentad44605").appendChild(s);
+    })();
+</script> <div class="entry-comments" id="comments"><h3>Comments</h3><ol class="comment-list">
+<li class="comment byuser comment-author-rietpluim even thread-even depth-1" id="comment-1061994">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/4dd94b350a468ac19a02fe338f9b94ab?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/4dd94b350a468ac19a02fe338f9b94ab?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">rietpluim</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T13:45:25+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1061994" itemprop="url">7 February 2017 at 1:45 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Such a parcel of rogues in a nation.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-stevem odd alt thread-odd thread-alt depth-1" id="comment-1061997">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">slithey tove (twas brillig (stevem))</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T13:53:50+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1061997" itemprop="url">7 February 2017 at 1:53 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Kick a NastyWomen see what happens NOW. Include me in #NastyWomen. Hear us roar. You aint seen nuthin yet!1!!1!1!1!!</p>
+<p>Shirt, Fork *vomit* </p>
+<p>Franken made good points against DeV.aldemort this morning which apparently sailed clear over the Rethuglican heads, so locked into party line they are. The only response I heard in her favor was a Sen blathering about &#8220;they asked her many more questions than any Obama nominee who was approved much more quickly than our current nom. Why are we covering her with such sludge?&#8221; [paraphrased that last sentence] No arguments FOR her; only offered arguments against voting NO.</p>
+<p>This swamp does need draining. Trump aint doin it korrectly. [sic&#8217;s on purpose]</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-robgrigjanis even thread-even depth-1" id="comment-1062002">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/662182bd3bf8001c20856a0f3f7176b8?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/662182bd3bf8001c20856a0f3f7176b8?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Rob Grigjanis</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:04:58+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062002" itemprop="url">7 February 2017 at 2:04 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>I was hoping John McCain and Lindsey Graham would pitch in. Crap.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-cartomancer odd alt thread-odd thread-alt depth-1" id="comment-1062003">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/a61c2f33f00b737a1dc2f080d38d2f8c?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/a61c2f33f00b737a1dc2f080d38d2f8c?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">cartomancer</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:07:37+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062003" itemprop="url">7 February 2017 at 2:07 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>And I thought we had it bad when Michael Gove was Education Secretary under Cameron. This makes him look positively competent.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-susannah even thread-even depth-1" id="comment-1062004">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/7dc969c1b13ace4b67b569ab356d2364?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/7dc969c1b13ace4b67b569ab356d2364?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name"><a href="http://wanderinweeta.blogspot.com" rel="external nofollow" itemprop="url">Susannah</a></span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:17:43+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062004" itemprop="url">7 February 2017 at 2:17 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>And now a generation of American kids will get the education I got. No evolution. Adam and Eve. The flood. Dinosaurs didn&#8217;t exist; they were made up by scientists. (Really! That&#8217;s what they told me. In public school. Times have changed, a bit; now the dinosaurs were on the ark.) The &#8220;curse&#8221;; on women, of course, because Eve.</p>
+<p>Some of them will go on to discover how they were lied to. Most won&#8217;t.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-secondtofirstworld odd alt thread-odd thread-alt depth-1" id="comment-1062006">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">secondtofirstworld</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:33:25+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062006" itemprop="url">7 February 2017 at 2:33 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Though I&#8217;m not clairvoyant, I still &#8220;can see the future&#8221; as in I&#8217;ve already seen this happening 7 years ago.</p>
+<p>The actual irony is, that some of the people, even ones with influential pull behind the administration were jaded, and turned against them. As things stand now, the formerly pro-government newspaper and TV station became pariahs with the administration, but the only silver lining is, their bulldog mentality, previously only held for liberals works now against conservatives too. It&#8217;s not much, but it is a sign, that they too are as equally divided, especially when they&#8217;re led by opportunists.</p>
+<p>The weirdest, however, happened to me, when I debated the Plame Affair with some conservatives. They were, and still are convinced, that Scooter Libby is behind giving a bad name to the former administration. I still don&#8217;t understand their internal logic. Libby is an ardent conservative, he was pardoned by Bush, so he has zero reasons to attack them, he did not go broke after being fired.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-daulnay even thread-even depth-1" id="comment-1062008">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/1924bc8e2a1cabe5f69d2ab986a9cb95?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/1924bc8e2a1cabe5f69d2ab986a9cb95?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">daulnay</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:38:17+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062008" itemprop="url">7 February 2017 at 2:38 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>DeVos is pushing the same agenda Grover Norquist laid out; &#8220;I don&#8217;t want to abolish government. I simply want to reduce it to the size where I can drag it into the bathroom and drown it in the bathtub.&#8221;</p>
+<p>Worth noting that the agenda isn&#8217;t to actually eliminate government. The agenda is to shift all governing activity into the hands of corporate leaders. The governing part of it continues, just by corporation owned by the wealthy. We&#8217;re in the middle of a titanic struggle between two forms of government, the civic state and the corporation.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-jimf odd alt thread-odd thread-alt depth-1" id="comment-1062010">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/5e63e6678c0f2d8b99e8f5dc4712eded?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/5e63e6678c0f2d8b99e8f5dc4712eded?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name"><a href="http://www.chimprefuge.com" rel="external nofollow" itemprop="url">jimf</a></span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T14:59:17+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062010" itemprop="url">7 February 2017 at 2:59 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>This certainly puts to rest any lingering ideas that this country is a meritocracy. </p>
+<p>Yes, here in the land of opportunity you can be completely unqualified for a top level cabinet position in the USA but you can still claim it if you give enough money to the right people. It is a wonderful message to send to every school kid across the land because at least now they now they know the cost of admission ($200E6).</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-unclefrogy even thread-even depth-1" id="comment-1062012">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/802c47f8de4500411a620c95e9a83327?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/802c47f8de4500411a620c95e9a83327?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">unclefrogy</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T15:11:22+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062012" itemprop="url">7 February 2017 at 3:11 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>well this plays into the hands of the Chinese,<br/>
+we are not loosing the leadership of the world contest as much as forfeiting the game by not engaging in the competition for knowledge. </p>
+<p>uncle frogy</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-colinjohnstone odd alt thread-odd thread-alt depth-1" id="comment-1062013">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/8f17979126abaa42a767ce9cf6457295?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/8f17979126abaa42a767ce9cf6457295?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Demeisen</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T15:14:50+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062013" itemprop="url">7 February 2017 at 3:14 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>@jimf (#8): The entire concept of &#8220;meritocracy&#8221; is incompatible with the American political system, as it exists in its current state, unless you define the word &#8220;merit&#8221; to mean &#8220;wealth.&#8221; Which, unfortunately, is exactly what many of the far-right churches have done with their &#8220;prosperity gospel&#8221; flavor of neo-Calvinism. If you&#8217;re rich, and you spout the right platitudes, you must have God&#8217;s favor and therefore deserve to dictate to the unwashed masses. This belief has become a point of faith for many, and will likely prove hard to dispel.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-lostbrit even thread-even depth-1" id="comment-1062014">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/2279cbe7c6d0e75d8e13925bf756e4c7?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/2279cbe7c6d0e75d8e13925bf756e4c7?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">lostbrit</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T15:38:05+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062014" itemprop="url">7 February 2017 at 3:38 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>It pains me to see this happening to the US but I take some nasty satisfaction in the fact it stops the UK looking like such fools on the world stage.</p>
+<p>However I am still waiting for all the &#8220;Anyone but Hillary&#8221; types to continue to justify why they feel this insane nightmare the world is enduring is so much better than the alternative. Not holding my breath though.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-stevem odd alt thread-odd thread-alt depth-1" id="comment-1062015">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">slithey tove (twas brillig (stevem))</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T15:38:16+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062015" itemprop="url">7 February 2017 at 3:38 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Countdown begins: When Trump welcomes Putin to relieve Trump of his duties, as Putin will take over the job and make us all GREAT again. Well done Drumph, handing over the poorly educated to a Russian overlord. *applause*<br/>
+T minus &#8230;<br/>
+oh sh~t (rather Putin than Bannor) F~~K</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-unclefrogy even thread-even depth-1" id="comment-1062016">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/802c47f8de4500411a620c95e9a83327?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/802c47f8de4500411a620c95e9a83327?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">unclefrogy</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T15:51:28+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062016" itemprop="url">7 February 2017 at 3:51 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>@10<br/>
+the whole concept only works here because the US is on top with all the power and wealth we have now because of the fortune of having conquered and settled an unexploited land and provided an education system that was easily accessed comparatively by anyone.<br/>
+I do not think those ideas that brought us to this particular juncture will fare so well when world leadership in science, in development and in trade passes to some one else like China.<br/>
+the bigoted leading the ignorant can&#8217;t lead to any place that is not going to be violent, with that prosperity will vanish. leaving the 1% and everyone else.<br/>
+the poor will be singing a different song<br/>
+<a href="https://www.youtube.com/watch?v=FnBMLG57sro" rel="nofollow">https://www.youtube.com/watch?v=FnBMLG57sro</a><br/>
+uncle frogy</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-davidgeelan odd alt thread-odd thread-alt depth-1" id="comment-1062018">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img class="avatar" src="//graph.facebook.com/548907886/picture?type=normal" style="width:48px" alt=""/><span itemprop="name"><a href="http://www.facebook.com/bravus" rel="external nofollow" itemprop="url">davidgeelan</a></span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T16:14:12+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062018" itemprop="url">7 February 2017 at 4:14 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>The sad part is that it is much easier and quicker to tear down something than to build something. In this case, quality public education. The damage wrought even in a single term will take decades to repair and rebuild&#8230; and there have already been considerable depredations even prior to this administration.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-tccc even thread-even depth-1" id="comment-1062021">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/297418cf750e0c88035cf26cb430111a?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/297418cf750e0c88035cf26cb430111a?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">tccc</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T16:32:07+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062021" itemprop="url">7 February 2017 at 4:32 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>If you have not read the tactics guide put out by current and former congressional staffers who saw the tea party have an outsized influence on congress, it is a must read:</p>
+<p>A PRACTICAL GUIDE FOR RESISTING THE TRUMP AGENDA<br/>
+Former congressional staffers reveal best practices for making Congress listen.</p>
+<p><a href="https://www.indivisibleguide.com/" rel="nofollow">https://www.indivisibleguide.com/</a></p>
+<p>It is carried out by groups of 10-20 people coordinating their work.</p>
+<p>Read it. seriously. There is a podcast reading of it as well if you would prefer audiobook style</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-secondtofirstworld odd alt thread-odd thread-alt depth-1" id="comment-1062023">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">secondtofirstworld</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T16:39:04+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062023" itemprop="url">7 February 2017 at 4:39 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>@Demeisen #10:</p>
+<p>I&#8217;ve found your point on Neo-Calvinism interesting, and within the faith itself, actually ironic. I was a Calvinist, and our churches were puritan in nature, it would have surprised me to hear of the accumulation of wealth, since Luther&#8217;s main tangent was for the split that rich people bought absolution. Pretty much what they taught in original Calvinism goes against this prosperity gospel.</p>
+<p>I don&#8217;t defend either view, or play their devil&#8217;s advocate, but to me this seems more like an American, than a Christian thing. Here in Europe, the 2 churches who ask/demand for a lot of donations are Catholics and Evangelicals (whom I call the more Catholic than the actual Catholics).</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-raven even thread-even depth-1" id="comment-1062027">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/9237862f13de0257f57d0d56a4486869?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/9237862f13de0257f57d0d56a4486869?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">raven</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T16:53:20+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062027" itemprop="url">7 February 2017 at 4:53 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>This is bad no doubt about it.<br/>
+They put someone in charge of public education who hates&#8230;public education.</p>
+<p>But maybe not that bad. The Dept. of Education doesn&#8217;t really have that much power.<br/>
+1. The constitution explicitly leaves education to the states and local.<br/>
+2. The Feds only supply 8% of public school budgets.<br/>
+Since all budgets are under stress, that still matters but 8% is 8%.<br/>
+3. Much of that money is already designated under various spending laws. DeVos can&#8217;t arbitrarily redirect that money.<br/>
+4. I doubt congress will give her much new money to play with. Spending money on children just isn&#8217;t a GOP thing.</p>
+<p>5. It does say though, if parents want their children to get a good education, they will have to watch closely and may well end up providing part of it.</p>
+<p>And oddly enough, America was Made Great under&#8230;public education. Another positive feature of our society that the GOP wants to destroy.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-diegogarcia1 odd alt thread-odd thread-alt depth-1" id="comment-1062029">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/c6f978a45f3e5e84327d5df72d2b9e27?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/c6f978a45f3e5e84327d5df72d2b9e27?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Kreator</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T16:57:42+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062029" itemprop="url">7 February 2017 at 4:57 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>lostbrit @ #11:</p>
+<blockquote><p>However I am still waiting for all the “Anyone but Hillary” types to continue to justify why they feel this insane nightmare the world is enduring is so much better than the alternative.</p></blockquote>
+<p>Conspirational thinking. Remember, they are people who gorged on right-wing&#8217;s smear campaigns and propaganda with gusto. They can easily come up with alternative scenarios (and facts!) of doom.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-emergence even thread-even depth-1" id="comment-1062032">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/ebf2b5e70420609c22b0491c53222d9d?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/ebf2b5e70420609c22b0491c53222d9d?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">emergence</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T17:23:44+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062032" itemprop="url">7 February 2017 at 5:23 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Note how they think that the &#8220;snowflakes&#8221; won&#8217;t be able to organise anything. The last election taught progressives that we can&#8217;t underestimate our enemies. It seems like the rethuglicans haven&#8217;t learned that lesson yet.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-fernando odd alt thread-odd thread-alt depth-1" id="comment-1062038">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/f7c5a59ae6ced40aae2eb2adc1928023?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/f7c5a59ae6ced40aae2eb2adc1928023?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">fernando</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T18:23:46+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062038" itemprop="url">7 February 2017 at 6:23 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>The theocratic and plutocratic far right, started to really destroying your country when they made the, &#8220;In God We Trust&#8221;, a sectarian &#8220;motto&#8221;, of loyalty and trust to a particular deity, with a horrible history regarding human rights, the officail motto of the USA, and almost abandoned the unofficial &#8220;E pluribus unum&#8221;, probably the most beautiful, and true, &#8220;motto&#8221; for your country: &#8220;One out o many&#8221;.</p>
+<p>I really wish you all the best of luck and don&#8217;t give up, another day, a more sunny day, will rise again with your help and the others that &#8211; by means of civic resistance and lawful combat against evil laws and acts &#8211; will, really, make America great again: a country that is a beacon of Hope, of Democracy and Human Rights.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-tethys even thread-even depth-1" id="comment-1062042">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/4dc0923c2be7bfa12915c51711ada95d?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/4dc0923c2be7bfa12915c51711ada95d?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Tethys</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T19:03:58+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062042" itemprop="url">7 February 2017 at 7:03 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>We are aware that the trolls like to spy on us. It isn&#8217;t as if we are making super secret plans to take over the world, and like all trolls, they tend to get kicked out the second they attempt to participate. They might even learn some feminism and how to fact-check, so we don&#8217;t worry about them knowing our plans. It is rather nice to have a horde of nearly 30,000 feminists available at the click of a few buttons.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-ckitching odd alt thread-odd thread-alt depth-1" id="comment-1062044">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/2f85f8b9f0f6cbce8656f636537e8da4?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/2f85f8b9f0f6cbce8656f636537e8da4?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">ck, the Irate Lump</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T20:42:04+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062044" itemprop="url">7 February 2017 at 8:42 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>raven wrote:</p>
+<blockquote><p>2. The Feds only supply 8% of public school budgets.</p></blockquote>
+<p>Her purpose is to privatize the school system. She will attempt to make that 8% contingent on accepting voucher and charter schools in the states they haven&#8217;t been able to crack into yet, and perhaps also on loosening the restrictions on religious schools.</p>
+<p>She can do a hell of a lot of damage with something as simple as that. Once the process of privatizing the public school system starts, it&#8217;s damn near impossible to reverse.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-ckitching even thread-even depth-1" id="comment-1062045">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/2f85f8b9f0f6cbce8656f636537e8da4?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/2f85f8b9f0f6cbce8656f636537e8da4?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">ck, the Irate Lump</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T20:49:40+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062045" itemprop="url">7 February 2017 at 8:49 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Also, this is what Betsy DeVos said in 1997 in Roll Call:</p>
+<blockquote><p>My family is the biggest contributor of soft money to the Republican National Committee. I have decided to stop taking offense, at the suggestion that we are buying influence. Now I simply concede the point. They are right. We do expect something in return. We expect to foster a conservative governing philosophy consisting of limited government and respect for traditional American virtues. We expect a return on our investment.</p></blockquote>
+<p>I guess she started expecting a little more direct return on investment.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-gregmusings odd alt thread-odd thread-alt depth-1" id="comment-1062047">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/f0cb5c55268a8d40fb2614c6a8f691ca?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/f0cb5c55268a8d40fb2614c6a8f691ca?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">gregmusings</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T21:31:03+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062047" itemprop="url">7 February 2017 at 9:31 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>So they&#8217;ve given us our marching orders: stay Involved, be loud, get in their way. That&#8217;s my plan.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-raven even thread-even depth-1" id="comment-1062050">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/9237862f13de0257f57d0d56a4486869?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/9237862f13de0257f57d0d56a4486869?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">raven</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T23:06:12+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062050" itemprop="url">7 February 2017 at 11:06 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<blockquote><p>She will attempt to make that 8% contingent on accepting voucher and charter schools in the states they haven’t been able to crack into yet, and perhaps also on loosening the restrictions on religious schools.</p></blockquote>
+<p>I don&#8217;t think she has that power.</p>
+<p>That money was allocated by congress. To support specific programs such as The No Child Left Behind Act.<br/>
+I don&#8217;t see that she can redirect that money without further legislation.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-numerobis odd alt thread-odd thread-alt depth-1" id="comment-1062051">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/5a1dc6305a15bee8d7ffc3b6b6af8d33?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/5a1dc6305a15bee8d7ffc3b6b6af8d33?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">numerobis</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-07T23:59:38+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062051" itemprop="url">7 February 2017 at 11:59 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Rob Grijanis:<br/>
+<blockquote>I was hoping John McCain and Lindsey Graham would pitch in. Crap.</p></blockquote>
+<p>Those two love to talk tough maverick independent shit, but they always vote their party line. Don&#8217;t rely on them ever.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-numerobis even thread-even depth-1" id="comment-1062052">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/5a1dc6305a15bee8d7ffc3b6b6af8d33?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/5a1dc6305a15bee8d7ffc3b6b6af8d33?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">numerobis</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T00:05:55+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062052" itemprop="url">8 February 2017 at 12:05 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Meanwhile, Sessions is going in, and the senate is silencing debate: <a href="https://www.theguardian.com/us-news/2017/feb/08/elizabeth-warren-mitch-mcconnell-silence-senate-debate-jeff-sessions-nomination" rel="nofollow">https://www.theguardian.com/us-news/2017/feb/08/elizabeth-warren-mitch-mcconnell-silence-senate-debate-jeff-sessions-nomination</a></p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-stevem odd alt thread-odd thread-alt depth-1" id="comment-1062063">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">slithey tove (twas brillig (stevem))</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T09:12:41+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062063" itemprop="url">8 February 2017 at 9:12 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>my only hope is that, she being so ignorant of the system, will let all the underlings continue doing their habitual tasks and things will roll along, even as she tries to steer it into a ditch. Sometimes ruts are a good thing. Like <b>Yes, Minister</b>, Humphries says long term bureaucrats keep the government working despite the temporary, blustery, elected officials who just come and go short term; all sound and fury accomplishing nuthing.<br/>
+yeah i know. feint hope, yet only one. *sob*</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-stevem even thread-even depth-1" id="comment-1062064">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/6b3da34dccc356514891f3c93d7ef1c5?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">slithey tove (twas brillig (stevem))</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T09:16:00+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062064" itemprop="url">8 February 2017 at 9:16 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>re 28 erratum:<br/>
+<strike>Humphries </strike> &#8211;&gt; Humphrey</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-multitool odd alt thread-odd thread-alt depth-1" id="comment-1062065">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/91d49ad887294996e827dca520d7063a?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/91d49ad887294996e827dca520d7063a?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">multitool</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T09:45:32+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062065" itemprop="url">8 February 2017 at 9:45 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>If there were only some way to make the White House less relevant, so even when they win it doesn&#8217;t hurt us as much.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-markadams even thread-even depth-1" id="comment-1062071">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/55600eca8abc274ab618dc4b3c616af2?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/55600eca8abc274ab618dc4b3c616af2?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Mark Adams</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T10:44:39+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062071" itemprop="url">8 February 2017 at 10:44 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Conservatives still outnumber liberals by about 50% in the USA. </p>
+<p>And although liberalism has been rising in the USA largely due to a drop in moderates, the global trend as far as politics is a rightward march in politics (Brexit, rise of European right-wing parties, etc.). In addition, Democrats lost of lot of seats in Congress during the Obama years. </p>
+<p>So the appointment of Betsy Devros is no surprise to anyone who has been following politics in recent years.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-cartomancer odd alt thread-odd thread-alt depth-1" id="comment-1062073">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/a61c2f33f00b737a1dc2f080d38d2f8c?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/a61c2f33f00b737a1dc2f080d38d2f8c?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">cartomancer</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T11:00:19+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062073" itemprop="url">8 February 2017 at 11:00 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>It seems a touch churlish, and all too easy, to chalk this situation up as evidence that the British system of checks and balances &#8211; sharing powers between the judicial, legislative and executive branches of government &#8211; is superior to the American system &#8211; a rigorous division of powers. But this case is certainly a demonstration of one of the excesses the US system is more prone to (I don&#8217;t doubt that equivalent problems can be illustrated in our recent political history). Perhaps the system needs to be reconsidered?</p>
+<p>Most government ministers in the UK are chosen from the parliamentary party with the majority &#8211; the Prime Minister&#8217;s party. So they are elected MPs who have at least won a popular mandate, rather than any old idiots the PM wants to bring in. Occasionally the cabinet will include one or two non-MPs, usually political bigwigs who the PM owes favours to like Peter Mandelson or Baroness Warsi, but the majority are always MPs (who are answerable to their constituents). In theory the PM could appoint a cabinet of whoever he wanted, but since he relies on his party&#8217;s MPs (and, in the Labour party, grass roots members and unions) for his own position it&#8217;s never going to happen. If it did the MPs would soon withdraw their support and oust him, because their getting the top jobs is all part of the bargain. </p>
+<p>Not that having your Mitch McConnells and Paul Ryans and Newt Gingriches as ministers would be a huge improvement of course&#8230; but I can&#8217;t help but think it would be some improvement.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-birgerjohansson even thread-even depth-1" id="comment-1062080">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/c10e8dbee5d54bcf8a74e64004fa7004?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/c10e8dbee5d54bcf8a74e64004fa7004?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">birgerjohansson</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T11:33:26+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062080" itemprop="url">8 February 2017 at 11:33 am</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>Another difference between Britain and Merca is the dominant role of the BBC in the media (not that it is as objective as you would hope, as we saw during the invasion of Iraq).<br/>
+&#8212; &#8212; &#8212; &#8212; &#8212;</p>
+<p> To understand American politics, especially people on the far right who get their news only from Fox News and similar sources, it is worthwhile to get familiar with the term “epistemic closure” means;<br/>
+To believe only the news you want to believe, from sources that only tells you what you expect to learn, to only perceive that tiny slice of reality that confirms your biases and prejudices;<br/>
+To essentially become Homo Rupertmurdochis !<br/>
+Example from &#8220;Dispatches From The Culture wars:</p>
+<p> “Trump’s World of Epistemic Closure” <a href="http://www.patheos.com/blogs/dispatches/2017/02/07/trumps-world-epistemic-closure/" rel="nofollow">http://www.patheos.com/blogs/dispatches/2017/02/07/trumps-world-epistemic-closure/</a></p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-jrkrideau odd alt thread-odd thread-alt depth-1" id="comment-1062098">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/25943c93d33479512874939809ee8e51?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/25943c93d33479512874939809ee8e51?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">jrkrideau</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T13:46:51+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062098" itemprop="url">8 February 2017 at 1:46 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>@32 cartomancer,</p>
+<p>I think another difference between the UK and USA government structures is the aforementioned Sir Humphrey and his equivalents. Much more minor but I think noticeable</p>
+<p>Some helpful American may correct me but I believe each new US President replaces a lot of the senior public service. I read not long after Trump&#8217;s election that he had to make 4,000 appointments, presumably at reasonably senior levels.</p>
+<p>Imagine trying to organize a new government, without single experienced Permanent Secretary—or as we would say here—Deputy Minister available.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-secondtofirstworld even thread-even depth-1" id="comment-1062100">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=48&#038;d=identicon&#038;r=r' srcset='http://0.gravatar.com/avatar/307e04d2e9135dcbe0285b26c0e61a37?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">secondtofirstworld</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T13:55:47+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062100" itemprop="url">8 February 2017 at 1:55 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>@Mark Adams #31:</p>
+<p>Not all instances can be lumped together. Brexiters represent the part of society, which calls the rest of the EU the continent as if they have nothing in common with us. I also would make a strong distinction between right wing and far right. I can&#8217;t recall the name of the British PM (parliamentary member, not prime minister) who took part, or at least had knowledge of guns being shipped to the Gaza Strip under the guise of humanitarian aid. He has a wife, who has a conflict of interest, and he&#8217;s not the only one with a foreigner wife.</p>
+<p>That alone is no issue, except if one actively campaign against immigration, like Richard Spencer (banned from the EU), Trump&#8217;s first and third wife are Eastern and Southern European from a non-aligned socialist country, Farage has a foreign wife, and so on. These fringe right figures offer nothing new, just the exotic unknown in Islamophobia, that thanks to the refugee crisis, also got a face. That coupled with economic instability on a global scale gave rise to the populist right.</p>
+<p>Former socialist countries have a tad different parties for populism. They&#8217;re either openly or covertly supported financially by the Kremlin, and thus they all have a positive opinion about Putin. His long term goal is to take America out of the equation by convincing leaders of going into isolation, and to destroy the EU. Somebody said here even Putin is better, than Bannon, no, he&#8217;s worse.</p>
+<p>Of course this isn&#8217;t being done for sh*ts and giggles, the current endgame is to achieve global economic dominance. Once America implodes under the weight of the trade wars, and the EU cannot keep its integrity together, the only other players are already the allies of Russia. This kind of behavior isn&#8217;t different from the 1930s. People, like Lindbergh, instead of admitting what a treasonous stupid idea it was to court Nazi Germany, when they allied themselves with the Japanese, they only said, what happened at Pearl Harbor was horrible, but could have been avoided if they had listened to them.</p>
+<p>The only way to mend this and turn people toward moderates is to make people realize they give the lock of the henhouse to the fox.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-saltycurrent odd alt thread-odd thread-alt depth-1" id="comment-1062152">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/2b43c25df6f442e734e80b0fcc07bb89?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/2b43c25df6f442e734e80b0fcc07bb89?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name"><a href="http://saltycurrent.blogspot.com" rel="external nofollow" itemprop="url">SC (Salty Current)</a></span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T22:40:15+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062152" itemprop="url">8 February 2017 at 10:40 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<blockquote><p>One leader applauded the report and said, “we don’t care if they like what we have to say, we don’t need them to agree with us. We just need them to give up, shut up and stay out of our way.”</p></blockquote>
+<p>This smacks of rape culture.</p>
+<p>So I protested this week in another part of the country. There was a Trump counter-protest &#8211; a new experience for me. The good news: even though the place had voted for Trump, the resistance far outnumbered the followers (in fact, from some of their comments, I got the impression that some of the resistance protesters had themselves voted for him). A few observations:</p>
+<p>&#8211; The gender divide was stark.<br/>
+&#8211; The police in my judgment were more sympathetic to the Trumpists, although they weren&#8217;t overtly hostile to the resistance demonstrators.<br/>
+&#8211; The pro-Trump people had no positive message. They weren&#8217;t pro anything that could be expressed in terms of any positive values. They have Trump and bigotry and a desperately claimed identity. I felt sorry for them. They were genuinely pathetic. (Their jingoism was especially pitiful in that their hero and his stooges have spent the past several days publicly trashing the US.)<br/>
+&#8211; Their primary purpose clearly wasn&#8217;t to put forward any positive message but to mock, insult, and intimidate the resistance protesters. So they were somewhat scary, but also, again, pretty sad. Their show of contemptuous glee wasn&#8217;t altogether convincing.</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-mrdeadinmypocket even thread-even depth-1" id="comment-1062155">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//1.gravatar.com/avatar/45a764efcbc0a597bc7ccf7106fba0de?s=48&#038;d=identicon&#038;r=r' srcset='http://1.gravatar.com/avatar/45a764efcbc0a597bc7ccf7106fba0de?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">Mrdead Inmypocket</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-08T23:38:30+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062155" itemprop="url">8 February 2017 at 11:38 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>There are quite a few elementary school teachers in my family. Overheard at a recent family gathering concerning Devos:</p>
+<p>&#8220;Delores Umbridge is taking over Hogwarts&#8221;</p>
+</div>
+</article>
+</li> 
+<li class="comment byuser comment-author-thinkingman odd alt thread-odd thread-alt depth-1" id="comment-1062373">
+<article itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+<header class="comment-header">
+<p class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">
+<img alt='' src='//2.gravatar.com/avatar/ba8a3530b5bc5c2fe287d00f81ee274b?s=48&#038;d=identicon&#038;r=r' srcset='http://2.gravatar.com/avatar/ba8a3530b5bc5c2fe287d00f81ee274b?s=96&amp;d=identicon&amp;r=r 2x' class='avatar avatar-48 photo' height='48' width='48'/><span itemprop="name">thinkingman</span> <span class="says">says</span> </p>
+<p class="comment-meta">
+<time itemprop="commentTime" datetime="2017-02-10T22:40:15+00:00"><a href="http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/#comment-1062373" itemprop="url">10 February 2017 at 10:40 pm</a></time> </p>
+</header>
+<div class="comment-content" itemprop="commentText">
+<p>So how long until repubs decide that school vouchers are a handout? As in, Family X has 3 kids and only paid $500 in school tax. They get $2000 per voucher times 3 kids for a total of $5500 more than they paid in. I&#8217;m just making up numbers based on some vouchers I saw online, but these are typically the people who complain about a minimum wage single parent getting a federal refund bigger than they paid in. I can&#8217;t believe they would be OK with this long term.<br/>
+I live in the deep red bible belt south and have heard the grumblings of older wealthier people complaining over paying school taxes when they have no children school age. It appears to me this is a backdoor way of doing just that. I really feel they are going to set vouchers up in a way that shifts the burden of education costs away from the wealthy and away from childless households, when as a society we decided a long time ago that education of our collective children was so important that we all bear some responsibility in it.</p>
+</div>
+</article>
+</li> 
+</ol></div> <div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/pharyngula/2017/02/07/deplorable-devos-is-in/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="/wp-login.php?redirect_to=http://freethoughtblogs.com/pharyngula/2017/02/07/deplorable-devos-is-in/%23respond">logged in</a> to post a comment.</p> </div> 
+</main><div class="google-ad-widget">
+<div id='div-gpt-ad-1410469553543-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410469553543-0'); });
+</script>
+</div>
+</div></div></div><footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter"><div class="wrap"><div class="creds"><p>&copy; 2014 - FreethoughtBlogs.com</p></div></div></footer></div>  
+<script>
+    <!-- 
+        var sc_project=7090442; 
+        var sc_security="47f2ced1"; 
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+    //-->
+document.write("<sc"+"ript src='" +scJsHost +"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/"><img class="statcounter" src="//c.statcounter.com/7090442/0/47f2ced1/0/" alt="web analytics"/></a></div></noscript>
+ 
+<input type="hidden" id="social_connect_login_form_uri" value="http://freethoughtblogs.com/pharyngula/wp-login.php"/>
+<div style="display:none">
+<div class="grofile-hash-map-700a584924f4f6c16fd6fd578d59b65b">
+</div>
+<div class="grofile-hash-map-4dd94b350a468ac19a02fe338f9b94ab">
+</div>
+<div class="grofile-hash-map-6b3da34dccc356514891f3c93d7ef1c5">
+</div>
+<div class="grofile-hash-map-662182bd3bf8001c20856a0f3f7176b8">
+</div>
+<div class="grofile-hash-map-a61c2f33f00b737a1dc2f080d38d2f8c">
+</div>
+<div class="grofile-hash-map-7dc969c1b13ace4b67b569ab356d2364">
+</div>
+<div class="grofile-hash-map-307e04d2e9135dcbe0285b26c0e61a37">
+</div>
+<div class="grofile-hash-map-1924bc8e2a1cabe5f69d2ab986a9cb95">
+</div>
+<div class="grofile-hash-map-5e63e6678c0f2d8b99e8f5dc4712eded">
+</div>
+<div class="grofile-hash-map-802c47f8de4500411a620c95e9a83327">
+</div>
+<div class="grofile-hash-map-8f17979126abaa42a767ce9cf6457295">
+</div>
+<div class="grofile-hash-map-2279cbe7c6d0e75d8e13925bf756e4c7">
+</div>
+<div class="grofile-hash-map-d4e7e3a49cf92ba246868bc2ff2abcd7">
+</div>
+<div class="grofile-hash-map-297418cf750e0c88035cf26cb430111a">
+</div>
+<div class="grofile-hash-map-9237862f13de0257f57d0d56a4486869">
+</div>
+<div class="grofile-hash-map-c6f978a45f3e5e84327d5df72d2b9e27">
+</div>
+<div class="grofile-hash-map-ebf2b5e70420609c22b0491c53222d9d">
+</div>
+<div class="grofile-hash-map-f7c5a59ae6ced40aae2eb2adc1928023">
+</div>
+<div class="grofile-hash-map-4dc0923c2be7bfa12915c51711ada95d">
+</div>
+<div class="grofile-hash-map-2f85f8b9f0f6cbce8656f636537e8da4">
+</div>
+<div class="grofile-hash-map-f0cb5c55268a8d40fb2614c6a8f691ca">
+</div>
+<div class="grofile-hash-map-5a1dc6305a15bee8d7ffc3b6b6af8d33">
+</div>
+<div class="grofile-hash-map-ec785f8631378e3f23f785b1aa6112b2">
+</div>
+<div class="grofile-hash-map-55600eca8abc274ab618dc4b3c616af2">
+</div>
+<div class="grofile-hash-map-c10e8dbee5d54bcf8a74e64004fa7004">
+</div>
+<div class="grofile-hash-map-25943c93d33479512874939809ee8e51">
+</div>
+<div class="grofile-hash-map-2b43c25df6f442e734e80b0fcc07bb89">
+</div>
+<div class="grofile-hash-map-fc176199b3ef6544b8d8282c0ead5917">
+</div>
+<div class="grofile-hash-map-ba8a3530b5bc5c2fe287d00f81ee274b">
+</div>
+</div>
+<div id='div-gpt-ad-1410470433473-0' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410470433473-0'); });
+</script>
+</div><div id='div-gpt-ad-1410470472975-0' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410470472975-0'); });
+</script>
+</div>
+<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/freethoughtblogs.com\/pharyngula\/2017\/02\/07\/deplorable-devos-is-in\/":33516};
+	</script>
+<div id="sharing_email" style="display: none;">
+<form action="/pharyngula/2017/02/07/deplorable-devos-is-in/" method="post">
+<label for="target_email">Send to Email Address</label>
+<input type="email" name="target_email" id="target_email" value=""/>
+<label for="source_name">Your Name</label>
+<input type="text" name="source_name" id="source_name" value=""/>
+<label for="source_email">Your Email Address</label>
+<input type="email" name="source_email" id="source_email" value=""/>
+<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off"/>
+<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+<img style="float: right; display: none" class="loading" src="//freethoughtblogs.com/pharyngula/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16"/>
+<input type="submit" value="Send Email" class="sharing_send"/>
+<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+<div class="errors errors-1" style="display: none;">
+Post was not sent - check your email addresses! </div>
+<div class="errors errors-2" style="display: none;">
+Email check failed, please try again </div>
+<div class="errors errors-3" style="display: none;">
+Sorry, your blog cannot share posts by email. </div>
+</form>
+</div>
+<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<script>
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+<script type="text/javascript" src="//platform.tumblr.com/v1/share.js"></script> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+			function renderGooglePlus1() {
+				if ( 'undefined' === typeof gapi ) {
+					return;
+				}
+
+				jQuery( '.g-plus' ).each(function() {
+					var $button = jQuery( this );
+
+					if ( ! $button.data( 'gplus-rendered' ) ) {
+						gapi.plusone.render( this, {
+							href: $button.attr( 'data-href' ),
+							size: $button.attr( 'data-size' ),
+							annotation: $button.attr( 'data-annotation' )
+						});
+
+						$button.data( 'gplus-rendered', true );
+					}
+				});
+			}
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				po.innerHTML = '{"parsetags": "explicit"}';
+				po.onload = renderGooglePlus1;
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+			jQuery( document.body ).on( 'post-load', renderGooglePlus1 );
+			</script>
+<script type="text/javascript">
+				// Pinterest shared resources
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				s.setAttribute('data-pin-hover', true);				s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+				var x = document.getElementsByTagName("script")[0];
+				x.parentNode.insertBefore(s, x);
+				// if 'Pin it' button has 'counts' make container wider
+				jQuery(window).load( function(){ jQuery( 'li.share-pinterest a span:visible' ).closest( '.share-pinterest' ).width( '80px' ); } );
+			</script>
+<script type="text/javascript">
+			jQuery( document ).ready( function() {
+			    jQuery.getScript( '//platform.linkedin.com/in.js?async=true', function success() {
+			        IN.init();
+			    });
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script><link rel='stylesheet' id='nlpcss-css' href='//freethoughtblogs.com/pharyngula/wp-content/plugins/network-latest-posts/css/default_style.css?ver=4.4.7' type='text/css' media='all'/>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-includes/js/wp-embed.min.js?ver=4.4.7'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//freethoughtblogs.com/pharyngula/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=3.8.3'></script>
+<script>
+    if(window.innerWidth<800) jQuery('body').addClass("mobile");
+  </script>
+<script type="text/javascript" src="//s.skimresources.com/js/66723X1521708.skimlinks.js"></script><script type='text/javascript' src='//stats.wp.com/e-201708.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.8.3',blog:'25718040',post:'33516',tz:'-5',srv:'freethoughtblogs.com'} ]);
+	_stq.push([ 'clickTrackerInit', '25718040', '33516' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0ac8520a27","applicationID":"3181468","transactionName":"Z1cEYBYHCkFVBRAKXV4dJ1cQDwtcGxUNDVVcVw==","queueTime":0,"applicationTime":303,"atts":"SxAHFl4dGU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+ 

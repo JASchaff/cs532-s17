@@ -1,0 +1,83 @@
+Homepage
+Sign in / Sign up
+Roland Behm
+Blocked
+Unblock
+Follow
+Following
+Feb 6
+Lives in the balance — DeVos, Gorsuch, and Grimm
+(l-r) Besty DeVos, Gavin Grimm, and Neil Gorsuch
+by Roland J. Behm
+The Supreme Court will hear the case of 
+Gloucester County School Board v. G.G.
+ on Tuesday, March 28, 2017. The case arises from a transgender student named Gavin Grimm who identifies as male and wants to be able to use the men’s bathroom at his Virginia high school. The issues for consideration involve the deference due to an agency’s construction of a statute or its own regulation by the judiciary. The Court’s decision will have a direct impact on the lives of K-12 students who are at a high risk for suicide.
+In 2016, the U.S. Department of Education (Department) issued a letter interpreting a regulation issued by the Department as part of its implementation of Title IX of the Education Amendments Act of 1972. The letter concluded that the only way to “provide separate toilet . . . facilities on the basis of sex” in a manner that does not deprive students of equal educational opportunity — and the only way to make common restrooms truly accessible — is to allow transgender students to use restrooms consistent with their gender identity.
+That letter served in large part as the basis for the Fourth Circuit Court of Appeal’s ruling in favor of Gavin’s challenge of the Gloucester County School Board policy of requiring students to use bathrooms based on the gender listed on their birth certificates. The Fourth Circuit found that the Department’s interpretation of its regulation was neither clearly erroneous nor inconsistent with the statutory text, deferring to the Department’s reasonable interpretation of its own regulation. The ruling by the Fourth Circuit was based in substantial measure on what is called “
+Auer
+ deference” — i.e. the deference due to an agency’s construction of its own regulations. Also relevant was the 
+Chevron
+ deference, the deference due an agency’s construction of a statute.
+Gloucester County School Board appealed the decision and the Supreme Court granted the appeal. The issues to be argued on March 28th include whether the Supreme Court should retain the 
+Auer
+ deference and, if 
+Auer
+ is retained, should deference extend to an agency letter that was adopted in the context of the very dispute in which deference is sought.
+Supreme Court of the United States
+The time has passed for the Trump administration to file a brief in the Supreme Court supporting the position of the Gloucester County School Board. Nonetheless, the potential confirmation of Besty DeVos as Secretary of Education and Neil Gorsuch as a Supreme Court justice allow the Trump administration to affect the decision both directly and indirectly.
+If confirmed as Secretary of Education, Ms. DeVos could still act to rescind the Department letter at the heart of the case or issue new and superseding guidance on the issue. The rescission of the letter or the issuance of new guidance by the Department would likely result in the Supreme Court remanding the case back to the Fourth Circuit for examination of its initial decision in light of the rescinded or newly-issued guidance. A remanding of the case based on the rescinding of the old letter or the issuance of new guidance would likely allow the Gloucester County School Board to continue the policy of bathroom use based on gender at birth.
+If confirmed as a Supreme Court justice, Judge Gorsuch will be participating at the March 28th hearing and actively involved — along with the other eight justices — in reaching a decision on the case. As noted previously, the primary issues before the Supreme Court involve the deference to given to an agency in the interpretation of its own regulations — the 
+Auer
+ deference — and the deference to be given an agency in the interpretation of a statute — the 
+Chevron
+ deference.
+Judge Gorsuch made clear his views on the Chevron deference in a concurring opinion he authored in 
+Gutierrez-Brizuela v. Lynch
+, a decision published in August 2016, Judge Gorsuch set out his view that 
+Chevron
+ needs to be reconsidered. His concurring opinion begins:
+There’s an elephant in the room with us today. We have studiously attempted to work our way around it and even left it unremarked. But the fact is Chevron … permit executive bureaucracies to swallow huge amounts of core judicial and legislative power and concentrate federal power in a way that seems more than a little difficult to square with the Constitution of the framers’ design. Maybe the time has come to face the behemoth.
+The concurring opinion continues for 23 pages, including:
+[T]he courts are not fulfilling their duty to interpret the law and declare invalid agency actions inconsistent with those interpretations in the cases and controversies that come before them. … That’s a problem for the judiciary. And it is a problem for the people whose liberties may now be impaired not by an independent decisionmaker seeking to declare the law’s meaning as fairly as possible — the decisionmaker promised to them by law — but by an avowedly politicized administrative agent seeking to pursue whatever policy whim may rule the day. . . .
+Lesbian, gay, bisexual, and transgender persons in general and transgender and gender nonconforming (TGNC) persons in particular are among groups with the highest risks of suicidal thoughts, plans, and attempts. The Youth Risk Behavior Surveillance survey is undertaken each year by the CDC. The 2015 survey was the first year in which high school students could self-identify as LGB (there was no ability in the survey to self-identify as TGNC). More than four out of every ten LGB high school students seriously considered attempting suicide and almost three out of every ten LGB high school students attempted suicide one or more times in the previous twelve months.
+Research on suicidality among TGNC people has revealed alarmingly high rates of suicidal ideation (SI) and suicide attempts, with 45%–77% of study respondents reporting a history of SI and 28%–52% reporting a history of one or more suicide attempts. These rates are consistently and strikingly higher than the estimated lifetime prevalence of SI and suicide attempts in the general population of 13.5% and 4.6%, respectively.
+A recent survey of TGNC adults that the vast majority of those surveyed who had attempted suicide made their first suicide attempt on or before age 20, with the number peaking between ages 13–16 — i.e., high school age.
+Data from recent survey of adults identifying as TGNC
+Studies examining external stressors in the TGNC community have demonstrated that TGNC people face high levels of discrimination and victimization and that exposure to these stressors is associated with a history of suicidal ideation and suicide attempt. One study found that nearly 70% of their sample of trans men and women experienced at least one form of victimization or discrimination related to gender identity including social discrimination, harassment and violent assault. Another study found high rates of sexual (27%) and physical (38%) violence in their sample of trans men and women and the overwhelming majority of those who reported histories stated that at least one episode of violence was related to gender expression or identity.
+If Ms. DeVos and Judge Gorsuch are confirmed to their respective positions, there are several possible outcomes of 
+Gloucester County School Board v. G.G.
+As Secretary of Education, Ms. DeVos could rescind the Department letter at the heart of the case or issue new guidance on the issue. The rescission of the letter or the issuance of new guidance by the Department could result in the Supreme Court either (i) remanding the case back to the Fourth Circuit for examination of the Fourth Circuit’s initial decision in light of the rescinded or newly-issued guidance or (ii) deciding the case based on the Supreme Court’s interpretation of the statute at issue (Title XI). In the latter case, the Supreme Court may explicitly or implicitly decide the issue of 
+Auer 
+and 
+Chevron
+ deference. Such a decision based on the statute would be consistent with Judge Gorsuch’s concern about “an avowedly politicized administrative agent seeking to pursue whatever policy whim may rule the day.”
+As Secretary of Education, Ms. DeVos may elect not to rescind the letter and not to issue new guidance on the issue. This would eliminate the possibility of deferring the decision, because the Supreme Court would not be able to remand to the Fourth Circuit for further consideration in light of a rescission or new guidance. The Supreme Court may decide to confirm the Fourth Court decision or it may elect to overturn the decision due to a holding by the Supreme Court that the 
+Auer
+ deference shown by the Fourth Circuit Court was misplaced. In the latter case, such a decision does not necessarily mean that the school board’s policy will remain in place; rather, the Supreme Court may decide as a matter of statutory interpretation that the Title IX allows transgender students to use restrooms consistent with their gender identity
+No matter the identity of those confirmed as Secretary of Education or Supreme Court justice nor the decision of the Supreme Court in 
+Gloucester County School Board v. G.G.
+, let us remember that there are lives in the balance — lives of K-12 students who do not conform with traditional gender roles and stereotypes. Children’s lives.
+�
+Transgender
+Politics
+Suicide
+Supreme Court
+Education
+1
+Blocked
+Unblock
+Follow
+Following
+Roland Behm
+Share
+1
+Never miss a story from
+ Roland Behm
+, when you sign up for Medium. 
+Learn more
+Never miss a story from
+ Roland Behm
+Blocked
+Unblock
+Follow
+Get updates

@@ -1,0 +1,7388 @@
+
+
+
+
+Whoa there!
+
+
+Looks like you're already verified.
+
+
+If you still have trouble signing in, you probably need a new confirmation link email.
+
+
+{* resendLink *} Please resend verification.
+
+
+
+
+
+
+
+
+Thanks for verifying your email address
+
+
+You're now logged in.
+
+
+LINK YOUR ACCOUNT FOR PREMIUM ACCESS
+
+
+Are you already a home delivery subscriber for ajc.com?
+
+
+Yes, Link My Account
+No, I'm good
+
+
+
+
+
+
+
+
+
+
+Change password
+
+		        {* newPasswordForm *}
+		            {* newPassword *}
+		            {* newPasswordConfirm *}
+		            {* submitButton *}
+		        {* /newPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Your password has been changed
+
+
+Password has been successfully updated.
+
+
+Sign in
+
+
+
+
+
+
+
+
+
+
+Email sent
+
+
+
+
+We have sent you an email with a link to change your password.
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We didn't recognize that password reset code. Enter your email address to get a new one.
+
+		        {* #forgotPasswordForm *}
+		        {* forgotPassword_emailAddress *}
+		        {* forgotPassword_sendButton *}
+		        {* /forgotPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your AJC.com profile
+
+
+Need a Profile? 
+Register Now.
+
+        
+        {* #userInformationForm *}
+
+          
+*EMAIL
+
+          {* traditionalSignIn_emailAddress *}
+
+          
+*PASSWORD
+
+
+Forgot your password?
+
+          {* traditionalSignIn_password *}
+
+          {* traditionalSignIn_signInButton *}
+        {* /userInformationForm *}
+      
+
+
+
+
+Sign in using your existing account
+
+        {* loginWidget *}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're Almost Done!
+
+
+Please confirm the information below before signing in.
+
+
+*Required
+
+		        {* #socialRegistrationForm *}
+		            {* socialRegistration_displayName *}
+		            {* socialRegistration_emailAddress *}
+		
+		            
+By submitting your registration information, you agree to our
+		              
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		            {* socialRegistration_signInButton *}
+		        {* /socialRegistrationForm *}
+		    
+
+
+
+
+
+
+
+
+Register
+
+
+*Required
+
+		        {* #registrationForm *}
+		
+		            {* traditionalRegistration_emailAddress *}
+		            {* traditionalRegistration_password *}
+		            {* traditionalRegistration_passwordConfirm *}
+		
+		            {* traditionalRegistration_displayName *}
+		            
+By submitting your registration information, you agree to our
+		              
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		
+		            {* createAccountButton *}
+		        {* /registrationForm *}
+		    
+
+
+
+
+
+
+
+
+Create a New Account
+
+
+*Required
+
+		        {* #registrationFormBlank *}
+		
+		            {* traditionalRegistration_emailAddressBlank *}
+		            {* traditionalRegistration_passwordBlank *}
+		            {* traditionalRegistration_passwordConfirmBlank *}
+		            {* traditionalRegistration_displayName *}
+		            
+By submitting your registration information, you agree to our
+		                
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+		
+		            {* createAccountButton *}
+		        {* /registrationForm *}
+		    
+
+
+
+
+
+
+
+
+Just One More Thing...
+
+
+We have sent you a verification email. Please check your email and click on the link to activate your AJC.com profile.
+
+
+If you do not receive the verification message within a few minutes of signing up, please check your Spam or Junk folder.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+Thank you for registering!
+
+
+We look forward to seeing you on AJC.com frequently. Visit us and sign in to update your profile, receive the latest news and keep up to date with mobile alerts.
+
+
+
+		        Click 
+here
+ to return to the page you were visiting.
+		        
+
+
+
+
+
+
+
+
+
+
+Create a new password
+
+
+Don't worry, it happens. We'll send you a link to create a new password.
+
+		        {* #forgotPasswordForm *}
+		        {* forgotPassword_emailAddress *}
+		        {* forgotPassword_sendButton *}
+		        {* /forgotPasswordForm *}
+		    
+
+
+
+
+
+
+
+
+Email sent
+
+
+We have sent you an email with a link to change your password.
+
+
+Close
+
+
+
+
+
+
+
+		    {* mergeAccounts *}
+		
+
+
+
+
+
+
+Sign in to complete account merge
+
+		        {* #tradAuthenticateMergeForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            {* mergePassword *}
+		            {* backButton *}
+		            {* traditionalSignIn_signInButton *}
+		        {* /tradAuthenticateMergeForm *}
+		    
+
+
+
+
+
+
+
+
+
+
+Resend Email Verification
+
+
+
+
+Click submit to receive another verification email
+
+		        {* #resendVerificationForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            
+
+
+
+
+
+		         {* /resendVerificationForm *}
+		     
+
+
+
+
+
+
+
+
+
+
+Your Verification Email Has Been Sent
+
+
+
+
+
+
+Check your email for a verification link
+
+
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for verifying your email address.
+
+
+You're now logged in.
+
+
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+It looks like you are already verified. If you still have trouble signing in, you probably need a 
+new confirmation link email.
+
+		          {* #userInformationForm *}
+		            {* traditionalSignIn_emailAddress *}
+		            {* traditionalSignIn_password *}
+		            {* traditionalSignIn_signInButton *}
+		            
+
+
+
+		                Use another account
+		              
+
+
+
+		          {* /userInformationForm *}
+		        
+
+
+
+
+
+
+
+
+
+
+Change password
+
+        {* newPasswordForm *}
+            {* newPassword *}
+            {* newPasswordConfirm *}
+            {* submitButton *}
+        {* /newPasswordForm *}
+    
+
+
+
+
+
+
+
+
+Your password has been changed
+
+
+Password has been successfully updated.
+
+
+Sign in
+
+
+
+
+
+
+
+
+
+
+Email sent
+
+
+
+
+We have sent you an email with a link to change your password.
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We didn't recognize that password reset code. Enter your email address to get a new one.
+
+        {* #forgotPasswordForm *}
+        {* forgotPassword_emailAddress *}
+        {* forgotPassword_sendButton *}
+        {* /forgotPasswordForm *}
+    
+
+
+
+
+
+
+
+
+Create a new password
+
+
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+Thanks for verifying your email address.
+
+
+You're now logged in.
+
+
+
+            {# Show dss link in NP sites that have subscriptions_url set #}
+            {% if subscriptions_url %}
+                
+
+
+* LINK YOUR ACCOUNT FOR PREMIUM ACCESS -
+
+
+Are you already a home delivery subscriber for {% site_setting friendly_name %}?
+
+
+Yes, Link My Account
+
+
+No, I'm good
+
+
+
+            {% else %}
+                
+Close
+
+            {% endif %}
+        
+
+
+
+
+
+
+
+
+
+        {% include "includes/auth/janrain/signIn_traditional.html"  with message='It looks like you are already verified. If you still have trouble signing in, you probably need a 
+new confirmation link email.
+' %}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                            Our Products
+	                        
+
+
+
+
+ 
+Your AJC, your way. Explore these products from The Atlanta Journal-Constitution.
+ 
+ 
+ 
+AJC.com Get Atlanta's News Now
+ 
+ 
+ 
+AJC access ATL Find Fun Things to Do
+ 
+ 
+ 
+myAJC Explore Exclusive Digital Extras and More
+ 
+ 
+ 
+AJC ePaper Read Today's Paper
+ 
+
+
+
+
+
+
+AJC Jobs
+ 
+Contact Us
+ 
+
+
+
+
+
+
+
+			63
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13
+
+
+
+
+
+
+
+
+
+
+open search
+
+
+clear
+
+
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+open search
+
+
+clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+			63
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+close menu
+
+
+
+
+Subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+close subnav
+
+
+open subnav
+
+
+
+
+
+
+
+
+Log Out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+NEWS
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All News
+
+
+
+
+
+
+
+
+
+    					News Video
+
+
+
+
+
+
+
+
+
+    					Local News
+
+
+
+
+
+
+
+
+
+    					Education
+
+
+
+
+
+
+
+
+
+    					Business
+
+
+
+
+
+
+
+
+
+    					Politics
+
+
+
+
+
+
+
+
+
+    					Technology
+
+
+
+
+
+
+
+
+
+    					Nation & World
+
+
+
+
+
+
+
+
+
+    					Crime & Safety
+
+
+
+
+
+
+
+
+
+    					Offbeat
+
+
+
+
+
+
+
+
+
+    					Atlanta Weather
+
+
+
+
+
+
+
+
+
+										NEWS BLOGS				
+
+
+
+
+
+
+
+
+AJC Investigations
+
+
+
+
+
+
+
+
+Political								Insider
+
+
+
+
+
+
+
+
+Get Schooled
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Atlanta Watering Restrictions
+
+
+
+
+
+
+
+
+Traffic: Construction Alert
+
+
+
+
+
+
+
+
+Ga. Public School Ratings
+
+
+
+
+
+
+
+
+Atlanta Gas								Prices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SPORTS
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Sports
+
+
+
+
+
+
+
+
+
+    					Braves
+
+
+
+
+
+
+
+
+
+    					Falcons
+
+
+
+
+
+
+
+
+
+    					Hawks
+
+
+
+
+
+
+
+
+
+    					Atlanta United
+
+
+
+
+
+
+
+
+
+    					High Schools
+
+
+
+
+
+
+
+
+
+    					Georgia Tech
+
+
+
+
+
+
+
+
+
+    					Georgia Colleges
+
+
+
+
+
+
+
+
+
+    					UGA / DawgNation
+
+
+
+
+
+
+
+
+
+    					SEC Country
+
+
+
+
+
+
+
+
+
+    					Sports Video
+
+
+
+
+
+
+
+
+
+    					AJC Store
+
+
+
+
+
+
+
+
+
+					BUY STUFF
+
+
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+
+					SPORTS BLOGS
+
+
+
+
+
+
+
+
+Recruiting
+
+
+
+
+
+
+
+
+Falcons
+
+
+
+
+
+
+
+
+Hawks
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Sports Scores
+
+
+
+
+
+
+
+
+Golf
+
+
+
+
+
+
+
+
+NASCAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NEIGHBORHOOD
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Neighborhood
+
+
+
+
+
+
+
+
+
+    					Newcomer's Guide
+
+
+
+
+
+
+
+
+
+    					Buckhead
+
+
+
+
+
+
+
+
+
+    					Decatur
+
+
+
+
+
+
+
+
+
+    					Buford
+
+
+
+
+
+
+
+
+
+    					Peachtree City
+
+
+
+
+
+
+
+
+
+    					Gwinnett County
+
+
+
+
+
+
+
+
+
+    					Intown Atlanta
+
+
+
+
+
+
+
+
+
+    					Marietta
+
+
+
+
+
+
+
+
+
+    					Roswell
+
+
+
+
+
+
+
+
+
+    					Sandy Springs
+
+
+
+
+
+
+
+
+
+    					Smyrna
+
+
+
+
+
+
+
+
+
+										COUNTY NEWS
+
+
+
+
+
+
+
+
+Clayton								County
+
+
+
+
+
+
+
+
+Cobb								County
+
+
+
+
+
+
+
+
+DeKalb								County
+
+
+
+
+
+
+
+
+Gwinnett								County
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Living Northside
+
+
+
+
+
+
+
+
+Living Intown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIFE
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Life
+
+
+
+
+
+
+
+
+
+    					Celebrities
+
+
+
+
+
+
+
+
+
+    					Home & Garden
+
+
+
+
+
+
+
+
+
+    					Weddings & Celebrations
+
+
+
+
+
+
+
+
+
+    					Health
+
+
+
+
+
+
+
+
+
+    					Travel
+
+
+
+
+
+
+
+
+
+    					Parenting
+
+
+
+
+
+
+
+
+
+    					Movies & TV
+
+
+
+
+
+
+
+
+
+    					Home Design Ideas
+
+
+
+
+
+
+
+
+
+    					Arts & Culture
+
+
+
+
+
+
+
+
+
+    					Food & Drink
+
+
+
+
+
+
+
+
+
+    					Music
+
+
+
+
+
+
+
+
+
+										LIFE BLOGS
+
+
+
+
+
+
+
+
+Best of Atlanta
+
+
+
+
+
+
+
+
+Atlanta								Restaurants
+
+
+
+
+
+
+
+
+Atlanta								Shopping
+
+
+
+
+
+
+
+										IN THE NEWS
+
+
+
+
+
+
+
+
+Black History
+
+
+
+
+
+
+
+
+Games
+
+
+
+
+
+
+
+
+AJC Peachtree								Road Race
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THINGS TO DO
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					All Things to Do
+
+
+
+
+
+
+
+
+
+    					Spring in Atlanta
+
+
+
+
+
+
+
+
+
+    					Events in Atlanta
+
+
+
+
+
+
+
+
+
+    					Best of Atlanta
+
+
+
+
+
+
+
+
+
+    					Black History
+
+
+
+
+
+
+
+
+
+    					Arts & Culture
+
+
+
+
+
+
+
+
+
+    					Movie Showtimes
+
+
+
+
+
+
+
+
+
+    					Radio & TV
+
+
+
+
+
+
+
+
+
+    					Food & Drink
+
+
+
+
+
+
+
+
+
+    					Music
+
+
+
+
+
+
+
+
+
+    					Shopping
+
+
+
+
+
+
+
+
+
+    					Latest Video
+
+
+
+
+
+
+
+
+
+    					Games
+
+
+
+
+
+
+
+
+
+										Blogs					
+
+
+
+
+
+
+
+
+Atlanta								Restaurants
+
+
+
+
+
+
+
+
+Music Scene
+
+
+
+
+
+
+
+
+Arts &								Culture
+
+
+
+
+
+
+
+										In the News					
+
+
+
+
+
+
+
+
+Upcoming								Movies
+
+
+
+
+
+
+
+
+Living Intown: BeltLine
+
+
+
+
+
+
+
+
+Horoscopes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MORE
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					Newsletters
+
+
+
+
+
+
+
+
+
+    					Customer Care
+
+
+
+
+
+
+
+
+
+    					Contact the AJC
+
+
+
+
+
+
+
+
+
+    					Shopping
+
+
+
+
+
+
+
+
+
+    					Games
+
+
+
+
+
+
+
+
+
+    					Obituaries
+
+
+
+
+
+
+
+
+
+    					Homefinder
+
+
+
+
+
+
+
+
+
+    					AJC Jobs
+
+
+
+
+
+
+
+
+
+    					AJC Cars
+
+
+
+
+
+
+
+
+
+    					Kudzu
+
+
+
+
+
+
+
+
+
+    					Celebrating Nurses
+
+
+
+
+
+
+
+
+
+    					AJC Cup
+
+
+
+
+
+
+
+
+
+    					AJC ePaper 
+
+
+
+
+
+
+
+
+
+										Today's Buzz					
+
+
+
+
+
+
+
+
+Buzz Blog
+
+
+
+
+
+
+
+
+Radio &								TV Talk
+
+
+
+
+
+
+
+
+News to Me
+
+
+
+
+
+
+
+										Inside AJC					
+
+
+
+
+
+
+
+
+Movie Theaters
+
+
+
+
+
+
+
+
+Atlanta's								Top Workplaces
+
+
+
+
+
+
+
+
+Find a								Garage Sale
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+close subnav
+
+
+
+
+
+
+open subnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    					Storefront
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			63
+
+
+
+
+
+
+ 
+Atlanta, GA 
+				30303
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13
+
+
+
+
+Traffic Conditions
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow us:
+
+
+
+
+Facebook
+
+
+
+
+
+
+Twitter
+
+
+
+
+ Top
+
+
+
+
+
+
+ 
+Full Site Index
+ |
+ 
+Visitor Agreement
+ |           
+Privacy Policy
+ |            
+Contact Us
+ 
+ 
+©2017 Cox Media Group
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Shortcuts
+
+
+
+
+
+
+AJC Store
+
+
+
+
+
+
+Homefinder
+
+
+
+
+
+
+Atlanta Jobs
+
+
+
+
+
+
+Find A Car
+
+
+
+
+
+
+Classifieds
+
+
+
+
+
+
+Obituaries
+
+
+
+
+
+
+Family-placed Notices
+
+
+
+
+
+
+Contact Us/Subscribe
+
+
+
+
+
+
+Customer Care
+
+
+
+
+
+
+Advertise With Us
+
+
+
+
+
+
+Digital Products
+
+
+
+
+
+
+
+
+EM-dummyText Insert Code Block here
+
+
+
+
+ 
+ 
+Your AJC, your way. Explore these products from The Atlanta Journal-Constitution.
+ 
+ 
+AJC
+ 
+Access Atlanta
+ 
+myAJC
+ 
+my account
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+        Subscribe 
+now
+ 
+As low as 99¢
+ 
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+
+
+
+
+
+
+
+
+					Log in to Manage your
+Profile and Account
+				
+
+
+
+
+
+						Create your 
+account
+
+
+
+
+
+						Receive up-to-date 
+newsletters
+
+
+
+
+
+						Set up 
+text alerts
+
+
+
+
+
+						Sign up and 
+manage subscriptions
+
+
+
+
+
+
+
+
+
+				Log In
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Log Out
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New David Perdue bill would end 22-year-old immigration lottery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+
+
+
+
+
+
+Tamar Hallerman
+ 
+
+
+
+
+
+
+February 7, 2017
+ 
+ 
+Congress
+, 
+David Perdue
+, 
+Donald Trump
+, 
+Illegal immigration
+.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+View Caption
+
+
+Hide Caption
+
+
+
+
+
+
+
+
+U.S. Sen. David Perdue in 2014. John Spink, jspink@ajc.com
+
+
+
+
+
+
+WASHINGTON — 
+U.S. Sen. David Perdue, R-Ga.,  would abolish a federal green card program originally created to bolster diversity under an immigration plan he plans to unveil later this morning.
+
+
+The freshman Republican would like to do away with a special lottery system started more than two decades ago that annually selects 50,000 people from countries with traditionally lower immigration rates to permanently live in the United States.
+
+Eliminating the State Department’s Diversity Immigrant Visa Program is just one of several changes to the legal immigration system Perdue, along with fellow first-term Sen. Tom Cotton, R-Ark., plans to propose at a press conference on Capitol Hill later this morning.
+
+Their legislation would also slash the number of visas the government offers refugees to 50,000 per year, on par with what President Donald Trump has advocated for in his recent 
+executive order.
+ By comparison, Barack Obama announced plans in September to let 110,000 refugees into the country during the 2017 budget year.
+
+
+Perdue is said to want to target what he describes as “outdated” programs, such as the diversity lottery system, in order to return legal immigration numbers to lower “historic levels” and help reduce competition for American workers’ wages.
+
+“Senator Cotton and I are taking action to fix the shortcomings in our legal immigration system,” Perdue said in a statement. “Returning to our historically normal levels of legal immigration will help improve the quality of American jobs and wages.”
+
+Perdue and Cotton’s bill would also significantly alter another avenue for legal immigration. Under the current system, U.S. citizens and legal permanent residents can sponsor members of their family and get them green cards. The new measure would eliminate preferences for the adult parents, siblings and children of citizens. It would only allow such preferences for spouses and dependent children of migrants, as well as elderly parents in need of caretaking.
+
+Overall, their proposal seeks to lower legal immigration levels by 41 percent compared to 2015 levels during its first year of implementation and by half within a decade.
+
+The legislation comes at a moment when immigration – both legal and illegal – is dominating the national conversation.
+
+Trump administration officials will argue before a federal appeals court today that the president’s divisive 
+executive order
+, which temporarily bans refugees from seven predominantly Muslim countries from entering the country, should be restored. Opponents have framed the policy change as unconstitutional.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+Meanwhile, some of President Donald Trump’s supporters have vowed to boycott several major corporations, including 84 Lumber, Coca-Cola and Budweiser, for airing pro-immigrant Super Bowl ads. And GOP leaders in Congress continue to formalize their strategy for fronting the money for Trump’s proposed wall on the Southern border behind closed doors.
+
+Perdue is not the only Trump ally who has touted curtailing legal immigration. Top White House strategist Steve Bannon and U.S. Sen. Jeff Sessions, R-Ala., who is expected to be confirmed as attorney general in the days ahead, have similarly advocated for slowing the flow of people entering the country.
+
+The Diversity Immigrant Visa Program is one of the world’s more unique green card programs. Nearly 14.4 million people from scores of countries around the world applied for 50,000 visas in 2015, the last year in which figures are publicly available. That means only 0.3 percent of applicants ultimately “won” the lottery.
+
+Supporters have touted the program for its melting-pot ethos, but critics have faulted it for being susceptible to fraud. They have also called out the program for allowing people from countries that are deemed state sponsors of terror to apply for visas. The nonpartisan Government Accountability Office has a pretty useful analysis of the lottery 
+here
+.
+
+The program, and more specifically the experience of one Somali refugee, was the subject of a 
+memorable episode
+ of the public radio program “This American Life” back in 2015 that’s worth a listen.
+
+Share this:
+Twitter
+Facebook
+Google
+Reddit
+More
+Email
+Pinterest
+LinkedIn
+Tumblr
+Print
+Like this:
+Like
+ 
+Loading...
+
+
+
+
+Related
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								View Comments
+								
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+121 comments
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+Get
+            Livefyre
+
+
+FAQ
+
+
+
+
+
+
+
+
+
+
+
+
+Sign in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  + Follow
+                
+
+
+
+
+
+
+
+
+
+
+
+                  Post comment
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      Link
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Newest
+ | 
+Oldest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+time for reform
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+For several decades, 
+immigrants no longer have been limited to bringing
+in a spouse and minor children
+. Chain Migration categories allow each
+immigrant (once a citizen) to petition for adult brothers and sisters, for
+adult sons and daughters, and for parents. 
+
+
+Each
+of them can in turn do the same along with bringing their own spouses who can
+start whole new chains in their own families, and so forth in a never-ending
+pattern.
+
+
+Sen.
+Cotton would stop all of that immigration which adds millions of workers each
+decade without any regard to their skills or how they would affect Americans
+competing in the same occupations. His bill would limit family immigration to a
+spouse and minor children -- including overseas adoptions and marriages by U.S.
+citizens.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JamesLSBowen
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+This bill is an excellent proposal.  This is what the Jordan Commission 
+recommended to President Clinton and Congress in 1996.  It should be 
+passed immediately.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Elaine Minick Stone
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+I truly do not believe that David Perdue won't be happy until his entire world is
+Lily White & Christian....  we've elected a real, open-minded individual!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Melody Dareing
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+I saw a report the other day on this and there are several others in both House and Senate supporting. I hadn't thought about the economic impact of immigration before.
+
+Now that I think back, my great-grandfather and grandfather had to prove they could be economically beneficial in order to immigrate back around 1910.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xuvirehoy
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+my Aunty Samantha got an awesome year old Porsche Panamera from only workin parttime online... see>>>>>>>>>>>  
+https://tinyurl.com/visit-4-more
+    <<<<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Charlie Martin
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+na he's part of the swamp didn't take him long to drink the washington koolaid believe me he's not working for us.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+luckjoe
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Great call Senator Perdue!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bill Stockstill
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+How much money did the DeVos pay you David? Was it $100,000 like Rubio? Disgusting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A.E. King
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+No, Purdue went for 23k and change from DeVos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Edwin E. Akins II
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+He has already started.  
+
+By voting in DeVos today he's assuring no one will seek getting educated in the US.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Patricia Baker Charles
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+He needs to tell everyone what he did to PILLOW TEX!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Janet Pratt French
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+He needs to go.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gene Kinney
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+"Georgia Jobs" for Georgians!... Thanks Gov!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Doug Rogers
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+The only thing Perdue has done is COMMITTED treason.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+luckjoe
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Where have you been for the last 8 years of Obama?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Penny Jones Smith
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Let's boycott  lottery tickets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Penny Jones Smith
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Patricia Evans, we know where you stand with that ugly pink pansy hat you are wearing. Pull it down a little further then you want be able to see and posts stupid comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jim Cortina
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+With a framed picture of immigrant Albert Einstein right behind him, no less.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mary Ann Kitchens
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you, David Perdue for having steel in your backbone and not bending over or having weak knees\U0001f44d\U0001f622
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Barbara Austen Cheng
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Well that's too bad for Georgia businesses when wanting to attract the best talent. Good luck with that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RetiredDude
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Senators Perdue and Cotton are using government power to intervene in private markets with the intent of conferring an unearned economic advantage to people of a particular nationality.
+Has anyone else ever heard of national socialism?
+I guess Perdue does have a personal stake in the matter...he needs people staying in their impoverished nations so he has a base of laborers to whom he can outsource "American" jobs.
+So, contards, which is it? Is Perdue self-serving in his pursuit of future private profits or is he behaving like a national socialist?  
+Perhaps in this case the two motivations align, but that is no excuse for Cotton or any of the other anti-immigration advocates out there.  Your only motivations for opposing immigration are bigotry or laziness.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JamesLSBowen
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+@
+RetiredDude
+ It could just as easily be argued that the Government is intervening in private markets to lower labor costs by bringing in so many immigrants.  The fact is that private enterprise does not control who and how many people are allowed to enter this country, the Federal Government does.  The question then becomes does the Federal Government adopt an immigration policy that benefits the bulk of the American citizenry or benefits a few at the top of the economic pyramid at the expense of most other Americans?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pat Bible Gilliam
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Shut it down,today can't be to soon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tim Langan
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Guess you are glad that wasn't the case for your ancestors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eustace E Cromartie
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+No he doesn't.  He want s to make the morons that support him think he is actually doing some.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Evelyn Fountain
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+It's about time you started working for those who voted for you David Perdue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sarah McIntire
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+This is a good start.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bill Stockstill
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+This man is impossible to contact. Maybe if we were lobbyists, he'd listen and respond to our concerns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ginny Hordines
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Shame on you for being such a party puppet! Shame on the state you are supposed to represent and choose to ignore.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+William Osborne
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+thank you, mr perdue,all immigration need to be cut all most out,completely
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tim Langan
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Guess you are glad that wasn't the policy when your ancestors arrived, eh?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+luckjoe
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Our ancestors came to the USA legally and pledged their support to the USA. They came to build a country and did not have their hand out. Currently, that is not the case. It is come to the USA with a hand out for government funded benefits, drive wages down and have anchor babies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Shar1
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+David Perdue has proven that he is nothing but a shill, following in the stream of the bigger liars and proud ignoramuses, never thinking beyond his own benefit.  He has taken almost $20,000 from the various DeVos political action funds and is thus obviously compromised in judging her qualifications for Secretary of Education but he refuses to either listen to the tsunami of constituent calls opposing her or to recuse himself in the vote.  Instead, he deflects by finding another untapped avenue to attack minority immigrants, one that his Liar In Chief hadn't yet thought of that might win him brownie points from the predators in the White House. 
+Corporate donors do not want immigration messed with; taxpayers are tired of competing with people who will do more work for less money and whose social services costs are slipped off corporate balance sheets into taxpayers' pockets.  Politicians have tried to maintain the status quo while pretending to share voters' concerns, and the easiest way to do that is to blame brown immigrants and pretend that the corporations who exploit their labor are blameless.  Perdue is just such a smarmy, lying, amoral suck up.  
+If we actually wanted to do something to normalize immigration, we would treat it like tax evasion - employers who hired illegal workers would be hit with punitive fines (shared 50/50 with qualified whistle blowers, just like tax evasion is) and mandatory jail sentences for CEOs.  Make the risk not worth the reward.  Abolish birthright citizenship, which has been purged from just about every other country on earth and is a vestige of the nineteenth century.  And expand the use of temporary work permits, with no provision for bringing in families and legal responsibility for each migrant worker resting with the employer.
+The H1N1 visa mills in India and the Phillipines should not be able to flood the system and garner all available visas.  Either shut the system down or limit the number of workers from any single company.  And cut the number issued - Silicon Valley has plenty of American engineers and coders to do the work, but they are not as cheap as immigrants.  Apple, MicroSoft, Google and their colleagues are awash in money and can certainly pay for American labor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Val Larzelere
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Perdue states he wants to reduce immigration numbers to protect American jobs. However, a better way to ensure Americans get good jobs is to make sure they are qualified for those jobs through education and technical training. Immigrants aren't taking out jobs, rather Americans are under-educated and not qualified for many of the high technical jobs now available. Why not place more emphasis, energy and money into educating our people?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Baron_DeKalb
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Interesting... remind me again, how much do we spend annually to "fly in immigrants?"
+https://www.washingtonpost.com/business/economy/eric-trumps-trip-to-uruguay-cost-taxpayers-97830-in-hotel-bills/2017/02/03/ababd64e-e95c-11e6-bf6f-301b6b443624_story.html?utm_term=.0f15e2835b85
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wayne Cole
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Exactly the monies used to fly in immigrants should be given to US citizens for training and education
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nancy Alford
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Your people or Americans?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pat Smith
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+A smart man
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Carlos_Castillo
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+I would only want to see this proposal move to passage within the context of our immigration laws changing to an Australian/Canadian points system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+consumedconsumer
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+@
+Carlos_Castillo
+ so much for american exceptionalism i guess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mollie Patrick
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+We need Sally Yates for our next senator. Perdue only represents wealthy Repubs and corporations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kim Thompson
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+I'm not wealthy or a corporation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Penny Jones Smith
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Nope we need someone new period. Just like the Donald. Someone who cares about America and we the people.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ethel Evans
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+If she wins, we would be over-run with Muslims....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Michael Wynn
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Sally Yates will never win a state-wide race in GA.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marion Baker
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Will not Happen as long as we enforce Voter ID . No to get it in all 50 states!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BetterDog
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+ Check out the movie "Idiocracy".  There are many similarities to what is going on today.  BEWARE!  You may not want your kids watching this movie.  See I even care about stupid liberals' kids.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BetterDog
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+ I must say you Wacko Liberals have guts.  To make such stupid comments and be so Anti-American and put your picture out there.  Wow!  Anyone who is trying to slow down this Immigration Reform is a complete idiot or Socialist.  Or both.  These people believe that no one died in Tampa or San Bernardino and  all the others.  We are truly living in a world of Idiocracry.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jeremy Jones
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+Wow. Perdue is really making sure we vote him out in 2020.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+joyofo
+
+
+5pts
+
+
+
+
+
+
+
+
+
+
+
+
+like April answered I am in shock that a student can get paid $9445 in one month on the 
+computer . i was reading this............. 
++_+_+_+_+__)_)_+_+_       h
+ttps://qr.net/JeWBQH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Trackbacks
+
+
+
+
+
+
+
+
+
+
+Remember the Atlanta massacre? Yeah, that didn’t happen, either | Political Insider
+ 
+says:
+ 
+
+
+
+			February 8, 2017 at 9:51 am
+ 
+
+
+[…] told you about U.S. Sen. David Perdue’s new bill that seeks to slash legal immigration levels by 50 percent yesterday. The state’s refugee groups […]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Senator David Perdue - Infinite Hope Coalition
+ 
+says:
+ 
+
+
+
+			February 9, 2017 at 1:47 pm
+ 
+
+
+[…] 
+http://politics.blog.ajc.com/2017/02/07/david-perdue-seeks-to-eliminate-immigrant-lottery-program/
+ […]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Donald Trump, immigration and the end of American exceptionalism | Political Insider
+ 
+says:
+ 
+
+
+
+			February 11, 2017 at 9:05 am
+ 
+
+
+[…] and Cotton pitched a bill to cut immigration into the U.S. from 1 million to 500,000 a year. The bill is not aimed at illegal immigration. Nor at the H-1B visas that corporations seek to bring […]
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Previous
+ 
+Bernie Sanders helps Atlanta mayoral candidate raise campaign cash
+
+
+Next
+Speaker declares Britain’s Parliament off-limits to Donald Trump
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+People to watch
+
+
+
+
+US Rep Tom Price, HHS Secretary Nominee
+
+
+Sally Yates
+
+
+John Lewis
+
+
+Sonny Perdue
+
+
+Randy Evans, RNC
+
+
+Newt Gingrich
+
+
+Keith Blackwell
+
+
+Bruce Levell
+
+
+US Senator David Perdue
+
+
+US Senator Johnny Isakson
+
+
+Ga Gov Nathan Deal
+
+
+Atlanta Mayor Kasim Reed
+
+
+
+
+
+
+Archives
+ 
+Archives
+
+
+
+
+Select Month
+
+
+ February 2017  (105)
+
+
+ January 2017  (203)
+
+
+ December 2016  (116)
+
+
+ November 2016  (154)
+
+
+ October 2016  (186)
+
+
+ September 2016  (132)
+
+
+ August 2016  (133)
+
+
+ July 2016  (257)
+
+
+ June 2016  (140)
+
+
+ May 2016  (123)
+
+
+ April 2016  (113)
+
+
+ March 2016  (168)
+
+
+ February 2016  (232)
+
+
+ January 2016  (140)
+
+
+ December 2015  (97)
+
+
+ November 2015  (112)
+
+
+ October 2015  (101)
+
+
+ September 2015  (94)
+
+
+ August 2015  (112)
+
+
+ July 2015  (74)
+
+
+ June 2015  (118)
+
+
+ May 2015  (91)
+
+
+ April 2015  (81)
+
+
+ March 2015  (109)
+
+
+ February 2015  (89)
+
+
+ January 2015  (88)
+
+
+ December 2014  (56)
+
+
+ November 2014  (67)
+
+
+ October 2014  (152)
+
+
+ September 2014  (84)
+
+
+ August 2014  (88)
+
+
+ July 2014  (105)
+
+
+ June 2014  (86)
+
+
+ May 2014  (93)
+
+
+ April 2014  (78)
+
+
+ March 2014  (102)
+
+
+ February 2014  (84)
+
+
+ January 2014  (90)
+
+
+
+
+
+
+
+
+Search for:
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Follow us on Twitter
+My Tweets
+Follow me on Twitter
+My Tweets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your profile
+
+
+Need a Profile? 
+Register Now.
+
+						{* #userInformationForm *}
+
+						
+*EMAIL
+
+						{* traditionalSignIn_emailAddress *}
+
+						
+*PASSWORD
+
+
+Forgot your password?
+
+						{* traditionalSignIn_password *}
+
+						{* traditionalSignIn_signInButton *}
+						{* /userInformationForm *}
+					
+
+
+
+
+Sign in using your existing account
+
+						{* loginWidget *}
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your profile
+
+
+Need a Profile? 
+Register Now.
+
+						{* #userInformationForm *}
+
+						
+*EMAIL
+
+						{* traditionalSignIn_emailAddress *}
+
+						
+*PASSWORD
+
+
+Forgot your password?
+
+						{* traditionalSignIn_password *}
+
+						{* traditionalSignIn_signInButton *}
+						{* /userInformationForm *}
+					
+
+
+
+
+Sign in using your existing account
+
+						{* loginWidget *}
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+
+
+
+
+OR
+
+
+
+
+
+
+
+
+Sign in using your profile
+
+
+Need a Profile? 
+Register Now.
+
+					{* #userInformationForm *}
+
+					
+*EMAIL
+
+					{* traditionalSignIn_emailAddress *}
+
+					
+*PASSWORD
+
+
+Forgot your password?
+
+					{* traditionalSignIn_password *}
+
+					{* traditionalSignIn_signInButton *}
+					{* /userInformationForm *}
+				
+
+
+
+
+Sign in using your existing account
+
+					{* loginWidget *}
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're Almost Done!
+
+
+Please confirm the information below before signing in.
+
+
+*Required
+
+		{* #socialRegistrationForm *}
+			{* socialRegistration_displayName *}
+			{* socialRegistration_emailAddress *}
+
+			
+By submitting your registration information, you agree to our 
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+
+			{* socialRegistration_signInButton *}
+		{* /socialRegistrationForm *}
+	
+
+
+
+
+
+
+
+
+
+
+Register
+
+
+*Required
+
+		{* #registrationForm *}
+
+			{* traditionalRegistration_emailAddress *}
+			{* traditionalRegistration_password *}
+			{* traditionalRegistration_passwordConfirm *}
+
+			{* traditionalRegistration_displayName *}
+
+			
+By submitting your registration information, you agree to our 
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+
+			{* createAccountButton *}
+		{* /registrationForm *}
+	
+
+
+
+
+
+
+
+
+
+
+Create a New Account
+
+
+*Required
+
+		{* #registrationFormBlank *}
+
+			{* traditionalRegistration_emailAddressBlank *}
+			{* traditionalRegistration_passwordBlank *}
+			{* traditionalRegistration_passwordConfirmBlank *}
+			{* traditionalRegistration_displayName *}
+
+			
+By submitting your registration information, you agree to our 
+Visitor Agreement
+ and 
+Privacy Policy
+.
+
+
+			{* createAccountButton *}
+		{* /registrationForm *}
+	
+
+
+
+
+
+
+
+
+
+
+Just One More Thing...
+
+
+We have sent you a verification email. Please check your email and click on the link to activate your profile.
+
+
+If you do not receive the verification message within a few minutes of signing up, please check your Spam or Junk folder.
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you for registering!
+
+
+We look forward to seeing you on [website] frequently. Visit us and sign in to update your profile, receive the latest news and keep up to date with mobile alerts.
+
+
+
+		Click 
+here
+ to return to the page you were visiting.
+		
+
+
+
+
+
+
+
+
+
+
+
+
+Create a new password
+
+
+Don't worry, it happens. We'll send you a link to create a new password.
+
+		{* #forgotPasswordForm *}
+		{* forgotPassword_emailAddress *}
+		{* forgotPassword_sendButton *}
+		{* /forgotPasswordForm *}
+	
+
+
+
+
+
+
+
+
+
+
+Email sent
+
+
+We have sent you an email with a link to change your password.
+
+
+Close
+
+
+
+
+
+
+
+
+
+	{* mergeAccounts *}
+
+
+
+
+
+
+
+
+
+Sign in to complete account merge
+
+		{* #tradAuthenticateMergeForm *}
+			{* traditionalSignIn_emailAddress *}
+			{* mergePassword *}
+			{* backButton *}
+			{* traditionalSignIn_signInButton *}
+		{* /tradAuthenticateMergeForm *}
+	
+
+
+
+
+
+
+
+
+
+
+Resend Email Verification
+
+
+
+
+Click submit to receive another verification email
+
+		{* #resendVerificationForm *}
+			{* traditionalSignIn_emailAddress *}
+			
+
+
+
+
+
+		 {* /resendVerificationForm *}
+	 
+
+
+
+
+
+
+
+
+
+
+Your Verification Email Has Been Sent
+
+
+
+
+
+
+Check your email for a verification link
+
+
+
+
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Send to Email Address
+
+
+
+
+Your Name
+
+
+
+
+Your Email Address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cancel
+
+
+
+				Post was not sent - check your email addresses!			
+
+
+
+				Email check failed, please try again			
+
+
+
+				Sorry, your blog cannot share posts by email.			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+%d
+ bloggers like this:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow us:
+
+
+
+
+Facebook
+
+
+
+
+
+
+Twitter
+
+
+
+
+ Top
+
+
+
+
+ 
+Full Site Index
+ |
+ 
+Visitor Agreement
+ |           
+Privacy Policy
+ |            
+Contact Us
+ 
+ 
+©2017 Cox Media Group
+ 
+ 
+
+
+
+
+
+
+Close 
+
+
+
+
+Sections
+news
+sports
+life
+neighborhoods
+shop
+things to do
+Shortcuts
+ajc obituaries
+family-placed notices
+classifieds
+homefinder
+atlanta jobs
+find your car
+manage your profile
+contact us
+customer care
+advertise with us
+digital products
+Partners
+find & save coupons
+kudzu
+savings.com
+valpak
+myajc
+Fun
+game center
+Member Center
+sign in
+manage your profile
+Utilities
+archives
+weather
+traffic
+sitemap
+Follow Us
+facebook
+twitter
+instagram
+youtube
+pinterest
+
+
+
+
+ 
+PRODUCTS 
+From The Atlanta Journal-Constitution
+ 
+ 
+AJC.com - Get Atlanta's News Now
+ 
+AJC Access Atlanta - Find Fun Things to Do
+ 
+myAJC - Explore Exclusive Digital Extras and More
+ 
+AJC ePaper - Read Today's Paper
+ 
+ 
+ 
+Subscribe
+ 
+ 
+
+
+
+
+ 
+Follow Us
+ 
+Facebook
+ 
+Twitter
+ 
+ 
+                                                © 2017 
+Cox Media Group
+.                                                By using this website, you accept the terms of our                         
+Visitor Agreement
+ and                         
+Privacy Policy
+, and understand your options regarding                         
+Ad Choices
+.                                                Learn about 
+careers at Cox Media Group
+.                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,223 @@
+
+        <html>
+        <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pence Breaks Senate Tie to Confirm DeVos as Education Sec.</title>
+        <meta name="description" content="The Senate voted to confirm Betsy DeVos as Education Secretary Tuesday by the narrowest of margins Tuesday, with VP Mike Pence needed to cast a tie-breaking vote. The vote came after Senate Democrats..." />
+        <meta name="keywords" content="" />
+        <meta name="author" content="www.nbcnews.com" />
+        <meta property="og:site_name" content="www.nbcnews.com" />
+        <meta property="og:title" content="Pence Breaks Senate Tie to Confirm DeVos as Education Sec." />
+        <meta property="og:description" content="The Senate voted to confirm Betsy DeVos as Education Secretary Tuesday by the narrowest of margins Tuesday, with VP Mike Pence needed to cast a tie-breaking vote. The vote came after Senate Democrats..." />
+        <meta property="og:image" content="http://media2.s-nbcnews.com/i/newscms/2016_48/1814646/161130-devos_withtrump-1422_b38ef54119ee48523e31433c068ae3db.jpg" />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="www.nbcnews.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@SnipsMedia" />
+        <meta name="twitter:title" content="Pence Breaks Senate Tie to Confirm DeVos as Education Sec." />
+        <meta name="twitter:description" content="The Senate voted to confirm Betsy DeVos as Education Secretary Tuesday by the narrowest of margins Tuesday, with VP Mike Pence needed to cast a tie-breaking vote. The vote came after Senate Democrats..." />
+        <meta name="twitter:image" content="http://media2.s-nbcnews.com/i/newscms/2016_48/1814646/161130-devos_withtrump-1422_b38ef54119ee48523e31433c068ae3db.jpg" />
+        <link href="/css/view.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+
+        <script type="text/javascript">
+        var destination_url = "http://www.nbcnews.com/politics/congress/mike-pence-casts-tie-breaking-vote-confirm-betsy-devos-education-n717836?cid=public-rss_20170207";
+        var vote = "";
+        var ab = 0;
+        var dropoff = 1;
+        var load_time = null;
+        var view_time = 0;
+        var time_left = 10;
+        var time_paused = false;
+        var time_hold = false;
+        var timer;
+        
+        try {
+            if ( window.document.domain != top.document.domain ||
+                 window.top.location.href != window.location.href )
+            {
+                dropoff = 0;
+                window.top.location.href = destination_url;
+            }
+        } catch(e) {
+            dropoff = 0;
+            window.top.location.href = destination_url;
+        }
+
+        function time_dec()
+        {
+            if ( time_paused ) 
+            {
+                document.getElementById("countdown").innerHTML = "Paused...";
+            }
+            else if ( time_left <= 0 )
+            {
+                dropoff = 0;
+                window.top.location.href = destination_url;
+                clearInterval(timer);
+            }
+            else if ( !time_hold )
+            {
+                time_left--;
+                document.getElementById("countdown").innerHTML = "Redirecting in " + time_left;
+            }
+            view_time++;
+        }
+       </script>
+
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <![endif]-->
+        <!--[if (gte IE 9) | (!IE)]><!-->  
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <!--<![endif]-->
+
+        <script type="text/javascript">
+        (function($) {
+            var stime = (new Date()).getTime();
+            $(window).load( function() {
+                load_time = (new Date()).getTime() - stime;
+            });
+            
+            $(window).load( function() {
+                $("#countdown").text( "Redirecting in " + time_left );
+                timer = setInterval("time_dec()", 1000);
+            });
+            
+            $(window).on( "load resize", function() {
+                $("#snips-heading-thumbnail img").each( function() {
+                    $(this).css("display", "inline-block");
+                    var offset = Math.floor(-($(this).width() - $(this).parent().width()) / 2);
+                    $(this).css("margin-left", offset+"px");
+                });
+            });
+            
+            $.getScript( "http://pagead2.googlesyndication.com/pagead/show_ads.js" )
+                .done( function(script, textStatus){ ab = 0; } )
+                .fail( function(jqxhr, settings, exception){ ab = 1; } );                      
+
+            $(window).load( function() {
+                $("a").click( function(e) {
+                    var target = $(this).attr("target") || "_top";
+                    if ( target == "_top" && $(this).attr("href") == destination_url )
+                    {
+                        dropoff = 0;
+                    }
+                });
+            });          
+            
+            function update_status(async) {
+                $.ajax({ type: "get", 
+                        async: async, 
+                        url: "//share.sni.ps/stats.php?guid=1730568&view_time=" + view_time + "&dropoff=" + dropoff + "&load_time=" + load_time + "&vote=" + vote + "&ab=" + ab
+                });
+            }
+            var status_timer = setInterval(function(){update_status(true);}, 1000);
+            $(window).bind("beforeunload unload", function(){ update_status(false); });
+            
+        })(jQuery);
+        </script>
+
+        <script type="text/javascript" src="/js/raty/jquery.raty.min.js"></script>
+        <script type="text/javascript">
+        (function($){
+            $(window).load( function() {
+                $("#snips-rating-stars").raty({
+                    score: undefined,
+                    number: 5,
+                    half: false,
+                    path: "/images/",
+                    hints: ["Rating: Lame", 
+                            "Rating: Seen better", 
+                            "Rating: Nice", 
+                            "Rating: Awesome", 
+                            "Rating: Stellar"],
+                    cancel: false,
+                    target: "#snips-rating-hint",
+                    targetFormat: "{score}",
+                    targetText: "<b>Like this ad?</b>",
+                    targetKeep: true,
+                    targetType: "hint",
+                    click: function(score, evt) {
+                        $.post( "//share.sni.ps/vote.php?score=" + score,
+                                function( data ) {
+                                    $("#snips-rating-response").html( data );
+                                    $("#snips-rating-stars").raty("readOnly", true);
+                                    vote = score;
+                                }
+                         );
+                    }
+                });
+            });
+        })(jQuery);
+        </script>
+
+        
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+          ga("create", "UA-60673852-2", "auto");
+          ga("send", "pageview");
+        </script>
+
+        </head>
+        
+        <body>
+        <div id="banner" style="background-color:#3498db;">
+        <table id="banner-table" align="center" cellspacing="0"><tr><td>
+        <div id="logo"><a href="http://sni.ps" target="_blank"><img src="/images/snips_logo.png"></a></div>
+        <div id="tagline"><a href="http://sni.ps" target="_blank"><img src="/images/snips_message.png"></a></div>
+        <div id="redirect">
+          <a href="http://www.nbcnews.com/politics/congress/mike-pence-casts-tie-breaking-vote-confirm-betsy-devos-education-n717836?cid=public-rss_20170207" target="_top">
+            <div id="skip-button" style="background-color:#1975cd;">
+               <span id="skip-button-txt" style="color:#ffffff;">SKIP THIS AD</span> 
+               <span id="skip-button-arrow" style="border-left-color:#ffffff;"></span>
+            </div>
+          </a>
+          <div id="counter"><span id="countdown" style="color:#ffffff;">Loading...</span></div>
+        </div>
+        </td></tr></table>
+        </div>
+
+        <table id="snips-zone-table" align="center" cellspacing="0"><tr><td style="padding:0; margin:0;">
+        <div id="snips-zone"><!-- BEGIN WIDGET EMBED -->
+<div id="smb-ctr-widget" data-src="//snips.saambaa.com/partner/3x2c/snips?utm_source=snips&utm_medium=cpc&utm_campaign=snips&utm_content=news" data-width="920px" data-height="500px"></div>
+<script>!function(e,t,r){var n,s=e.getElementsByTagName(t)[0];e.getElementById(r)||(n=e.createElement(t),n.id=r,n.src="//saambaa.com/widget/center/3x2c/smb-ctr.js",s.parentNode.insertBefore(n,s))}(document,"script","smb-ctr-sdk")</script>
+<!-- END WIDGET EMBED -->
+<div id='beacon_519537f9c1' style='position: absolute; left: 0px; top: 0px; visibility: hidden;'><img src='/images/pixel.png?bid=613&amp;cpid=321&amp;zid=7&amp;OAZBLOCK=3600&amp;OASZCAP=5&amp;loc=1&amp;referer=http%3A%2F%2Fshare.sni.ps%2Fadserve.php%3Fzoneid%3D7%26tag%3DV5b%26category%3Dnews%26description%3D%2520-%2520Pence%2520Breaks%2520Senate%2520Tie%2520to%2520Confirm%2520DeVos%2520as%2520Education%2520Sec.%26url%3Dhttp%253A%252F%252Fwww.nbcnews.com%252Fpolitics%252Fcongress%252Fmike-pence-casts-tie-breaking-vote-confirm-betsy-devos-education-n717836%253Fcid%253Dpublic-rss_20170207%26user_age%3D59%26user_gender%3Dm%26user_id%3D736e9c74%26cb%3D643111093&amp;cb=519537f9c1' width='0' height='0' alt='' style='width: 0px; height: 0px;' /></div></div>
+        </td></tr><tr><td>
+        <div style="font-family:Arial; color:#cccccc; font-size:10px; text-align:center; padding-top:5px;">ADVERTISEMENT</div>
+        
+        <div id="snips-rating">
+        <div id="snips-rating-stars"></div>
+        <div id="snips-rating-hint"><b>Like this ad?</b></div>
+        <div id="snips-rating-response"></div>
+        </div> 
+        </td></tr></table>
+
+        <table id="snips-content-table" align="center" cellspacing="0"><tr><td style="padding:0; margin:0;">
+        <div id="snips-content">
+        <div id="snips-heading">
+        <table id="snips-heading-table"><tr>
+        <td id="snips-heading-table-thumbnail">
+        <div id="snips-heading-thumbnail"><img src="http://media2.s-nbcnews.com/i/newscms/2016_48/1814646/161130-devos_withtrump-1422_b38ef54119ee48523e31433c068ae3db.jpg"/></div>
+        </td>
+        <td id="snips-heading-table-summary">
+        <div id="snips-heading-summary">
+        <div id="where-to">Where I am going...</div>
+        <h1 class="title">Pence Breaks Senate Tie to Confirm DeVos as Education Sec.</h1>
+        <h2 class="url"><a href="http://www.nbcnews.com/politics/congress/mike-pence-casts-tie-breaking-vote-confirm-betsy-devos-education-n717836?cid=public-rss_20170207">http://www.nbcnews.com/politics/congress/mike-penc...</a></h2>
+        <h2 class="description">The Senate voted to confirm Betsy DeVos as Education Secretary Tuesday by the narrowest of margins Tuesday, with VP Mike Pence needed to cast a tie-breaking vote. The vote came after Senate Democrats...</h2>
+        </div></td>
+        </tr></table>
+        </div></div> 
+        </td></tr></table>
+        
+        <div id="footer">Powered by <a href="http://sni.ps" target="_blank"><img src="/images/snips_logo_mini.png"></a>. Built in the USA.</div>
+        </body>
+        </html>

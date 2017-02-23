@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forward RSS Feed to Email</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content="Automatic send RSS to email in daily basic."  />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tab.js"></script>
+	<script type="text/javascript">
+	var baseUrl = 'http://'+window.location.host+window.location.pathname.replace(/(\/index\.php|\/)$/, '');
+	$(document).ready(function() {
+		// remove http scheme from urls before submitting
+		$('#form').submit(function() {
+			$('#url').val($('#url').val().replace(/^http:\/\//i, ''));
+			return true;
+		});
+	});
+	</script>
+	<style>
+	html, body { background-color: #cfe8e5;}
+	body {
+	margin: 0;
+	line-height: 1.4em;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+	
+	label, input, select, textarea { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+	li { color: #404040; }
+	li.active a { font-weight: bold; color: #666 !important; }
+	form .controls { margin-left: 20px !important; }
+	label { width: 120px; margin-right: 10px; !important; }
+	fieldset legend {
+	padding-left: 220px;
+	line-height: 20px !important;
+	margin-bottom: 0px !important;}
+	
+	.form-actions { padding-left: 160px; padding-top:40px; !important; }
+	.popover-inner { width: 205px; }
+	h1 { font-size: 18px;
+	margin-bottom: 4px;}
+	
+	body,td,th {
+	font-family: Arial, Helvetica, sans-serif;}
+	
+    .style1 {font-family: "Times New Roman", Times, serif}
+	.mystyle {padding:20px; margin-top:20px; border-radius:10px; color:grey; background:#eee;}
+	.mylabel {text-align:right; font-size:24px; font-weight:200;}
+	.myinput {width:400px; height:46px; border-radius:5px; font-size:24px; color:grey;}
+	.myinput2 {width:200px; height:46px; border-radius:5px; font-size:24px; color:grey;}
+	
+    </style>
+  </head>
+  <body>
+  	<div class="container" style="width: 820px; border: 2px; border-radius: 0px; background-color: #FFFFFF; padding: 30px; margin-top: 30px; margin-bottom: 30px;">
+	<div align="center" style="margin-bottom:5px;"><a href="index.php" title="News Reader"><img src="images/ForwardRSS.png"></a></div>
+	<h1 align="center"><font color="grey">FORWARD RSS - Send any RSS Feed to email in daily basic</font></h1><br />	
+	<form method="post" action="CreateForward.php" id="form" class="form-horizontal">
+	<fieldset>
+	<div class="control-group" style="padding:50px; border-radius:10px; color:grey; background:#fffbdf;">
+		<div class="controls"><label for="q" class="mylabel">RSS feed</label>
+		<input type="text" id="q" name="q" class="myinput" title="RSS FEED URL" data-content='Enter your rss feed here.' required />
+		<div align="center">Enter a <a href="https://validator.w3.org/feed/" rel="nofollow" target="blank">VALID RSS feed</a>!    <input type="checkbox" name="content" value="full" id="content" style="margin-top: 5px;" /> Check to convert to Full RSS </div>
+		</div>
+		
+	  
+		<div class="controls" style="padding-top:20px;"><label for="email" class="mylabel">Email</label>
+		<input type="email" id="email" name="email" class="myinput" title="email" data-content='Enter email destination here, feed content will be sent to this email address.' required />
+		</div>
+		
+		<div class="controls" style="padding-top:10px;"><label for="key" class="mylabel">Access key</label>
+		<input type="text" id="key" name="key" class="myinput" title="Access Key" required />
+		</div>
+		
+		<div class="controls" style="padding-top:10px;"><label for="links" class="mylabel">Links</label>
+		<select name="links" id="links" class="myinput" title="Link handling">
+			<option value="preserve" selected="selected">preserve</option>
+			<option value="remove">remove</option>
+		</select>
+		</div>
+		
+		<div class="form-actions"><input type="submit" id="submit" name="submit" value="Submit" class="btn btn-primary" /></div>
+	</div>
+	</fieldset>
+	</form>
+
+
+	<ul class="nav nav-tabs" style="padding-top:40px;">
+        <li class="active"><a href="#about" data-toggle="tab">About</a></li>
+		<li><a href="#AccessKey" data-toggle="tab">ACCESS KEY</a></li>
+	</ul>
+	
+	<div class="tab-content">
+	<!-- ACCESS KEY TAB -->
+	<div class="active tab-pane" id="about">
+	<div style="padding:20px; margin-top:20px; border-radius:10px; color:grey; background:#eee;"><h3>What is Forward RSS and what you can do with it</h3>
+	<p><b>Forward RSS to Email is an automatic RSS forwarder or RSS Sender tool.</b> It allow you to forward or send any RSS feed to any email address in <b>daily</b> basic.</p>
+	<li>Read any RSS feed directly in your email inbox, and get daily updates!</li>
+	<li>Internet marketing? Promoting your blog? This tool help you to deliver your contents directly to your user's inbox everyday.</li> 
+	<li>Can convert excerpt only RSS to full content RSS and send it to any email address.</li>
+	<li><b>Send RSS feed</b> to your <b>Blogger</b> blog and get them updated daily, automatic and NO duplicate post. "#end" tag already added to the end of each article sent to <b>mail-to-blogger</b> address, that mean "unsubscribe" link will not be included in articles. <a href="https://support.google.com/blogger/answer/41452?hl=en">Click here</a> to learn how to create blog posts via email. Tool will check the source feed every 24 hours, and it will send new post if there's new feed item. </li>
+	<li>Read or send single/multiple RSS feeds to single/multiple email address.</li>
+	<li>Just set and forget. The tool will automatically send your feed everyday.</li><br />
+	All feed items will be sent from <b>forward@fullcontentrss.com</b>, please add it to your email contact to ensure you will receive rss email from us.
+	</div>
+	</div>
+	
+	<!-- SUBSCRIBE TAB -->
+	<div class="tab-pane" id="AccessKey" style="padding-top:40px;">
+	<p>Available FREE Access Key: <b>FREEB0EDF</b> </p>
+	<p>Use above Access Key to use our tool for free, please note that it <b>will work for few days only</b>, and all forwarding generated by the free key will stop as well. To have uninteruptable forwarding, buy the subscription now. </p><br />
+	<table class="table table-bordered">
+   <thead>
+      <tr>
+         <th>FREE</th>
+         <th>LITE</th>
+         <th>BASIC</th>
+		 <th>PRO</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Few</td>
+         <td>Max 20 Source Feeds</td>
+         <td>Max 50 Source Feeds</td>
+		 <td>Max 100 Source Feeds</td>
+
+      </tr>
+      <tr>
+         <td>Few</td>
+         <td>Max 20 Email Destinations</td>
+         <td>Max 50 Email Destinations</td>
+		 <td>Max 100 Email Destinations</td>
+
+      </tr>
+	  	  <tr>
+         <td>Few</td>
+         <td>Max 20 Forwarders *</td>
+         <td>Max 50 Forwarders *</td>
+		 <td>Max 100 Forwarders *</td>
+      </tr>
+	  </tr>
+	  	  <tr>
+         <td>Forwarding live for few days only</td>
+         <td>Live as long as your subscription</td>
+         <td>Live as long as your subscription</td>
+		 <td>Live as long as your subscription</td>
+      </tr>
+	   <tr>
+         <td>FREE</td>
+         <td>$24/year</td>
+         <td>$5/month or $36/year</td>
+		<td>$8/month or $60/year</td>
+      </tr>
+   </tbody>
+</table>
+
+<p>* Example: 
+<li>Forwarder 1: Forward RSS_Feed_1 to email_1</li>
+<li>Forwarder 2: Forward RSS_Feed_2 to email_2</li>
+<li>Forwarder 3: Forward RSS_Feed_3 to email_3</li>
+Each forwarder will forward RSS Feed every 24 hours as long as your subscription live. 
+</p>
+
+
+<div align="center" style="margin-top:20px; margin-bottom:30px; font-size:14px; border-radius:10px; padding:25px;">
+<div style="float: left; width: 65%; padding:0px;">
+Buy the Access Key now and we will send it to your PayPal email within few hours. 
+Be sure to add FullContentRSS@gmail.com to your email contact.</div>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="CLVXRPZSJE9YW">
+<table>
+<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+	<option value="LITE $2/mo">LITE $2/mo : $24,00 USD - yearly</option>
+	<option value="BASIC $5/mo">BASIC $5/mo : $5,00 USD - monthly</option>
+	<option value="BASIC $3/mo">BASIC $3/mo : $36,00 USD - yearly</option>
+	<option value="PRO $8/mo">PRO $8/mo : $8,00 USD - monthly</option>
+	<option value="PRO $5/mo">PRO $5/mo : $60,00 USD - yearly</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</div>
+</div>
+
+
+</div>
+<div align="center" style="padding:10px; margin:10px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive TEXT Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2985280251753703"
+     data-ad-slot="3875000530"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<br /> <br />
+        <center><a href="http://forward.fullcontentrss.com">Forward RSS</a> | <a href="http://forward.fullcontentrss.com/MyForwardJobs.php">Manage Forwarders</a> | <a href="mailto:fullcontentrss@gmail.com" target="_top">Contact Us</a> Forward RSS Script Created by. <a href="http://fullcontentrss.com" target="_blank">Full Content RSS</a> </center>
+
+  </body>
+</html>
