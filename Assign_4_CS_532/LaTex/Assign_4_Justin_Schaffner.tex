@@ -41,7 +41,12 @@
 \begin{document}
 
 \begin{answer}{1: Friendship Paradox on Facebook}
-Question 1: Determine if the friendship paradox holds for my Facebookaccount.* Compute the mean, standard deviation, and median of thenumber of friends that my friends have. Create a graph of thenumber of friends (y-axis) and the friends themselves, sorted bynumber of friends (x-axis).Do include me in the graphand label me accordingly.
+Question 1: Determine if the friendship paradox holds for M. Nelson's Facebook
+account. Compute the mean, standard deviation, and median of the
+number of friends that M. Nelson's friends have. Create a graph of the
+number of friends (y-axis) and the friends themselves, sorted by
+number of friends (x-axis).Do include M. Nelson in the graph
+and label him accordingly.
 For this exercise I used R to import the graphml document of M. Nelsons facebook network. Due to the number of friends, I flipped the x and y axis so that the names would be to the left, and readable. M. Nelson's friend count is highlighted in blue. The mean, median and standard deviation are also calculated using R, and the n rounded to 3 significant digits. \\
 Here is the R code used to generate the graph:\\
 \begin{MyR}
@@ -89,7 +94,8 @@ The data suggests that yes, most of M. Nelson's friends have more friends than h
 
 \end{answer}
 \begin{answer}{2: Friendship Paradox on Twitter}
-Determine if the friendship paradox holds for the phonedude\textunderscore mln Twitter account.Since Twitter is a directed graph, use "followers" as the value you measure.
+Determine if the friendship paradox holds for the phonedude\textunderscore mln Twitter account.
+Since Twitter is a directed graph, use "followers" as the value you measure.
 For this problem, I built a quick Python program to query Twitter called ``Twitter\textunderscore Followers.py". I used Python 3.5, and the program takes two arguments. The first is the output file for the data, and the second is the screen name of the profile you wish to query. The program creates a tabulated file with two columns: the screen name of the follower, and the number of followers they have. \\
 Here is the code for ``Twitter\textunderscore Followers.py":
 \begin{MyPython}
