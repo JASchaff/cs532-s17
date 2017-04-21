@@ -1,0 +1,8 @@
+http://feeds.feedburner.com/TomsBikeTrip?format=xml
+https://averagejoecyclist.com/feed/
+http://cyclingmagazine.ca/feed/
+http://www.bikepacking.com/feed/
+https://www.theadventurejunkies.com/feed/
+http://www.pathlesspedaled.com/blog/feed/
+http://feeds.feedburner.com/BicycleTouringAroundTheWorld?format=xml
+http://www.whileoutriding.com/blog/feed
