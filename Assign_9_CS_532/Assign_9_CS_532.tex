@@ -55,10 +55,10 @@
 \begin{document}
 
 \begin{answer}{1: Build the Data Set}
-Question 1: Choose a blog or a newsfeed (or something similar with an Atom or RSS feed). Every student should do a unique feed, so please "claim" the feed on the class email list (first come, first served). It should be on a topic or topics of which you are qualified to provide classification training data. Find something with at least 100 entries (or items if RSS). Create between four and eight different categories for the entries
-in the feed. Download and process the pages of the feed as per the week 12 class slides. Be sure to upload the raw data (Atom or RSS) to your github account. Create a table with 100 rows. This is your "ground truth" (or "gold standard") data.\\
+Question 1: Choose a blog or a newsfeed (or something similar with an Atom or RSS feed). Every student should do a unique feed, so please ``claim" the feed on the class email list (first come, first served). It should be on a topic or topics of which you are qualified to provide classification training data. Find something with at least 100 entries (or items if RSS). Create between four and eight different categories for the entries
+in the feed. Download and process the pages of the feed as per the week 12 class slides. Be sure to upload the raw data (Atom or RSS) to your github account. Create a table with 100 rows. This is your ``ground truth" (or ``gold standard") data.\\
 
-I had a really hard time finding a blog with 100 entries that allowed the RSS feed to go beyond 10 or 20 items. Most of the pages I found don't have rel=next links for their RSS feeds. Instead I gathered several blogs that were all about cycling and built my data set from that. The list of blogs I used can be found in cyclefile.txt. I used the script getRSS.py in Listing \ref{lst:getrss} to pull the RSS pages and store them in individual files. In order to make a list of the 100 entries I intend to use, I added the function ``downtohundred()", shown in Listing \ref{lst:downtohundred} to fishermethod.py. Fishermethod will hold all of the functions used in this assignment other than getRSS, while the main script calling the functions can be found in feedclassify.py. I created 7 different categories for the entries:\\ community	recommendation-travel	recommendation-gear	recommendation-media	opinion	how-to	news\\ The categories are pretty self-explanatory, except perhaps for community, which I use for personal stories and anecdotes. The first section of feedclassify.py deals with the ground truth. Once the groundtruth.txt file has been established, it won't ask for it on further iterations. feedclassify.py can be seen in Listing \ref{lst:feedclassify} at the end of this report along with fishermethod.py in Listing \ref{lst:fishermethod}. 
+I had a really hard time finding a blog with 100 entries that also allowed pagination of the RSS feed. Most of the pages I found don't have rel=next links for their RSS feeds. Instead I gathered several blogs that were all about cycling and built my data set from that. The list of blogs I used can be found in cyclefile.txt. I used the script getRSS.py in Listing \ref{lst:getrss} to pull the RSS pages and store them in individual files. In order to make a list of the 100 entries I intend to use, I added the function ``downtohundred()", shown in Listing \ref{lst:downtohundred} to fishermethod.py. Fishermethod will hold all of the functions used in this assignment other than getRSS, while the main script calling the functions can be found in feedclassify.py. I created 7 different categories for the entries:\\ community,	recommendation-travel,	recommendation-gear,	recommendation-media,	opinion,	how-to,	news\\ The categories are pretty self-explanatory, except perhaps for community, which I use for personal stories and anecdotes. The first section of feedclassify.py deals with the ground truth. Once the groundtruth.txt file has been established, it won't ask for it on further iterations. feedclassify.py can be seen in Listing \ref{lst:feedclassify} at the end of this report along with fishermethod.py in Listing \ref{lst:fishermethod}. 
 
 
 
@@ -97,10 +97,11 @@ def downtohundred(path):
 \end{answer}
 
 \begin{answer}{2: Fisher Classifier}
-Train the Fisher classifier on the first 50 entries (the "training set"), then use the classifier to guess the classification of the next 50 entries (the "test set"). Create a table with 50 rows. Assess the performance of your classifier in each of your categories by computing precision, recall, and F-measure. Use the "macro-averaged" label based method, as per: http://stats.stackexchange.com/questions/21551/how-to-compute-precisionrecall- for-multiclass-multilabel-classification For example, if you have 5 categories (e.g., 80s, metal, alternative, electronic, cover), you will compute precision, recall, and F-measure for each category, and then compute the average across the 5 categories.\\
-For question 2 I split the list of 100 articles and sent them to my own version of the read() function called ``myread()" in fishermethod.py. The main difference is the ability to handle files from multiple feeds. The entries in the files are compared to the list of 100 from groundtruth.txt. Once the Classifier has been trained on the first 50, it calculates its best guess for the remaining 50. The table can be seen in results0.txt or an excerpt in Table \ref{5050}. For the Precision, Recall and F-measure I used the Pandas-ML Library to make a confusion matrix. The Pandas-ML library does most of the work for you and generates the TP, FP and FN automatically. Those results can be seen in Table \ref{50FPR} along with the Macro-Avg. Even though there was a category for news, there are apparently no news articles in the second half of the data set, so news is not represented. The results aren't terribly good. This could be because some of the entries technically fall in more than one category. 
+Train the Fisher classifier on the first 50 entries (the ``training set"), then use the classifier to guess the classification of the next 50 entries (the ``test set"). Create a table with 50 rows. Assess the performance of your classifier in each of your categories by computing precision, recall, and F-measure. Use the ``macro-averaged" label based method, as per: http://stats.stackexchange.com/questions/21551/how-to-compute-precisionrecall- for-multiclass-multilabel-classification . For example, if you have 5 categories (e.g., 80s, metal, alternative, electronic, cover), you will compute precision, recall, and F-measure for each category, and then compute the average across the 5 categories.\\
+For question 2 I split the list of 100 articles and sent them to my own version of the read() function called ``myread()" in fishermethod.py in Listing \ref{lst:fishermethod}. The main difference is the ability to handle files from multiple feeds. The entries in the files are compared to the list of 100 from groundtruth.txt so that only htose 100 are looked at. The trainer also pulls the categorie directly from the groundtruth file rather than by user entry. Once the Classifier has been trained on the first 50, it calculates its best guess for the remaining 50. The table can be seen in results5050.txt or an excerpt in Table \ref{5050}. For the Precision, Recall and F-measure I used the Pandas-ML Library to make a confusion matrix. The implementation is in the F\textunderscore P\textunderscore R() function in Listing \ref{lst:fishermethod}. The Pandas-ML library does most of the work for you and generates the TP, FP and FN when print\textunderscore stats() is called. The results can be seen in Table \ref{50FPR} along with the Macro-Avg. Even though there was a category for news, there are apparently no news articles in the second half of the data set, so news is not represented. The results aren't terribly good. This could be because some of the entries may fall into more than one category, or I could just be terrible at making up categories.
 
 \begin{table}[!htbp]
+\small
 \centering
 \caption{50/50 Results}
 \label{5050}
@@ -121,6 +122,7 @@ Trans-Cuba: La Ruta Mala	& community	& recommendations-travel
 \end{table}
 
 \begin{table}[!htbp]
+\small
 \centering
 \caption{50/50 FPR}
 \label{50FPR}
@@ -130,9 +132,9 @@ Categorie	&  Precision	&  Recall	&  F-measure\\
 Community	&  0.20	&  0.14	&  0.17\\
 How-to	&  0.00	&  0.00	&  0.00\\
 Opinion	&  0.00	&  0.00	&  0.00\\
-Recommendations-gear	&  0.55	&  0.90	&  0.68\\
-Recommendations-travel	&  0.57	&  0.67	&  0.62\\
-Recommendations-media	&  0.80	&  0.80	&  0.80\\
+Gear	&  0.55	&  0.90	&  0.68\\
+Travel	&  0.57	&  0.67	&  0.62\\
+Media	&  0.80	&  0.80	&  0.80\\
 Macro-Avg	&  0.35	&  0.42	&  0.38
 \end{tabular}
 }
@@ -141,8 +143,9 @@ Macro-Avg	&  0.35	&  0.42	&  0.38
 \end{answer}
 
 \begin{answer}{3: Fisher Classifier on 90 trainer items}
-Repeat question 2, but use the first 90 entries to train your classifier and the last 10 entries for testing. I redivided the original list of 100 and ran the same functions over the lists, but using a new database. The results are in results1.txt or in Table \ref{9010} and the Precision, Recall and F-measure are in Table \ref{90FRP}
+Repeat question 2, but use the first 90 entries to train your classifier and the last 10 entries for testing. I redivided the original list of 100 into lists of 90 and 10, then ran the same functions over the lists, but using a new database. The results are in results9010.txt or in Table \ref{9010} and the Precision, Recall and F-measure are in Table \ref{90FRP}. The Precision is higher, but the Recall is much lower, so the F-measure came out to be about the same. 
 \begin{table}[!htbp]
+\small
 \centering
 \caption{90/10 Results}
 \label{9010}
@@ -155,7 +158,7 @@ Moulton Review (How do the Moultons and Bromptons compare?!)	&  recommendations-
 700c to 650b Conversion Project	&  how-to	&  recommendations-travel\\
 Shop Visit: Gladys Bikes	&  community	&  community\\
 Bicycling Across Mississippi Video Playlist	&  community	&  community\\
-#PLPTucson: Shipping Bikes with the AirCaddy Bike Box	&  recommendations-gear	&  recommendations-gear\\
+PLPTucson: Shipping Bikes with the AirCaddy Bike Box	&  recommendations-gear	&  recommendations-gear\\
 The Gino Behind the Gino Mount	&  recommendations-gear	&  how-to\\
 Norther Cycles ? Randonneuring Paradise	&  recommendations-gear	&  how-to\\
 Visiting Rivelo PDX	&  community	&  how-to
@@ -163,19 +166,123 @@ Visiting Rivelo PDX	&  community	&  how-to
 \end{table}
 
 \begin{table}[!htbp]
+\small
 \centering
 \caption{90/10 FPR}
 \label{90FRP}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{llll}
-Title	&  Precision	&  Recall	&  F-measure\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
 Community	&  1.00	&  0.67	&  0.80\\
 How-to	&  0.00	&  0.00	&  0.00\\
-Recommendations-gear	&  1.00	&  0.50	&  0.67\\
-Recommendations-travel	&	0.00	&  0.00	&  0.00\\
+Gear	&  1.00	&  0.50	&  0.67\\
+Travel	&	0.00	&  0.00	&  0.00\\
 Macro-Avg	&  0.50	&  0.29	&  0.36
 \end{tabular}}
 \end{table}
+
+\end{answer}
+
+\begin{answer}{4: 10-fold Cross Validation}
+Rerun question 3, but with ``10-fold cross validation". What was the change, if any, in precision and recall (and thus F-Measure)?\\
+The hardest part of Question four was the logic for making 10 different test sets out of the data. That can be seen in Listing \ref{lst:feedclassify} in the last section. The Results of the 10 runs can be seen in Table \ref{1010FRP}, and the raw output is in the text file TenofTen\textunderscore Output.txt.
+The final Precision for the Fisher Classifier on this data set was 0.367. The Recall is 0.44 and the F-measure is 0.37. The Precision and Recall are closer to question 1 than question 2, but the F-measure seems to be fairly constant for all three Questions. It could be low due to my choice in categories, but it could also be just that some of the categories are represented less in this data set. Perhaps with a larger data set, with more equal representation between the categories, the classifier would be more accurate. 
+\FloatBarrier
+\begin{longtable}{llll}
+\small
+\caption{10-fold FPR}\\
+\label{1010FRP}\\
+0th Run&&&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  1.0	&  0.67	&  0.80\\
+How-to	&  0.0	&  0.0	&  0.0\\
+Gear	&  1.0	&  0.5	&  0.66\\
+Travel	&  0.0	&  0.0	& 0.0\\
+Macro-Avg	& 0.5	&  0.29	&  0.37\\
+*	&	&	&\\
+1st Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+How-to	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.10	&  1.0	&  0.18\\
+Macro-Avg	&  0.05	&  0.5	&  0.09\\
+*	&	&	&\\
+2nd Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  1	&  0.5	&  0.67\\
+How-to	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.8	&  1.0	&  0.89\\
+Media	&  1.0	&  1.0	&  1.0\\
+Travel	&  0.5	&  1.0	&  1.0\\
+Macro-Avg	&  0.66	&  0.7	&  0.64\\
+*	&	&	&\\
+3rd Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.86	&  1.0	&  0.92\\
+Media	&  1.0	&  1.0	&  1.0\\
+Travel	&  1.0	&  1.0	&  1.0\\
+Macro-Avg	&  0.71	&  0.75	&  0.73\\
+*	&	&	&\\
+4th Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.71	&  1.0	&  0.83\\
+Media	&  1.0	&  1.0	&  1.0\\
+Travel	&  1.0	&  1.0	&  1.0\\
+Macro-Avg	&  0.68	&  0.75	&  0.71\\
+*	&	&	&\\
+5th Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  0.0	&  0.0	&  0.0\\
+How-to	&  0.0	&  0.0	&  0.0\\
+News	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.75	&  1.0	&  0.86\\
+Media	&  0.25	&  0.5	&  0.33\\
+Travel	&  1.0	&  1.0	&  1.0\\
+Macro-Avg	&  0.33	&  0.42	&  0.36\\
+*	&	&	&\\
+6th Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  0.0	&  0.0	&  0.0\\
+News	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.67	&  1.0	&  0.8\\
+Media	&  0.5	&  1.0	&  0.67\\
+Travel	&  1.0	&  1.0	&  1.0\\
+Macro-Avg	&  0.43	&  0.6	&  0.49\\
+*	&	&	&\\
+7th Run	&	&	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Communtiy	&  0.0	&  0.0	&  0.0\\
+News	&  0.0	&  0.0	&  0.0\\
+Opinion	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.25	&  1.0	&  0.4\\
+Macro-Avg	&  0.062	&  0.25	&  0.1\\
+*	&  	&  	&\\
+8th Run	& 	& 	&\\
+Categorie	&  Precision	&  Recall	&  F-measure\\
+Community	&  0.0	&  0.0	&  0.0\\
+How-to	&  0.0	&  0.0	&  0.0\\
+Opinion	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.25	&  0.25	&  0.25\\
+Travel	&  0.0	&  0.0	&  0.0\\
+Macro-Avg	&  0.05	&  0.05	&  0.05\\
+*	&	&	&\\
+9th Run	&	&	&\\
+Community	&  0.0	&  0.0	&  0.0\\
+How-to	&  1.0	&  0.4	&  0.57\\
+Opinion	&  0.0	&  0.0	&  0.0\\
+Gear	&  0.0	&  0.0	&  0.0\\
+Travel	&  0.0	&  0.0	&  0.0\\
+*	&	&	&\\
+10-Fold Cross	&  	&  	&\\
+	&  Precision	&  Recall	&  F-measure\\
+	&  0.37	&  0.44	&  0.37
+\end{longtable}
+\FloatBarrier
+
+
+
+
 
 \end{answer}
 
@@ -194,7 +301,7 @@ header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebK
 
 
 
-
+#creates a confusion matrix and outputs the resulting statistics to the terminal
 def F_P_R(articles, classifier):
     categories=classifier.categories()
     values=list((k,v) for k,v in articles.values())
@@ -208,7 +315,7 @@ def F_P_R(articles, classifier):
             
     
                       
-    
+#selects 100 items out of a list of feeds
 def downtohundred(path):
     articles={}
     for file in os.listdir(path):
@@ -262,45 +369,44 @@ def myread(articles, path, classifier):
                 text=entry.summary
             else:
                 text=entry.description
-            print('\n-----')
-            # Print the contents of the entry
-            print('Title: '+ str(entry.title))
-            print('\n'+str(text))
+            
             # Combine all the text to create one item for the classifier
             fulltext='%s\n%s' % (entry.title,text)
-            # Print the best guess at the current category
-            print('Guess: '+str(classifier.classify(fulltext)))
-            # Ask the user to specify the correct category and train on that
-            cl=input('Enter category: ')
+            #changed this to pull the training data from the articles
+            cl=articles[entry.title]
             classifier.train(fulltext,cl)
-
-            
+        
 def myclassify(articles, path, classifier):
+    temparticles=dict(list(x for x in articles.items()))
     entries=[]
+    #pulls the individual entries out of the sepearte feed files
     for file in os.listdir(path):
         feed=os.path.join(path, file)
         f=feedparser.parse(feed)
         for entry in f.entries:
             entries.append(entry)
-
+    #creates a table of actual and predicted classifications, storing them in a file in results folder
     for entry in entries:
-        if entry.title in articles.keys():
+        if entry.title in temparticles.keys():
             if 'summary' in entry:
                 text=entry.summary
             else:
                 text=entry.description
             fulltext='%s\n%s' % (entry.title,text)
             best=classifier.classify(fulltext)
-            articles[entry.title]=(articles[entry.title], best)
+            temparticles[entry.title]=(temparticles[entry.title], best)
             
     if not os.path.exists('./results'):
         os.mkdirs('./results')
     file=os.path.join('./results/','results'.rstrip()+str(len(os.listdir('./results')))+'.txt')
     with open(file, 'w') as out:
-        for key in articles.keys():
-            print(key, *articles[key], sep='\t', end='\n', file=out)
-    F_P_R(articles, classifier)
-  
+        for key in temparticles.keys():
+            print(key, *temparticles[key], sep='\t', end='\n', file=out)
+     #creates a confusion matrix
+    F_P_R(temparticles, classifier)
+        
+
+
 def getwords(doc):
     splitter=re.compile('\\W*')
     # Split the words by non-alpha characters
@@ -391,6 +497,11 @@ class classifier:
         self.con=sqlite.connect(dbfile)
         self.con.execute('create table if not exists fc(feature,category,count)')
         self.con.execute('create table if not exists cc(category,count)')
+
+
+
+
+    
 
 class fisherclassifier(classifier):
     def __init__(self,getfeatures):
@@ -491,7 +602,35 @@ if not os.path.isfile('./cyclingdb2.db'):
     myread(halfninety, './feeds', cl2)
 else:cl2.setdb('cyclingdb2.db')
 myclassify(halften, './feeds', cl2)
- 
+
+#process for question 4
+tenoften={}
+topcount=dict(list(x for x in articles.items()))
+downcount=dict(list(x for x in articles.items())[:90])
+downcounter=90
+#breaks out ten distinct sub dictionaries from the main Articles dictionary.
+for i in range(10):
+    tenoften[i]=dict(list(x for x in topcount.items() if x not in downcount.items()))
+    downcounter-=10
+    downcount=dict(list(downcount.items())[:downcounter])
+    topcount=dict(list(x for x in topcount.items() if x not in tenoften[i].items()))
+print('TEN OF TEN: %d' % len(tenoften))
+
+#builds a new training data set to send to myread() for each subset of Articles, then sends the Articles subset to classify
+for i in range(10):
+    cl3=fisherclassifier(getwords)
+    datafile=str('tenoften'.rstrip() +str(i)+'.db')
+    if not os.path.isfile(os.path.join('./',datafile)):
+        cl3.setdb(datafile)
+        temp={}
+        for keys in tenoften.keys():
+            for key,item in tenoften[keys].items():
+                if key not in tenoften[i].keys():
+                    temp[key]=item                  
+        myread(temp, './feeds', cl3)
+    else:cl3.setdb(datafile)
+    print('Data Set %s' % str('tenoften'+ str(i)))
+    myclassify(tenoften[i],'./feeds',cl3)
 \end{MyPython}
 
 

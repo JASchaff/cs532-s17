@@ -79,20 +79,21 @@ def myread(articles, path, classifier):
                 text=entry.summary
             else:
                 text=entry.description
-            print('\n-----')
+            #print('\n-----')
             # Print the contents of the entry
-            print('Title: '+ str(entry.title))
-            print('\n'+str(text))
+            #print('Title: '+ str(entry.title))
+            #print('\n'+str(text))
             # Combine all the text to create one item for the classifier
             fulltext='%s\n%s' % (entry.title,text)
             # Print the best guess at the current category
-            print('Guess: '+str(classifier.classify(fulltext)))
+            #print('Guess: '+str(classifier.classify(fulltext)))
             # Ask the user to specify the correct category and train on that
-            cl=input('Enter category: ')
+            cl=articles[entry.title]
             classifier.train(fulltext,cl)
 
             
 def myclassify(articles, path, classifier):
+    temparticles=dict(list(x for x in articles.items()))
     entries=[]
     for file in os.listdir(path):
         feed=os.path.join(path, file)
@@ -101,23 +102,22 @@ def myclassify(articles, path, classifier):
             entries.append(entry)
 
     for entry in entries:
-        if entry.title in articles.keys():
+        if entry.title in temparticles.keys():
             if 'summary' in entry:
                 text=entry.summary
             else:
                 text=entry.description
             fulltext='%s\n%s' % (entry.title,text)
             best=classifier.classify(fulltext)
-            articles[entry.title]=(articles[entry.title], best)
+            temparticles[entry.title]=(temparticles[entry.title], best)
             
     if not os.path.exists('./results'):
         os.mkdirs('./results')
     file=os.path.join('./results/','results'.rstrip()+str(len(os.listdir('./results')))+'.txt')
     with open(file, 'w') as out:
-        for key in articles.keys():
-            print(key, *articles[key], sep='\t', end='\n', file=out)
-    F_P_R(articles, classifier)
-    
+        for key in temparticles.keys():
+            print(key, *temparticles[key], sep='\t', end='\n', file=out)
+    F_P_R(temparticles, classifier)
         
 
 
