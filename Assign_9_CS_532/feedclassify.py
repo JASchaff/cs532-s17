@@ -24,26 +24,26 @@ else:
         articles.setdefault(title,actual.rstrip())
         
 #process for question 2
-#halfone=dict(list(articles.items())[:50])
-#halftwo=dict(list(x for x in articles.items() if x not in halfone.items()))
-#cl=fisherclassifier(getwords)
-#if not os.path.isfile('./cyclingdb.db'):
-#    cl.setdb('cyclingdb.db')
-#    myread(halfone, './feeds', cl)
-#else: cl.setdb('cyclingdb.db')
-#myclassify(halftwo, './feeds', cl)
-#del cl
+halfone=dict(list(articles.items())[:50])
+halftwo=dict(list(x for x in articles.items() if x not in halfone.items()))
+cl=fisherclassifier(getwords)
+if not os.path.isfile('./cyclingdb.db'):
+    cl.setdb('cyclingdb.db')
+    myread(halfone, './feeds', cl)
+else: cl.setdb('cyclingdb.db')
+myclassify(halftwo, './feeds', cl)
+del cl
 
 #process for question 3
-#cl2=fisherclassifier(getwords)
-#halfninety=dict(list(articles.items())[:90])
-#halften=dict(list(x for x in articles.items() if x not in halfninety.items()))
-#if not os.path.isfile('./cyclingdb2.db'):
-#    cl2.setdb('cyclingdb2.db')
-#    myread(halfninety, './feeds', cl2)
-#else:cl2.setdb('cyclingdb2.db')
-#myclassify(halften, './feeds', cl2)
-#del cl2
+cl2=fisherclassifier(getwords)
+halfninety=dict(list(articles.items())[:90])
+halften=dict(list(x for x in articles.items() if x not in halfninety.items()))
+if not os.path.isfile('./cyclingdb2.db'):
+    cl2.setdb('cyclingdb2.db')
+    myread(halfninety, './feeds', cl2)
+else:cl2.setdb('cyclingdb2.db')
+myclassify(halften, './feeds', cl2)
+del cl2
 
 #process for question 4
 tenoften={}
