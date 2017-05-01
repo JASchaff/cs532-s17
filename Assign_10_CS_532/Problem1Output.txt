@@ -1,0 +1,96 @@
+Nearest Neighbors to F-Measure for k=1
+	SPIN IT RECORDS Moncton 467A Main Street Moncton NB CANADA
+Avg Distance 0.680835
+Nearest Neighbors to F-Measure for k=2
+	SPIN IT RECORDS Moncton 467A Main Street Moncton NB CANADA
+	Indie Top 20 - The Blog!
+Avg Distance 0.539775
+Nearest Neighbors to F-Measure for k=5
+	SPIN IT RECORDS Moncton 467A Main Street Moncton NB CANADA
+	Indie Top 20 - The Blog!
+	.
+	MTJR RANTS & RAVES ON MUSIC
+	The Power of Independent Trucking
+Avg Distance 0.418254
+Nearest Neighbors to F-Measure for k=10
+	SPIN IT RECORDS Moncton 467A Main Street Moncton NB CANADA
+	Indie Top 20 - The Blog!
+	.
+	MTJR RANTS & RAVES ON MUSIC
+	The Power of Independent Trucking
+	Swinging Singles Club
+	Subterranean Noise
+	KiDCHAIR
+	DaveCromwell Writes
+	Eli Jace | The Mind Is A Terrible Thing To Paste
+Avg Distance 0.344340
+Nearest Neighbors to F-Measure for k=20
+	SPIN IT RECORDS Moncton 467A Main Street Moncton NB CANADA
+	Indie Top 20 - The Blog!
+	.
+	MTJR RANTS & RAVES ON MUSIC
+	The Power of Independent Trucking
+	Swinging Singles Club
+	Subterranean Noise
+	KiDCHAIR
+	DaveCromwell Writes
+	Eli Jace | The Mind Is A Terrible Thing To Paste
+	Coyote Doc Music Co-op
+	Encore
+	Some Call It Noise....
+	www.doginasweater.com Live Show Review Archive
+	The Jeopardy of Contentment
+	Stereo Pills
+	GYPSY RHAPSODY
+	Cuz Music Rocks
+	The Girl at the Rock Show
+	The Music Binge
+Avg Distance 0.288265
+Nearest Neighbors to Web Science and Digital Libraries Research Group for k=1
+	The Grunge Pit
+Avg Distance 0.723314
+Nearest Neighbors to Web Science and Digital Libraries Research Group for k=2
+	The Grunge Pit
+	hmmhannah
+Avg Distance 0.633799
+Nearest Neighbors to Web Science and Digital Libraries Research Group for k=5
+	The Grunge Pit
+	hmmhannah
+	macthemost
+	Riley Haas' blog
+	ORGANMYTH
+Avg Distance 0.491994
+Nearest Neighbors to Web Science and Digital Libraries Research Group for k=10
+	The Grunge Pit
+	hmmhannah
+	macthemost
+	Riley Haas' blog
+	ORGANMYTH
+	The Ideal Copy
+	Subterranean Noise
+	PALMIRA A PISTA TRES
+	Diagnosis: No Radio
+	Eli Jace | The Mind Is A Terrible Thing To Paste
+Avg Distance 0.377691
+Nearest Neighbors to Web Science and Digital Libraries Research Group for k=20
+	The Grunge Pit
+	hmmhannah
+	macthemost
+	Riley Haas' blog
+	ORGANMYTH
+	The Ideal Copy
+	Subterranean Noise
+	PALMIRA A PISTA TRES
+	Diagnosis: No Radio
+	Eli Jace | The Mind Is A Terrible Thing To Paste
+	.
+	DaveCromwell Writes
+	Some Call It Noise....
+	Avidd Wallows' Blog
+	The Power of Independent Trucking
+	Hip In Detroit
+	simone goes
+	Stories From the City, Stories From the Sea
+	Mile In Mine
+	MTJR RANTS & RAVES ON MUSIC
+Avg Distance 0.296337
